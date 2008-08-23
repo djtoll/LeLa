@@ -1,0 +1,210 @@
+<window id="4">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>background</include>
+		<include>allscreens</include>
+
+		<control type="label">
+			<description>description label</description>
+			<include>home-menubar</include>
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>752</width>
+			<align>center</align>
+			<label>5</label>
+			<font>page</font>
+		</control>
+		
+		<control type="panel" id="50">
+			<viewtype label="535">List</viewtype>
+			<posx>50</posx>
+			<posy>100</posy>
+			<width>800</width>
+			<height>500</height>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>23</pagecontrol>
+			<visible>!Window.IsActive(129)</visible>
+			<include>pageslide</include>	
+			
+			<itemlayout width="306" height="77">
+				<control type="image">
+					<width>300</width>
+					<height>72</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-nofocus.png</texture>
+				</control>
+				
+				<control type="image">
+					<width>64</width>
+					<height>64</height>
+					<posx>0</posx>
+					<posy>3</posy>
+					<info>ListItem.Icon</info>
+				</control>
+				
+				<control type="label">
+					<posx>70</posx>
+					<posy>10</posy>
+					<width>200</width>
+					<height>34</height>
+					<font>h2</font>
+					<align>left</align>
+					<textcolor>button-text</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+				
+				<control type="label">
+					<posx>70</posx>
+					<posy>35</posy>
+					<width>220</width>
+					<height>34</height>
+					<font>menu</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			
+			<focusedlayout width="306" height="77">
+				
+				<control type="image">
+					<width>64</width>
+					<height>64</height>
+					<posx>0</posx>
+					<posy>3</posy>
+					<info>ListItem.Icon</info>
+				</control>
+				
+				<control type="image">
+					<width>300</width>
+					<height>72</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-focus.png</texture>
+					<include>select-fade</include>
+				</control>
+				
+				<control type="label">
+					<posx>70</posx>
+					<posy>10</posy>
+					<width>200</width>
+					<height>34</height>
+					<font>h2</font>
+					<align>left</align>
+					<textcolor>button-text</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>70</posx>
+					<posy>35</posy>
+					<width>220</width>
+					<height>34</height>
+					<font>menu</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Label2</info>
+				</control>
+				
+			</focusedlayout>
+		      
+		     <content>
+
+			  <item id="1">
+			    <label>3</label>
+			    <label2>$LOCALIZE[14022], $LOCALIZE[16003], $LOCALIZE[287], $LOCALIZE[14018], $LOCALIZE[360]</label2>
+			    <icon>settings-videos-nofocus.png</icon>
+			    <thumb>settings-videos-nofocus.png</thumb>
+			    <onclick>ActivateWindow(MyVideosSettings)</onclick>
+			  </item>
+			  
+			  <item id="2">
+			    <label>2</label>
+			    <label2>$LOCALIZE[14022], $LOCALIZE[16003], $LOCALIZE[15200], $LOCALIZE[13327], $LOCALIZE[620]</label2>
+			    <icon>settings-music-nofocus.png</icon>
+			    <thumb>settings-music-nofocus.png</thumb>
+			    <onclick>ActivateWindow(MyMusicSettings)</onclick>
+			  </item>
+			  
+			  <item id="3">
+			    <label>1</label>
+			    <label2>$LOCALIZE[108], $LOCALIZE[20008], $LOCALIZE[581]</label2>
+			    <label2>Slideshow, Screenshots, Sorting</label2>
+			    <icon>settings-pictures-nofocus.png</icon>
+			    <thumb>settings-pictures-nofocus.png</thumb>
+			    <onclick>ActivateWindow(MyPicturesSettings)</onclick>
+			  </item>
+			  
+			  <item id="4">
+			    <label>0</label>
+			    <label2>$LOCALIZE[582], $LOCALIZE[581]</label2>
+			    <icon>settings-programs-nofocus.png</icon>
+			    <thumb>settings-programs-nofocus.png</thumb>
+			    <onclick>ActivateWindow(MyProgramsSettings)</onclick>
+			  </item>
+			  
+			  <item id="5">
+			    <label>8</label>
+			    <label2>$LOCALIZE[396], $LOCALIZE[20026]</label2>
+			    <icon>settings-weather-nofocus.png</icon>
+			    <thumb>settings-weather-nofocus.png</thumb>
+			    <onclick>ActivateWindow(MyWeatherSettings)</onclick>
+			  </item>
+			  
+			  <item id="6">
+			    <label>705</label>
+			    <label2>$LOCALIZE[150], $LOCALIZE[727], $LOCALIZE[1014], $LOCALIZE[20171], $LOCALIZE[20175]</label2>
+			    <label2>IP Adress, Web Server, Username, SMB, UPnP</label2>
+			    <icon>settings-network-nofocus.png</icon>
+			    <thumb>settings-network-nofocus.png</thumb>
+			    <onclick>ActivateWindow(NetworkSettings)</onclick>
+			  </item>
+			  
+			  <item id="7">
+			    <label>13000</label>
+			    <label2>$LOCALIZE[13281], $LOCALIZE[439], $LOCALIZE[447], $LOCALIZE[12360]</label2>
+			    <label2>Hardware, Cache, Autorun</label2>
+			    <icon>settings-system-nofocus.png</icon>
+			    <thumb>settings-system-nofocus.png</thumb>
+			    <onclick>ActivateWindow(SystemSettings)</onclick>
+			  </item>
+			  
+			  <item id="8">
+			    <label>480</label>
+			    <label2>$LOCALIZE[166], $LOCALIZE[248], $LOCALIZE[131], $LOCALIZE[14018], $LOCALIZE[360]</label2>
+			    <icon>settings-appearance-nofocus.png</icon>
+			    <thumb>settings-appearance-nofocus.png</thumb>
+			    <onclick>ActivateWindow(AppearanceSettings)</onclick>
+			  </item>
+			  
+			   <item id="9">
+			    <label>13200</label>
+			    <label2>$LOCALIZE[31017], $LOCALIZE[20096]</label2>
+			    <icon>settings-profiles-nofocus.png</icon>
+			    <thumb>settings-profiles-nofocus.png</thumb>
+			    <onclick>ActivateWindow(Profiles)</onclick>
+			  </item>
+			  
+			  <item id="10">
+			    <label>20077</label>
+			    <label2>$LOCALIZE[31015], $LOCALIZE[31016], $LOCALIZE[31020], $LOCALIZE[31022], $LOCALIZE[470]</label2>
+			    <icon>settings-skin-nofocus.png</icon>
+			    <thumb>settings-skin-nofocus.png</thumb>
+			    <onclick>ActivateWindow(59)</onclick>
+			  </item>
+
+			</content>
+		      
+		</control>      
+
+	</controls>
+
+</window>

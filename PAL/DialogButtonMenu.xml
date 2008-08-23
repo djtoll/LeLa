@@ -1,0 +1,807 @@
+<window type="buttonMenu" id="111">
+	<defaultcontrol always="true">101</defaultcontrol>
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>201</posx>
+		<posy>130</posy>
+	</coordinates>
+	<controls>
+	
+		<control type="group">
+			<control type="image">
+				<posx>-27</posx>
+				<posy>-27</posy>
+				<width>372</width>
+				<height>264</height>
+				<texture border="38">dialogpanel.png</texture>
+			</control>
+			
+			
+			<control type="group" id="100">
+				<animation effect="fade" start="100" reversible="true" end="80" time="200" condition="!ControlGroup(100).HasFocus()">Conditional</animation>
+				<animation effect="fade" start="80" reversible="true" end="100" time="200" condition="ControlGroup(100).HasFocus()">Conditional</animation>
+				
+				<control type="button" id="101">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>130</width>
+					<height>34</height>
+					<label>3</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>right</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>10</onleft>
+					<onright>200</onright>
+					<onup>106</onup>
+					<ondown>102</ondown>
+					<onclick>ActivateWindow(MyVideoFiles)</onclick>
+				</control>
+				<control type="button" id="102">
+					<posx>0</posx>
+					<posy>36</posy>
+					<width>130</width>
+					<height>34</height>
+					<label>2</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>right</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>10</onleft>
+					<onright>300</onright>
+					<onup>101</onup>
+					<ondown>103</ondown>
+					<onclick>ActivateWindow(MyMusicFiles)</onclick>
+				</control>
+				<control type="button" id="103">
+					<posx>0</posx>
+					<posy>71</posy>
+					<width>130</width>
+					<height>34</height>
+					<label>1</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>right</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>102</onup>
+					<ondown>104</ondown>
+					<onclick>ActivateWindow(MyPictures)</onclick>
+				</control>
+				<control type="button" id="104">
+					<posx>0</posx>
+					<posy>106</posy>
+					<width>130</width>
+					<height>34</height>
+					<label>$LOCALIZE[31006]</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>right</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>10</onleft>
+					<onright>500</onright>
+					<onup>103</onup>
+					<ondown>105</ondown>
+					<onclick>ActivateWindow(Favourites)</onclick>
+				</control>
+				<control type="button" id="105">
+					<posx>0</posx>
+					<posy>141</posy>
+					<width>130</width>
+					<height>34</height>
+					<label>5</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>right</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>10</onleft>
+					<onright>600</onright>
+					<onup>104</onup>
+					<ondown>106</ondown>
+					<onclick>ActivateWindow(4)</onclick>
+				</control>
+				<control type="button" id="106">
+					<posx>0</posx>
+					<posy>176</posy>
+					<width>130</width>
+					<height>34</height>
+					<label>$LOCALIZE[31013]</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>right</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>10</onleft>
+					<onright>700</onright>
+					<onup>105</onup>
+					<ondown>101</ondown>
+				</control>
+
+			</control>
+			
+			
+			
+			<control type="grouplist" id="200">
+				<description>menu items for VIDEO</description>
+				<visible allowhiddenfocus="true">ControlGroup(200).HasFocus(0)| ControlGroup(100).HasFocus(101)</visible>
+				<animation effect="fade" start="0" end="100" time="350" >Visible</animation>
+				<animation effect="fade" start="100" reversible="true" end="80" time="200" condition="!ControlGroup(200).HasFocus()">Conditional</animation>
+				<animation effect="fade" start="80" reversible="true" end="100" time="200" condition="ControlGroup(200).HasFocus()">Conditional</animation>
+				<posx>133</posx>
+				<posy>0</posy>
+				<width>185</width>
+				<height>209</height>
+				<onleft>100</onleft>
+				<onright>-</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>1</itemgap>
+				
+				<control type="button" id="201">
+					<width>185</width>
+					<height>34</height>
+					<label>342</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyVideoLibrary,movietitles)</onclick>
+				</control>
+				<control type="button" id="202">
+					<width>185</width>
+					<height>34</height>
+					<label>20343</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles)</onclick>
+				</control>
+				<control type="button" id="203">
+					<width>185</width>
+					<height>34</height>
+					<label>20389</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyVideoLibrary,musicvideotitles)</onclick>
+				</control>
+				<control type="button" id="204">
+					<width>185</width>
+					<height>34</height>
+					<label>31914</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyVideoLibrary,plugin://video)</onclick>
+				</control>
+				<control type="button" id="205">
+					<width>185</width>
+					<height>34</height>
+					<label>31011</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyVideoFiles,plugin://video/Apple Movie Trailers)</onclick>
+				</control>
+
+			</control>
+			
+			
+			<control type="grouplist" id="300">
+				<description>menu items for MUSIC</description>
+				<visible allowhiddenfocus="true">ControlGroup(300).HasFocus(0)| ControlGroup(100).HasFocus(102)</visible>
+				<animation effect="fade" start="0" end="100" time="350" >Visible</animation>
+				<animation effect="fade" start="100" reversible="true" end="80" time="200" condition="!ControlGroup(300).HasFocus()">Conditional</animation>
+				<animation effect="fade" start="80" reversible="true" end="100" time="200" condition="ControlGroup(300).HasFocus()">Conditional</animation>
+				<posx>133</posx>
+				<posy>0</posy>
+				<width>185</width>
+				<height>209</height>
+				<onleft>100</onleft>
+				<onright>-</onright>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<itemgap>1</itemgap>
+				
+				<control type="button" id="301">
+					<width>185</width>
+					<height>34</height>
+					<label>132</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyMusicLibrary,albums)</onclick>
+				</control>
+				<control type="button" id="302">
+					<width>185</width>
+					<height>34</height>
+					<label>133</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyMusicLibrary,artists)</onclick>
+				</control>
+				<control type="button" id="303">
+					<width>185</width>
+					<height>34</height>
+					<label>134</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyMusicLibrary,songs)</onclick>
+				</control>
+				<control type="button" id="304">
+					<width>185</width>
+					<height>34</height>
+					<label>135</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyMusicLibrary,Genres)</onclick>
+				</control>
+				<control type="button" id="305">
+					<width>185</width>
+					<height>34</height>
+					<label>136</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyMusicLibrary,playlists)</onclick>
+				</control>
+				<control type="button" id="306">
+					<width>185</width>
+					<height>34</height>
+					<label>31914</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyMusicFiles,plugin://music)</onclick>
+				</control>
+
+			</control>
+			
+			
+			
+			<control type="grouplist" id="500">
+				<description>menu items for ACCESSORIES</description>
+				<visible allowhiddenfocus="true">ControlGroup(500).HasFocus(0)| ControlGroup(100).HasFocus(104)</visible>
+				<animation effect="fade" start="0" end="100" time="350" >Visible</animation>
+				<animation effect="fade" start="100" reversible="true" end="80" time="200" condition="!ControlGroup(500).HasFocus()">Conditional</animation>
+				<animation effect="fade" start="80" reversible="true" end="100" time="200" condition="ControlGroup(500).HasFocus()">Conditional</animation>
+				<posx>133</posx>
+				<posy>0</posy>
+				<width>185</width>
+				<height>209</height>
+				<onleft>100</onleft>
+				<onright>-</onright>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<itemgap>1</itemgap>
+				
+				<control type="button" id="501">
+					<width>185</width>
+					<height>34</height>
+					<label>10001</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyPrograms)</onclick>
+				</control>
+				<control type="button" id="502">
+					<width>185</width>
+					<height>34</height>
+					<label>10020</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyScripts)</onclick>
+				</control>
+				<control type="button" id="503">
+					<width>185</width>
+					<height>34</height>
+					<label>10508</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(MyWeather)</onclick>
+				</control>
+				<control type="button" id="504">
+					<width>185</width>
+					<height>34</height>
+					<label>7</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(Filemanager)</onclick>
+				</control>
+				<control type="button" id="505">
+					<width>185</width>
+					<height>34</height>
+					<label>130</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+				</control>
+				<control type="button" id="506">
+					<width>185</width>
+					<height>34</height>
+					<label>31905</label>
+					<font>menu</font>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.RunScript(Q:\scripts\T3CH Upgrader\default.py)</onclick>
+				</control>
+
+			</control>
+
+			<control type="grouplist" id="600">
+				<description>menu items for SETTINGS</description>
+				<visible allowhiddenfocus="true">ControlGroup(600).HasFocus(0)| ControlGroup(100).HasFocus(105)</visible>
+				<animation effect="fade" start="0" end="100" time="350" >Visible</animation>
+				<animation effect="fade" start="100" reversible="true" end="80" time="200" condition="!ControlGroup(600).HasFocus()">Conditional</animation>
+				<animation effect="fade" start="80" reversible="true" end="100" time="200" condition="ControlGroup(600).HasFocus()">Conditional</animation>
+				<posx>133</posx>
+				<posy>0</posy>
+				<width>185</width>
+				<height>209</height>
+				<onleft>100</onleft>
+				<onright>9001</onright>
+				<onup>600</onup>
+				<ondown>600</ondown>
+				<itemgap>1</itemgap>
+				
+				<control type="button" id="601">
+					<label>20077</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(59)</onclick>
+				</control>
+				<control type="button" id="602">
+					<label>480</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(appearancesettings)</onclick>
+				</control>
+				<control type="button" id="603">
+					<label>1212</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(videossettings)</onclick>
+				</control>
+				<control type="button" id="604">
+					<label>10005</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(musicsettings)</onclick>
+				</control>
+				<control type="button" id="605">
+					<label>10001</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(programssettings)</onclick>
+				</control>
+				<control type="button" id="606">
+					<label>10002</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(picturessettings)</onclick>
+				</control>
+				<control type="button" id="607">
+					<label>13279</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(networksettings)</onclick>
+				</control>
+				<control type="button" id="608">
+					<label>8</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(weathersettings)</onclick>
+				</control>
+				<control type="button" id="609">
+					<label>13000</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>ActivateWindow(systemsettings)</onclick>
+				</control>
+
+			</control>
+			
+			
+			<control type="grouplist" id="700">
+				<description>menu items for EXIT</description>
+				<visible allowhiddenfocus="true">ControlGroup(700).HasFocus(0)| ControlGroup(100).HasFocus(106)</visible>
+				<animation effect="fade" start="0" end="100" time="350" >Visible</animation>
+				<animation effect="fade" start="100" reversible="true" end="80" time="200" condition="!ControlGroup(700).HasFocus()">Conditional</animation>
+				<animation effect="fade" start="80" reversible="true" end="100" time="200" condition="ControlGroup(700).HasFocus()">Conditional</animation>
+				<posx>133</posx>
+				<posy>0</posy>
+				<width>185</width>
+				<height>209</height>
+				<onleft>100</onleft>
+				<onright>9001</onright>
+				<onup>700</onup>
+				<ondown>700</ondown>
+				<itemgap>1</itemgap>
+				
+				<control type="button" id="701">
+					<label>$LOCALIZE[13313] XBMC</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.RestartApp()</onclick>
+					<onclick>dialog.close(all,true)</onclick>
+					<visible>!System.Loggedon</visible>
+				</control>
+				<control type="button" id="702">
+					<label>13313</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.Reset()</onclick>
+					<onclick>dialog.close(all,true)</onclick>
+					<visible>!System.Loggedon</visible>
+				</control>
+				<control type="button" id="703">
+					<label>13005</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.ShutDown()</onclick>
+					<onclick>dialog.close(all,true)</onclick>
+					<visible>!System.Loggedon</visible>
+				</control>
+				<control type="button" id="704">
+					<label>20046</label>
+					<altlabel>20045</altlabel>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>xbmc.mastermode</onclick>
+					<visible>System.LoggedOn + System.HasLocks</visible>
+				</control>
+				<control type="button" id="705">
+					<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>system.logoff</onclick>
+					<visible>System.LoggedOn + System.HasLoginScreen + Skin.HasSetting(advancedShutdown)</visible>
+				</control>
+				<control type="button" id="706">
+					<description>30min ShutdownTimer button</description>
+					<label>31911</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),30)</onclick>
+					<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
+				</control>
+				<control type="button" id="707">
+					<description>60min ShutdownTimer button</description>
+					<label>31912</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),60)</onclick>
+					<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
+				</control>
+				<control type="button" id="708">
+					<description>120min ShutdownTimer button</description>
+					<label>31913</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),120)</onclick>
+					<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
+				</control>
+				<control type="button" id="709">
+					<description>Custom ShutdownTimer button</description>
+					<label>31916</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown())</onclick>
+					<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
+				</control>
+				<control type="button" id="710">
+					<description>Cancel ShutdownTimer button</description>
+					<label>20151</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+					<visible>System.LoggedOn + !Skin.HasSetting(advancedShutdown)</visible>
+					<visible>System.HasAlarm(shutdowntimer) + Skin.HasSetting(advancedShutdown)</visible>
+				</control>
+				<control type="button" id="711">
+					<description>Shutdown button</description>
+					<label>13005</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.ShutDown()</onclick>
+					<visible>System.LoggedOn</visible>
+				</control>
+				<control type="button" id="712">
+					<description>Reboot button</description>
+					<label>13313</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.Reset()</onclick>
+					<visible>System.LoggedOn</visible>
+				</control>
+				<control type="button" id="713">
+					<description>Restart XBMC button</description>
+					<label>$LOCALIZE[13313] XBMC</label>
+					<font>menu</font>
+					<width>185</width>
+					<height>34</height>
+					<textoffsety>2</textoffsety>
+					<aligny>-</aligny>
+					<align>left</align>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<onleft>100</onleft>
+					<onright>10</onright>
+					<onclick>XBMC.RestartApp()</onclick>
+					<visible>System.LoggedOn</visible>
+				</control>
+			</control>
+			
+		</control>
+	
+	</controls>
+</window>

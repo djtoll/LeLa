@@ -1,0 +1,100 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+	<controls>
+
+		<control type="image">
+			<posx>295</posx>
+			<posy>90</posy>
+			<width>128</width>
+			<height>29</height>
+			<aspectratio>keep</aspectratio>
+			<texture>focuslogosmall.png</texture>
+		</control>
+		
+		<control type="label">
+			<description>date label</description>
+			<posx>0</posx>
+			<posy>140</posy>
+			<width>720</width>
+			<label>$INFO[System.Date] [COLOR=sublabel-text] |  $INFO[System.Time][/COLOR]</label>
+			<align>center</align>
+			<aligy>center</aligy>
+			<font>h2</font>
+			<include>fadeinout</include>
+		</control>
+
+		<control type="fixedlist" id="52">
+			<posx>160</posx>
+			<posy>200</posy>
+			<width>400</width>
+			<height>500</height>
+			<onleft>100</onleft>
+			<onright>100</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<wraparound>yes</wraparound>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<include>fadeinout</include>
+			
+			<itemlayout height="40" width="400">
+				<control type="label">
+					<posx>65</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<font>h2</font>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			
+			<focusedlayout height="70"  width="451">
+				<control type="image">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>400</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texture>list-focus.png</texture>
+				</control>
+
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>48</width>
+					<height>48</height>
+					<aspectratio>keep</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+
+				<control type="label">
+					<posx>65</posx>
+					<posy>3</posy>
+					<width>250</width>
+					<font>h1</font>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				
+				<control type="label">
+					<posx>65</posx>
+					<posy>33</posy>
+					<width>250</width>
+					<font>h5</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Label2</info>
+				</control>
+		
+			</focusedlayout>
+		</control>
+
+	</controls>
+</window>

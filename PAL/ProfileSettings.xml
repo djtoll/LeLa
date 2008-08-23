@@ -1,0 +1,214 @@
+<window id="130">
+	<defaultcontrol>1</defaultcontrol>
+	<visible>Window.IsActive(130)</visible>
+	
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>150</posx>
+		<posy>85</posy>
+	</coordinates>
+	
+	<controls>
+		
+		<control type="group">
+			
+			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(103)">Conditional</animation>
+			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(131)">Conditional</animation>
+			
+			<control type="image">
+				<description>background image</description>
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>490</width>
+				<height>455</height>
+				<texture border="38">dialogpanel.png</texture>
+			</control>
+			
+			<control type="image" id="2">
+				<description>profile image</description>
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>96</width>
+				<height>96</height>
+				<align>left</align>
+				<aspectratio>stretch</aspectratio>
+				<texture>unknown-user.png</texture>
+			</control>
+	
+			<!--
+			<control type="label" id="0">
+				<description>profile name label</description>
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<align>left</align>
+				<font>h4</font>
+				<label>$LOCALIZE[ 20093 ]</label>
+			</control>
+			-->
+			
+			<control type="label" id="1000">
+				<description>profile name</description>
+				<posx>110</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<align>left</align>
+				<font>h1</font>
+				<textcolor>label-text</textcolor>
+			</control>
+			
+			<control type="label" id="0">
+				<description>profile directory label</description>
+				<posx>110</posx>
+				<posy>40</posy>
+				<width>305</width>
+				<align>left</align>
+				<font>h4</font>
+				<label>$LOCALIZE[20070]</label>
+			</control>
+			
+			<control type="label" id="1001">
+				<description>profile directory</description>
+				<posx>110</posx>
+				<posy>70</posy>
+				<width>305</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>true</scroll>
+			</control>
+			
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>0</posx>
+				<posy>120</posy>
+				<width>420</width>
+				<height>210</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>60</pagecontrol>
+				<onleft>28</onleft>
+				<onright>60</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+			</control>
+
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<posx>530</posx>
+				<posy>150</posy>
+				<height>33</height>
+				<font>menu</font>
+				<textoffsetx>10</textoffsetx>
+				<aligny>-</aligny>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+			</control>
+			
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<posx>530</posx>
+				<posy>150</posy>
+				<height>33</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textoffsetx>10</textoffsetx>
+				<aligny>-</aligny>
+				<textureradiofocus>settings-check-box.png</textureradiofocus>
+				<textureradionofocus>settings-check-boxNF.png</textureradionofocus>
+			</control>
+			
+			<control type="spincontrolex" id="9">
+				<description>Default SpinControlex</description>
+				<posx>530</posx>
+				<posy>150</posy>
+				<height>33</height>
+				<width>300</width>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textureup>scroll-up.png</textureup>
+				<texturedown>scroll-down.png</texturedown>
+				<textureupfocus>scroll-up-focus.png</textureupfocus>
+				<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+				<font>h4</font>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<aligny>-</aligny>
+				<reverse>yes</reverse>
+			</control>
+			
+			<control type="sliderex" id="10">
+				<description>Default Slider</description>
+				<posx>1530</posx>
+				<posy>150</posy>
+				<height>29</height>
+				<width>300</width>
+				<texturefocus>input-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<sliderwidth>100</sliderwidth>
+				<sliderheight>20</sliderheight>
+				<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+				<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+				<textureslidernibfocus>osd_slider_nibFO.png</textureslidernibfocus>
+				<font>h4</font>
+				<textcolor>white</textcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>12</textoffsetx>
+			</control>
+			
+			<control type="image" id="11">
+				<description>separator image</description>
+				<width>350</width>
+				<height>0</height>
+				<texture>separatorOSD.png</texture>
+				<visible>false</visible>
+			</control>
+			
+			<control type="button" id="28">
+				<description>Ok Button</description>
+				<posx>230</posx>
+				<posy>350</posy>
+				<width>90</width>
+				<height>36</height>
+				<font>buttonD</font>
+				<align>center</align>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<texturenofocus>button2.png</texturenofocus>
+				<texturefocus>button2-focus.png</texturefocus>
+				<label>186</label>
+				<onup>5</onup>
+				<onleft>29</onleft>
+				<onright>29</onright>
+				<ondown>5</ondown>
+				<textcolor>button-text</textcolor>
+				<focusedcolor>button-alttext</focusedcolor>
+			</control>
+			
+			<control type="button" id="29">
+				<description>Cancel Button</description>
+				<posx>330</posx>
+				<posy>350</posy>
+				<width>90</width>
+				<height>36</height>
+				<font>buttonD</font>
+				<align>center</align>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<texturenofocus>button2.png</texturenofocus>
+				<texturefocus>button2-focus.png</texturefocus>
+				<label>222</label>
+				<onup>5</onup>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<ondown>5</ondown>
+				<textcolor>button-text</textcolor>
+				<focusedcolor>button-alttext</focusedcolor>
+			</control>
+		
+		</control>
+
+	</controls>
+</window>

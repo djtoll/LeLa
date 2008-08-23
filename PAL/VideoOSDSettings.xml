@@ -1,0 +1,148 @@
+<window id="123">
+	<defaultcontrol>2</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>150</posx>
+		<posy>60</posy>
+	</coordinates>
+	
+	<include>dialog-open</include>
+	
+	<controls>
+	
+	
+		
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>-35</posx>
+			<posy>-30</posy>
+			<width>480</width>
+			<height>420</height>
+			<texture border="38">dialogpanel.png</texture>
+			<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
+		</control>
+		
+		<control type="label" id="2">
+			<description>Settings Label</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>420</width>
+			<align>left</align>
+			<font>h1</font>
+		</control>
+
+		<control type="label" id="3">
+			<description>No Settings Label</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>420</width>
+			<align>left</align>
+			<label>13390</label>
+			<font>h1</font>
+		</control>
+		
+		<control type="spincontrol" id="60">
+			<description>Next page button</description>
+			<posx>365</posx>
+			<posy>10</posy>
+			<subtype>page</subtype>
+			<font>h4</font>
+			<onleft>5</onleft>
+			<onright>28</onright>
+			<ondown>5</ondown>
+			<onup>28</onup>
+			<showonepage>false</showonepage>
+			<visible>false</visible>
+		</control>
+		
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>410</width>
+			<height>315</height>
+			<itemgap>2</itemgap>
+			<pagecontrol>60</pagecontrol>
+			<onleft>28</onleft>
+			<onright>60</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+		
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>33</height>
+			<font>menu</font>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+		</control>
+		
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>33</height>
+			<font>menu</font>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+		</control>
+		
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>33</height>
+			<width>300</width>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>menu</font>
+			<textcolor>button-text</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>10</textoffsetx>
+			<textoffsety>3</textoffsety>
+			<aligny>-</aligny>
+			<reverse>yes</reverse>
+			<spinwidth>15</spinwidth>
+			<spinheight>15</spinheight>
+		</control>
+		
+		<control type="sliderex" id="10">
+			<description>Default Slider</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>33</height>
+			<width>300</width>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>list-nofocus.png</texturenofocus>
+			<sliderwidth>100</sliderwidth>
+			<sliderheight>20</sliderheight>
+			<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+			<textureslidernibfocus>osd_slider_nibFO.png</textureslidernibfocus>
+			<font>menu</font>
+			<textcolor>button-text</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>10</textoffsetx>
+		</control>
+		
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>0</height>
+			<texture>separatorOSD.png</texture>
+			<visible>false</visible>
+		</control>
+		
+	</controls>
+</window>

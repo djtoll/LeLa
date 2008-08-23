@@ -1,0 +1,181 @@
+<window id="131">
+	<defaultcontrol>5</defaultcontrol>
+	
+	<include>dialog-open</include>
+	<visible>Window.IsActive(131)</visible>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>180</posx>
+		<posy>150</posy>
+	</coordinates>
+	
+	<controls>
+		
+		
+		<control type="image">
+			<posx>-35</posx>
+			<posy>-30</posy>
+			<width>430</width>
+			<height>405</height>
+			<texture border="38">dialogpanel.png</texture>
+		</control>
+		
+		<control type="label" id="2">
+			<description>Settings Label</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>410</width>
+			<align>left</align>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+		</control>
+		
+		<control type="label" id="3">
+			<description>No Settings Label</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>410</width>
+			<align>left</align>
+			<label>12016</label>
+			<font>h1</font>
+		</control>
+		
+		<control type="spincontrol" id="60">
+			<description>Next page button</description>
+			<posx>371</posx>
+			<posy>8</posy>
+			<subtype>page</subtype>
+			<font>h4D</font>
+			<onleft>5</onleft>
+			<onright>28</onright>
+			<ondown>5</ondown>
+			<onup>28</onup>
+			<showonepage>false</showonepage>
+		</control>
+		
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>360</width>
+			<height>270</height>
+			<itemgap>0</itemgap>
+			<pagecontrol>60</pagecontrol>
+			<onleft>28</onleft>
+			<onright>60</onright>
+			<onup>28</onup>
+			<ondown>28</ondown>
+		</control>
+		
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<height>33</height>
+			<font>h4D</font>
+			<textoffsetx>10</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<aligny>-</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<height>33</height>
+			<font>h4D</font>
+			<textoffsetx>10</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<aligny>-</aligny>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+		
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<height>33</height>
+			<width>300</width>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<font>h4D</font>
+			<textcolor>white</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>12</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		
+		<control type="sliderex" id="10">
+			<description>Default Slider</description>
+			<posx>1530</posx>
+			<posy>150</posy>
+			<height>31</height>
+			<width>300</width>
+			<texturefocus>input-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<sliderwidth>100</sliderwidth>
+			<sliderheight>20</sliderheight>
+			<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+			<textureslidernibfocus>osd_slider_nibFO.png</textureslidernibfocus>
+			<font>h4D</font>
+			<textcolor>white</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>12</textoffsetx>
+		</control>
+		
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>5</height>
+			<texture>separatorOSD.png</texture>
+			<visible>false</visible>
+		</control>
+		
+		<control type="button" id="28">
+			<description>Ok button</description>
+			<posx>150</posx>
+			<posy>300</posy>
+			<width>100</width>
+			<height>36</height>
+			<label>186</label>
+			<font>buttonD</font>
+			<focusedcolor>button-alttext</focusedcolor>
+			<textoffsety>2</textoffsety>
+			<aligny>-</aligny>
+			<align>center</align>
+			<texturenofocus>button2.png</texturenofocus>
+			<texturefocus>button2-focus.png</texturefocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>11</onup>
+			<ondown>11</ondown>
+		</control>
+		
+		<control type="button" id="29">
+			<description>Cancel button</description>
+			<posx>260</posx>
+			<posy>300</posy>
+			<width>100</width>
+			<height>36</height>
+			<label>222</label>
+			<font>buttonD</font>
+			<focusedcolor>button-alttext</focusedcolor>
+			<textoffsety>2</textoffsety>
+			<aligny>-</aligny>
+			<align>center</align>
+			<texturenofocus>button2.png</texturenofocus>
+			<texturefocus>button2-focus.png</texturefocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>11</onup>
+			<ondown>11</ondown>
+		</control>
+
+	</controls>
+</window>

@@ -1,0 +1,143 @@
+<window id="2007">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control type="image" id="13">
+			<description>pause image</description>
+			<align>right</align>
+			<posx>600</posx>
+			<posy>25</posy>
+			<height>64</height>
+			<width>128</width>
+			<visible>no</visible>
+			<texture>video-pause.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		
+		<control type="fadelabel" id="200">
+			<posx>660</posx>
+			<posy>9</posy>
+			<width>315</width>
+			<label>$INFO[System.Time]</label>
+			<scrollout>false</scrollout>
+			<pauseatend>5000</pauseatend>
+			<textcolor>ffffffff</textcolor>
+			<align>right</align>
+			<font>date</font>
+			<include>home-menubar</include>
+			<visible>Player.ShowInfo</visible>
+		</control>
+		
+		<control type="group" id="1">
+			<posx>-10</posx>
+			<posy>430</posy>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			
+			<control type="image" id="1">
+				<description>media info background image</description>
+				<posx>-20</posx>
+				<posy>0</posy>
+				<width>760</width>
+				<height>130</height>
+				<texture border="3">osd-bar.png</texture>
+				<visible>Player.HasAudio</visible>
+			</control>
+	
+			<control type="group" id="1">
+				<visible>Player.ShowInfo + Player.HasMedia</visible>
+				
+				<control type="image" id="1">
+					<description>cover image</description>
+					<posx>30</posx>
+					<posy>0</posy>
+					<width>92</width>
+					<height>130</height>
+					<info>MusicPlayer.Cover</info>
+					<aspectratio align="center">keep</aspectratio>
+				</control>
+				
+				<control type="label" id="1">
+					<description>Title</description>
+					<width>560</width>
+					<posx>140</posx>
+					<posy>3</posy>
+					<info>MusicPlayer.Title</info>
+					<align>left</align>
+					<font>h1</font>
+				</control>
+				
+				<control type="label" id="1">
+					<description>Album</description>
+					<width>560</width>
+					<posx>140</posx>
+					<posy>43</posy>
+					<info>MusicPlayer.Album</info>
+					<align>left</align>
+					<font>h2</font>
+					<textcolor>sublabel-text</textcolor>
+				</control>
+				
+				<control type="label" id="1">
+					<description>Artist</description>
+					<width>560</width>
+					<posx>140</posx>
+					<posy>73</posy>
+					<info>Musicplayer.Artist</info>
+					<align>left</align>
+					<font>h2</font>
+					<textcolor>sublabel-text</textcolor>
+				</control>
+				
+				<control type="label" id="1">
+					<description>time label</description>
+					<width>200</width>
+					<posx>700</posx>
+					<posy>73</posy>
+					<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+					<align>right</align>
+					<font>h2</font>
+				</control>
+				
+				<control type="label" id="1">
+					<description>Playlist Pos No</description>
+					<width>200</width>
+					<posx>700</posx>
+					<posy>43</posy>
+					<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
+					<visible>!MusicPartyMode.Enabled</visible>
+					<align>right</align>
+					<font>h4</font>
+				</control>
+				
+				<control type="label" id="1">
+					<description>PartyMode Enabled</description>
+					<width>200</width>
+					<posx>700</posx>
+					<posy>3</posy>
+					<label>589</label>
+					<visible>MusicPartyMode.Enabled</visible>
+					<align>right</align>
+					<font>h4</font>
+				</control>
+				
+				<control type="progress" id="1">
+					<description>Progressbar</description>
+					<posx>140</posx>
+					<posy>110</posy>
+					<width>560</width>
+					<height>5</height>
+					<info>Player.Progress</info>
+					<texturebg>progress_back.png</texturebg>
+					<lefttexture>progress_left.png</lefttexture>
+					<midtexture>progress_mid.png</midtexture>
+					<righttexture>progress_right.png</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<visible>true</visible>
+				</control>
+				
+			</control>
+
+	</control>
+
+	</controls>
+</window>

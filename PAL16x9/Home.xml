@@ -1,0 +1,208 @@
+<window id="0">
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		
+		<posx>-460</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+
+<control type="image">
+      <description>Background</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1280</width>
+      <height>720</height>
+      <visible>true</visible>
+      <texture border="0" flipY="false" flipX="false">bg.png</texture>
+</control>
+  <control type="label">
+        <description>Time</description>
+        <posx>20</posx>
+        <posy>20</posy>
+        <visible>true</visible>
+        <align>left</align>
+        <aligny>center</aligny>
+        <scroll>false</scroll>
+        <label>6</label>
+        <info>System.Time</info>
+        <haspath>false</haspath>
+        <font>Clock</font>
+        <textcolor>FF373737</textcolor>
+        <wrapmultiline>false</wrapmultiline>
+  </control>
+
+<control type="wraplist" id="1">
+      <description>My first wraplist container</description>
+      <posx>500</posx>
+      <posy>-44</posy>
+      <width>1280</width>
+      <height>764</height>
+      <visible>true</visible>
+      <onup>2</onup>
+      <ondown>3</ondown>
+      <onleft>1</onleft>
+      <onright>1</onright>
+      <viewtype label="3D list">list</viewtype>
+      <orientation>vertical</orientation>
+      <pagecontrol>25</pagecontrol>
+      <focusposition>1</focusposition>
+      <scrolltime>200</scrolltime>
+      <content>
+<item id="1">
+<icon>Movies.png</icon>
+<thumb>MoviesI.png</thumb>
+<onclick>XBMC.ActivateWindow(MyVideo)</onclick>
+</item>
+<item id="2">
+<icon>Music.png</icon>
+<thumb>MusicI.png</thumb>
+<onclick>XBMC.ActivateWindow(501)</onclick>
+</item>
+<item id="3">
+<icon>System.png</icon>
+<thumb>SystemI.png</thumb>
+<onclick>XBMC.ActivateWindow(4)</onclick>
+</item>
+<item id="4">
+<icon>Images.png</icon>
+<thumb>ImagesI.png</thumb>
+<onclick>XBMC.ActivateWindow(2)</onclick>
+</item>
+      </content>
+      <itemlayout width="600" height="200">
+        <control type="image">
+            <posx>-60</posx>
+            <posy>-4</posy>
+            <width>-</width>
+            <height>-</height>
+            <info>ListItem.thumb</info>
+	<animation effect="fade" time="100">Focus</animation>
+	<animation effect="fade" time="200">Unfocus</animation>
+        </control>
+      </itemlayout>
+      <focusedlayout height="200" width="600">
+	    <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>-</width>
+            <height>-</height>
+            <info>ListItem.ActualIcon</info>
+<animation type="Focus">
+  <effect type="fade" start="0" end="100" time="200"/>
+  <effect type="zoom" start="10,10" center="800,100" time="200"/>
+</animation>
+<animation type="Unfocus">
+  <effect type="fade" start="100" end="0" time="200"/>
+  <effect type="zoom" end="10,10" center="800,100" time="200"/>
+</animation>
+        </control>
+      </focusedlayout>
+</control>
+
+<control type="image">
+      <description>Plays</description>
+	<visible>Player.HasVideo</visible>
+      <posx>60</posx>
+      <posy>470</posy>
+      <width>260</width>
+      <height>200</height>
+      <texture border="0" flipY="false" flipX="false">Pbg.png</texture>
+</control>
+
+<control type="videowindow" id="2">
+      <description>My first video control</description>
+      <posx>65</posx>
+      <posy>475</posy>
+      <width>250</width>
+      <height>190</height>
+<visible>Player.HasVideo</visible>
+</control>
+
+<control type="image">
+      <description>Zatemn</description>
+	<visible>Player.HasVideo</visible>
+      <posx>60</posx>
+      <posy>470</posy>
+      <width>260</width>
+      <height>200</height>
+      <texture border="0" flipY="false" flipX="false">Pzabg.png</texture>
+</control>
+
+  <control type="label">
+        <description>Current Play</description>
+	<visible>Player.HasVideo</visible>
+        <posx>70</posx>
+        <posy>680</posy>
+        <visible>true</visible>
+        <align>left</align>
+        <aligny>center</aligny>
+        <scroll>false</scroll>
+        <label>6</label>
+        <info>VideoPlayer.Title</info>
+        <haspath>false</haspath>
+        <font>font6</font>
+        <textcolor>FF373737</textcolor>
+        <wrapmultiline>false</wrapmultiline>
+  </control>
+
+
+
+<control type="image">
+      <description>Plays</description>
+	<visible>Player.HasAudio</visible>
+      <posx>60</posx>
+      <posy>470</posy>
+      <width>260</width>
+      <height>200</height>
+      <texture border="0" flipY="false" flipX="false">Pbg.png</texture>
+</control>
+
+<control type="videowindow" id="2">
+      <description>My first video control</description>
+      <posx>65</posx>
+      <posy>475</posy>
+      <width>250</width>
+      <height>190</height>
+<visible>Player.HasVideo</visible>
+</control>
+
+<control type="image">
+      <description>Plays</description>
+	<visible>Player.HasAudio</visible>
+      <posx>65</posx>
+      <posy>475</posy>
+      <width>250</width>
+      <height>190</height>
+ <info>MusicPlayer.Cover</info>
+</control>
+
+<control type="image">
+      <description>Zatemn</description>
+	<visible>Player.HasAudio</visible>
+      <posx>60</posx>
+      <posy>470</posy>
+      <width>260</width>
+      <height>200</height>
+      <texture border="0" flipY="false" flipX="false">Pzabg.png</texture>
+</control>
+
+  <control type="label">
+        <description>Current Play</description>
+	<visible>Player.HasAudio</visible>
+        <posx>70</posx>
+        <posy>680</posy>
+        <visible>true</visible>
+        <align>left</align>
+        <aligny>center</aligny>
+        <scroll>false</scroll>
+        <label>6</label>
+        <info>MusicPlayer.Title</info>
+        <haspath>false</haspath>
+        <font>font6</font>
+        <textcolor>FF373737</textcolor>
+        <wrapmultiline>false</wrapmultiline>
+  </control>
+	</controls>
+</window>

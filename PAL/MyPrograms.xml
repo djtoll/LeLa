@@ -1,0 +1,90 @@
+<window id="1">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>Home</previouswindow>
+	
+	<controls>
+		
+		<include>background</include>
+		<include>infobar</include>
+
+		<control type="group">
+			<description>page content</description>
+			<include>ListView</include>
+			<include>Icons</include>
+			<include>viewsmenu</include>
+			<include>viewsmenucontext</include>
+			<include>PageControl</include>		
+			
+			
+<!--- COMMON -------------------------->
+					
+			<control type="image" id="999">
+				<description>list item thumb</description>
+				<posx>430</posx>
+				<posy>90</posy>
+				<height>256</height>
+				<width>256</width>
+				<info>ListItem.Thumb</info>
+				<visible>Control.IsVisible(50)</visible>
+				<aspectratio align="bottom">keep</aspectratio>
+				<include>pageslide</include>
+			</control>
+			
+			<control type="image" id="999">
+				<description>list item icon</description>
+				<posx>430</posx>
+				<posy>90</posy>
+				<height>256</height>
+				<width>256</width>
+				<texture>DefaultProgramBig.png</texture>
+				<visible>Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+				<aspectratio align="bottom">keep</aspectratio>
+				<include>pageslide</include>
+			</control>
+		
+			<control type="image" id="999">
+				<description>list item icon</description>
+				<posx>430</posx>
+				<posy>345</posy>
+				<height>256</height>
+				<width>256</width>
+				<info>ListItem.Icon</info>
+				<visible>false</visible>
+				<texture flipy="true" diffuse="fade2.png">-</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<include>pageslide</include>
+			</control>
+
+		</control>
+			
+<!-- PAGE HEADER -->	
+						
+		<include>allscreens</include>
+		
+		<control type="label">
+			<include>home-menubar</include>
+			<posx>0</posx>
+			<posy>4</posy>
+			<width>752</width>
+			<align>center</align>
+			<label>10506</label>
+			<font>page</font>
+			<visible>IsEmpty(container.pluginname)</visible>
+		</control>
+		
+		<control type="label">
+			<include>home-menubar</include>
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>720</width>
+			<align>center</align>
+			<info>Container.PluginName</info>
+			<font>page</font>
+			<visible>!IsEmpty(container.pluginname)</visible>
+		</control>	
+			
+	<include>FilesMenu</include>
+	
+	</controls>
+</window>

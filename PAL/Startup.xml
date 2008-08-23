@@ -1,0 +1,53 @@
+﻿<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		
+<!--- STARTUP PLAYLIST ---------------------------------->		
+
+		<control type="button" id="10">
+			<description>trigger without playlist</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" delay="3000" end="100">Focus</animation>
+			<visible>!Skin.Hassetting(startup-playlist)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>trigger with playlist</description>
+			<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" delay="3000" end="100">Focus</animation>
+			<visible>Skin.Hassetting(startup-playlist)</visible>
+		</control>
+		
+		<control type="image">
+			<description>startup animation</description>
+			<posx>285</posx>
+			<posy>240</posy>
+			<width>148</width>
+			<height>42</height>
+			<texture>focusstartup.png</texture>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" easing="InOut" time="1000" />
+				<effect type="fade" start="100" end="0" delay="2000" time="1000" />
+			</animation>
+		</control>
+		
+		<control type="image">
+			<description>startup animation</description>
+			<posx>285</posx>
+			<posy>282</posy>
+			<width>148</width>
+			<height>42</height>
+			<texture flipy="true" diffuse="fade.png">focusstartup.png</texture>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" easing="InOut" time="1000" />
+				<effect type="fade" start="100" end="0" delay="2000" time="1000" />
+			</animation>
+		</control>
+		
+	</controls>
+</window>

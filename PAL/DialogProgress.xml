@@ -1,0 +1,118 @@
+<window id="101">
+	<defaultcontrol>10</defaultcontrol>
+	
+	<animation type="WindowOpen">
+		<effect type="zoom" start="50" end="100" center="212,125" tween="back" time="250" />
+		<effect type="fade" start="0" end="300" time="400" />
+	</animation>
+	<animation type="WindowClose">
+		<effect type="zoom" start="100" end="50" center="212,125" time="150" />
+		<effect type="fade" start="300" end="0" time="200" />
+	</animation>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>183</posx>
+		<posy>100</posy>
+	</coordinates>
+	
+	<controls>
+		
+		<control type="group">
+			
+			<control type="image">
+				<description>background image</description>
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>425</width>
+				<height>280</height>
+				<texture border="38">dialogpanel.png</texture>
+				<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
+			</control>
+
+			<control type="label" id="1">
+				<description>dialog Heading</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>345</width>	
+				<label>-</label>
+				<align>center</align>
+				<font>h1</font>
+				<textcolor>button-text</textcolor>
+			</control>
+				
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>0</posx>
+				<width>345</width>	
+				<align>center</align>
+				<posy>40</posy>
+				<label>-</label>
+				<font>h2</font>
+				<textcolor>button-text</textcolor>
+			</control>
+			
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>0</posx>
+				<width>345</width>	
+				<align>center</align>
+				<posy>70</posy>
+				<label>-</label>
+				<font>h4</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="4">
+				<description>dialog line 3</description>
+				<posx>0</posx>
+				<width>345</width>	
+				<align>center</align>
+				<posy>100</posy>
+				<label>-</label>
+				<font>h4</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="image">
+				<posx>10</posx>
+				<posy>140</posy>
+				<width>325</width>
+				<height>8</height>
+				<texture>progressbar-background.png</texture>
+			</control>
+			
+			<control type="progress" id="20">
+				<description>progress control</description>
+				<posx>10</posx>
+				<posy>140</posy>
+				<width>325</width>
+				<height>8</height>
+				<texturebg>progressbar-background.png</texturebg>
+				<lefttexture>progress-left.png</lefttexture>
+				<midtexture>progress-middle.png</midtexture>
+				<righttexture>progress-right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			
+			<control type="button" id="10">
+				<description>Cancel button</description>
+				<posx>128</posx>
+				<posy>175</posy>
+				<width>90</width>
+				<height>36</height>
+				<label>222</label>
+				<font>buttonD</font>
+				<align>center</align>
+				<textoffsety>3</textoffsety>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+			
+		</control>
+	</controls>
+</window>

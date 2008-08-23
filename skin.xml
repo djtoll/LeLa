@@ -1,0 +1,15 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <version>2.1</version>
+  
+  <credits>
+    <skinname>Focus</skinname>
+    <name>by Jeroen</name>
+    <name>Thanks:</name>
+    <name>the XBMC development team</name>
+    <name>all plugin, script and skin developers,</name>
+    <name>and anyone contributing to XBMC in any way</name>
+    <name>and YOU for trying out this skin</name>
+  </credits>
+</skin>

@@ -1,0 +1,302 @@
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>195</posx>
+		<posy>105</posy>
+	</coordinates>
+
+	<controls>
+		
+		<control type="group">
+			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(128)">Conditional</animation>
+	
+			<control type="image">
+				<posx>-35</posx>
+				<posy>-27</posy>
+				<width>400</width>
+				<height>450</height>
+				<texture border="38">dialogpanel.png</texture>
+			</control>
+	
+			<control type="label" id="411">
+				<description>heading label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>380</width>
+				<align>left</align>
+				<font>h1</font>
+				<label>1023</label>
+				<textcolor>label-text</textcolor>
+			</control>
+			
+			<control type="image" id="0">
+				<posx>0</posx>
+				<posy>38</posy>
+				<width>330</width>
+				<height>37</height>
+				<texture border="2">dialog-input.png</texture>
+			</control>
+
+			<control type="label" id="412">
+				<description>path label control</description>
+				<posx>10</posx>
+				<posy>40</posy>
+				<width>300</width>
+				<align>left</align>
+				<font>h4</font>
+				<haspath>true</haspath>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+	
+			<control type="list" id="450">
+				<posx>0</posx>
+				<posy>85</posy>
+				<width>330</width>
+				<height>245</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				
+				<itemlayout height="35">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>330</width>
+						<height>33</height>
+						<texture>list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>4</posx>
+						<posy>3</posy>
+						<width>28</width>
+						<height>28</height>
+						<info>ListItem.ActualIcon</info>
+					</control>
+					<control type="label">
+						<posx>37</posx>
+						<posy>0</posy>
+						<width>310</width>
+						<height>31</height>
+						<font>menu</font>
+						<aligny>center</aligny>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				
+				<focusedlayout height="35">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>330</width>
+						<height>33</height>
+						<visible>!Control.HasFocus(450)</visible>
+						<texture>list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>330</width>
+						<height>33</height>
+						<visible>Control.HasFocus(450)</visible>
+						<texture>list-focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>4</posx>
+						<posy>3</posy>
+						<width>28</width>
+						<height>28</height>
+						<info>ListItem.ActualIcon</info>
+					</control>
+					<control type="label">
+						<posx>37</posx>
+						<posy>0</posy>
+						<width>310</width>
+						<height>31</height>
+						<font>menu</font>
+						<aligny>center</aligny>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="panel" id="451">
+				<posx>0</posx>
+				<posy>80</posy>
+				<width>345</width>
+				<height>250</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>451</onup>
+				<ondown>451</ondown>
+				<scrolltime>200</scrolltime>
+				<viewtype label="536">icon</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<orientation>vertical</orientation>
+				
+				<itemlayout height="125" width="115">
+					<control type="image">
+						<posx>3</posx>
+						<posy>3</posy>
+						<width>94</width>
+						<height>94</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>98</posy>
+						<width>97</width>
+						<font>h4</font>
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				
+				<focusedlayout height="125" width="115">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>100</height>
+						<visible>!Control.HasFocus(451)</visible>
+						<texture border="2">list-nofocus.png</texture>
+					</control>
+					
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>100</height>
+						<visible>Control.HasFocus(451)</visible>
+						<texture border="2">list-focus.png</texture>
+					</control>
+					
+					<control type="image">
+						<posx>3</posx>
+						<posy>3</posy>
+						<width>94</width>
+						<height>94</height>
+						<info>ListItem.Icon</info>
+					</control>
+					
+					<control type="label">
+						<posx>50</posx>
+						<posy>98</posy>
+						<width>97</width>
+						<font>h4</font>
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<control type="group">
+				<visible>false</visible>
+				<posx>400</posx>
+				<posy>80</posy>
+				
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>30</width>
+					<height>30</height>
+					<onclick>PageUp(60)</onclick>
+					<texturefocus>scrollbar_arrow_up_focus.png</texturefocus>
+					<texturenofocus>scrollbar_arrow_up.png</texturenofocus>
+					<visible>Control.IsVisible(60)</visible>
+				</control>
+				<control type="scrollbar" id="60">
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>30</width>
+					<height>375</height>
+					<texturesliderbackground>button-nofocus.png</texturesliderbackground>
+					<texturesliderbar>scrollbar_bar.png</texturesliderbar>
+					<texturesliderbarfocus>scrollbar_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<onleft>450</onleft>
+					<onright>9000</onright>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+					<visible>Skin.HasSetting(UseAdvancedMouse)</visible>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>415</posy>
+					<width>30</width>
+					<height>30</height>
+					<onclick>PageDown(60)</onclick>
+					<texturefocus>scrollbar_arrow_down_focus.png</texturefocus>
+					<texturenofocus>scrollbar_arrow_down.png</texturenofocus>
+					<visible>Control.IsVisible(60)</visible>
+				</control>
+			</control>
+			
+			<control type="group" id="60">
+				<control type="button" id="413">
+					<description>OK button</description>
+					<posx>140</posx>
+					<posy>345</posy>
+					<width>90</width>
+					<height>36</height>
+					<aligny>-</aligny>
+					<align>center</align>
+					<textoffsety>3</textoffsety>
+					<font>buttonD</font>
+					<label>186</label>
+					<texturenofocus>buttonD.png</texturenofocus>
+					<texturefocus>buttonD-focus.png</texturefocus>
+					<onleft>60</onleft>
+					<onright>414</onright>
+					<onup>450</onup>
+					<ondown>413</ondown>
+				</control>
+				<control type="button" id="414">
+					<description>Cancel button</description>
+					<posx>240</posx>
+					<posy>345</posy>
+					<width>90</width>
+					<height>36</height>
+					<aligny>-</aligny>
+					<textoffsety>3</textoffsety>
+					<align>center</align>
+					<font>buttonD</font>
+					<label>222</label>
+					<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
+					<onleft>60</onleft>
+					<onright>415</onright>
+					<onup>450</onup>
+					<ondown>414</ondown>
+				</control>
+				<control type="button" id="415">
+					<description>Create folder button</description>
+					<posx>0</posx>
+					<posy>345</posy>
+					<width>110</width>
+					<height>36</height>
+					<aligny>-</aligny>
+					<textoffsety>3</textoffsety>
+					<align>center</align>
+					<font>buttonD</font>
+					<label>119</label>
+					<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
+					<onleft>60</onleft>
+					<onright>413</onright>
+					<onup>450</onup>
+					<ondown>415</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

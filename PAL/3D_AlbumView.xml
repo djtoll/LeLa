@@ -1,0 +1,579 @@
+<includes>
+	<include name="AlbumCoverflow">
+
+		<control type="group" id="7001">
+			<camera x="360" y="228" />
+			<posy>80</posy>
+			<visible>Control.IsVisible(58) + Container.OnNext</visible>
+            <animation effect="slide" end="-60,0" time="250" reversible="false">Hidden</animation>
+            
+			<control type="group">
+				<posx>20</posx>
+				<visible>Container.OnNext</visible>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+				<animation effect="rotatey" center="0" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-4).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-4).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>80</posx>
+				<animation effect="rotatey" center="60" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-3).Icon</info>
+					</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>140</posx>
+				<animation effect="rotatey" center="120" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>540</posx>
+				<visible>!Container.OnNext</visible>
+				<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+				<animation effect="rotatey" center="780" start="70" end="70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>480</posx>
+				<animation effect="rotatey" center="720" start="70" end="70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>420</posx>
+				<animation effect="rotatey" center="660" start="70" end="70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(1).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(1).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>Container.OnNext</visible>
+				<animation effect="slide" end="-50,0" time="250" reversible="false">Hidden</animation>
+				
+				<control type="group">
+					<posx>360</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="rotatey" center="600" start="0" end="-70" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+					<animation effect="rotatey" center="600" start="70" end="70" time="0" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>350</height>
+						<info>Container(58).ListItem(0).Icon</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>352</posy>
+						<width>220</width>
+						<height>350</height>
+						<texture flipy="true" diffuse="fade2.png" />
+						<info>Container(58).ListItem(0).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>250</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="rotatey" center="250" start="0" end="-70" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>350</height>
+						<info>Container(58).ListItem(-1).Icon</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>352</posy>
+						<width>220</width>
+						<height>350</height>
+						<texture flipy="true" diffuse="fade2.png" />
+						<info>Container(58).ListItem(-1).Icon</info>
+					</control>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group" id="7002">
+			<camera x="360" y="228" />
+			<posy>80</posy>
+			<visible>Control.IsVisible(58) + Container.OnPrevious</visible>
+        	<animation effect="slide" end="60,0" time="250" reversible="false">Hidden</animation>
+        	
+			<control type="group">
+				<posx>480</posx>
+				<visible>Container.OnPrevious</visible>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+				<animation effect="rotatey" center="720" start="70" end="70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(4).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(4).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>420</posx>
+				<animation effect="rotatey" center="660" start="70" end="70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>360</posx>
+				<animation effect="rotatey" center="600" start="70" end="70" time="0" condition="true">Conditional</animation>.
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>-40</posx>
+				<visible>!Container.OnPrevious</visible>
+				<animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+				<animation effect="rotatey" center="-60" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>20</posx>
+				<animation effect="rotatey" center="0" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>80</posx>
+				<animation effect="rotatey" center="60" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-1).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-1).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>Container.OnPrevious</visible>
+				<animation effect="slide" end="50,0" time="250" reversible="false">Hidden</animation>
+				
+				<control type="group">
+					<posx>140</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="rotatey" center="120" start="0" end="70" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+					<animation effect="rotatey" center="120" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>350</height>
+						<info>Container(58).ListItem(0).Icon</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>352</posy>
+						<width>220</width>
+						<height>350</height>
+						<texture flipy="true" diffuse="fade2.png" />
+						<info>Container(58).ListItem(0).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>250</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="rotatey" center="490" start="0" end="70" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>350</height>
+						<info>Container(58).ListItem(1).Icon</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>352</posy>
+						<width>220</width>
+						<height>350</height>
+						<texture flipy="true" diffuse="fade2.png" />
+						<info>Container(58).ListItem(1).Icon</info>
+					</control>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group" id="7000">
+			<camera x="360" y="228" />
+			<posy>80</posy>
+			<visible>Control.IsVisible(58) + !Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+			
+			<control type="group">
+				<posx>20</posx>
+				<animation effect="rotatey" center="0" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>80</posx>
+				<animation effect="rotatey" center="60" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>140</posx>
+				<animation effect="rotatey" center="120" start="-70" end="-70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-1).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(-1).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>480</posx>
+				<animation effect="rotatey" center="720" start="70" end="70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>420</posx>
+				<animation effect="rotatey" center="660" start="70" end="70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>360</posx>
+				<animation effect="rotatey" center="600" start="70" end="70" time="0" condition="true">Conditional</animation>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(1).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(1).Icon</info>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>250</posx>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>350</height>
+					<info>Container(58).ListItem(0).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>352</posy>
+					<width>220</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="fade2.png" />
+					<info>Container(58).ListItem(0).Icon</info>
+				</control>
+			</control>
+		</control>
+		
+		<control type="wraplist" id="58">
+			<posx>11</posx>
+			<posy>628</posy>
+			<width>7</width>
+			<height>1</height>
+			<onleft>58</onleft>
+			<onright>58</onright>
+			<onup>9000</onup>
+			<ondown>60</ondown>
+			<viewtype label="AlbumFlow">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<scrolltime>250</scrolltime>
+			<focusedposition>3</focusedposition>
+			<visible>Container.Content(albums)</visible>
+			<itemlayout height="1" width="1">
+			</itemlayout>
+			<focusedlayout height="1" width="1">
+			</focusedlayout>
+		</control>
+				
+		<control type="label">
+			<posx>0</posx>
+			<posy>445</posy>
+			<width>720</width>
+			<height>30</height>
+			<font>h1</font>
+			<align>center</align>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<info>ListItem.Label</info>
+			<textoffsetx>0</textoffsetx>
+			<visible>Control.IsVisible(58)</visible>
+		</control>
+		
+		<control type="label">
+			<posx>0</posx>
+			<posy>480</posy>
+			<width>720</width>
+			<height>30</height>
+			<font>h2</font>
+			<align>center</align>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<label>$INFO[ListItem.Artist] | $INFO[ListItem.Genre] | $INFO[ListItem.Year]</label>
+			<textoffsetx>0</textoffsetx>
+			<scrollout>false</scrollout>
+			<pauseatend>5000</pauseatend>
+			<visible>Control.IsVisible(58)</visible>
+		</control>
+
+	</include>
+</includes>

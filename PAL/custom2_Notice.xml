@@ -1,0 +1,61 @@
+<window id="58" type="dialog">
+	<defaultcontrol always="true">11</defaultcontrol>
+	
+	<controls>
+		<allowoverlay>no</allowoverlay>
+		
+		
+		
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>black.png</texture>
+		</control>	
+		
+		<control type="label">
+			<posx>0</posx>
+			<posy>200</posy>
+			<width>720</width>
+			<align>center</align>
+			<label>Welcome to Focus...</label>
+			<font>homemenu</font>
+			<textcolor>sublabel-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+		</control>
+		
+			<control type="label">
+			<posx>0</posx>
+			<posy>240</posy>
+			<width>720</width>
+			<align>center</align>
+			<label>Before you start here are some good things to know before using Focus.</label>
+			<font>h2</font>
+			<textcolor>label-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+		</control>
+		
+		<control type="textbox" id="4">
+			<description>movie plot</description>
+			<posx>40</posx>
+			<posy>280</posy>
+			<width>650</width>
+			<height>130</height>
+			<label>When you are in the homescreen, selecting one of the main categories at the top of the screen will take you to the filemode or main window of the selected feature. Alternately, when hovering one of the main categories you can press the down button on your controller or remote to fold open a submenu for that category giving you quick access to library functions, settings menus, and so on.</label>
+			<align>center</align>
+			<font>description</font>
+			<autoscroll delay="6000" time="2000" repeat="10000">!Control.HasFocus(4)</autoscroll>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<include>fadeinout</include>
+		</control>
+					
+	</controls>
+</window>

@@ -1,0 +1,220 @@
+<window id="132">
+	<defaultcontrol>3</defaultcontrol>
+	<include>dialog-open</include>
+
+	<coordinates>
+		<system>1</system>
+		<posx>183</posx>
+		<posy>120</posy>
+	</coordinates>
+
+	<controls>
+
+		<control type="group">
+			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(10140)">Conditional</animation>
+		
+			<control type="image" id="1">
+				<description>background image</description>
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>425</width>
+				<height>455</height>
+				<texture border="23">dialogpanel.png</texture>
+			</control>
+			
+			<control type="label" id="1000">
+				<description>directory contains label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>280</width>
+				<align>left</align>
+				<font>h2</font>
+				<label>$LOCALIZE[20344]</label>
+			</control>
+			
+			<control type="spincontrolex" id="3">
+				<description>directory content select spincontrol</description>
+				<align>right</align>
+				<width>190</width>
+				<height>17</height>
+				<posx>173</posx>
+				<posy>5</posy>
+				<font>h2</font>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onup>28</onup>
+				<ondown>4</ondown>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<disabledcolor>disabled</disabledcolor>
+				<spinwidth>15</spinwidth>
+				<spinheight>15</spinheight>
+			</control>
+
+
+			<control type="list" id="4">
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>355</width>
+				<height>140</height>
+				<onup>3</onup>
+				<ondown>30</ondown>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>60</pagecontrol>
+				
+				<itemlayout height="35">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>355</width>
+						<height>33</height>
+						<texture>list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>2</posy>
+						<width>30</width>
+						<height>30</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>345</width>
+						<height>28</height>
+						<font>menu</font>
+						<aligny>center</aligny>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				
+				<focusedlayout height="35">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>355</width>
+						<height>33</height>
+						<visible>Control.HasFocus(4)</visible>
+						<texture>list-focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>355</width>
+						<height>31</height>
+						<visible>!Control.HasFocus(4)</visible>
+						<texture border="3">list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>2</posy>
+						<width>30</width>
+						<height>30</height>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>345</width>
+						<height>28</height>
+						<font>menu</font>
+						<aligny>center</aligny>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+
+			
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>-4</posx>
+				<posy>187</posy>
+				<width>360</width>
+				<height>150</height>
+				<itemgap>2</itemgap>
+				<onup>4</onup>
+				<ondown>28</ondown>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<font>h4</font>
+			</control>
+			
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<posx>530</posx>
+				<posy>150</posy>
+				<height>33</height>
+				<aligny>-</aligny>
+				<font>h4D</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+				<textureradiofocus>check-box.png</textureradiofocus>
+				<textureradionofocus>check-boxNF.png</textureradionofocus>
+			</control>
+			
+			<control type="button" id="6">
+				<description>Settings button</description>
+				<posx>0</posx>
+				<posy>350</posy>
+				<width>110</width>
+				<height>36</height>
+				<aligny>-</aligny>
+				<align>center</align>
+				<textoffsety>3</textoffsety>
+				<label>5</label>
+				<font>buttonD</font>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
+				<onleft>29</onleft>
+				<onright>28</onright>
+				<onup>30</onup>
+				<ondown>3</ondown>
+			</control>
+			
+			<control type="button" id="28">
+				<description>OK button</description>
+				<posx>165</posx>
+				<posy>350</posy>
+				<width>90</width>
+				<height>36</height>
+				<aligny>-</aligny>
+				<align>center</align>
+				<textoffsety>3</textoffsety>
+				<label>186</label>
+				<font>buttonD</font>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
+				<onleft>6</onleft>
+				<onright>29</onright>
+				<onup>30</onup>
+				<ondown>3</ondown>
+			</control>
+			
+			<control type="button" id="29">
+				<description>Cancel button</description>
+				<posx>265</posx>
+				<posy>350</posy>
+				<width>90</width>
+				<height>36</height>
+				<aligny>-</aligny>
+				<align>center</align>
+				<textoffsety>3</textoffsety>
+				<label>222</label>
+				<font>buttonD</font>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
+				<onleft>28</onleft>
+				<onright>6</onright>
+				<onup>30</onup>
+				<ondown>3</ondown>
+			</control>	
+		</control>
+
+	</controls>
+</window>

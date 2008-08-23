@@ -1,0 +1,78 @@
+<window type="dialog" id="105">
+	<defaultcontrol always="true">450</defaultcontrol>
+	
+	<include>dialog-open-fav</include>
+
+	<coordinates>
+		<system>1</system>
+		<posx>325</posx>
+		<posy>135</posy>
+	</coordinates>
+
+	<controls>
+
+		<control type="image">
+			<posx>-27</posx>
+			<posy>-27</posy>
+			<width>270</width>
+			<height>373</height>
+			<texture border="38">dialogpanel.png</texture>
+		</control>
+
+		<control type="group">
+			<control type="list" id="450">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>215</width>
+			<height>320</height>
+			<onleft>1</onleft>
+			<onright>10</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<scrolltime>200</scrolltime>
+			
+			<itemlayout height="32">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>215</width>
+					<height>30</height>
+					<texture>list-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>205</width>
+					<height>24</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>215</width>
+					<height>30</height>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>205</width>
+					<height>24</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+			
+		</control>
+	</control>
+
+</controls>
+</window>

@@ -1,0 +1,37 @@
+﻿<window id="107">
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>536</posy>
+	</coordinates>
+	
+	<controls>
+
+		<control type="label" id="401">
+			<description>Caption Label</description>
+			<posx>30</posx>
+			<posy>4</posy>
+			<width>300</width>
+			<font>h4</font>
+			<align>left</align>
+			<label>-</label>
+			<scroll>true</scroll>
+			<textcolor>label-text</textcolor>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="label" id="402">
+			<description>Description</description>
+			<posx>690</posx>
+			<posy>4</posy>
+			<width>420</width>
+			<label>-</label>
+			<font>h4</font>
+			<align>right</align>
+			<scroll>true</scroll>
+			<textcolor>sublabel-text</textcolor>
+			<include>fadeinout</include>
+		</control>
+	</controls>
+</window>

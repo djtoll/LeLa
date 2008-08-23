@@ -1,0 +1,41 @@
+<window id="2004">
+	<defaultcontrol>5</defaultcontrol>
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>300</posx>
+		<posy>120</posy>
+	</coordinates>
+	
+	<controls>
+		<control type="image">
+			<posx>-35</posx>
+			<posy>-30</posy>
+			<width>450</width>
+			<height>435</height>
+			<texture border="38">dialogpanel.png</texture>
+		</control>
+	
+		<control type="label" id="1">
+			<description>description label</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<label>262</label>
+			<font>h1</font>
+		</control>
+		
+		<control type="textbox" id="5">
+			<description>textarea</description>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>400</width>
+			<height>287</height>
+			<font>h4</font>
+			<textcolor>button-text</textcolor>
+			<spinposx>340</spinposx>
+			<spinposy>295</spinposy>
+		</control>
+		
+	</controls>
+</window>

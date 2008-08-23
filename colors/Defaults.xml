@@ -1,0 +1,14 @@
+<colors>
+	<color name="button-text">FFFFFFFF</color>
+	<color name="button-alttext">FF073861</color>
+	<color name="label-text">FFFFFFFF</color>
+	<color name="sublabel-text">ff95bfff</color>
+	<color name="sublabelalt-text">ff98a9c3</color>
+	<color name="sublabelalt2-text">ff073063</color>
+	<color name="rss-headline">ffdedede</color>
+	<color name="rss-title">ff95bfff</color>
+	<color name="listselectedtext">FFa8ec12</color>
+	<color name="listselectedcolor">ff0066cc</color>
+	<color name="disabled-text">60d0d0d0</color>
+	<color name="disabled-alttext">603a3b3f</color>
+</colors>

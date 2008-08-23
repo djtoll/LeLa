@@ -1,0 +1,147 @@
+<window id="35">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>MyPrograms</previouswindow>
+	
+	<controls>
+		<include>background</include>
+		<include>#files</include>
+		<include>Fake-Overlay</include>
+		<include>allscreens</include>
+		
+		<control type="label">
+			<description>description label</description>
+			<include>home-menubar</include>
+			<posx>0</posx>
+			<posy>4</posy>
+			<width>720</width>
+			<align>center</align>
+			<label>20315</label>
+			<font>page</font>
+		</control>
+
+		<control type="group">
+			<description>page content</description>
+			<include>pageslide</include>
+			<include>viewsmenu</include>
+			<include>viewsmenucontext</include>
+			<include>ListView</include>
+			<include>Icons</include>
+			<include>BigIcons</include>
+			<include>PageControl</include>
+			
+			<control type="image">
+				<description>list item icon</description>
+				<posx>430</posx>
+				<posy>90</posy>
+				<width>260</width>
+				<height>260</height>
+				<info>ListItem.Icon</info>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+			<control type="image">
+				<description>list item icon reflection</description>
+				<posx>430</posx>
+				<posy>351</posy>
+				<width>260</width>
+				<height>260</height>
+				<info>ListItem.Icon</info>
+				<texture flipy="true" diffuse="fade.png">-</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+	
+			<control type="label">
+				<posx>20</posx>
+				<posy>500</posy>
+				<width>300</width>
+				<height>200</height>
+				<label>$INFO[ListItem.size]</label>
+				<scroll>true</scroll>
+				<font>h2</font>
+				<align>center</align>
+				<textcolor>ff95bfff</textcolor>
+				<include>fadeinout</include>
+			</control>	
+		</control>	
+			
+<!-- VIEW SETTINGS -->		
+									
+		<control type="group" id="9000">
+			<visible>!Skin.HasSetting(view-as-lock)</visible>
+			<include>pageslide</include>
+			
+			<control type="button" id="2">
+				<description>View As Icons button</description>
+				<posx>30</posx>
+				<posy>77</posy>
+				<width>185</width>
+				<height>33</height>
+				<font>menu</font>
+				<label>100</label>		
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>5</onup>
+				<ondown>3</ondown>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<include>View-as</include>
+			</control>
+			<control type="button" id="3">
+				<description>Sort by button</description>
+				<posx>30</posx>
+				<posy>112</posy>
+				<width>185</width>
+				<height>33</height>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<label>103</label>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>5</ondown>
+				<include>View-as</include>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>Sort asc</description>
+				<posx>190</posx>
+				<posy>122</posy>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>5</ondown>
+				<include>View-as</include>
+			</control>
+			<control type="radiobutton" id="5">
+				<description>Library button</description>
+				<posx>30</posx>
+				<posy>147</posy>
+				<width>185</width>
+				<height>33</height>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+				<onclick>ReplaceWindow(mymusiclibrary)</onclick>
+				<selected>Window.IsVisible(mymusiclibrary)</selected>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>2</ondown>
+				<include>View-as</include>
+			</control>
+		</control>
+	</controls>
+</window>

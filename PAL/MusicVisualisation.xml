@@ -1,0 +1,195 @@
+<window id="2006">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<visible>!Window.IsVisible(2004)</visible>
+
+	<controls>
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+		</control>
+	
+<!-- codec & vis info -->
+
+		<control type="image">
+			<description>preset background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>760</width>
+			<height>120</height>
+			<texture>back.bmp</texture>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="300">VisibleChange</animation>
+		</control>
+		
+		<control type="label">
+			<description>Codecinfo</description>
+			<width>720</width>
+			<posx>0</posx>
+			<posy>3</posy>
+			<label>Audio | $INFO[musicplayer.Codec,Codec:,]$INFO[musicplayer.Bitrate, - Bitrate:,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>
+			<align>center</align>
+			<font>h4</font>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="300">VisibleChange</animation>
+		</control>
+		
+		<control type="label">
+			<description>Presets label</description>
+			<posx>0</posx>
+			<posy>27</posy>
+			<width>720</width>
+			<label>Visual | fps: $INFO[System.FPS] - $INFO[Visualisation.Name]$INFO[Visualisation.Preset, - ]</label>
+			<font>h4</font>
+			<align>center</align>
+			<visible>Player.ShowCodec</visible>
+			<animation effect="fade" time="300">VisibleChange</animation>
+		</control>
+		
+		<control type="label">
+			<description>Preset locked image</description>
+			<posx>210</posx>
+			<posy>36</posy>
+			<width>12</width>
+			<height>15</height>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Visualisation.Locked + Player.ShowCodec</visible>
+			<animation effect="fade" time="300">VisibleChange</animation>
+			<texture>arenaitem-private.png</texture>
+		</control>
+			
+			
+<!-- "Now Playing"-->
+
+		<control type="image">
+			<description>background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture diffuse="background-diffuse.png">background.bmp</texture>
+			<visible>!Skin.String(custom-background)</visible>
+			<animation effect="fade" start="100" end="85" time="0" condition="[Player.HasAudio + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
+		</control>
+	
+		<control type="image">
+			<description>custom background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>Skin.String(custom-background)</info>
+			<visible>Skin.String(custom-background)</visible>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(custom-background)]</texture>
+			<animation effect="fade" start="100" end="85" time="0" condition="[Player.HasAudio + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
+		</control>
+		
+		<control type="image">
+			<description>cover image</description>
+			<posx>210</posx>
+			<posy>60</posy>
+			<width>300</width>
+			<height>300</height>
+			<info>MusicPlayer.Cover</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+		</control>
+		
+		<control type="image">
+			<description>cover image reflection</description>
+			<posx>210</posx>
+			<posy>360</posy>
+			<width>300</width>
+			<height>300</height>
+			<info>MusicPlayer.Cover</info>
+			<texture flipy="true" diffuse="fade.png">-</texture>
+			<aspectratio align="top">keep</aspectratio>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+		</control>
+		
+		<control type="label">
+			<description>Title Label</description>
+			<width>720</width>
+			<posx>0</posx>
+			<posy>370</posy>
+			<info>MusicPlayer.Title</info>
+			<align>center</align>
+			<font>h1</font>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+		</control>
+		
+		<control type="label">
+			<description>Artist label</description>
+			<width>720</width>
+			<posx>0</posx>
+			<posy>405</posy>
+			<label>by $INFO[MusicPlayer.Artist]</label>
+			<align>center</align>
+			<font>h3</font>
+			<textcolor>sublabel-text</textcolor>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+		</control>
+		
+		<control type="label">
+			<description>Album Label</description>
+			<width>720</width>
+			<posx>0</posx>
+			<posy>435</posy>
+			<label>from the album "$INFO[MusicPlayer.Album]"</label>
+			<align>center</align>
+			<font>h4</font>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<textcolor>sublabel-text</textcolor>
+		</control>
+			
+		<control type="label">
+			<description>time label</description>
+			<width>720</width>
+			<posx>0</posx>
+			<posy>475</posy>
+			<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+			<align>center</align>
+			<font>h4</font>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<textcolor>sublabelalt-text</textcolor>
+		</control>
+			
+		<control type="label">
+			<description>Playlist</description>
+			<width>720</width>
+			<posx>0</posx>
+			<posy>505</posy>
+			<align>center</align>
+			<label>$INFO[musicplayer.Playlistposition,Track ]$INFO[musicplayer.Playlistlength, / ]</label>
+			<font>h4</font>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.HasMedia + Player.ShowInfo</visible>
+			<textcolor>sublabelalt-text</textcolor>
+		</control>
+
+		<control type="label">
+			<description>PartyMode Enabled</description>
+			<width>720</width>
+			<posx>0</posx>
+			<posy>540</posy>
+			<label>589</label>
+			<visible>!Skin.HasSetting(np-vis)</visible>
+			<visible>Player.ShowInfo + MusicPartyMode.Enabled</visible>
+			<align>left</align>
+			<font>h4</font>
+			<textcolor>sublabelalt-text</textcolor>
+		</control>
+
+			
+	</controls>
+</window>

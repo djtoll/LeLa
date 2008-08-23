@@ -1,0 +1,1375 @@
+<window id="25">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>Home</previouswindow>
+
+	<controls>	
+		
+	<include>background</include>
+	
+<!----- PAGE LABELS ----------------------->
+
+	
+		<control type="label">
+			<posx>0</posx>
+			<posy>6</posy>
+			<width>720</width>
+			<align>center</align>
+			<label>$LOCALIZE[20314]</label>
+			<font>page</font>
+			<visible>IsEmpty(Container.PluginName) + ![container.content(tvshows) | !container.content(movies) | !container.content(musicvideos)]</visible>
+			<include>home-menubar</include>
+		</control>
+		
+		<control type="label">
+			<posx>0</posx>
+			<posy>6</posy>
+			<width>720</width>
+			<align>center</align>
+			<info>ListItem.TVShowTitle</info>
+			<font>page</font>
+			<visible>container.content(episodes) | container.content(seasons)</visible>
+			<include>home-menubar</include>
+		</control>
+
+		<control type="label">
+			<posx>0</posx>
+			<posy>6</posy>
+			<width>720</width>
+			<align>center</align>
+			<label>$LOCALIZE[20314] - $LOCALIZE[20343]</label>
+			<font>page</font>
+			<visible>IsEmpty(Container.PluginName) + container.content(tvshows)</visible>
+			<include>home-menubar</include>
+		</control>
+		
+		<control type="label">
+			<posx>0</posx>
+			<posy>6</posy>
+			<width>720</width>
+			<align>center</align>
+			<label>$LOCALIZE[20314] - $LOCALIZE[342]</label>
+			<font>page</font>
+			<visible>IsEmpty(Container.PluginName) + container.content(movies)</visible>
+			<include>home-menubar</include>
+		</control>
+		
+		<control type="label">
+			<posx>0</posx>
+			<posy>6</posy>
+			<width>720</width>
+			<align>center</align>
+			<label>$LOCALIZE[20314] - $LOCALIZE[20389]</label>
+			<font>page</font>
+			<visible>IsEmpty(Container.PluginName) + container.content(musicvideos)</visible>
+			<include>home-menubar</include>
+		</control>
+		
+		<control type="label">
+			<posx>0</posx>
+			<posy>6</posy>
+			<width>720</width>
+			<align>center</align>
+			<info>Container.PluginName</info>
+			<font>page</font>
+			<visible>!IsEmpty(Container.PluginName)</visible>
+			<include>home-menubar</include>
+		</control>
+
+		<control type="label">
+			<posx>0</posx>
+			<posy>6</posy>
+			<width>720</width>
+			<align>center</align>
+			<info>Container.Property(PluginCategory)</info>
+			<font>page</font>
+			<visible>!IsEmpty(Container.Property(PluginCategory))</visible>
+			<include>home-menubar</include>
+		</control>
+
+		<include>Fanart</include>
+		
+		
+<!----- CONTENT START ------------------->	
+		<control type="group">
+			<description>page content</description>
+			<include>pageslide</include>
+			<include>viewsmenu</include>
+			<include>viewsmenucontext</include>
+			<include>PageControl</include>
+			
+<!----- VIEWTYPES ----------------------->	
+			<include>ListView</include>
+			<include>DetailListView</include>
+			<include>BigList</include>
+			<include>Coverflow</include>
+			<include>CoverSlide</include>
+			<include>Icons</include>
+			<include>BigIcons</include>
+			<include>PosterIcons</include>
+			<include>PosterIconsS</include>
+			<include>BigIconsEP</include>
+			<include>WideIcons</include>
+			<include>BigIconsSeason</include>
+			<include>DVDIcons</include>
+			<include>FanartView</include>
+			<include>CoverSlideEP</include>		
+			<include>CoverSlideTV</include>
+			<!---
+			<include>CoverSlideS</include>
+			<include>FanartSeason</include>
+			<include>BigIconsEP</include>
+			-->
+			<include>AllViewCommonPageControls</include>
+
+						
+<!----------------------------------------------------------------------------------------------------------------->		
+<!---------- MOVIES ----------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+	<!----- LIST VIEW ----->
+	
+		<control type="image">
+			<description>list item icon</description>
+			<posx>430</posx>
+			<posy>90</posy>
+			<width>256</width>
+			<height>256</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Container.Content(movies) + Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+			<include>pageslide</include>
+			<include>idle-fade-movie</include>
+		</control>
+		<control type="image">
+			<description>list item icon</description>
+			<posx>430</posx>
+			<posy>346</posy>
+			<width>256</width>
+			<height>256</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<visible>Container.Content(movies) + Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+			<include>pageslide</include>
+			<include>idle-fade-movie</include>
+		</control>
+											
+		<control type="image">
+			<description>list thumb icon</description>
+			<posx>430</posx>
+			<posy>90</posy>
+			<width>260</width>
+			<height>300</height>
+			<info>ListItem.Thumb</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Container.Content(movies) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-movie</include>
+		</control>			
+		<control type="image">
+			<description>list item thumb reflection</description>
+			<posx>430</posx>
+			<posy>390</posy>
+			<width>260</width>
+			<height>300</height>
+			<info>ListItem.Thumb</info>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Container.Content(movies) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-movie</include>
+		</control>
+		
+		<control type="image">
+			<description>list item overlay</description>
+			<posx>620</posx>
+			<posy>365</posy>
+			<width>26</width>
+			<height>26</height>
+			<info>ListItem.Overlay</info>
+			<visible>Skin.HasSetting(overlayMovies) + Container.Content(movies) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-movie</include>
+		</control>
+	
+		<control type="label">
+			<description>Title value</description>
+			<posx>430</posx>
+			<posy>400</posy>
+			<width>260</width>
+			<height>200</height>
+			<label>$INFO[ListItem.Title]</label>
+			<scroll>true</scroll>
+			<font>h1</font>
+			<align>center</align>
+			<textcolor>label-text</textcolor>
+			<visible>Container.Content(movies) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-movie</include>
+		</control>
+
+		<control type="label">
+			<description>Genre value</description>
+			<posx>430</posx>
+			<posy>440</posy>
+			<width>260</width>
+			<height>300</height>
+			<label>$INFO[ListItem.Genre]</label>
+			<font>h2</font>
+			<align>center</align>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(movies) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-movie</include>
+		</control>
+							
+		<control type="label">
+			<description>Duration value</description>
+			<posx>430</posx>
+			<posy>470</posy>
+			<width>260</width>
+			<height>200</height>
+			<label>$INFO[ListItem.Duration]</label>
+			<font>h2</font>
+			<align>center</align>
+			<textcolor>sublabel-text</textcolor>
+			<textwidth>260</textwidth>
+			<scroll>true</scroll>
+			<visible>Container.Content(movies) + Control.IsVisible(50)</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-movie</include>
+		</control>
+		
+		<control type="label">
+			<description>Trailer value</description>
+			<posx>430</posx>
+			<posy>500</posy>
+			<width>260</width>
+			<height>200</height>
+			<label>31931</label>
+			<font>h2</font>
+			<align>center</align>
+			<textcolor>sublabel-text</textcolor>
+			<textwidth>260</textwidth>
+			<scroll>true</scroll>
+			<visible>!IsEmpty(ListItem.Trailer) + Container.Content(movies) + Control.IsVisible(50)</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-movie</include>
+		</control>
+		
+		<control type="textbox" id="4">
+			<description>movie plot</description>
+			<posx>430</posx>
+			<posy>65</posy>
+			<width>260</width>
+			<height>450</height>
+			<info>ListItem.Plot</info>
+			<font>description</font>
+			<align>justify</align>
+			<include>autoscroll-plot</include>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<visible>System.IdleTime(2) + Skin.HasSetting(movielistPlot) + Container.Content(movies) + Control.IsVisible(50)</visible>
+			<include>fadeinout</include>
+		</control>
+	
+	
+	<!----- DETAIL LIST VIEW ----->
+	
+		<control type="image">
+			<description>list item icon</description>
+			<posx>35</posx>
+			<posy>350</posy>
+			<width>128</width>
+			<height>128</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb) + Container.Content(movies) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+		</control>			
+		<control type="image">
+			<description>list item icon reflection</description>
+			<posx>35</posx>
+			<posy>478</posy>
+			<width>128</width>
+			<height>128</height>
+			<info>ListItem.Icon</info>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb) + Container.Content(movies) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+		</control>
+											
+		<control type="image">
+			<description>list item thumb</description>
+			<posx>40</posx>
+			<posy>340</posy>
+			<width>167</width>
+			<height>170</height>
+			<info>ListItem.Thumb</info>
+			<bordertexture border="2">folder-focus.png</bordertexture>
+			<bordersize>4</bordersize>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Container.Content(movies) + [Control.IsVisible(53)]</visible>
+			<include>fadeinout</include>
+		</control>			
+		<control type="image">
+			<description>list item thumb reflection</description>
+			<posx>40</posx>
+			<posy>509</posy>
+			<width>167</width>
+			<height>170</height>
+			<info>ListItem.Thumb</info>
+			<bordertexture border="2">folder-focus-y.png</bordertexture>
+			<bordersize>4</bordersize>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Container.Content(movies) + [Control.IsVisible(53)]</visible>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="image">
+			<description>list item overlay</description>
+			<posx>115</posx>
+			<posy>485</posy>
+			<width>22</width>
+			<height>22</height>
+			<info>ListItem.Overlay</info>
+			<visible>Skin.HasSetting(overlayMovies) + Container.Content(movies) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+		</control>
+						
+		<control type="textbox" id="4">
+			<description>movie plot outline</description>
+			<posx>160</posx>
+			<posy>340</posy>
+			<width>520</width>
+			<height>165</height>
+			<info>ListItem.PlotOutline</info>
+			<font>description</font>
+			<align>justify</align>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>Container.Content(movies) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>
+		
+		<control type="textbox" id="4">
+			<description>movie plot</description>
+			<posx>160</posx>
+			<posy>340</posy>
+			<width>520</width>
+			<height>165</height>
+			<info>ListItem.Plot</info>
+			<font>description</font>
+			<align>justify</align>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>IsEmpty(ListItem.PlotOutline) + Container.Content(movies) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>
+
+								
+	<!----- COVERSLIDE VIEW ----->
+			
+		<control type="label">
+			<posx>65</posx>
+			<posy>65</posy>
+			<width>530</width>
+			<height>30</height>
+			<info>ListItem.Title</info>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(52) + Container.Content(movies)</visible>
+		</control>
+		
+		<control type="label">
+			<posx>65</posx>
+			<posy>100</posy>
+			<width>577</width>
+			<height>30</height>
+			<label>$INFO[ListItem.Genre], $INFO[ListItem.Year]</label>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(52)+ Container.Content(movies)</visible>
+		</control>
+		
+		<control type="label">
+			<posx>65</posx>
+			<posy>130</posy>
+			<width>577</width>
+			<height>30</height>
+			<info>ListItem.Duration</info>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(52) + Container.Content(movies)</visible>
+		</control>
+		
+		<control type="image">
+			<description>Rating Value</description>
+			<posx>480</posx>
+			<posy>450</posy>
+			<width>160</width>
+			<height>32</height>
+			<info>ListItem.Rating</info>
+			<aspectratio>keep</aspectratio>
+			<visible>Container.Content(movies) + [Control.IsVisible(52)]</visible>
+			<font>h2</font>
+		</control>	
+		
+		<control type="label">
+			<posx>700</posx>
+			<posy>65</posy>
+			<width>300</width>
+			<height>30</height>
+			<label>31931</label>
+			<font>h2</font>
+			<align>right</align>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<visible>!IsEmpty(ListItem.Trailer) + Control.IsVisible(52) + Container.Content(movies)</visible>
+		</control>		
+		
+		<control type="textbox" id="4">
+			<description>movie plot outline</description>
+			<posx>65</posx>
+			<posy>405</posy>
+			<width>620</width>
+			<height>118</height>
+			<info>ListItem.Plot</info>
+			<font>description</font>
+			<align>justify</align>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>600</spinposx>
+			<spinposy>125</spinposy>
+			<visible>Container.Content(movies) + Control.IsVisible(52) + !Skin.HasSetting(plotScroll)</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>
+		
+		<control type="textbox" id="4">
+			<description>movie plot outline</description>
+			<posx>65</posx>
+			<posy>405</posy>
+			<width>620</width>
+			<height>118</height>
+			<info>ListItem.Plot</info>
+			<font>description</font>
+			<align>justify</align>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<visible>Container.Content(movies) + Control.IsVisible(52) + Skin.HasSetting(plotScroll)</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>
+		
+		
+	<!----- POSTER VIEW ----->
+		
+		<control type="label">
+			<posx>270</posx>
+			<posy>105</posy>
+			<width>420</width>
+			<height>30</height>
+			<info>ListItem.Title</info>
+			<font>h1</font>
+			<align>left</align>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<visible>System.IdleTime(2) + Container.Content(movies) + Control.IsVisible(59)</visible>
+			<include>fadeinout</include>
+		</control>
+		<control type="fadelabel">
+			<posx>270</posx>
+			<posy>140</posy>
+			<width>420</width>
+			<height>30</height>
+			<info>ListItem.Tagline</info>
+			<info>ListItem.Genre</info>
+			<info>ListItem.Duration</info>
+			<font>h2</font>
+			<scrollout>no</scrollout>
+			<pauseatend>4000</pauseatend>
+			<align>left</align>
+			<textcolor>sublabel-text</textcolor>
+			<visible>System.IdleTime(2) + Container.Content(movies) + Control.IsVisible(59)</visible>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="textbox" id="4">
+			<description>movie plotoutline</description>
+			<posx>270</posx>
+			<posy>185</posy>
+			<width>420</width>
+			<height>255</height>
+			<info>ListItem.PlotOutline</info>
+			<font>description</font>
+			<align>justify</align>
+			<aligny>top</aligny>
+			<include>autoscroll-plot</include>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>System.IdleTime(2) + Container.Content(movies) + Control.IsVisible(59)</visible>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="textbox" id="4">
+			<description>movie plot</description>
+			<posx>270</posx>
+			<posy>185</posy>
+			<width>420</width>
+			<height>255</height>
+			<info>ListItem.Plot</info>
+			<font>description</font>
+			<align>justify</align>
+			<aligny>top</aligny>
+			<include>autoscroll-plot</include>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>IsEmpty(ListItem.PlotOutline) + System.IdleTime(2) + Container.Content(movies) + Control.IsVisible(59)</visible>
+			<include>fadeinout</include>
+		</control>
+
+	
+		
+			
+<!----------------------------------------------------------------------------------------------------------------->		
+<!---------- TV SHOWS --------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+	
+	<!----- LIST VIEWS ----->	
+										
+		<control type="image">
+			<description>list item icon</description>
+			<posx>400</posx>
+			<posy>70</posy>
+			<height>256</height>
+			<width>256</width>
+			<info>ListItem.Icon</info>
+			<aspectratio align="top">keep</aspectratio>
+			<visible>Container.Content(tvshows) + Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+		</control>
+		<control type="image">
+			<description>list item icon</description>
+			<posx>400</posx>
+			<posy>326</posy>
+			<height>256</height>
+			<width>256</width>
+			<info>ListItem.Icon</info>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="top">keep</aspectratio>
+			<visible>Container.Content(tvshows) + Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+		</control>
+
+		<control type="image">
+			<description>list item thumb</description>
+			<posx>400</posx>
+			<posy>75</posy>
+			<height>60</height>
+			<width>325</width>
+			<info>ListItem.Thumb</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Container.Content(tvshows) + Control.IsVisible(50)</visible>
+		</control>
+		<control type="image">
+			<description>list item thumb</description>
+			<posx>400</posx>
+			<posy>135</posy>
+			<height>60</height>
+			<width>325</width>
+			<info>ListItem.Thumb</info>
+			<visible>Container.Content(tvshows) + Control.IsVisible(50)</visible>
+			<texture flipy="true" diffuse="fade.png">-</texture>
+			<aspectratio align="bottom">keep</aspectratio>
+		</control>
+																	
+		<control type="label">
+			<posx>430</posx>
+			<posy>150</posy>
+			<width>260</width>
+			<info>ListItem.Label</info>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(tvshows) + Control.IsVisible(50)</visible>
+		</control>
+																	
+		<control type="label">
+			<posx>430</posx>
+			<posy>185</posy>
+			<width>260</width>
+			<font>h2</font>
+			<info>ListItem.Genre</info>
+			<textcolor>sublabel-text</textcolor>\
+			<scroll>true</scroll>
+			<visible>Container.Content(tvshows) + Control.IsVisible(50)</visible>
+		</control>
+																	
+		<control type="label">
+			<posx>430</posx>
+			<posy>215</posy>
+			<width>260</width>
+			<label>$INFO[ListItem.episode] episodes</label>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(tvshows) + [Control.IsVisible(50) + !IsEmpty(ListItem.Episode)]</visible>
+		</control>
+		
+		<control type="label">
+			<posx>430</posx>
+			<posy>245</posy>
+			<width>260</width>
+			<info>ListItem.Rating</info>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<align>left</align>
+			<scroll>true</scroll>
+			<visible>Container.Content(tvshows) + [Control.IsVisible(50) + !IsEmpty(ListItem.Premiered)]</visible>
+		</control>
+		
+		<control type="textbox" id="4">
+			<description>tv show description</description>
+			<posx>430</posx>
+			<posy>290</posy>
+			<width>260</width>
+			<height>210</height>
+			<label>$INFO[ListItem.Plot]</label>
+			<font>description</font>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<align>justify</align>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>Skin.HasSetting(tvlistPlot) + Container.Content(tvshows) + Control.IsVisible(50)</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>
+						
+	<!----- COVERSLIDE VIEW ----->
+													
+		<control type="label">
+			<posx>115</posx>
+			<posy>80</posy>
+			<width>530</width>
+			<height>30</height>
+			<info>ListItem.Title</info>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(tvshows) + [Control.IsVisible(52)]</visible>
+			<include>fadeinout</include>
+		</control>
+
+		<control type="label">
+			<posx>115</posx>
+			<posy>115</posy>
+			<width>530</width>
+			<height>30</height>
+			<info>ListItem.Genre</info>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(tvshows) + [Control.IsVisible(52)]</visible>
+			<include>fadeinout</include>
+		</control>
+
+		<control type="label">
+			<posx>115</posx>
+			<posy>145</posy>
+			<width>577</width>
+			<height>30</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(tvshows) + [Control.IsVisible(52)]</visible>
+			<include>fadeinout</include>
+		</control>				
+															
+		<control type="textbox" id="4">
+			<description>tv show description</description>
+			<posx>115</posx>
+			<posy>270</posy>
+			<width>560</width>
+			<height>245</height>
+			<label>$INFO[ListItem.Plot]</label>
+			<font>description</font>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>Container.Content(tvshows) + [Control.IsVisible(52)]</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>
+								
+																																							
+<!----------------------------------------------------------------------------------------------------------------->		
+<!---------- SEASONS ---------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+	<!----- LIST VIEWS ----->
+	
+		<control type="image">
+			<description>list item icon</description>
+			<posx>430</posx>
+			<posy>70</posy>
+			<width>256</width>
+			<height>256</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Container.Content(seasons) + Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+			<include>pageslide</include>
+		</control>
+		<control type="image">
+			<description>list item icon</description>
+			<posx>430</posx>
+			<posy>326</posy>
+			<width>256</width>
+			<height>256</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<visible>Container.Content(seasons) + Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+			<include>pageslide</include>
+		</control>
+									
+		<control type="image">
+			<description>list item icon</description>
+			<posx>430</posx>
+			<posy>90</posy>
+			<width>260</width>
+			<height>400</height>
+			<info>ListItem.Thumb</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Container.Content(seasons) + Control.IsVisible(50)</visible>
+			<include>pageslide</include>
+		</control>
+		<control type="image">
+			<description>list item icon reflection</description>
+			<posx>430</posx>
+			<posy>490</posy>
+			<width>260</width>
+			<height>400</height>
+			<info>ListItem.Thumb</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Container.Content(seasons) + Control.IsVisible(50)</visible>
+			<include>pageslide</include>
+		</control>
+		
+
+	<!----- COVERSLIDE VIEW ----->
+	
+		<control type="label">
+			<posx>85</posx>
+			<posy>380</posy>
+			<width>530</width>
+			<height>30</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(52) + Container.Content(seasons)</visible>
+		</control>
+
+		<control type="label">
+			<posx>85</posx>
+			<posy>420</posy>
+			<width>577</width>
+			<height>30</height>
+			<label>$INFO[ListItem.TVShowTitle]</label>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(52)+ Container.Content(seasons)</visible>
+		</control>
+		
+														
+<!----------------------------------------------------------------------------------------------------------------->		
+<!---------- EPISODES ---------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+	<!----- LIST VIEW ----->
+	
+		<control type="image">
+			<description>list item icon</description>
+			<posx>430</posx>
+			<posy>70</posy>
+			<width>256</width>
+			<height>256</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Container.Content(episodes) + Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+			<include>pageslide</include>
+		</control>
+		<control type="image">
+			<description>list item icon</description>
+			<posx>430</posx>
+			<posy>326</posy>
+			<width>256</width>
+			<height>256</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<visible>Container.Content(episodes) + Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+			<include>pageslide</include>
+		</control>																	
+																						
+		<control type="image">
+			<description>list item thumb</description>
+			<posx>430</posx>
+			<posy>90</posy>
+			<width>260</width>
+			<height>195</height>
+			<info>ListItem.Thumb</info>
+			<aspectratio align="bottom">stretch</aspectratio>
+			<visible>Container.Content(episodes) + Control.IsVisible(50)</visible>
+		</control>
+		<control type="image">
+			<description>list item thumb reflection</description>
+			<posx>430</posx>
+			<posy>285</posy>
+			<width>260</width>
+			<height>195</height>
+			<info>ListItem.Thumb</info>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="top">stretch</aspectratio>
+			<visible>Container.Content(episodes) + Control.IsVisible(50)</visible>
+		</control>
+		
+		<control type="image">
+			<description>list item overlay</description>
+			<posx>665</posx>
+			<posy>260</posy>
+			<height>32</height>
+			<width>32</width>
+			<info>ListItem.Overlay</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Skin.HasSetting(overlayEpisodes) + Container.Content(episodes) + Control.IsVisible(50)</visible>
+		</control>
+		
+		<control type="label">
+			<posx>430</posx>
+			<posy>300</posy>
+			<info>ListItem.Title</info>
+			<font>h1</font>
+			<width>260</width>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+			<visible>!IsEmpty(ListItem.Episode) + Container.Content(episodes) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-episode</include>
+		</control>
+																						
+		<control type="label">
+			<posx>430</posx>
+			<posy>340</posy>
+			<info>ListItem.TVShowTitle</info>
+			<font>h2</font>
+			<width>260</width>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+			<visible>!IsEmpty(ListItem.Episode) + Container.Content(episodes) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-episode</include>
+		</control>
+																					
+		<control type="label">
+			<posx>430</posx>
+			<posy>370</posy>
+			<font>h2</font>
+			<width>260</width>
+			<label>$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $LOCALIZE[20359] $INFO[ListItem.Episode]</label>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<align>center</align>
+			<visible>!IsEmpty(ListItem.Episode) + Container.Content(episodes) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-episode</include>
+		</control>
+		
+		<control type="label">
+			<posx>430</posx>
+			<posy>400</posy>
+			<info>ListItem.Premiered</info>
+			<font>h2</font>
+			<width>260</width>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>			
+			<align>center</align>
+			<visible>!IsEmpty(ListItem.Episode) + Container.Content(episodes) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-episode</include>
+		</control>
+		
+		<control type="label">
+			<posx>430</posx>
+			<posy>430</posy>
+			<info>ListItem.Rating</info>
+			<font>h2</font>
+			<width>260</width>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>			
+			<align>center</align>
+			<visible>!IsEmpty(ListItem.Episode) + Container.Content(episodes) + [Control.IsVisible(50)]</visible>
+			<include>fadeinout</include>
+			<include>idle-fade-episode</include>
+		</control>
+		
+		<control type="textbox" id="4">
+			<description>episode plot</description>
+			<posx>430</posx>
+			<posy>300</posy>
+			<width>260</width>
+			<height>220</height>
+			<info>ListItem.Plot</info>
+			<font>description</font>
+			<align>justify</align>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>Skin.HasSetting(episodelistPlot) + Container.Content(episodes) + Control.IsVisible(50) + System.IdleTime(2)</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>		
+		
+		
+	<!----- DETAIL LIST VIEW ----->
+		
+		<control type="image">
+			<description>list item icon</description>
+			<posx>30</posx>
+			<posy>350</posy>
+			<width>145</width>
+			<height>145</height>
+			<info>ListItem.Icon</info>
+			<aspectratio align="right">keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb) + Container.Content(episodes) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+		</control>			
+					
+		<control type="image">
+			<description>list item thumb</description>
+			<posx>40</posx>
+			<posy>340</posy>
+			<width>170</width>
+			<height>165</height>
+			<info>ListItem.Thumb</info>
+			<bordertexture border="3" align="center" aspectratio="scale">folder-focus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<aspectratio align="left">stretch</aspectratio>
+			<visible>Container.Content(episodes) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+		</control>
+		<control type="image">
+			<description>list item thumb</description>
+			<posx>40</posx>
+			<posy>504</posy>
+			<width>170</width>
+			<height>165</height>
+			<info>ListItem.Thumb</info>
+			<bordertexture border="2">folder-focus-y.png</bordertexture>
+			<bordersize>4</bordersize>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="left">stretch</aspectratio>
+			<visible>Container.Content(episodes) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+		</control>		
+
+		<control type="image">
+			<description>list item overlay</description>
+			<posx>184</posx>
+			<posy>480</posy>
+			<width>24</width>
+			<height>24</height>
+			<info>ListItem.Overlay</info>
+			<visible>Skin.HasSetting(overlayEpisodes) + Container.Content(episodes) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+		</control>	
+
+		<control type="textbox" id="4">
+			<description>Episode plot</description>
+			<posx>225</posx>
+			<posy>348</posy>
+			<width>440</width>
+			<height>140</height>
+			<info>ListItem.Plot</info>
+			<font>description</font>
+			<align>justify</align>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>IsEmpty(ListItem.PlotOutline) + Container.Content(episodes) + Control.IsVisible(53)</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>	
+		
+
+<!----- COVERSLIDE VIEW ----->
+
+		<control type="label">
+			<posx>90</posx>
+			<posy>70</posy>
+			<width>577</width>
+			<height>30</height>
+			<info>ListItem.Title</info>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(episodes) + Control.IsVisible(52)</visible>
+			<include>fadeinout</include>
+		</control>			
+
+		<control type="label">
+			<posx>90</posx>
+			<posy>105</posy>
+			<width>577</width>
+			<height>30</height>
+			<label>$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</label>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(episodes) + Control.IsVisible(52)</visible>
+			<include>fadeinout</include>
+		</control>
+
+		<control type="textbox" id="4">
+			<description>tv episode plot</description>
+			<include>fadeinout</include>
+			<posx>90</posx>
+			<posy>355</posy>
+			<width>600</width>
+			<height>160</height>
+			<label>$INFO[ListItem.Plot]</label>
+			<font>description</font>
+			<textcolor>label-text</textcolor>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>-5000</spinposx>
+			<spinposy>-5000</spinposy>
+			<visible>Container.Content(episodes) + Control.IsVisible(52)</visible>
+			<include>fadeinout</include>
+			<include>autoscroll-plot</include>
+		</control>
+		
+		
+	<!----- FANART VIEW ----->
+	
+		<control type="label">
+			<description>Episode Title</description>
+			<posx>30</posx>
+			<posy>330</posy>
+			<width>600</width>
+			<height>34</height>
+			<font>h1</font>
+			<align>left</align>
+			<textcolor>label-text</textcolor>
+			<visible>Container.Content(episodes) + Control.IsVisible(54)</visible>
+			<label>$INFO[ListItem.Title]</label>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="label">
+			<description>episode/season info, fanart colours not enabled or enabled but unavailable</description>
+			<posx>30</posx>
+			<posy>360</posy>
+			<width>600</width>
+			<height>34</height>
+			<font>h2</font>
+			<align>left</align>
+			<textcolor>sublabel-text</textcolor>
+			<visible>[!Skin.HasSetting(fanartcolorEnable) | [Skin.HasSetting(fanartcolorEnable) + IsEmpty(Fanart.Color1)]] + [Container.Content(episodes) + Control.IsVisible(54)]</visible>
+			<label>$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</label>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="label">
+			<description>episode/season info, fanart colours enabled and available</description>
+			<posx>30</posx>
+			<posy>360</posy>
+			<width>600</width>
+			<height>34</height>
+			<font>h2</font>
+			<align>left</align>
+			<textcolor>$INFO[Fanart.Color1]</textcolor>
+			<visible>!IsEmpty(Fanart.Color1) + Skin.HasSetting(fanartcolorEnable) + Container.Content(episodes) + Control.IsVisible(54)</visible>
+			<label>$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</label>
+			<include>fadeinout</include>
+		</control>
+		
+		<!--
+		<control type="label">
+			<description>air date, fanart colours not enabled or enabled but unavailable</description>
+			<posx>30</posx>
+			<posy>538</posy>
+			<width>600</width>
+			<height>34</height>
+			<font>h4</font>
+			<align>left</align>
+			<textcolor>sublabel-text</textcolor>
+			<visible>[!Skin.HasSetting(fanartcolorEnable) | [Skin.HasSetting(fanartcolorEnable) + IsEmpty(Fanart.Color1)]] + [Container.Content(episodes) + Control.IsVisible(54)]</visible>
+			<label>$INFO[ListItem.Premiered]</label>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="label">
+			<description>air date, fanart colours enabled and available</description>
+			<posx>30</posx>
+			<posy>538</posy>
+			<width>600</width>
+			<height>34</height>
+			<font>h4</font>
+			<align>left</align>
+			<textcolor>$INFO[Fanart.Color1]</textcolor>
+			<visible>!IsEmpty(Fanart.Color1) + Skin.HasSetting(fanartcolorEnable) + Container.Content(episodes) + Control.IsVisible(54)</visible>
+			<label>$INFO[ListItem.Premiered]</label>
+			<include>fadeinout</include>
+		</control>
+		-->
+																																			
+		<control type="textbox" id="4">
+			<description>tv episode description</description>
+			<posx>200</posx>
+			<posy>405</posy>
+			<width>485</width>
+			<height>135</height>
+			<info>ListItem.Plot</info>
+			<font>description</font>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>5000</spinposx>
+			<spinposy>5140</spinposy>
+			<visible>Container.Content(episodes) + Control.IsVisible(54) + System.IdleTime(2)</visible>
+			<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+			<include>pageslide</include>
+			<align>justify</align>
+			<include>autoscroll-plot</include>
+		</control>
+	
+	
+	
+																												
+				
+<!----------------------------------------------------------------------------------------------------------------->		
+<!---------- MUSIC VIDEOS ----------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+	<!----- LIST VIEW ----->																				
+	
+		<control type="label">
+			<posx>430</posx>
+			<posy>365</posy>
+			<width>260</width>
+			<height>200</height>
+			<info>ListItem.Title</info>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<align>center</align>
+			<scroll>true</scroll>
+			<visible>Container.Content(musicvideos) + [Control.IsVisible(50)]</visible>
+		</control>
+																													
+		<control type="label">
+			<posx>430</posx>
+			<posy>405</posy>
+			<width>260</width>
+			<height>300</height>
+			<info>ListItem.Artist</info>
+			<font>h2</font>
+			<align>center</align>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(musicvideos) + [Control.IsVisible(50)]</visible>
+		</control>
+																														
+		<control type="label">
+			<posx>430</posx>
+			<posy>435</posy>
+			<width>260</width>
+			<height>300</height>
+			<info>ListItem.Studio</info>
+			<font>h2</font>
+			<align>center</align>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(musicvideos) + [Control.IsVisible(50)]</visible>
+		</control>
+		
+		<control type="label">
+			<posx>430</posx>
+			<posy>465</posy>
+			<width>260</width>
+			<height>300</height>
+			<info>ListItem.Year</info>
+			<font>h2</font>
+			<align>center</align>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Container.Content(musicvideos) + [Control.IsVisible(50)]</visible>
+		</control>
+																																			
+																																			
+	<!----- COVERSLIDE VIEW ----->
+
+		<control type="label">
+			<posx>68</posx>
+			<posy>370</posy>
+			<width>530</width>
+			<height>30</height>
+			<info>ListItem.Label</info>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(52) + Container.Content(musicvideos)</visible>
+		</control>		
+	
+		<control type="label">
+			<posx>68</posx>
+			<posy>410</posy>
+			<width>600</width>
+			<height>30</height>
+			<info>ListItem.Artist</info>
+			<font>h2</font>			
+			<textcolor>sublabel-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(52) + Container.Content(musicvideos)</visible>
+		</control>
+
+		<control type="label">
+			<posx>68</posx>
+			<posy>440</posy>
+			<width>600</width>
+			<height>30</height>
+			<info>ListItem.Studio</info>
+			<font>h2</font>			
+			<textcolor>sublabel-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(52) + Container.Content(musicvideos)</visible>
+		</control>																										
+																												
+																																																	
+<!----------------------------------------------------------------------------------------------------------------->		
+<!---------- LIBRARY-OTHER ---------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+
+	<!----- LIST VIEW ----->
+
+		<control type="image" id="999">
+			<description>list item thumb</description>
+			<posx>430</posx>
+			<posy>90</posy>
+			<width>256</width>
+			<height>256</height>
+			<info>ListItem.Thumb</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(50)</visible>
+		</control>
+		<control type="image">
+			<description>list item thumb reflection</description>
+			<posx>430</posx>
+			<posy>345</posy>
+			<width>256</width>
+			<height>256</height>
+			<info>ListItem.Thumb</info>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(50)</visible>
+		</control>						
+	
+			
+	<!----- DVD VIEW ----->																											
+																																																						
+		<control type="label">
+			<posx>68</posx>
+			<posy>370</posy>
+			<width>577</width>
+			<height>30</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<selectedcolor>listselectedtext</selectedcolor>
+			<scroll>true</scroll>
+			<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(52)</visible>
+			<include>fadeinout</include>
+		</control>																												
+																																										
+	</control>
+								
+<!--- PAGE INCLUDES --------------------------------->
+																																
+	<include>allscreens</include>
+
+		
+		<include>LibraryVideoMenu</include>	
+		
+		<control type="label" id="18">
+			<description>No Info Scanned Label</description>
+			<posx>300</posx>
+			<posy>80</posy>
+			<width>485</width>
+			<height>150</height>
+			<font>h2</font>
+			<label>-</label>
+			<align>left</align>
+		</control>
+
+	</controls>
+</window>

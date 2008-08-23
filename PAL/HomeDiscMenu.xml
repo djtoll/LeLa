@@ -1,0 +1,77 @@
+<includes>
+	<include name="HomeDiscMenu">
+		
+		<control type="group" id="3000">
+			<include>home-start-column</include>
+			<include>zoomout</include>
+			<include>home-submenu</include>
+			<include>fadeinout</include>
+			<posx>164</posx>
+			<posy>61</posy>
+			<onup>9000</onup>
+		
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(6)</visible>	
+			
+			<control type="buttonscroller" id="1000">
+				<visible allowhiddenfocus="true">Control.HasFocus(1000)</visible>
+				<posx>320</posx>
+				<posy>0</posy>
+				<width>215</width>
+				<height>37</height>
+				<buttongap>0</buttongap>
+				<numbuttons>5</numbuttons>
+				<orientation>vertical</orientation>
+				<align>right</align>
+				<aligny>center</aligny>
+				<movement>0</movement>
+				<defaultbutton>2</defaultbutton>
+				<wraparound>yes</wraparound>
+				<smoothscrolling>yes</smoothscrolling>
+				<alpha>70</alpha>
+				<font>homemenu</font>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>8000</ondown>
+				<onup>8000</onup>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsetx>0</textoffsetx>
+				<textcolor>sublabel-text</textcolor>
+				<focusedcolor>label-text</focusedcolor>
+				<include>select</include>
+	
+				<buttons>
+					<button id="1">
+						<label>482</label>
+						<onclick>XBMC.Credits</onclick>
+					</button>
+					
+					<button id="2">
+						<label>20183</label>
+						<onclick>XBMC.ReloadSkin()</onclick>
+					</button>
+					
+					<button id="3">
+						<label>20126</label>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>system.logoff</onclick>
+					</button>
+					
+					<button id="4">
+						<label>13313</label>
+						<onclick>XBMC.RestartApp()</onclick>
+					</button>
+					
+					<button id="5">
+						<label>13005</label>
+						<onclick>XBMC.ShutDown()</onclick>
+					</button>
+					
+					
+
+				</buttons>
+			</control>
+		</control>
+		
+	</include>
+</includes>

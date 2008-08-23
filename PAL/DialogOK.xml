@@ -1,0 +1,92 @@
+<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>190</posx>
+		<posy>120</posy>
+	</coordinates>
+
+	<controls>
+		
+		<control type="group">
+				
+			<control type="image">
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>412</width>
+				<height>240</height>
+				<texture border="38">dialogpanel.png</texture>
+			</control>
+				
+			<control type="label" id="1">
+				<description>dialog Heading</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>342</width>	
+				<label>-</label>
+				<align>center</align>
+				<font>h1</font>
+				<textcolor>button-text</textcolor>
+			</control>
+		
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>0</posx>
+				<width>342</width>	
+				<align>center</align>
+				<posy>40</posy>
+				<label>-</label>
+				<font>h2D</font>
+				<textcolor>button-text</textcolor>
+				<scroll>yes</scroll>
+			</control>
+			
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>0</posx>
+				<width>342</width>	
+				<align>center</align>
+				<posy>70</posy>
+				<label>-</label>
+				<font>h4D</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>yes</scroll>
+			</control>
+			
+			<control type="label" id="4">
+				<description>dialog line 3</description>
+				<posx>0</posx>
+				<width>342</width>	
+				<align>center</align>
+				<posy>100</posy>
+				<label>-</label>
+				<font>h4D</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>yes</scroll>
+			</control>
+			
+			<control type="button" id="10">
+				<description>Ok button</description>
+				<posx>140</posx>
+				<posy>135</posy>
+				<width>90</width>
+				<height>36</height>
+				<label>186</label>
+				<font>buttonD</font>
+				<textoffsety>3</textoffsety>
+				<aligny>-</aligny>
+				<align>center</align>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+			</control>
+
+		</control>
+		
+	</controls>
+</window>
