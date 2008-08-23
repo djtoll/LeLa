@@ -230,6 +230,17 @@
 				<onclick>XBMC.LastFM.Ban</onclick>
 				<visible>LastFM.RadioPlaying</visible>
 			</control>
+			<control type="image">
+				<description>list item icon</description>
+				<posx>0</posx>
+				<posy>418</posy>
+				<width>260</width>
+				<height>260</height>
+				<info>ListItem.Icon</info>
+				<aspectratio align="bottom">keep</aspectratio>
+				<colordiffuse>90FFFFFF</colordiffuse>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
 										
 		</control>
 	</include>

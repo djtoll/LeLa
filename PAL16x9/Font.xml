@@ -99,6 +99,13 @@
 		<shadow>ff000000</shadow>
 		<aspect>1.1</aspect>
 	</font>
+	<font>
+		<name>menu34</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>34</size>
+		<shadow>ff000000</shadow>
+		<aspect>1.1</aspect>
+	</font>
 	
 	<font>
 		<name>cali36</name>

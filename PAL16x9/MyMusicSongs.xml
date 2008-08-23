@@ -2,13 +2,13 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>Home</previouswindow>
-	
+
 	<controls>
 		<include>background</include>
 		<include>allscreens</include>
 		<include>mediaoverlay</include>
 		<include>infobar</include>
-	
+
 		<control type="label">
 			<description>description label</description>
 			<include>home-menubar</include>
@@ -20,7 +20,7 @@
 			<font>cali36</font>
 			<visible>IsEmpty(container.pluginname)</visible>
 		</control>
-		
+
 		<control type="label">
 			<include>home-menubar</include>
 			<posx>0</posx>
@@ -32,8 +32,34 @@
 			<visible>!IsEmpty(container.pluginname)</visible>
 		</control>
 
-		<control type="group">
-		
+		<!-- <control type="button" id="9006">
+			<width>16</width>
+			<height>34</height>
+			<posx>702</posx>
+			<posy>530</posy>
+			<colordiffuse>70FFFFFF</colordiffuse>
+			<texturefocus>pfeilre.png</texturefocus>
+			<texturenofocus>pfeilli.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(8033)</onclick>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+		</control> -->
+
+
+		<!-- <control type="group" id="9006">
+
+			<visible allowhiddenfocus="true">ControlGroup(9006).HasFocus(0)</visible>
+			
+			
+			
+			
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+
 			<control type="image">
 				<description>list item icon</description>
 				<posx>199</posx>
@@ -45,31 +71,32 @@
 				<colordiffuse>30FFFFFF</colordiffuse>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
-			
+		</control> -->
+
+
+
+		<control type="group"> 
+
+
+
 			<description>page content</description>
-			<include>pageslide</include>
+			<include>pageslide</include> 
 			<include>viewsmenu</include>
-			<include>viewsmenucontext</include>
+
+
+			<include>viewsmenucontext</include> 
 			<include>ListView</include>
 			<!-- <include>BigList</include> -->
 			<include>Icons</include>
 			<include>BigIcons</include>
 			<include>PageControl</include>
-			
-			
-			<!-- <control type="image">
-				<description>list item icon reflection</description>
-				<posx>430</posx>
-				<posy>351</posy>
-				<width>260</width>
-				<height>260</height>
-				<info>ListItem.Icon</info>
-				<texture flipy="true" diffuse="fade.png">-</texture>
-				<aspectratio align="bottom">keep</aspectratio>
-				<visible>Control.IsVisible(50)</visible>
-			</control> -->
-			
-		<control type="label">
+
+
+
+
+
+
+			<control type="label">
 				<posx>30</posx>
 				<posy>526</posy>
 				<width>260</width>
@@ -83,8 +110,9 @@
 				<include>fadeinout</include>
 			</control> 
 		</control>	
-		
+
+
 		<include>FilesMenu</include>	
-	
+
 	</controls>
 </window>

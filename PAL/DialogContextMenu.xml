@@ -20,11 +20,11 @@
 				<description>button template</description>
 				<posx>19</posx>
 				<posy>14</posy>
-				<width>192</width>
-				<height>33</height>
+				<width>248</width>
+				<height>35</height>
 				<align>left</align>
-				<aligny>left</aligny>
-				<font>menu</font>
+				<aligny>2</aligny>
+				<font>cali38</font>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<texturefocus border="2">list-focus.png</texturefocus>
 			</control>
