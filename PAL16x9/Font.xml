@@ -107,6 +107,13 @@
 		<shadow>ff000000</shadow>
 		<aspect>1.1</aspect>
 	</font>
+	<font>
+		<name>cali38</name>
+		<filename>DroidSans.ttf</filename>
+		<size>30</size>
+		<shadow>ff000000</shadow>
+		<aspect>1.1</aspect>
+	</font>
 	
 	<font>
 		<name>Button</name>
