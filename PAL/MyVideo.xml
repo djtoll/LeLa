@@ -7,7 +7,6 @@
 		
 		<include>background</include>
 		<include>infobar</include>
-		<include>pagebar</include>
 		
 		<control type="group">
 			<description>page content</description>
@@ -21,7 +20,7 @@
 			<include>AllViewCommonPageControls</include>
 			
 			
-			<control type="image" id="999">
+			<!-- <control type="image" id="999">
 				<description>list item icon</description>
 				<posx>430</posx>
 				<posy>72</posy>
@@ -42,7 +41,7 @@
 				<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 				<texture flipy="true" diffuse="fade2.png">-</texture>
 				<aspectratio align="bottom">keep</aspectratio>
-			</control>
+			</control> -->
 
 			<control type="image">
 				<description>list item thumb</description>
@@ -55,7 +54,7 @@
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 			
-			<control type="label">
+			<!-- <control type="label">
 				<description>Genre</description>
 				<posx>430</posx>
 				<posy>480</posy>
@@ -67,19 +66,18 @@
 				<align>center</align>
 				<textcolor>sublabel-text</textcolor>
 				<include>fadeinout</include>
-			</control>
+			</control> -->
 
 			<control type="label">
-				<description>Size</description>
-				<posx>430</posx>
-				<posy>505</posy>
+				<posx>30</posx>
+				<posy>529</posy>
 				<width>260</width>
-				<height>200</height>
 				<label>$INFO[ListItem.size]</label>
-				<scroll>true</scroll>
-				<font>h4</font>
-				<align>center</align>
-				<textcolor>sublabel-text</textcolor>
+				<scroll>true</scroll>				
+				<font>cali36</font>	
+				<textcolor>ffcd5c5c</textcolor>
+				<align>left</align>				
+				<visible>Control.IsVisible(50)</visible>
 				<include>fadeinout</include>
 			</control>
 			

@@ -150,7 +150,7 @@
 		<!----- LIST VIEW ----->
 	
 			
-			<control type="image" id="999">
+			<!-- <control type="image" id="999">
 				<description>list item thumb</description>
 				<posx>430</posx>
 				<posy>80</posy>
@@ -228,7 +228,7 @@
 				<textcolor>sublabel-text</textcolor>
 				<visible>Container.Content(albums) + Control.IsVisible(50)</visible>
 				<include>fadeinout</include>
-			</control>
+			</control> -->
 		
 
 	<!----- COVERSLIDE VIEW ----->
