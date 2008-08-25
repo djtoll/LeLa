@@ -67,6 +67,8 @@
 		</control>
 	
 	</include>
+	
+	
 
 
 <!-- ANIMATIONS ------------------------------------------------------------------------->
@@ -79,17 +81,18 @@
 		<autoscroll delay="8000" time="2500" repeat="10000">!Control.HasFocus(4)</autoscroll>
 	</include>
 	
-	<include name="viewsmenu">
-
-		
-		<animation effect="slide" start="0" end="190" time="150" acceleration="1.2" reversible="false" condition="ControlGroup(9000).HasFocus(0)" >Conditional</animation>
-		
-		<animation effect="slide" start="190" end="0" time="150" acceleration="1.1" reversible="false" condition="!ControlGroup(9000).HasFocus(0)" >Conditional</animation>
+	<include name="viewsmenu">		
+		<animation effect="slide" start="0" end="340" time="150" acceleration="1.2" reversible="false" condition="ControlGroup(9000).HasFocus(0)" >Conditional</animation>		
+		<animation effect="slide" start="340" end="0" time="150" acceleration="1.1" reversible="false" condition="!ControlGroup(9000).HasFocus(0)" >Conditional</animation>
 	</include>
+	<!-- <include name="viewsmenu-right">		
+		<animation effect="slide" start="720" end="1340" time="150" acceleration="1.2" reversible="false" condition="ControlGroup(9006).HasFocus(0)" >Conditional</animation>		
+		<animation effect="slide" start="1340" end="720" time="150" acceleration="1.1" reversible="false" condition="!ControlGroup(9006).HasFocus(0)" >Conditional</animation>
+	</include> -->
 	
 	<include name="viewsmenucontext">
-		<animation effect="slide" start="0" end="190" time="150" acceleration="1.2" reversible="false" condition="Window.IsActive(106)">Conditional</animation>
-		<animation effect="slide" start="190" end="0" time="150" acceleration="1.1" reversible="false" condition="!Window.IsActive(106)" >Conditional</animation>
+		<animation effect="slide" start="0" end="440" time="150" acceleration="1.2" reversible="false" condition="Window.IsActive(106)">Conditional</animation>
+		<animation effect="slide" start="440" end="0" time="150" acceleration="1.1" reversible="false" condition="!Window.IsActive(106)" >Conditional</animation>
 	</include>
 
 	<include name="dialog-open">

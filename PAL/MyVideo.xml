@@ -2,12 +2,36 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>Home</previouswindow>
-	
+
 	<controls>
-		
+
 		<include>background</include>
+		<include>allscreens</include>
+		<include>mediaoverlay</include>
 		<include>infobar</include>
-		
+
+		<control type="label">
+			<include>home-menubar</include>
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>752</width>
+			<align>center</align>
+			<label>3</label>
+			<font>page</font>
+			<visible>IsEmpty(Container.PluginName)</visible>
+		</control>
+
+		<control type="label">
+			<include>home-menubar</include>
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>720</width>
+			<align>center</align>
+			<info>Container.Pluginname</info>
+			<visible>!IsEmpty(Container.PluginName)</visible>
+			<font>page</font>
+		</control>
+
 		<control type="group">
 			<description>page content</description>
 			<include>PageControl</include>
@@ -18,42 +42,81 @@
 			<include>Icons</include>
 			<include>BigIconsF</include>
 			<include>AllViewCommonPageControls</include>
-			
-			
-			<!-- <control type="image" id="999">
-				<description>list item icon</description>
-				<posx>430</posx>
-				<posy>72</posy>
-				<height>256</height>
-				<width>256</width>
-				<info>ListItem.Icon</info>
-				<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
-				<aspectratio align="bottom">keep</aspectratio>
-			</control>
 
-			<control type="image" id="999">
-				<description>list item icon</description>
-				<posx>430</posx>
-				<posy>328</posy>
-				<height>256</height>
-				<width>256</width>
-				<info>ListItem.Icon</info>
-				<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
-				<texture flipy="true" diffuse="fade2.png">-</texture>
-				<aspectratio align="bottom">keep</aspectratio>
-			</control> -->
 
-			<control type="image">
-				<description>list item thumb</description>
-				<posx>430</posx>
-				<posy>72</posy>
-				<width>260</width>
-				<height>400</height>
-				<info>ListItem.Thumb</info>
-				<aspectratio align="bottom">keep</aspectratio>
+
+<control type="group"> 
+				<posx>-10</posx>
+				<posy>48</posy>
 				<visible>Control.IsVisible(50)</visible>
+				<visible allowhiddenfocus="true">![Control.IsVisible(50) + System.IdleTime(4)]</visible>
+				<control type="image" id="0">
+					<description>list item.icon and list item.thumb Background</description>
+					<posx>530</posx>
+					<posy>38</posy>
+					<height>200</height>
+					<width>200</width>			
+					<!-- <texture border="40">itbg.png</texture> -->	
+					<aspectratio align="bottom">keep</aspectratio>
+					<texture>itbg.png</texture>
+				</control>				
+				<control type="image" id="0">
+					<description>list item.icon and list item.thumb Background diffuse</description>
+					<posx>530</posx>
+					<posy>229</posy>
+					<height>200</height>
+					<width>200</width>						
+					<aspectratio align="bottom">keep</aspectratio>					
+					<texture>itbgdiff.png</texture>
+				</control>
+				<control type="image" id="999">
+					<description>list item icon</description>
+					<posx>540</posx>
+					<posy>48</posy>
+					<height>180</height>
+					<width>180</width>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
+					<aspectratio align="bottom">keep</aspectratio>
+				</control> 
+				
+
+				<control type="image" id="999">
+					<description>list item icon</description>
+					<posx>540</posx>
+					<posy>238</posy>
+					<height>180</height>
+					<width>180</width>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
+					<texture flipy="true" diffuse="fade2.png">-</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>list item thumb</description>
+					<posx>540</posx>
+					<posy>48</posy>
+					<height>180</height>
+					<width>180</width>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="bottom">keep</aspectratio>
+					<visible>Control.IsVisible(50)</visible>
+				</control>
+				<control type="image">
+					<description>list item thumb</description>
+					<posx>540</posx>
+					<posy>238</posy>
+					<height>180</height>
+					<width>180</width>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png">-</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+					<visible>Control.IsVisible(50)</visible>
+				</control>
 			</control>
+
 			
+
 			<!-- <control type="label">
 				<description>Genre</description>
 				<posx>430</posx>
@@ -70,7 +133,7 @@
 
 			<control type="label">
 				<posx>30</posx>
-				<posy>529</posy>
+				<posy>531</posy>
 				<width>260</width>
 				<label>$INFO[ListItem.size]</label>
 				<scroll>true</scroll>				
@@ -80,37 +143,20 @@
 				<visible>Control.IsVisible(50)</visible>
 				<include>fadeinout</include>
 			</control>
-			
-		</control>
-		
-		
-<!-- PAGE HEADER -->
-		
-		<include>allscreens</include>
 
-		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
-			<label>3</label>
-			<font>page</font>
-			<visible>IsEmpty(Container.PluginName)</visible>
 		</control>
-		
-		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>720</width>
-			<align>center</align>
-			<info>Container.Pluginname</info>
-			<visible>!IsEmpty(Container.PluginName)</visible>
-			<font>page</font>
-		</control>
-	
-	<include>FilesMenu</include>
-	
+
+
+		<!-- PAGE HEADER -->
+
+
+
+		<!-- <include>allscreens</include> -->
+
+
+
+
+		<include>FilesMenu</include>
+
 	</controls>
 </window>  
