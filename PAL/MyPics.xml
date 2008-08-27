@@ -61,21 +61,26 @@
 				<include>fadeinout</include>
 			</control> -->
 			<control type="group"> 
-				<posx>-10</posx>
-				<posy>48</posy>
+				<posx>-14</posx>
+				<posy>40</posy>
 				<visible>Control.IsVisible(50)</visible>
 				<visible allowhiddenfocus="true">![Control.IsVisible(50) + System.IdleTime(4)]</visible>
-				<control type="image" id="0">
+				
+				
+				
+				<!-- <control type="image" id="0">
 					<description>list item.icon and list item.thumb Background</description>
 					<posx>530</posx>
 					<posy>38</posy>
 					<height>200</height>
-					<width>200</width>			
+					<width>200</width> -->
+					
 					<!-- <texture border="40">itbg.png</texture> -->	
-					<aspectratio align="bottom">keep</aspectratio>
+					
+					<!-- <aspectratio align="bottom">keep</aspectratio>
 					<texture>itbg.png</texture>
-				</control>				
-				<control type="image" id="0">
+				</control> -->				
+				<!-- <control type="image" id="0">
 					<description>list item.icon and list item.thumb Background diffuse</description>
 					<posx>530</posx>
 					<posy>229</posy>
@@ -83,7 +88,17 @@
 					<width>200</width>						
 					<aspectratio align="bottom">keep</aspectratio>					
 					<texture>itbgdiff.png</texture>
-				</control>
+				</control> -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				<control type="image" id="999">
 					<description>list item icon</description>
 					<posx>540</posx>
@@ -91,18 +106,22 @@
 					<height>180</height>
 					<width>180</width>
 					<info>ListItem.Icon</info>
+					<bordertexture border="2">itbg.png</bordertexture>
+					<bordersize>18</bordersize>
 					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 					<aspectratio align="bottom">keep</aspectratio>
 				</control> 
-				
-
 				<control type="image" id="999">
 					<description>list item icon</description>
 					<posx>540</posx>
-					<posy>238</posy>
+					<posy>218</posy>
 					<height>180</height>
 					<width>180</width>
 					<info>ListItem.Icon</info>
+					
+					<bordertexture border="2">itbgdiff.png</bordertexture>
+					<bordersize>18</bordersize>
+					
 					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 					<texture flipy="true" diffuse="fade2.png">-</texture>
 					<aspectratio align="bottom">keep</aspectratio>
@@ -114,16 +133,22 @@
 					<height>180</height>
 					<width>180</width>
 					<info>ListItem.Thumb</info>
+					<bordertexture border="2">itbg.png</bordertexture>
+					<bordersize>18</bordersize>
 					<aspectratio align="bottom">keep</aspectratio>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
 				<control type="image">
 					<description>list item thumb</description>
 					<posx>540</posx>
-					<posy>238</posy>
+					<posy>218</posy>
 					<height>180</height>
 					<width>180</width>
 					<info>ListItem.Thumb</info>
+					
+					<bordertexture border="2">itbgdiff.png</bordertexture>
+					<bordersize>18</bordersize>
+					
 					<texture flipy="true" diffuse="fade2.png">-</texture>
 					<aspectratio align="bottom">keep</aspectratio>
 					<visible>Control.IsVisible(50)</visible>

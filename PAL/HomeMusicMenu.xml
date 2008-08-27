@@ -40,7 +40,13 @@
 				<focusedcolor>label-text</focusedcolor>
 				<include>select</include>
 		
-				<buttons>			
+				<buttons>
+					
+					<button id="0">
+						<label>589</label>
+						<onclick>XBMC.PlayerControl(Partymode)</onclick>
+					</button>
+					
 					<button id="1">
 						<label>132</label>
 						<onclick>ActivateWindow(MyMusicLibrary,albums)</onclick>
@@ -80,6 +86,8 @@
 						<label>31914</label>
 						<onclick>ActivateWindow(MyMusicFiles,plugin://music)</onclick>
 					</button>
+					
+					
 									
 				</buttons>
 			</control>
