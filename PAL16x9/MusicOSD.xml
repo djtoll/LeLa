@@ -5,9 +5,9 @@
 		<control type="button" id="208">
 			<description>REC button</description>
 			<posx>35</posx>
-			<posy>339</posy>
+			<posy>304</posy>
 			<width>128</width>
-			<height>128</height>
+			<height>163</height>
 			<texturefocus>osd_button_rec.png</texturefocus>
 			<texturenofocus>osd_button_recNF.png</texturenofocus>
 			<label>-</label>
@@ -22,9 +22,9 @@
 		<control type="button" id="209">
 			<description>REC button 2</description>
 			<posx>35</posx>
-			<posy>339</posy>
+			<posy>304</posy>
 			<width>128</width>
-			<height>128</height>
+			<height>163</height>
 			<texturefocus>osd_button_rec2.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<label>-</label>
@@ -39,8 +39,8 @@
 		<control type="image" id="1">
 			<description>Panel</description>
 			<posx>60</posx>
-			<posy>330</posy>
-			<height>223</height>
+			<posy>300</posy>
+			<height>256</height>
 			<width>180</width>
 			<texture>osd_panel_audio.png</texture>
 			<visible>yes</visible>
@@ -48,9 +48,9 @@
 		<control type="button" id="210">
 			<description>Skip Bwd</description>
 			<posx>81</posx>
-			<posy>424</posy>
+			<posy>408</posy>
 			<width>38</width>
-			<height>45</height>
+			<height>51</height>
 			<texturefocus>osd_button_skip_minusFO.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<label>-</label>
@@ -64,9 +64,9 @@
 		<control type="togglebutton" id="211">
 			<description>Rewind</description>
 			<posx>112</posx>
-			<posy>420</posy>
-			<width>33</width>
-			<height>43</height>
+			<posy>403</posy>
+			<width>34</width>
+			<height>49</height>
 			<texturefocus>osd_button_rewFO.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<usealttexture>Player.Rewinding</usealttexture>
@@ -83,9 +83,9 @@
 		<control type="togglebutton" id="213">
 			<description>Play</description>
 			<posx>136</posx>
-			<posy>404</posy>
+			<posy>385</posy>
 			<width>52</width>
-			<height>58</height>
+			<height>66</height>
 			<texturefocus>osd_button_pauseFO.png</texturefocus>
 			<texturenofocus>osd_button_pauseNF.png</texturenofocus>
 			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -102,9 +102,9 @@
 		<control type="togglebutton" id="214">
 			<description>Fast Forward</description>
 			<posx>179</posx>
-			<posy>404</posy>
+			<posy>385</posy>
 			<width>32</width>
-			<height>43</height>
+			<height>49</height>
 			<texturefocus>osd_button_ffFO.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<usealttexture>Player.Forwarding</usealttexture>
@@ -121,9 +121,9 @@
 		<control type="button" id="215">
 			<description>Skip Fwd</description>
 			<posx>202</posx>
-			<posy>400</posy>
-			<width>33</width>
-			<height>41</height>
+			<posy>380</posy>
+			<width>34</width>
+			<height>46</height>
 			<texturefocus>osd_button_skip_plusSELFO.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<label>-</label>
@@ -137,9 +137,9 @@
 		<control type="button" id="499">
 			<description>playlist Button</description>
 			<posx>130</posx>
-			<posy>346</posy>
+			<posy>318</posy>
 			<width>38</width>
-			<height>38</height>
+			<height>44</height>
 			<texturefocus>osd_button_playlistFO.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<onclick>XBMC.ActivateWindow(500)</onclick>
@@ -153,9 +153,9 @@
 		<control type="button" id="500">
 			<description>Popup Vis Select Button</description>
 			<posx>135</posx>
-			<posy>377</posy>
+			<posy>353</posy>
 			<width>40</width>
-			<height>35</height>
+			<height>41</height>
 			<texturefocus>osd_button_visFO.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<label>-</label>
@@ -168,9 +168,9 @@
 		<control type="button" id="220">
 			<description>Popup Vis Preset List</description>
 			<posx>151</posx>
-			<posy>455</posy>
+			<posy>443</posy>
 			<width>41</width>
-			<height>38</height>
+			<height>44</height>
 			<texturefocus>osd_button_presetsFO.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<label>-</label>
@@ -184,9 +184,9 @@
 		<control type="button" id="219">
 			<description>Popup Vis Settings</description>
 			<posx>156</posx>
-			<posy>485</posy>
+			<posy>477</posy>
 			<width>43</width>
-			<height>44</height>
+			<height>51</height>
 			<texturefocus>osd_button_vizsettingsFO.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<label>-</label>

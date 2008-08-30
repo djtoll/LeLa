@@ -5,66 +5,66 @@
 
 	<coordinates>
 		<system>1</system>
-		<posx>325</posx>
-		<posy>135</posy>
+		<posx>67</posx>
+		<posy>85</posy>
 	</coordinates>
 
 	<controls>
 
 		<control type="image">
 			<posx>-27</posx>
-			<posy>-27</posy>
-			<width>270</width>
-			<height>373</height>
+			<posy>-32</posy>
+			<width>640</width>
+			<height>473</height>
 			<texture border="38">dialogpanel.png</texture>
 		</control>
 
 		<control type="group">
 			<control type="list" id="450">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>215</width>
-			<height>320</height>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>580</width>
+			<height>450</height>
 			<onleft>1</onleft>
 			<onright>10</onright>
 			<onup>450</onup>
 			<ondown>450</ondown>
 			<scrolltime>200</scrolltime>
 			
-			<itemlayout height="32">
+			<itemlayout height="54">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>215</width>
-					<height>30</height>
+					<width>570</width>
+					<height>52</height>
 					<texture>list-nofocus.png</texture>
 				</control>
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>205</width>
-					<height>24</height>
-					<font>menu</font>
+					<width>560</width>
+					<height>54</height>
+					<font>cali38</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
 			
-			<focusedlayout height="32">
+			<focusedlayout height="54">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>215</width>
-					<height>30</height>
+					<width>570</width>
+					<height>52</height>
 					<texture>list-focus.png</texture>
 				</control>
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>205</width>
-					<height>24</height>
-					<font>menu</font>
+					<width>560</width>
+					<height>54</height>
+					<font>cali38</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>

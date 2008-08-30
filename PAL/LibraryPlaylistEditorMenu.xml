@@ -16,12 +16,12 @@
 					<description>Open button</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>185</width>
-					<height>34</height>
-					<font>menu</font>
+					<width>286</width>
+					<height>37</height>
+					<font>cali38</font>
 					<label>502</label>
 					<textoffsetx>10</textoffsetx>
-					<aligny>-</aligny>	
+					<aligny>center</aligny>	
 					<textoffsety>2</textoffsety>
 					<texturefocus border="2">list-focus.png</texturefocus>
 					<texturenofocus border="2">list-nofocus.png</texturenofocus>
@@ -36,12 +36,12 @@
 					<description>Save button</description>
 					<posx>0</posx>
 					<posy>35</posy>
-					<width>185</width>
-					<height>34</height>
-					<font>menu</font>
+					<width>286</width>
+					<height>37</height>
+					<font>cali38</font>
 					<label>190</label>
 					<textoffsetx>10</textoffsetx>
-					<aligny>-</aligny>	
+					<aligny>center</aligny>	
 					<textoffsety>2</textoffsety>
 					<texturefocus border="2">list-focus.png</texturefocus>
 					<texturenofocus border="2">list-nofocus.png</texturenofocus>
@@ -56,11 +56,11 @@
 					<description>Clear button</description>
 					<posx>0</posx>
 					<posy>70</posy>
-					<width>185</width>
-					<height>34</height>
-					<font>menu</font>
+					<width>286</width>
+					<height>37</height>
+					<font>cali38</font>
 					<textoffsetx>10</textoffsetx>
-					<aligny>-</aligny>	
+					<aligny>center</aligny>	
 					<textoffsety>2</textoffsety>
 					<texturefocus border="2">list-focus.png</texturefocus>
 					<texturenofocus border="2">list-nofocus.png</texturenofocus>

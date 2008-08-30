@@ -1,16 +1,16 @@
 <window id="106">
 	<defaultcontrol>1000</defaultcontrol>
-	
+
 	<coordinates>
-	<system>1</system>
-	<origin x="0" y="67">true</origin>
+		<system>1</system>
+		<origin x="0" y="67">true</origin>
 	</coordinates>
-	
+
 	<animation effect="slide" time="150" start="-190,0" end="0,0">WindowOpen</animation>
 	<animation effect="slide" time="150" start="0,0" end="-190,0" >WindowClose</animation>
-	
+
 	<controls>
-	
+
 		<control type="group" id="9000">
 			<posx>0</posx>
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
@@ -20,11 +20,13 @@
 				<description>button template</description>
 				<posx>19</posx>
 				<posy>14</posy>
-				<width>248</width>
+				<width>380</width>
 				<height>35</height>
 				<align>left</align>
-				<aligny>2</aligny>
+				<aligny>-</aligny>				
+				<textoffsety>-2</textoffsety>
 				<font>cali38</font>
+				<textcolor>ffeeaa26</textcolor>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<texturefocus border="2">list-focus.png</texturefocus>
 			</control>

@@ -14,9 +14,9 @@
 				<description>View As Icons button</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>185</width>
-				<height>33</height>
-				<font>menu</font>
+				<width>286</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>100</label>
 				<aligny>center</aligny>	
 				<texturefocus border="2">list-focus.png</texturefocus>
@@ -62,9 +62,9 @@
 				<description>Sort by button</description>
 				<posx>0</posx>
 				<posy>35</posy>
-				<width>185</width>
-				<height>33</height>
-				<font>menu</font>
+				<width>286</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>103</label>
 				<aligny>center</aligny>	
 				<texturefocus border="2">list-focus.png</texturefocus>
@@ -78,7 +78,7 @@
 			</control>
 			<control type="togglebutton" id="4">
 				<description>Sort asc</description>
-				<posx>160</posx>
+				<posx>230</posx>
 				<posy>43</posy>
 				<label>-</label>
 				<onleft>3</onleft>
@@ -91,10 +91,10 @@
 				<description>Library button</description>
 				<posx>0</posx>
 				<posy>70</posy>
-				<width>185</width>
-				<height>33</height>
+				<width>286</width>
+				<height>37</height>
 				<aligny>center</aligny>	
-				<font>menu</font>
+				<font>cali38</font>
 				<textoffsetx>10</textoffsetx>
 				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
 				<onclick>ReplaceWindow(mymusicfiles)</onclick>
@@ -111,9 +111,9 @@
 				<description>Search button</description>
 				<posx>0</posx>
 				<posy>105</posy>
-				<width>185</width>
-				<height>33</height>
-				<font>menu</font>
+				<width>286</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>137</label>
 				<aligny>center</aligny>	
 				<onleft>50</onleft>
@@ -129,9 +129,9 @@
 				<description>Filter Button</description>
 				<posx>0</posx>
 				<posy>140</posy>
-				<width>185</width>
-				<height>33</height>
-				<font>menu</font>
+				<width>286</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>587</label>
 				<aligny>center</aligny>	
 				<onleft>50</onleft>
@@ -146,9 +146,9 @@
 				<description>CDDB Button</description>
 				<posx>0</posx>
 				<posy>175</posy>
-				<width>185</width>
-				<height>33</height>
-				<font>menu</font>
+				<width>286</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>CDDB</label>
 				<aligny>center</aligny>	
 				<onleft>50</onleft>
@@ -163,9 +163,9 @@
 				<description>Party Mode button</description>
 				<posx>0</posx>
 				<posy>210</posy>
-				<width>185</width>
-				<height>33</height>
-				<font>menu</font>
+				<width>286</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>589</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
@@ -180,15 +180,15 @@
 				<description>Favourites Button</description>
 				<posx>0</posx>
 				<posy>245</posy>
-				<width>185</width>
-				<height>33</height>
+				<width>286</width>
+				<height>37</height>
 				<label>1036</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onclick>ActivateWindow(Favourites)</onclick>
 				<onup>16</onup>
 				<ondown>31</ondown>
-				<font>menu</font>
+				<font>cali38</font>
 				<aligny>center</aligny>	
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
@@ -197,14 +197,14 @@
 				<description>LastFM Love button</description>
 				<posx>0</posx>
 				<posy>280</posy>
-				<width>185</width>
-				<height>33</height>
+				<width>286</width>
+				<height>37</height>
 				<label>LastFM Love</label>
 				<onleft>50</onleft>
 				<onright>50	</onright>
 				<onup>30</onup>
 				<ondown>32</ondown>
-				<font>menu</font>
+				<font>cali38</font>
 				<aligny>center</aligny>	
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
@@ -216,14 +216,14 @@
 				<description>LastFM Ban button</description>
 				<posx>0</posx>
 				<posy>315</posy>
-				<width>185</width>
-				<height>33</height>
+				<width>286</width>
+				<height>37</height>
 				<label>LastFM Ban</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>31</onup>
 				<ondown>2</ondown>
-				<font>menu</font>
+				<font>cali38</font>
 				<aligny>center</aligny>	
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
@@ -232,13 +232,13 @@
 			</control>
 			<control type="image">
 				<description>list item icon</description>
-				<posx>0</posx>
-				<posy>418</posy>
-				<width>260</width>
-				<height>260</height>
+				<posx>30</posx>
+				<posy>330</posy>
+				<width>160</width>
+				<height>160</height>
 				<info>ListItem.Icon</info>
 				<aspectratio align="bottom">keep</aspectratio>
-				<colordiffuse>90FFFFFF</colordiffuse>
+				<colordiffuse>97FFFFFF</colordiffuse>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 										

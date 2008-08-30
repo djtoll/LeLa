@@ -566,6 +566,52 @@
 					<textoffsety>2</textoffsety>
 					<textoffsetx>10</textoffsetx>
 				</control>
+				
+				<control type="radiobutton" id="129">
+				<description>Skin credits</description>
+				<posx>0</posx>				
+				<height>34</height>
+					<width>486</width>
+					<label>21398</label>
+					<font>menu</font>
+				<textcolor>button-text</textcolor>
+					<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+					<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<aligny>-</aligny>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>128</onup>
+				<ondown>130</ondown>
+				</control>
+				
+				
+				<control type="button" id="130">
+					<description>Startup Playlist Path</description>
+					<posx>0</posx>				
+				<height>34</height>
+				<width>486</width>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+					<label>15311</label>
+					<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+					<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+					<aligny>-</aligny>
+					<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>129</onup>
+				<ondown>126</ondown>
+				</control>
+				
+				
 
 			</control>			
 				

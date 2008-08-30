@@ -12,7 +12,7 @@
 			<width>680</width>
 			<height>442</height>
 			<onleft>9000</onleft>
-			<onright>23</onright>
+			<onright>9000</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<scrolltime>200</scrolltime>	
@@ -49,7 +49,7 @@
 					<width>200</width>
 					<height>55</height>
 					<aligny>center</aligny>
-					<font>menu34</font>
+					<font>menu</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>sublabel-text</textcolor>
@@ -85,7 +85,7 @@
 					<posy>-1</posy>
 					<width>200</width>
 					<height>55</height>
-					<font>menu34</font>
+					<font>menu</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>sublabel-text</textcolor>
@@ -1959,7 +1959,7 @@
 					<posy>115</posy>
 					<width>110</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -1997,7 +1997,7 @@
 					<posy>115</posy>
 					<width>110</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2058,7 +2058,7 @@
 					<posy>115</posy>
 					<width>86</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2106,7 +2106,7 @@
 					<posy>115</posy>
 					<width>86</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2166,7 +2166,7 @@
 					<posy>170</posy>
 					<width>140</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2211,7 +2211,7 @@
 					<posy>170</posy>
 					<width>140</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2270,7 +2270,7 @@
 					<posy>170</posy>
 					<width>140</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2317,7 +2317,7 @@
 					<posy>170</posy>
 					<width>140</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2380,7 +2380,7 @@
 					<posy>197</posy>
 					<width>100</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2430,7 +2430,7 @@
 					<posy>197</posy>
 					<width>100</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2489,7 +2489,7 @@
 					<posy>160</posy>
 					<width>195</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2534,7 +2534,7 @@
 					<posy>160</posy>
 					<width>195</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2588,7 +2588,7 @@
 					<posy>90</posy>
 					<width>290</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>					
 				</control>
@@ -2634,7 +2634,7 @@
 					<posy>90</posy>
 					<width>290</width>
 					<height>22</height>
-					<font>h4</font>
+					<font>cali36</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -2684,7 +2684,7 @@
 					<posy>2</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<textcolor>label-text</textcolor>
 					<info>ListItem.Label</info>
 				</control>
@@ -2694,7 +2694,7 @@
 					<posy>32</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<textcolor>sublabel-text</textcolor>
 					<info>ListItem.Genre</info>
 				</control>
@@ -2704,7 +2704,7 @@
 					<posy>32</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<textcolor>sublabel-text</textcolor>
 					<info>ListItem.TVShowTitle</info>
 					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
@@ -2715,7 +2715,7 @@
 					<posy>2</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<align>right</align>
 					<textcolor>label-text</textcolor>
 					<info>ListItem.Label2</info>
@@ -2726,7 +2726,7 @@
 					<posy>32</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<align>right</align>
 					<textcolor>sublabel-text</textcolor>
 					<info>ListItem.Year</info>
@@ -2738,7 +2738,7 @@
 					<posy>32</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<align>right</align>
 					<textcolor>sublabel-text</textcolor>
 					<label>$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $LOCALIZE[20359]  $INFO[ListItem.Episode]</label>
@@ -2779,7 +2779,7 @@
 					<posy>2</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<textcolor>label-text</textcolor>
 					<info>ListItem.Label</info>
 				</control>
@@ -2789,7 +2789,7 @@
 					<posy>32</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<textcolor>sublabel-text</textcolor>
 					<info>ListItem.Genre</info>
 				</control>
@@ -2799,7 +2799,7 @@
 					<posy>32</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<textcolor>sublabel-text</textcolor>
 					<info>ListItem.TVShowTitle</info>
 					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
@@ -2810,7 +2810,7 @@
 					<posy>2</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<align>right</align>
 					<textcolor>label-text</textcolor>
 					<info>ListItem.Label2</info>
@@ -2821,7 +2821,7 @@
 					<posy>32</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<align>right</align>
 					<textcolor>sublabel-text</textcolor>
 					<info>ListItem.Year</info>
@@ -2833,7 +2833,7 @@
 					<posy>32</posy>
 					<width>400</width>
 					<height>16</height>
-					<font>menu</font>
+					<font>cali36</font>
 					<align>right</align>
 					<textcolor>sublabel-text</textcolor>
 					<label>$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $LOCALIZE[20359]  $INFO[ListItem.Episode]</label>
@@ -3089,11 +3089,11 @@
 			<pagecontrol>23</pagecontrol>
 			<include>pageslide</include>	
 
-			<itemlayout width="660" height="35">
+			<itemlayout width="660" height="54">
 				
 				<control type="image">
 					<width>660</width>
-					<height>33</height>
+					<height>52</height>
 					<posx>0</posx>
 					<posy>0</posy>
 					<texture>list-nofocus.png</texture>
@@ -3102,8 +3102,8 @@
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>630</width>
-					<height>30</height>
+					<width>570</width>
+					<height>54</height>
 					<font>menu</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -3115,8 +3115,8 @@
 					<posx>650</posx>
 					<posy>0</posy>
 					<width>100</width>
-					<height>30</height>
-					<font>menu</font>
+					<height>54</height>
+					<font>cali38</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>sublabel-text</textcolor>
@@ -3125,10 +3125,10 @@
 				
 			</itemlayout>
 
-			<focusedlayout width="660" height="35">
+			<focusedlayout width="660" height="54">
 				<control type="image">
 					<width>660</width>
-					<height>33</height>
+					<height>52</height>
 					<posx>0</posx>
 					<posy>0</posy>
 					<texture border="5,0,5,0">list-focus.png</texture>
@@ -3137,8 +3137,8 @@
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>630</width>
-					<height>30</height>
+					<width>570</width>
+					<height>54</height>
 					<font>menu</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -3151,8 +3151,8 @@
 					<posx>650</posx>
 					<posy>0</posy>
 					<width>100</width>
-					<height>30</height>
-					<font>menu</font>
+					<height>54</height>
+					<font>cali38</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textoffsetx>6</textoffsetx>

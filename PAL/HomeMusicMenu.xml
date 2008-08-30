@@ -86,6 +86,14 @@
 						<label>31914</label>
 						<onclick>ActivateWindow(MyMusicFiles,plugin://music)</onclick>
 					</button>
+					<button id="9">
+						<label>Last.FM</label>
+						<onclick>XBMC.ActivateWindow(MyMusicLibrary,lastfm://)</onclick>
+					</button>
+					<button id="10">
+						<label>Playing Now ...</label>
+						<onclick>ActivateWindow(500)</onclick>
+					</button>
 					
 					
 									

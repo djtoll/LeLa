@@ -76,10 +76,11 @@
 	
 		<control type="label">
 			<description>title</description>
-			<posx>180</posx>
-			<posy>65</posy>
+			<posx>188</posx>
+			<posy>57</posy>
+			<width>510</width>
 			<align>left</align>
-			<font>h1</font>
+			<font>menu</font>
 			<info>MusicPlayer.Title</info>
 			<textcolor>label-text</textcolor>
 			<visible>Player.HasAudio</visible>
@@ -87,10 +88,11 @@
 	
 		<control type="label">
 			<description>artist</description>
-			<posx>180</posx>
-			<posy>100</posy>
+			<posx>188</posx>
+			<posy>105</posy>
 			<align>left</align>
-			<font>h2</font>
+			<width>510</width>
+			<font>menu34</font>
 			<info>MusicPlayer.Artist</info>
 			<textcolor>sublabel-text</textcolor>
 			<visible>Player.HasAudio</visible>
@@ -98,10 +100,11 @@
 	
 		<control type="label">
 			<description>album</description>
-			<posx>180</posx>
-			<posy>130</posy>
+			<posx>188</posx>
+			<posy>142</posy>
+			<width>510</width>
 			<align>left</align>
-			<font>h2</font>
+			<font>cali38</font>
 			<info>MusicPlayer.Album</info>
 			<textcolor>sublabel-text</textcolor>
 			<visible>Player.HasAudio</visible>
@@ -109,10 +112,10 @@
 	
 		<control type="label">
 			<description>Time Label</description>
-			<posx>180</posx>
-			<posy>167</posy>
+			<posx>188</posx>
+			<posy>180</posy>
 			<align>left</align>
-			<font>h4</font>
+			<font>cali36</font>
 			<label>$INFO[player.Time]$INFO[player.Duration, / ]</label>
 			<visible>Player.HasAudio</visible>
 			<include>sublabel</include>
@@ -120,10 +123,10 @@
 
 		<control type="progress">
 			<description>progress control</description>
-			<posx>180</posx>
-			<posy>207</posy>
-			<width>510</width>
-			<height>8</height>
+			<posx>188</posx>
+			<posy>223</posy>
+			<width>501</width>
+			<height>10</height>
 			<info>Player.Progress</info>
 			<texturebg>progressbar-background.png</texturebg>
 			<lefttexture>progress-left.png</lefttexture>

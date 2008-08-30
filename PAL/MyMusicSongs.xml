@@ -67,7 +67,7 @@
 			<include>viewsmenucontext</include>
 			<include>ListView</include>
 			<!-- <include>BigList</include> -->
-			<include>Icons</include>
+			<!-- <include>Icons</include> -->
 			<include>BigIcons</include>
 			<include>PageControl</include>
 			<!-- <control type="group">

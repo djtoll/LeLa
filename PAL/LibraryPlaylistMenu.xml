@@ -6,29 +6,88 @@
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
 			<onright>50</onright>
 			<include>pageslide</include>
-			
+
 			<animation effect="slide" time="150" start="-190,0" end="0,0" acceleration="1.1">Visible</animation>
 			<animation effect="slide" time="150" start="0,0" end="-190,0" acceleration="1.1">Hidden</animation>
-				
-			<control type="button" id="20">
+
+
+
+
+
+
+
+			<control type="image">
+				<description>list item icon</description>
+				<posx>0</posx>
+				<posy>214</posy>
+				<width>280</width>
+				<height>260</height>
+				<info>ListItem.Icon</info>
+				<aspectratio align="bottom">keep</aspectratio>	
+				<visible>!LastFM.RadioPlaying</visible>
+				<!-- <visible>Control.IsVisible(50)</visible> -->
+			</control>
+			<control type="image">
+				<description>list item icon reflection</description>
+				<posx>0</posx>
+				<posy>474</posy>
+				<width>280</width>
+				<height>260</height>
+				<info>ListItem.Icon</info>
+				<texture flipy="true" diffuse="fade.png">-</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>!LastFM.RadioPlaying</visible>
+			</control>
+			<control type="image">
+				<description>list item icon</description>
+				<posx>0</posx>
+				<posy>260</posy>
+				<width>270</width>
+				<height>220</height>
+				<info>ListItem.Icon</info>
+				<aspectratio align="bottom">keep</aspectratio>	
+				<visible>LastFM.RadioPlaying</visible>
+				<!-- <visible>Control.IsVisible(50)</visible> -->
+			</control>
+			<control type="image">
+				<description>list item icon reflection</description>
+				<posx>0</posx>
+				<posy>488</posy>
+				<width>270</width>
+				<height>220</height>
+				<info>ListItem.Icon</info>
+				<texture flipy="true" diffuse="fade.png">-</texture>
+				<aspectratio align="bottom">keep</aspectratio>
+				<visible>LastFM.RadioPlaying</visible>
+			</control>
+
+
+
+
+
+
+
+
+			<control type="radiobutton" id="20">
 				<description>Shuffle button</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>185</width>
-				<height>34</height>
-				<font>menu</font>
+				<width>270</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>191</label>
 				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>31</onup>
-				<ondown>28</ondown>
+				<ondown>26</ondown>
 				<textcolor>button-text</textcolor>
 			</control>
-			
-			<control type="radiobutton" id="28">
+
+			<!-- <control type="radiobutton" id="28">
 				<description>Randomize button</description>
 				<posx>0</posx>
 				<posy>35</posy>
@@ -45,35 +104,37 @@
 				<onup>20</onup>
 				<ondown>26</ondown>
 				<textcolor>button-text</textcolor>
-			</control>
-			
+			</control> -->
+
 			<control type="button" id="26">
 				<description>Repeat button</description>
 				<posx>0</posx>
-				<posy>70</posy>
-				<width>185</width>
-				<height>34</height>
-				<font>menu</font>
+				<posy>37</posy>
+				<width>270</width>
+				<height>37</height>
+				<font>cali38</font>
 				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<label>-</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
-				<onup>28</onup>
+				<onup>20</onup>
 				<ondown>21</ondown>
 				<textcolor>button-text</textcolor>
 			</control>
-			
+
 			<control type="button" id="21">
 				<description>Save button</description>
 				<posx>0</posx>
-				<posy>105</posy>
-				<width>185</width>
-				<height>34</height>
-				<font>menu</font>
+				<posy>74</posy>
+				<width>270</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>190</label>
 				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
@@ -82,17 +143,18 @@
 				<ondown>22</ondown>
 				<textcolor>button-text</textcolor>
 			</control>
-			
+
 			<control type="button" id="22">
 				<description>Clear button</description>
 				<posx>0</posx>
-				<posy>140</posy>
-				<width>185</width>
-				<height>34</height>
-				<font>menu</font>
+				<posy>111</posy>
+				<width>270</width>
+				<height>37</height>
+				<font>cali38</font>
 				<label>192</label>
 				<label>31011</label>
 				<textoffsetx>10</textoffsetx>
+				<aligny>center</aligny>
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
@@ -101,49 +163,49 @@
 				<ondown>30</ondown>
 				<textcolor>button-text</textcolor>
 			</control>
-			
+
 			<control type="button" id="30">
 				<description>LastFM Love button</description>
 				<posx>0</posx>
-				<posy>175</posy>
-				<width>185</width>
-				<height>33</height>
+				<posy>148</posy>
+				<width>270</width>
+				<height>37</height>
 				<label>LastFM Love</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>22</onup>
 				<ondown>31</ondown>
-				<font>menu</font>
-				<aligny>center</aligny>	
+				<font>cali38</font>
+				<aligny>center</aligny>					
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<include>View-as</include>
 				<onclick>XBMC.LastFM.Love</onclick>
 				<visible>LastFM.RadioPlaying</visible>
 			</control>
-				
+
 			<control type="button" id="31">
 				<description>LastFM Ban button</description>
 				<posx>0</posx>
-				<posy>205</posy>
-				<width>185</width>
-				<height>33</height>
+				<posy>185</posy>
+				<width>270</width>
+				<height>37</height>
 				<label>LastFM Ban</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>30</onup>
 				<ondown>20</ondown>
-				<font>menu</font>
+				<font>cali38</font>
 				<aligny>center</aligny>	
 				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<onclick>XBMC.LastFM.Ban</onclick>
 				<visible>LastFM.RadioPlaying</visible>
 			</control>
-																	
+
 		</control>
-		
-		
+
+
 	</include>
 
 </includes>
