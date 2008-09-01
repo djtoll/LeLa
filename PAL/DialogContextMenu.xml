@@ -26,7 +26,7 @@
 				<aligny>-</aligny>				
 				<textoffsety>-2</textoffsety>
 				<font>cali38</font>
-				<textcolor>ffeeaa26</textcolor>
+				<textcolor>ff2ea5f7</textcolor>
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<texturefocus border="2">list-focus.png</texturefocus>
 			</control>
