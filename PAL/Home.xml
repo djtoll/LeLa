@@ -130,15 +130,15 @@
 		<control type="button" id="6">
 			<label>-</label>
 			<posx>665</posx>
-			<posy>8</posy>
-			<width>20</width>
-			<height>24</height>
+			<posy>5</posy>
+			<width>30</width>
+			<height>40</height>
 			<onleft>7</onleft>
 			<onright>1</onright>
 			<onup>1</onup>
 			<ondown>1800</ondown>
-			<texturenofocus>shutdown-menubar-nofocus.png</texturenofocus>
-			<texturefocus>shutdown-menubar-focus.png</texturefocus>
+			<texturenofocus>home-power.png</texturenofocus>
+			<texturefocus>home-power-focus.png</texturefocus>
 			<aspectratio>keep</aspectratio>
 			<textoffsetx>10</textoffsetx>
 			<textoffsety>3</textoffsety>

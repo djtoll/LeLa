@@ -28,7 +28,7 @@
 				<wraparound>yes</wraparound>
 				<smoothscrolling>yes</smoothscrolling>
 				<alpha>70</alpha>
-				<font>homemenu</font>
+				<font>menubar</font>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<ondown>700</ondown>
