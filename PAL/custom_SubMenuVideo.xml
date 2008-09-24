@@ -1,0 +1,95 @@
+<window id="52" type="dialog">
+	<defaultcontrol always="true" >9003</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<include>dialog-open</include>
+	<coordinates>
+		<system>1</system>
+		<posx>170</posx>
+		<posy>100</posy>
+	</coordinates>
+
+	
+	<controls>
+		
+		<control type="group">
+				
+			<control type="image">
+				
+				<height>460</height>
+				<include>dialogWindow</include>
+			</control>
+			
+		<control type="label" id="1">
+				<description>dialog Heading</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>342</width>	
+				<label>Select Backgrounds</label>
+				<align>left</align>
+				<font>h1</font>
+				<textcolor>label-text</textcolor>
+			</control>
+		
+		<control type="grouplist" id="9003">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>395</width>
+				<height>360</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9003</onup>
+				<ondown>9003</ondown>
+
+				<itemgap>2</itemgap>
+				<scrolltime>200</scrolltime>
+
+				<control type="radiobutton" id="100">
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>31914</label>
+					<onclick>Skin.ToggleSetting(SubVideoPlugins)</onclick>
+					<selected>Skin.HasSetting(SubVideoPlugins)</selected>
+				</control>
+				<control type="radiobutton" id="101">
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>20343</label>
+					<onclick>Skin.ToggleSetting(SubVideoTVShows)</onclick>
+					<selected>Skin.HasSetting(SubVideoTVShows)</selected>
+				</control>
+				<control type="radiobutton" id="102">
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>20387</label>
+					<onclick>Skin.ToggleSetting(SubVideoRecent)</onclick>
+					<selected>Skin.HasSetting(SubVideoRecent)</selected>
+				</control>
+				<control type="radiobutton" id="103">
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>20387</label>
+					<onclick>Skin.ToggleSetting(SubVideoRecentEP)</onclick>
+					<selected>Skin.HasSetting(SubVideoRecentEP)</selected>
+				</control>
+				<control type="radiobutton" id="104">
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>20389</label>
+					<onclick>Skin.ToggleSetting(SubVideoMusic)</onclick>
+					<selected>Skin.HasSetting(SubVideoMusic)</selected>
+				</control>
+			
+
+				
+		
+			</control>
+			
+		</control>
+
+	</controls>
+</window>

@@ -1,143 +1,91 @@
 <window id="2007">
 	<defaultcontrol>2</defaultcontrol>
 	<controls>
-		<control type="image" id="13">
-			<description>pause image</description>
-			<align>right</align>
-			<posx>600</posx>
-			<posy>25</posy>
-			<height>64</height>
-			<width>128</width>
-			<visible>no</visible>
-			<texture>video-pause.png</texture>
-			<colorkey>0</colorkey>
-		</control>
-		
-		<control type="fadelabel" id="200">
-			<posx>660</posx>
-			<posy>9</posy>
-			<width>315</width>
-			<label>$INFO[System.Time]</label>
-			<scrollout>false</scrollout>
-			<pauseatend>5000</pauseatend>
-			<textcolor>ffffffff</textcolor>
-			<align>right</align>
-			<font>date</font>
-			<include>home-menubar</include>
-			<visible>Player.ShowInfo</visible>
-		</control>
-		
-		<control type="group" id="1">
+
+	<control type="group" id="1">
+		<posx>-10</posx>
+		<posy>380</posy>
+
+		<control type="image" id="1">
 			<posx>-10</posx>
-			<posy>430</posy>
+			<posy>68</posy>
+			<width>760</width>
+			<height>150</height>
+			<texture border="0,0,22,0">osd-infobar.png</texture>
+			<include>fadeinout-osd</include>
 			<visible>Player.ShowInfo</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+
+		<control type="group" id="1">
+			<visible>Player.ShowInfo</visible>
+			<include>fadeinout-osd-info</include>
 			
 			<control type="image" id="1">
-				<description>media info background image</description>
-				<posx>-20</posx>
-				<posy>0</posy>
-				<width>760</width>
-				<height>130</height>
-				<texture border="3">osd-bar.png</texture>
-				<visible>Player.HasAudio</visible>
+				<description>cover image</description>
+				<posx>25</posx>
+				<posy>98</posy>
+				<width>100</width>
+				<height>85</height>
+				<info>musicplayer.cover</info>
+				<bordertexture border="2">list-focus.png</bordertexture>
+				<bordersize>2</bordersize>
+				<aspectratio align="left">keep</aspectratio>
 			</control>
-	
-			<control type="group" id="1">
-				<visible>Player.ShowInfo + Player.HasMedia</visible>
-				
-				<control type="image" id="1">
-					<description>cover image</description>
-					<posx>30</posx>
-					<posy>0</posy>
-					<width>92</width>
-					<height>130</height>
-					<info>MusicPlayer.Cover</info>
-					<aspectratio align="center">keep</aspectratio>
-				</control>
-				
-				<control type="label" id="1">
-					<description>Title</description>
-					<width>560</width>
-					<posx>140</posx>
-					<posy>3</posy>
-					<info>MusicPlayer.Title</info>
-					<align>left</align>
-					<font>h1</font>
-				</control>
-				
-				<control type="label" id="1">
-					<description>Album</description>
-					<width>560</width>
-					<posx>140</posx>
-					<posy>43</posy>
-					<info>MusicPlayer.Album</info>
-					<align>left</align>
-					<font>h2</font>
-					<textcolor>sublabel-text</textcolor>
-				</control>
-				
-				<control type="label" id="1">
-					<description>Artist</description>
-					<width>560</width>
-					<posx>140</posx>
-					<posy>73</posy>
-					<info>Musicplayer.Artist</info>
-					<align>left</align>
-					<font>h2</font>
-					<textcolor>sublabel-text</textcolor>
-				</control>
-				
-				<control type="label" id="1">
-					<description>time label</description>
-					<width>200</width>
-					<posx>700</posx>
-					<posy>73</posy>
-					<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
-					<align>right</align>
-					<font>h2</font>
-				</control>
-				
-				<control type="label" id="1">
-					<description>Playlist Pos No</description>
-					<width>200</width>
-					<posx>700</posx>
-					<posy>43</posy>
-					<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
-					<visible>!MusicPartyMode.Enabled</visible>
-					<align>right</align>
-					<font>h4</font>
-				</control>
-				
-				<control type="label" id="1">
-					<description>PartyMode Enabled</description>
-					<width>200</width>
-					<posx>700</posx>
-					<posy>3</posy>
-					<label>589</label>
-					<visible>MusicPartyMode.Enabled</visible>
-					<align>right</align>
-					<font>h4</font>
-				</control>
-				
-				<control type="progress" id="1">
-					<description>Progressbar</description>
-					<posx>140</posx>
-					<posy>110</posy>
-					<width>560</width>
-					<height>5</height>
-					<info>Player.Progress</info>
-					<texturebg>progress_back.png</texturebg>
-					<lefttexture>progress_left.png</lefttexture>
-					<midtexture>progress_mid.png</midtexture>
-					<righttexture>progress_right.png</righttexture>
-					<overlaytexture>-</overlaytexture>
-					<visible>true</visible>
-				</control>
-				
+			
+			<control type="label" id="1">
+				<description>Movie Title</description>
+				<width>420</width>
+				<posx>115</posx>
+				<posy>100</posy>
+				<info>musicplayer.Title</info>
+				<align>left</align>
+				<font>h1</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Movie Genre</description>
+				<width>520</width>
+				<posx>115</posx>
+				<posy>127</posy>
+				<info>musicplayer.Genre</info>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Progress</description>
+				<width>520</width>
+				<posx>115</posx>
+				<posy>156</posy>
+				<align>left</align>
+				<font>h3</font>
+				<include>timeProgress</include>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Playlist</description>
+				<width>200</width>
+				<posx>710</posx>
+				<posy>127</posy>
+				<label>$INFO[musicplayer.PlaylistPosition]$INFO[musicplayer.PlaylistLength, / ]</label>
+				<align>right</align>
+				<font>h4</font>
+				<textcolor>sublabel-text</textcolor>
 			</control>
 
+			<control type="label" id="1">
+				<description>FINISH time label</description>
+				<width>310</width>
+				<posx>710</posx>
+				<posy>156</posy>
+				<label>[B]$LOCALIZE[31068][/B]</label>	
+				<align>right</align>
+				<font>h3</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+		
+		</control>
 	</control>
-
 	</controls>
 </window>

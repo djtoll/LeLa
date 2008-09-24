@@ -27,10 +27,10 @@
 		<include>PlaylistView</include>
 
 		<control type="image">
-			<posx>32</posx>
-			<posy>70</posy>
-			<width>150</width>
-			<height>150</height>
+			<posx>30</posx>
+			<posy>67</posy>
+			<width>166</width>
+			<height>166</height>
 			<info>MusicPlayer.Cover</info>
 			<bordertexture border="2">list-focus.png</bordertexture>
 			<bordersize>4</bordersize>
@@ -38,7 +38,7 @@
 			<visible>Player.HasAudio</visible>
 			<include>fadereplace</include>
 		</control>
-		<control type="image">
+		<!-- <control type="image">
 			<posx>32</posx>
 			<posy>210</posy>
 			<width>150</width>
@@ -50,7 +50,7 @@
 			<aspectratio align="left">keep</aspectratio>
 			<visible>Player.HasAudio</visible>
 			<include>fadereplace</include>
-		</control>
+		</control> -->
 
 		<control type="image">
 			<posx>30</posx>
@@ -92,7 +92,7 @@
 			<posy>105</posy>
 			<align>left</align>
 			<width>510</width>
-			<font>menu34</font>
+			<font>mach7</font>
 			<info>MusicPlayer.Artist</info>
 			<textcolor>sublabel-text</textcolor>
 			<visible>Player.HasAudio</visible>
@@ -101,10 +101,10 @@
 		<control type="label">
 			<description>album</description>
 			<posx>188</posx>
-			<posy>142</posy>
+			<posy>146</posy>
 			<width>510</width>
 			<align>left</align>
-			<font>cali38</font>
+			<font>cali36</font>
 			<info>MusicPlayer.Album</info>
 			<textcolor>sublabel-text</textcolor>
 			<visible>Player.HasAudio</visible>
@@ -120,6 +120,29 @@
 			<visible>Player.HasAudio</visible>
 			<include>sublabel</include>
 		</control>
+		
+		<control type="label">
+				<description>Tracks value</description>
+				<posx>677</posx>
+				<posy>180</posy>
+				<align>right</align>
+				<label>$INFO[musicpartymode.songsplayed]$INFO[musicpartymode.matchingsongs, / ]</label>
+				<textcolor>80ffffff</textcolor>
+				<width>425</width>
+				<font>cali36</font>
+				<visible>MusicPartyMode.Enabled</visible>
+			</control>
+			<control type="label">
+				<description>Tracks value</description>
+				<posx>677</posx>
+				<posy>180</posy>
+				<align>right</align>
+				<label>$INFO[musicplayer.Playlistposition]$INFO[musicplayer.Playlistlength, / ]</label>
+				<font>cali36</font>
+				<textcolor>80ffffff</textcolor>
+				<width>425</width>
+				<visible>!MusicPartyMode.Enabled</visible>
+			</control>
 
 		<control type="progress">
 			<description>progress control</description>
@@ -137,7 +160,16 @@
 		</control>
 
 	</control>
-	
+	<control type="label">
+			<description>no files in the playlist</description>
+			<posx>178</posx>
+			<posy>140</posy>
+			<align>left</align>
+			<font>cali38</font>
+			<label>sorry, no Files in the Playlist !</label>
+			<visible>!Player.HasAudio</visible>			
+		</control>
+		
 	<control type="image">
 		<posx>30</posx>
 		<posy>539</posy>

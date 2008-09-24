@@ -1,21 +1,15 @@
 <window id="4">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
+	
 	<controls>
 
 		<include>background</include>
 		<include>allscreens</include>
 
 		<control type="label">
-			<description>description label</description>
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>5</label>
-			<font>page</font>
 		</control>
 		
 		<control type="panel" id="50">

@@ -1,110 +1,55 @@
 <window id="12">
 	<defaultcontrol>0</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	
+	<previouswindow>58</previouswindow>
 	
 	<controls>
 		<include>background</include>
 		<include>allscreens</include>
-		<include>mediaoverlay</include>
 
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>10507</label>
 			<visible>Window.IsActive(settings)</visible>
 		</control>
-		
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31033</label>
-			<font>page</font>
 			<visible>Window.IsActive(appearancesettings)</visible>
 		</control>
-		
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31069</label>
-			<font>page</font>
 			<visible>Window.IsActive(videossettings)</visible>
 		</control>
-		
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31007</label>
-			<font>page</font>
 			<visible>Window.IsActive(programssettings)</visible>
 		</control>
-		
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31900</label>
-			<font>page</font>
 			<visible>Window.IsActive(musicsettings)</visible>
 		</control>
-		
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31901</label>
-			<font>page</font>
 			<visible>Window.IsActive(picturessettings)</visible>
 		</control>
-		
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31902</label>
-			<font>page</font>
 			<visible>Window.IsActive(networksettings)</visible>
 		</control>
-		
 		<control type="label">
-			<description>description label</description>
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31903</label>
-			<font>page</font>
 			<visible>Window.IsActive(weathersettings)</visible>
 		</control>
-		
 		<control type="label">
-			<description>description label</description>
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31904</label>
-			<font>page</font>
 			<visible>Window.IsActive(systemsettings)</visible>
 		</control>
 				
@@ -129,14 +74,13 @@
 					<posx>210</posx>
 					<posy>90</posy>
 					<width>480</width>
-					<height>450</height>
+					<height>433</height>
 					<itemgap>2</itemgap>
 					<onleft>3</onleft>
 					<onright>3</onright>
 					<onup>5</onup>
 					<ondown>5</ondown>
 				</control>
-				
 				
 				<control type="button" id="7">
 					<description>Default Button</description>
@@ -150,6 +94,7 @@
 					<texturenofocus>list-nofocus.png</texturenofocus>
 					<textcolor>button-text</textcolor>
 				</control>
+				
 				<control type="radiobutton" id="8">
 					<description>Default RadioButton</description>
 					<posx>0</posx>
@@ -157,14 +102,6 @@
 					<width>225</width>
 					<height>34</height>
 					<font>menu</font>
-					<texturefocus>list-focus.png</texturefocus>
-					<texturenofocus>list-nofocus.png</texturenofocus>
-					<aligny>-</aligny>
-					<textoffsetx>10</textoffsetx>
-					<textoffsety>2</textoffsety>
-					<textureradiofocus>check-box.png</textureradiofocus>
-					<textureradionofocus>check-boxNF.png</textureradionofocus>
-					<textcolor>button-text</textcolor>
 				</control>
 				
 				<control type="spincontrolex" id="9">
@@ -201,7 +138,7 @@
 					<textoffsety>3</textoffsety>
 					<textoffsetx>10</textoffsetx>
 					<texturefocus border="2">list-focus.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
 					<textcolor>button-text</textcolor>
 				</control>
 

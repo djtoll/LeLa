@@ -14,7 +14,7 @@
 			<include>list-fade</include>
 			<focusposition>2</focusposition>
 			<orientation>horizontal</orientation>
-			<visible>!Skin.HasSetting(viewtypeCoverFlow) + Container.Content(movies) | !Skin.HasSetting(viewtypeCoverFlowS) + Container.Content(Seasons)</visible>
+			<visible>!Skin.HasSetting(viewtypeCoverFlow) + Container.Content(movies) | Skin.HasSetting(viewtypeCoverFlowS) + Container.Content(Seasons)</visible>
 			<itemlayout height="390" width="140">
 			</itemlayout>
 			<focusedlayout height="410" width="320">
@@ -557,52 +557,49 @@
 			</control>
 	</control>
 		
-		<control type="label">
-			<posx>0</posx>
-			<posy>465</posy>
-			<width>720</width>
-			<height>30</height>
-			<font>h1</font>
-			<align>center</align>
-			<textcolor>label-text</textcolor>
-			<scroll>true</scroll>
-			<info>ListItem.Label</info>
-			<textoffsetx>0</textoffsetx>
-			<visible>Control.IsVisible(57)</visible>
-			</control>
-		<control type="label">
-			<posx>0</posx>
-			<posy>500</posy>
-			<width>720</width>
-			<height>30</height>
-			<font>h2</font>
-			<align>center</align>
-			<textcolor>sublabel-text</textcolor>
-			<scroll>true</scroll>
-			<label>$INFO[ListItem.Year] | $INFO[ListItem.Genre] | $INFO[ListItem.Duration] | $INFO[ListItem.Rating]</label>
-			<textoffsetx>0</textoffsetx>
-			<scrollout>false</scrollout>
-			<pauseatend>5000</pauseatend>
-			<visible>Container.Content(movies) + Control.IsVisible(57)</visible>
+	<control type="label">
+		<posx>0</posx>
+		<posy>465</posy>
+		<width>720</width>
+		<height>30</height>
+		<font>h1</font>
+		<align>center</align>
+		<textcolor>label-text</textcolor>
+		<scroll>true</scroll>
+		<info>ListItem.Label</info>
+		<textoffsetx>0</textoffsetx>
+		<visible>Control.IsVisible(57)</visible>
 		</control>
-		<control type="label">
-			<posx>0</posx>
-			<posy>535</posy>
-			<width>720</width>
-			<height>30</height>
-			<font>h2</font>
-			<align>center</align>
-			<textcolor>sublabel-text</textcolor>
-			<scroll>true</scroll>
-			<label>31931</label>
-			<textoffsetx>0</textoffsetx>
-			<scrollout>false</scrollout>
-			<pauseatend>5000</pauseatend>
-			<visible>!IsEmpty(ListItem.Trailer) + Container.Content(movies) + Control.IsVisible(57)</visible>
-		</control>
-		
-		
-
+	<control type="label">
+		<posx>0</posx>
+		<posy>495</posy>
+		<width>720</width>
+		<height>30</height>
+		<font>h2</font>
+		<align>center</align>
+		<textcolor>sublabel-text</textcolor>
+		<scroll>true</scroll>
+		<label>$INFO[ListItem.Year] | $INFO[ListItem.Genre] | $INFO[ListItem.Duration] | $INFO[ListItem.Rating]</label>
+		<textoffsetx>0</textoffsetx>
+		<scrollout>false</scrollout>
+		<pauseatend>5000</pauseatend>
+		<visible>Container.Content(movies) + Control.IsVisible(57)</visible>
+	</control>
+	<control type="label">
+		<posx>0</posx>
+		<posy>525</posy>
+		<width>720</width>
+		<height>30</height>
+		<font>h2</font>
+		<align>center</align>
+		<textcolor>sublabel-text</textcolor>
+		<scroll>true</scroll>
+		<label>31931</label>
+		<textoffsetx>0</textoffsetx>
+		<scrollout>false</scrollout>
+		<pauseatend>5000</pauseatend>
+		<visible>!IsEmpty(ListItem.Trailer) + Container.Content(movies) + Control.IsVisible(57)</visible>
+	</control>
 
 	</include>
 </includes>

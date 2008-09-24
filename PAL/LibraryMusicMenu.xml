@@ -1,33 +1,26 @@
 <includes>
 	<include name="LibraryMusicMenu">
+		
 		<control type="group" id="9000">
 			<posx>20</posx>
 			<posy>67</posy>
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
 			<onright>50</onright>
 			<include>pageslide</include>
-			
-			<animation effect="slide" time="150" start="-190,0" end="0,0" acceleration="1.1">Visible</animation>
-			<animation effect="slide" time="150" start="0,0" end="-190,0" acceleration="1.1">Hidden</animation>
+			<include>pagemenus</include>
 
 			<control type="button" id="2">
 				<description>View As Icons button</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>100</label>
-				<aligny>center</aligny>	
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>40</onright>
 				<onup>32</onup>
 				<ondown>3</ondown>
-				<textcolor>button-text</textcolor>
-				<include>button-fade</include>
 			</control>
+			
 			<control type="button" id="40">
 				<description>previous viewtype</description>
 				<posx>146</posx>
@@ -43,6 +36,7 @@
 				<onup>2</onup>
 				<ondown>3</ondown>
 			</control>
+			
 			<control type="button" id="41">
 				<description>next viewtype</description>
 				<posx>163</posx>
@@ -58,43 +52,34 @@
 				<onup>2</onup>
 				<ondown>3</ondown>
 			</control>
+			
 			<control type="button" id="3">
 				<description>Sort by button</description>
 				<posx>0</posx>
 				<posy>35</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>103</label>
-				<aligny>center</aligny>	
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>4</onright>
 				<onup>2</onup>
 				<ondown>5</ondown>
-				<textcolor>button-text</textcolor>
-				<include>button-fade</include>
 			</control>
+			
 			<control type="togglebutton" id="4">
 				<description>Sort asc</description>
-				<posx>230</posx>
+				<posx>160</posx>
 				<posy>43</posy>
 				<label>-</label>
 				<onleft>3</onleft>
 				<onright>50</onright>
 				<onup>2</onup>
 				<ondown>5</ondown>
-				<include>View-as</include>
 			</control>
 			<control type="radiobutton" id="5">
 				<description>Library button</description>
 				<posx>0</posx>
 				<posy>70</posy>
-				<width>286</width>
-				<height>37</height>
-				<aligny>center</aligny>	
-				<font>cali38</font>
+				<width>185</width>
 				<textoffsetx>10</textoffsetx>
 				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
 				<onclick>ReplaceWindow(mymusicfiles)</onclick>
@@ -103,146 +88,96 @@
 				<onright>50</onright>
 				<onup>3</onup>
 				<ondown>8</ondown>
-				<textcolor>button-text</textcolor>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 			</control>
+			
 			<control type="button" id="8">
 				<description>Search button</description>
 				<posx>0</posx>
 				<posy>105</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>137</label>
-				<aligny>center</aligny>	
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>5</onup>
 				<ondown>19</ondown>
-				<textcolor>button-text</textcolor>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 			</control>
 			
 			<control type="radiobutton" id="19">
 				<description>Filter Button</description>
 				<posx>0</posx>
 				<posy>140</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>587</label>
-				<aligny>center</aligny>	
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>8</onup>
 				<ondown>17</ondown>
-				<textcolor>button-text</textcolor>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 			</control>
+			
 			<control type="button" id="17">
 				<description>CDDB Button</description>
 				<posx>0</posx>
 				<posy>175</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>CDDB</label>
-				<aligny>center</aligny>	
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>19</onup>
 				<ondown>16</ondown>
-				<textcolor>button-text</textcolor>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 			</control>
+			
 			<control type="radiobutton" id="16">
 				<description>Party Mode button</description>
 				<posx>0</posx>
 				<posy>210</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>589</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
-				<aligny>center</aligny>	
 				<onup>17</onup>
 				<ondown>30</ondown>
-				<textcolor>button-text</textcolor>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 			</control>
+			
 			<control type="button" id="30">
 				<description>Favourites Button</description>
 				<posx>0</posx>
 				<posy>245</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>1036</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onclick>ActivateWindow(Favourites)</onclick>
 				<onup>16</onup>
 				<ondown>31</ondown>
-				<font>cali38</font>
-				<aligny>center</aligny>	
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 			</control>
+			
 			<control type="button" id="31">
 				<description>LastFM Love button</description>
 				<posx>0</posx>
 				<posy>280</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>LastFM Love</label>
 				<onleft>50</onleft>
-				<onright>50	</onright>
+				<onright>50</onright>
 				<onup>30</onup>
 				<ondown>32</ondown>
-				<font>cali38</font>
-				<aligny>center</aligny>	
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
-				<include>View-as</include>
 				<onclick>XBMC.LastFM.Love</onclick>
 				<visible>LastFM.RadioPlaying</visible>
 			</control>
+			
 			<control type="button" id="32">
 				<description>LastFM Ban button</description>
 				<posx>0</posx>
 				<posy>315</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>LastFM Ban</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>31</onup>
 				<ondown>2</ondown>
-				<font>cali38</font>
-				<aligny>center</aligny>	
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<onclick>XBMC.LastFM.Ban</onclick>
 				<visible>LastFM.RadioPlaying</visible>
-			</control>
-			<control type="image">
-				<description>list item icon</description>
-				<posx>30</posx>
-				<posy>330</posy>
-				<width>160</width>
-				<height>160</height>
-				<info>ListItem.Icon</info>
-				<aspectratio align="bottom">keep</aspectratio>
-				<colordiffuse>97FFFFFF</colordiffuse>
-				<visible>Control.IsVisible(50)</visible>
-			</control>
-										
+			</control>							
 		</control>
 	</include>
-
 </includes>

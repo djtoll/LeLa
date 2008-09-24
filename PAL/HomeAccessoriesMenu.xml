@@ -6,7 +6,7 @@
 			<include>zoomout</include>
 			<include>home-submenu</include>
 			<include>fadeinout</include>
-			<posx>332</posx>
+			<posx>338</posx>
 			<posy>55</posy>
 			<onup>9000</onup>
 		
@@ -17,9 +17,9 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>420</width>
-				<height>37</height>
+				<height>40</height>
 				<buttongap>0</buttongap>
-				<numbuttons>7</numbuttons>
+				<numbuttons>6</numbuttons>
 				<orientation>vertical</orientation>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -27,8 +27,8 @@
 				<defaultbutton>2</defaultbutton>
 				<wraparound>yes</wraparound>
 				<smoothscrolling>yes</smoothscrolling>
-				<alpha>70</alpha>
-				<font>homemenu</font>
+				<alpha>80</alpha>
+				<font>menubarhomesub</font>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<ondown>700</ondown>
@@ -70,11 +70,6 @@
 					<button id="6">
 						<label>130</label>
 						<onclick>ActivateWindow(SystemInfo)</onclick>
-					</button>
-					
-					<button id="7">
-						<label>31905</label>
-						<onclick>XBMC.RunScript(Q:\scripts\T3CH Upgrader\default.py)</onclick>
 					</button>
 						
 				</buttons>

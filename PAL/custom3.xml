@@ -1,0 +1,201 @@
+<window id="51" type="dialog">
+	<defaultcontrol always="true" >9003</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<include>dialog-open</include>
+	<coordinates>
+		<system>1</system>
+		<posx>170</posx>
+		<posy>100</posy>
+	</coordinates>
+
+	
+	<controls>
+		
+		<control type="group">
+				
+			<control type="image">
+				
+				<height>460</height>
+				<include>dialogWindow</include>
+			</control>
+			
+		<control type="label" id="1">
+				<description>dialog Heading</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>342</width>	
+				<label>Select Backgrounds</label>
+				<align>left</align>
+				<font>h1</font>
+				<textcolor>label-text</textcolor>
+			</control>
+		
+		<control type="grouplist" id="9003">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>395</width>
+				<height>360</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9003</onup>
+				<ondown>9003</ondown>
+
+				<itemgap>2</itemgap>
+				<scrolltime>200</scrolltime>
+
+				<control type="radiobutton" id="303">
+					<description>Enable Custom Background Toggle - HOME</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>[B]$LOCALIZE[513][/B] - $LOCALIZE[31024]</label>
+					<onclick>Skin.ToggleSetting(backgroundHomeEnable)</onclick>
+					<selected>Skin.HasSetting(backgroundHomeEnable)</selected>
+					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				<control type="button" id="304">
+					<description>Background Path - HOME</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>1030</label>
+					<label2>[COLOR=sublabel-text]$INFO[Skin.String(backgroundHome)][/COLOR]</label2>
+					<onclick>Skin.SetImage(backgroundHome)</onclick>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<enable>Skin.HasSetting(backgroundHomeEnable) + Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				
+				<control type="radiobutton" id="305">
+					<description>Enable Custom Background Toggle - VIDEO</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>[B]$LOCALIZE[3][/B] - $LOCALIZE[31024]</label>
+					<onclick>Skin.ToggleSetting(backgroundVideoEnable)</onclick>
+					<selected>Skin.HasSetting(backgroundVideoEnable)</selected>
+					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				<control type="button" id="306">
+					<description>Background Path - VIDEO</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>1030</label>
+					<label2>[COLOR=sublabel-text]$INFO[Skin.String(backgroundVideo)][/COLOR]</label2>
+					<onclick>Skin.SetImage(backgroundVideo)</onclick>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<enable>Skin.HasSetting(backgroundVideoEnable) + Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+
+				
+				<control type="radiobutton" id="307">
+					<description>Enable Custom Background Toggle - MUSIC</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>[B]$LOCALIZE[2][/B] - $LOCALIZE[31024]</label>
+					<onclick>Skin.ToggleSetting(backgroundMusicEnable)</onclick>
+					<selected>Skin.HasSetting(backgroundMusicEnable)</selected>
+					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				<control type="button" id="308">
+					<description>Background Path - MUSIC</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>1030</label>
+					<label2>[COLOR=sublabel-text]$INFO[Skin.String(backgroundMusic)][/COLOR]</label2>
+					<onclick>Skin.SetImage(backgroundMusic)</onclick>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<enable>Skin.HasSetting(backgroundMusicEnable) + Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				
+				<control type="radiobutton" id="309">
+					<description>Enable Custom Background Toggle - PICTURES</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>[B]$LOCALIZE[1][/B] - $LOCALIZE[31024]</label>
+					<onclick>Skin.ToggleSetting(backgroundPicturesEnable)</onclick>
+					<selected>Skin.HasSetting(backgroundPicturesEnable)</selected>
+					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				<control type="button" id="310">
+					<description>Background Path - PICTURES</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>1030</label>
+					<label2>[COLOR=sublabel-text]$INFO[Skin.String(backgroundPictures)][/COLOR]</label2>
+					<onclick>Skin.SetImage(backgroundPictures)</onclick>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<enable>Skin.HasSetting(backgroundPicturesEnable) + Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				
+				<control type="radiobutton" id="311">
+					<description>Enable Custom Background Toggle - SETTINGS</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>[B]$LOCALIZE[5][/B] - $LOCALIZE[31024]</label>
+					<onclick>Skin.ToggleSetting(backgroundSettingsEnable)</onclick>
+					<selected>Skin.HasSetting(backgroundSettingsEnable)</selected>
+					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				<control type="button" id="312">
+					<description>Background Path - SETTINGS</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>1030</label>
+					<label2>[COLOR=sublabel-text]$INFO[Skin.String(backgroundSettings)][/COLOR]</label2>
+					<onclick>Skin.SetImage(backgroundSettings)</onclick>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<enable>Skin.HasSetting(backgroundSettingsEnable) + Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				
+				<control type="radiobutton" id="313">
+					<description>Enable Custom Background Toggle - WEATHER</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<label>[B]$LOCALIZE[8][/B] - $LOCALIZE[31024]</label>
+					<onclick>Skin.ToggleSetting(backgroundWeatherEnable)</onclick>
+					<selected>Skin.HasSetting(backgroundWeatherEnable)</selected>
+					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+				<control type="button" id="314">
+					<description>Background Path - WEATHER</description>
+					<width>395</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>1030</label>
+					<label2>[COLOR=sublabel-text]$INFO[Skin.String(backgroundWeather)][/COLOR]</label2>
+					<onclick>Skin.SetImage(backgroundWeather)</onclick>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<enable>Skin.HasSetting(backgroundWeatherEnable) + Skin.HasSetting(genericBackgroundEnable)</enable>
+				</control>
+			</control>
+			
+		</control>
+
+	</controls>
+</window>

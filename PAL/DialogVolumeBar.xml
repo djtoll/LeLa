@@ -3,8 +3,8 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>675</posx>
-		<posy>230</posy>
+		<posx>530</posx>
+		<posy>70</posy>
 	</coordinates>
 	
 	<controls>
@@ -13,19 +13,20 @@
 			<include>fadeinout</include>
 			
 			<control type="image">
+				<description>background image</description>
 				<posx>-30</posx>
-				<posy>-185</posy>
-				<width>80</width>
-				<height>180</height>
-				<texture border="38">dialogpanel.png</texture>
+				<posy>-23</posy>
+				<width>225</width>
+				<height>65</height>
+				<texture border="28">keyboardPanel.png</texture>	
 			</control>
 			
 			<control type="progress">
 				<description>progress control</description>
-				<posx>30</posx>
-				<posy>0</posy>
+				<posx>-4</posx>
+				<posy>3</posy>
 				<width>100</width>
-				<height>24</height>
+				<height>13</height>
 				<info>Player.Volume</info>
 				<texturebg>progress_back.png</texturebg>
 				<lefttexture>-</lefttexture>
@@ -33,21 +34,18 @@
 				<righttexture>-</righttexture>
 				<overlaytexture>-</overlaytexture>
 				<visible>!Window.IsActive(113)</visible>
-				<animation effect="rotate" start="0" end="-270" time="0" condition="true">conditional</animation>
 			</control>
 
 			<control type="label" id="0">
 				<description>Volume Label</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<font>h4</font>
+				<posx>110</posx>
+				<posy>-2</posy>
+				<font>h3</font>
 				<align>left</align>
 				<info>Player.Volume</info>
-				<width>40</width>
-				<height>20</height>
+				<width>80</width>
 				<textcolor>label-text</textcolor>
 				<!--<visible>!Window.IsActive(113)</visible>-->
-				<visible>false</visible>
 			</control>
 			
 		</control>

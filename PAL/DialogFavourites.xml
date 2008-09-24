@@ -15,7 +15,7 @@
 			<posx>-27</posx>
 			<posy>-32</posy>
 			<width>640</width>
-			<height>473</height>
+			<height>502</height>
 			<texture border="38">dialogpanel.png</texture>
 		</control>
 
@@ -24,7 +24,7 @@
 			<posx>10</posx>
 			<posy>5</posy>
 			<width>580</width>
-			<height>450</height>
+			<height>448</height>
 			<onleft>1</onleft>
 			<onright>10</onright>
 			<onup>450</onup>
@@ -58,6 +58,7 @@
 					<width>570</width>
 					<height>52</height>
 					<texture>list-focus.png</texture>
+					<include>ListScroll</include>
 				</control>
 				<control type="label">
 					<posx>10</posx>

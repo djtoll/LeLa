@@ -1,0 +1,11 @@
+ <constant name="MediaListSlideTime">200</constant>
+
+  <include name="MediaListItemSlide">
+    <animation effect="slide" start="0,-42" end="0,0" time="MediaListSlideTime" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext">focus</animation>
+    <animation effect="slide" start="0,42" end="0,0" time="MediaListSlideTime" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious">focus</animation>
+  </include>
+  
+  <include name="ListScroll">
+    	<animation effect="slide" start="0,-53" end="0,0" time="120" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,53" end="0,0" time="120" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>

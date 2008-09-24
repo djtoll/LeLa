@@ -8,14 +8,8 @@
 		<include>allscreens</include>
 
 		<control type="label">
-			<description>description label</description>
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>720</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>10503</label>
-			<font>page</font>
 		</control>
 		
 		<control type="group">
@@ -26,8 +20,8 @@
 			<control type="label" id="12">
 				<description>number of files in left list text label</description>
 				<posx>30</posx>
-				<posy>75</posy>
-				<label>1211</label>
+				<posy>65</posy>
+				<label>[B]$LOCALIZE[1211][/B]</label>
 				<font>h2</font>
 				<width>400</width>
 				<align>left</align>
@@ -37,7 +31,7 @@
 			<control type="label" id="101">
 				<description>number of songs in playlist text label</description>
 				<posx>693</posx>
-				<posy>70</posy>
+				<posy>65</posy>
 				<label>-</label>
 				<font>h2</font>
 				<align>right</align>
@@ -48,7 +42,7 @@
 				<description>playlist label</description>
 				<align>left</align>
 				<posx>380</posx>
-				<posy>70</posy>
+				<posy>65</posy>
 				<width>270</width>
 				<font>h2</font>
 				<label>32003</label>
@@ -57,9 +51,9 @@
 
 			<control type="list" id="50">
 				<posx>30</posx>
-				<posy>110</posy>
+				<posy>100</posy>
 				<width>310</width>
-				<height>396</height>
+				<height>440</height>
 				<onleft>6</onleft>
 				<onright>100</onright>
 				<onup>50</onup>
@@ -67,6 +61,7 @@
 				<scrolltime>1</scrolltime>
 				<animation effect="fade" start="100" end="60" time="200" condition="Control.HasFocus(100)">Conditional</animation>
 				<include>pageslideleft</include>
+				
 				
 				<itemlayout width="310" height="36" >
 					<control type="image">
@@ -107,6 +102,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<texture>list-focus.png</texture>
+						<include>ListScroll</include>
 					</control>
 					<control type="label">
 						<posx>13</posx>
@@ -136,7 +132,7 @@
 			<control type="image">
 				<description>separator</description>
 				<posx>360</posx>
-				<posy>110</posy>
+				<posy>100</posy>
 				<width>1</width>
 				<height>400</height>
 				<texture>separator-vert.png</texture>
@@ -144,8 +140,8 @@
 			</control>
 			
 			<control type="list" id="100">
-				<posx>373</posx>
-				<posy>110</posy>
+				<posx>380</posx>
+				<posy>100</posy>
 				<width>310</width>
 				<height>396</height>
 				<onleft>50</onleft>
@@ -163,7 +159,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<texture>list-nofocus.png</texture>
-						</control>
+					</control>
 					<control type="label">
 						<posx>13</posx>
 						<posy>3</posy>
@@ -196,6 +192,16 @@
 						<posy>0</posy>
 						<texture>list-focus.png</texture>
 						<visible>Control.HasFocus(100)</visible>
+						<include>ListScroll</include>
+					</control>
+					<control type="image">
+						<width>310</width>
+						<height>34</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<texture>list-focus.png</texture>
+						<visible>!Control.HasFocus(100)</visible>
+						<include>ListScroll</include>
 					</control>
 					<control type="label">
 						<posx>13</posx>

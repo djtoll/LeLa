@@ -1,0 +1,59 @@
+<includes>
+	<include name="WeatherMenu">
+		<control type="group" id="9000">
+			<posx>20</posx>
+			<posy>67</posy>
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
+			<onright>2</onright>
+			<include>pageslide</include>
+			
+			<animation effect="slide" time="150" start="-190,0" end="0,0" acceleration="1.1">Visible</animation>
+			<animation effect="slide" time="150" start="0,0" end="-190,0" acceleration="1.1">Hidden</animation>
+				
+		
+			
+			<control type="button" id="30">
+				<description>LastFM Love button</description>
+				<posx>0</posx>
+				<posy>175</posy>
+				<width>185</width>
+				<height>33</height>
+				<label>LastFM Love</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>22</onup>
+				<ondown>31</ondown>
+				<font>menu</font>
+				<aligny>center</aligny>	
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocus.png</texturenofocus>
+				<include>View-as</include>
+				<onclick>XBMC.LastFM.Love</onclick>
+				<visible>LastFM.RadioPlaying</visible>
+			</control>
+				
+			<control type="button" id="31">
+				<description>LastFM Ban button</description>
+				<posx>0</posx>
+				<posy>205</posy>
+				<width>185</width>
+				<height>33</height>
+				<label>LastFM Ban</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>30</onup>
+				<ondown>20</ondown>
+				<font>menu</font>
+				<aligny>center</aligny>	
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocus.png</texturenofocus>
+				<onclick>XBMC.LastFM.Ban</onclick>
+				<visible>LastFM.RadioPlaying</visible>
+			</control>
+																	
+		</control>
+		
+		
+	</include>
+
+</includes>

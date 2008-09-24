@@ -5,7 +5,7 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>100</posx>
+		<posx>450</posx>
 		<posy>80</posy>
 	</coordinates>
 	
@@ -15,18 +15,11 @@
 		<control type="image">
 			<posx>-30</posx>
 			<posy>-30</posy>
-			<width>400</width>
-			<height>490</height>
+			<width>297</width>
+			<height>475</height>
 			<texture border="38">dialogpanel.png</texture>
 		</control>
-		<control type="image">
-			<description>background image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>800</width>
-			<height>610</height>
-			<texture border="40">DialogFront.png</texture>
-		</control>
+
 		<control type="label" id="1">
 			<description>heading label</description>
 			<posx>0</posx>
@@ -35,14 +28,14 @@
 			<height>30</height>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>h1</font>
+			<font>h1D</font>
 			<label>$LOCALIZE[13406]</label>
 		</control>
 
 		<control type="list" id="5">
 			<posx>0</posx>
-			<posy>50</posy>
-			<width>345</width>
+			<posy>40</posy>
+			<width>238</width>
 			<height>378</height>
 			<onleft>5</onleft>
 			<onright>5</onright>
@@ -50,18 +43,19 @@
 			<ondown>5</ondown>
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>200</scrolltime>
+			
 			<itemlayout height="63">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>340</width>
+					<width>238</width>
 					<height>60</height>
 					<texture border="2">list-nofocus.png</texture>
 				</control>
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>320</width>
+					<width>218</width>
 					<height>35</height>
 					<font>menu</font>
 					<aligny>center</aligny>
@@ -71,7 +65,7 @@
 				<control type="label">
 					<posx>10</posx>
 					<posy>25</posy>
-					<width>320</width>
+					<width>218</width>
 					<height>35</height>
 					<font>menu</font>
 					<aligny>center</aligny>
@@ -84,7 +78,7 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>340</width>
+					<width>238</width>
 					<height>60</height>
 					<visible>!Control.HasFocus(5)</visible>
 					<texture border="2">list-nofocus.png</texture>
@@ -92,7 +86,7 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>340</width>
+					<width>238</width>
 					<height>60</height>
 					<visible>Control.HasFocus(5)</visible>
 					<texture border="2">list-focus.png</texture>
@@ -100,7 +94,7 @@
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>320</width>
+					<width>218</width>
 					<height>35</height>
 					<font>menu</font>
 					<aligny>center</aligny>
@@ -111,7 +105,7 @@
 				<control type="label">
 					<posx>10</posx>
 					<posy>25</posy>
-					<width>320</width>
+					<width>218</width>
 					<height>35</height>
 					<font>menu</font>
 					<aligny>center</aligny>
@@ -122,6 +116,7 @@
 				</control>
 			</focusedlayout>
 		</control>
+		
 		<control type="label">
 			<description>number of files/pages in list text label</description>
 			<posx>750</posx>

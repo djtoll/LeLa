@@ -1,94 +1,79 @@
 <window id="2008">
 	<defaultcontrol>450</defaultcontrol>
+
 	<include>dialog-open</include>
-	
+
+	<coordinates>
+		<system>1</system>
+		<posx>252</posx>
+		<posy>135</posy>
+	</coordinates>
+
 	<controls>
-		
-	<control type="group">
-		<posx>230</posx>
-		<posy>200</posy>
-		<width>450</width>
 
-	<control type="image">
-		<description>background image</description>
-		<posx>-35</posx>
-		<posy>-30</posy>
-		<width>300</width>
-		<height>170</height>
-		<texture border="38">dialogpanel.png</texture>
-		<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
-	</control>
+		<control type="image">
+			<posx>-27</posx>
+			<posy>-27</posy>
+			<width>268</width>
+			<height>200</height>
+			<texture border="38">dialogpanel.png</texture>
+		</control>
 
-	<control type="list" id="450">
-		<viewtype label="535">list</viewtype>
-		<posx>25</posx>
-		<posy>25</posy>
-		<width>300</width>
-		<height>115</height>
-		<scrolltime>250</scrolltime>
-		<focusposition>0</focusposition>
-		<orientation>vertical</orientation>
-		<wraparound>no</wraparound>
-		<onleft>450</onleft>
-		<onright>450</onright>
-		<onup>450</onup>
-		<ondown>450</ondown>
-		
-		<itemlayout height="37" width="300">
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>200</width>
-				<height>34</height>
-				<texture>list-nofocus.png</texture>
-			</control>
-			<control type="image">
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>24</width>
-				<height>24</height>
-				<texture>button-cd-nofocus.png</texture>
-			</control>
-			<control type="label">
-				<posx>60</posx>
-				<posy>3</posy>
-				<width>400</width>
-				<height>22</height>
-				<font>h2</font>
-				<include>selectedcolor</include>
-				<align>center</align>
-				<label>ListItem.Label</label>
-			</control>
-		</itemlayout>
+		<control type="group">
+			<control type="list" id="450">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>215</width>
+			<height>147</height>
+			<onleft>1</onleft>
+			<onright>10</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<scrolltime>200</scrolltime>
 			
-		<focusedlayout height="37" width="300">
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>200</width>
-				<height>34</height>
-				<texture>list-focus.png</texture>
-			</control>
-			<control type="image">
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>24</width>
-				<height>24</height>
-				<texture>button-cd-focus.png</texture>
-			</control>
-			<control type="label">
-				<posx>60</posx>
-				<posy>3</posy>
-				<width>400</width>
-				<height>22</height>
-				<font>h2</font>
-				<include>selectedcolor</include>
-				<align>center</align>
-				<info>ListItem.Label</info>
-			</control>
-		</focusedlayout>
+			<itemlayout height="32">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>215</width>
+					<height>30</height>
+					<texture>list-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>205</width>
+					<height>24</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			
+			<focusedlayout height="32">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>215</width>
+					<height>30</height>
+					<texture>list-focus.png</texture>
+					<include>ListScroll</include>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>205</width>
+					<height>24</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+			
+		</control>
 	</control>
 
-</control>
-	</controls>
+</controls>
 </window>

@@ -17,7 +17,6 @@
 			<align>left</align>
 			<label>-</label>
 			<scroll>true</scroll>
-			<textcolor>label-text</textcolor>
 			<include>fadeinout</include>
 		</control>
 		

@@ -1,33 +1,22 @@
 <window id="2004">
-
 	<controls>
-		
+				
 		<control type="group">
 			<posx>0</posx>
-			<posy>536</posy>
+			<posy>540</posy>
 			
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>40</height>
-				<width>720</width>
-				<texture border="4">infobar2.png</texture>
-				<include>fadeinout</include>
-				<visible>false</visible>
-			</control>
 
 			<control type="label" id="200">
 				<include>home-start</include>
-				<posx>60</posx>
+				<posx>10</posx>
 				<posy>4</posy>
-				<width>600</width>
+				<width>700</width>
 				<label>31079</label>
 				<textcolor>label-text</textcolor>
 				<align>center</align>
-				<font>h4</font>
-				<include>fadeinout</include>	
+				<font>rsslela</font>
 				<visible>!Skin.HasSetting(overlay) + ![Window.IsActive(112) | Window.IsActive(107) | Window.IsActive(114) | Window.IsActive(2006) | Window.IsActive(136) | Window.IsActive(115) | Window.IsActive(500) | Window.IsActive(28)]</visible>
-				<animation effect="fade" start="100" end="0" time="150" condition="[Container.Content(episodes) + Control.IsVisible(54)]">Conditional</animation>
+				<include>fadeinout</include>
 			</control>
 		
 		</control>

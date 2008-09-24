@@ -13,11 +13,9 @@
 		<control type="group">
 				
 			<control type="image">
-				<posx>-35</posx>
-				<posy>-30</posy>
-				<width>412</width>
+				
 				<height>240</height>
-				<texture border="38">dialogpanel.png</texture>
+				<include>dialogWindow</include>
 			</control>
 				
 			<control type="label" id="1">
@@ -28,7 +26,7 @@
 				<label>-</label>
 				<align>center</align>
 				<font>h1</font>
-				<textcolor>button-text</textcolor>
+				<textcolor>label-text</textcolor>
 			</control>
 		
 			<control type="label" id="2">
@@ -39,7 +37,7 @@
 				<posy>40</posy>
 				<label>-</label>
 				<font>h2D</font>
-				<textcolor>button-text</textcolor>
+				<textcolor>label-text</textcolor>
 				<scroll>yes</scroll>
 			</control>
 			
@@ -72,18 +70,8 @@
 				<posx>140</posx>
 				<posy>135</posy>
 				<width>90</width>
-				<height>36</height>
 				<label>186</label>
-				<font>buttonD</font>
-				<textoffsety>3</textoffsety>
-				<aligny>-</aligny>
-				<align>center</align>
-				<texturenofocus>buttonD.png</texturenofocus>
-				<texturefocus>buttonD-focus.png</texturefocus>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
+				<include>dialogConfirmButton</include>
 			</control>
 
 		</control>

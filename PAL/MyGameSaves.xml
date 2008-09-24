@@ -5,19 +5,12 @@
 	
 	<controls>
 		<include>background</include>
-		<include>#files</include>
-		<include>Fake-Overlay</include>
 		<include>allscreens</include>
 		
 		<control type="label">
-			<description>description label</description>
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>4</posy>
-			<width>720</width>
+			<include>pageLabel</include>
 			<align>center</align>
 			<label>20315</label>
-			<font>page</font>
 		</control>
 
 		<control type="group">

@@ -1,0 +1,807 @@
+<includes>
+	
+<!---------- BIG LIST (MUSIC) ------------------------------------------------------------------------------------->
+
+	<include name="BigListAU">
+		<control type="list" id="51">
+			<viewtype label="537">List</viewtype>
+			<posx>30</posx>
+			<posy>70</posy>
+			<width>660</width>
+			<height>460</height>
+			<onleft>9000</onleft>
+			<onright>62</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<scrolltime>200</scrolltime>	
+			<wraparound>yes</wraparound>
+			<pagecontrol>62</pagecontrol>
+			<visible>!Window.IsActive(129)</visible>
+			<visible>
+				!Skin.HasSetting(viewtypeBigListAU) + Container.Content(albums) | Container.Content(songs) | Window.IsActive(500) | Container.Content(musicvideos)</visible>
+			<include>pageslide</include>	
+			
+			<itemlayout width="660" height="76">
+				
+				<control type="image">
+					<width>660</width>
+					<height>74</height>
+					<posx>0</posx>
+					<posy>4</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+				
+				<control type="image">
+					<posx>1</posx>
+					<posy>6</posy>
+					<width>62</width>
+					<height>62</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>1</posx>
+					<posy>10</posy>
+					<width>62</width>
+					<height>62</height>
+					<info>ListItem.Thumb</info>
+				</control>
+				
+				<control type="label">
+					<posx>70</posx>
+					<posy>8</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h2</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>label-text</textcolor>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>70</posx>
+					<posy>31</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h4</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Artist</info>
+					<selectedcolor>sublabel-text</selectedcolor>
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>35</posy>
+					<width>100</width>
+					<height>37</height>
+					<aligny>center</aligny>
+					<font>menu</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<info>ListItem.Label2</info>
+					<visible>!Container.Content(albums)</visible>
+				</control>	
+				
+				<control type="label">
+					<posx>650</posx>
+					<posy>8</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h4</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<info>ListItem.Year</info>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>650</posx>
+					<posy>31</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h4</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<info>ListItem.Genre</info>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>643</posx>
+					<posy>7</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h4</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<info>ListItem.Genre</info>
+					<visible>Container.Content(musicvideos)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>500</posx>
+					<posy>18</posy>
+					<width>200</width>
+					<height>22</height>
+					<info>ListItem.Rating</info>
+					<visible>container.content(songs) | Window.IsActive(500)</visible>
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout width="660" height="76">
+				
+				<control type="image">
+					<width>660</width>
+					<height>74</height>
+					<posx>0</posx>
+					<posy>4</posy>
+					<texture border="2">list-focus.png</texture>
+					<include>BigListScrollM</include>
+				</control>
+				
+				<control type="image">
+					<posx>1</posx>
+					<posy>6</posy>
+					<width>62</width>
+					<height>62</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>1</posx>
+					<posy>10</posy>
+					<width>62</width>
+					<height>62</height>
+					<info>ListItem.Thumb</info>
+				</control>
+				
+				<control type="label">
+					<posx>70</posx>
+					<posy>8</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h2</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>label-text</textcolor>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>70</posx>
+					<posy>31</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h4</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Artist</info>
+					<selectedcolor>sublabel-text</selectedcolor>
+				</control>
+	
+				<control type="image">
+					<posx>500</posx>
+					<posy>18</posy>
+					<width>200</width>
+					<height>22</height>
+					<info>ListItem.Rating</info>
+					<visible>container.content(songs) | Window.IsActive(500)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>35</posy>
+					<width>100</width>
+					<height>37</height>
+					<aligny>center</aligny>
+					<font>menu</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Label2</info>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<visible>!Container.Content(albums)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>650</posx>
+					<posy>8</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h4</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<info>ListItem.Year</info>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>643</posx>
+					<posy>7</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h4</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<info>ListItem.Genre</info>
+					<visible>Container.Content(musicvideos)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>650</posx>
+					<posy>31</posy>
+					<width>600</width>
+					<height>37</height>
+					<font>h4</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<info>ListItem.Genre</info>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				
+			</focusedlayout>		
+		</control>
+	</include>
+
+		
+<!---------- SLIDE VIEW (ALBUMS) ---------------------------------------------------------------------------------->
+									
+	<include name="MusicSlide">
+		<control type="wraplist" id="52">
+			<viewtype label="Slide">Slide</viewtype>
+			<posx>-110</posx>
+			<posy>70</posy>
+			<width>900</width>
+			<height>600</height>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>9000</onup>
+			<ondown>-</ondown>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<focusposition>1</focusposition>
+			<include>pageslide</include>
+			<visible>!Skin.HasSetting(viewtypeSlideAU) + Container.Content(albums)</visible>	
+			
+			<itemlayout height="200" width="178">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>50</posy>
+					<width>180</width>
+					<height>190</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio aligny="left">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>230</posy>
+					<width>180</width>
+					<height>190</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<texture flipy="true" diffuse="fade.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<posx>35</posx>
+					<posy>107</posy>
+					<width>128</width>
+					<height>128</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<posx>35</posx>
+					<posy>235</posy>
+					<width>128</width>
+					<height>128</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture flipy="true" diffuse="fade.png" /> 
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+
+			</itemlayout>
+			
+			<focusedlayout height="200" width="200">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>50</posy>
+					<width>180</width>
+					<height>190</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2" >list-focus.png</bordertexture>
+					<bordersize>5</bordersize>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="43,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="43,125" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>230</posy>
+					<width>180</width>
+					<height>190</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="43,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="43,125" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>35</posx>
+					<posy>107</posy>
+					<width>128</width>
+					<height>128</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,125" time="200"/>
+					</animation>
+				</control>
+				<control type="image">
+					<posx>35</posx>
+					<posy>235</posy>
+					<width>128</width>
+					<height>128</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="fade.png" /> 
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,125" time="200"/>
+					</animation>
+				</control>
+				
+			</focusedlayout>
+			
+		</control>
+	
+	</include>
+							
+	
+<!---------- ICONS VIEW (MUSIC) ----------------------------------------------------------------------------------->
+																																		
+	<include name="IconsAU">
+		<control type="panel" id="55">
+			<posx>20</posx>
+			<posy>75</posy>
+			<width>685</width>
+			<height>450</height>
+			<onleft>9000</onleft>
+			<onright>24</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">Icons</viewtype>
+			<pagecontrol>24</pagecontrol>
+			<include>pageslide</include>
+			<visible>!Skin.HasSetting(viewtypeThumbsAU)</visible>
+															
+			<itemlayout height="150" width="110">
+				
+				<control type="image">
+					<posx>27</posx>
+					<posy>22</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>115</width>
+					<height>115</height>
+					<aspectratio>keep</aspectratio>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>6</bordersize>
+				</control>
+				<control type="image">
+					<posx>90</posx>
+					<posy>90</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>62</posx>
+					<posy>120</posy>
+					<width>95</width>
+					<height>22</height>
+					<font>h4</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+															
+			<focusedlayout height="150" width="110">
+				
+				<control type="image">
+					<posx>6</posx>
+					<posy>0</posy>
+					<width>115</width>
+					<height>125</height>
+					<aspectratio>keep</aspectratio>
+					<texture border="2">list-focus.png</texture>
+					<bordersize>6</bordersize>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+						
+				<control type="image">
+					<posx>27</posx>
+					<posy>22</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>115</width>
+					<height>115</height>
+					<aspectratio>keep</aspectratio>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">list-focus.png</bordertexture>
+					<bordersize>6</bordersize>
+				</control>
+				
+				<control type="image">
+					<posx>90</posx>
+					<posy>90</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+				</control>
+				<control type="label">
+					<posx>62</posx>
+					<posy>120</posy>
+					<width>95</width>
+					<height>22</height>
+					<font>h4</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+		
+<!---------- BIG ICONS VIEW (MUSIC) ------------------------------------------------------------------------------->
+
+	<include name="BigIconsAU">
+		<control type="panel" id="56">
+			<viewtype label="538">Big Icons</viewtype>
+			<posx>40</posx>
+			<posy>95</posy>
+			<width>685</width>
+			<height>425</height>
+			<onleft>2</onleft>
+			<onright>25</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<scrolltime>200</scrolltime>
+			<include>pageslide</include>
+			<pagecontrol>25</pagecontrol>
+			<visible>!Skin.HasSetting(viewtypeBigThumbsEP) + Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
+															
+			<itemlayout height="210" width="160">
+				
+				<control type="image">
+					<posx>32</posx>
+					<posy>26</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+				<control type="label">
+					<posx>80</posx>
+					<posy>165</posy>
+					<width>135</width>
+					<height>22</height>
+					<font>h4</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+															
+			<focusedlayout height="210" width="160">
+				
+				<control type="image">
+					<posx>6</posx>
+					<posy>-6</posy>
+					<width>148</width>
+					<height>172</height>
+					<texture border="2">list-focus.png</texture>
+					<bordersize>6</bordersize>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+	
+				<control type="image">
+					<posx>32</posx>
+					<posy>26</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">list-focus.png</bordertexture>
+					<bordersize>6</bordersize>
+					<aspectratio>keep</aspectratio>
+				</control>
+				
+				<control type="label">
+					<posx>80</posx>
+					<posy>165</posy>
+					<width>135</width>
+					<height>22</height>
+					<font>h4</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+			
+		</control>
+		
+	</include>
+	
+
+<!---------- PLAYLIST VIEW ---------------------------------------------------------------------------------------->
+																										
+	<!-- <include name="PlaylistView">
+		<control type="list" id="50">
+			<viewtype label="535">List</viewtype>
+			<posx>30</posx>
+			<posy>70</posy>
+			<width>395</width>
+			<height>455</height>
+			<onleft>9000</onleft>
+			<onright>63</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>200</scrolltime>	
+			<pagecontrol>63</pagecontrol>
+			<include>pageslide</include>	
+
+			<itemlayout width="395" height="35">
+				
+				<control type="image">
+					<width>395</width>
+					<height>33</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>375</width>
+					<height>30</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+																																	
+				<control type="label">
+					<posx>385</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>30</height>
+					<font>menu</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Duration</info>
+				</control>
+				
+			</itemlayout>
+
+			<focusedlayout width="395" height="35">
+				<control type="image">
+					<width>395</width>
+					<height>33</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="5,0,5,0">list-focus.png</texture>
+					<include>ListScroll</include>
+				</control>
+				
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>375</width>
+					<height>30</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>100</textoffsetx>
+					<info>ListItem.Label</info>
+				</control>
+																																	
+				<control type="label">
+					<posx>385</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>30</height>
+					<font>menu</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textoffsetx>6</textoffsetx>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Duration</info>
+				</control>
+				
+			</focusedlayout>
+			
+					
+		</control>
+	</include> -->
+	
+	
+	<!-- PLAYLIST VIEW -->
+	<include name="PlaylistView">
+		<control type="list" id="50">
+			<viewtype label="535">List</viewtype>
+			<posx>30</posx>
+			<posy>245</posy>
+			<width>660</width>
+			<height>280</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>260</scrolltime>	
+			<pagecontrol>23</pagecontrol>
+			<include>pageslide</include>	
+
+			<itemlayout width="660" height="54">
+				
+				<control type="image">
+					<width>660</width>
+					<height>52</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>list-nofocus.png</texture>					
+				</control>
+
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>570</width>
+					<height>54</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>button-text</textcolor>
+					<label>$INFO[ListItem.Title] - $INFO[ListItem.Artist]</label>
+				</control>
+																																	
+				<control type="label">
+					<posx>650</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>54</height>
+					<font>cali38</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Duration</info>
+				</control>
+				
+			</itemlayout>
+
+			<focusedlayout width="660" height="54">
+				<control type="image">
+					<width>660</width>
+					<height>52</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="5,0,5,0">list-focus.png</texture>
+					<include>ListScroll</include>
+				</control>
+				
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>570</width>
+					<height>54</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>100</textoffsetx>
+					<textcolor>button-text</textcolor>
+					<label>$INFO[ListItem.Title] - $INFO[ListItem.Artist]</label>
+				</control>
+																																	
+				<control type="label">
+					<posx>650</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>54</height>
+					<font>cali38</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textoffsetx>6</textoffsetx>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Duration</info>
+				</control>
+				
+			</focusedlayout>		
+		</control>
+	</include>
+				
+</includes>

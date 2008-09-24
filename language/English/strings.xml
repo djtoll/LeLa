@@ -1,16 +1,65 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
 	
-<string id="31000">Skin created by: Jeroen[CR][CR]This skin uses icons from and icons based on the Tango! Desktop Project (http://tango.freedesktop.org)[CR][CR]Thanks: Team-XBMC, all plugin, script and skin developers and everyone contributing in whatever way to making xbmc so great. And YOU, for using Focus.</string>
-	
+<!--changed-->
+<string id="31000">
+[B]Skin developer: [/B]Jeroen[CR][CR]
+[B]Translators:[/B][CR]
+snuggidk (Danish), Modhack (French), NOOK360/Oli (German), SandmanCL (Norwegian), xbs08 (Portuguese), shizzle (Swedish)
+
+[CR][CR][B]Thanks:[/B] Team-XBMC, all plugin, script and skin developers and anyone contributing in whatever way to making xbmc so great. And YOU, for using Focus.[CR]
+[CR]Default wallpaper created by Adam Moore, used with permission. Visit elusive.deviantart.com for his portfolio.
+[CR]This skin uses icons from and icons based on the Tango! Desktop Project (http://tango.freedesktop.org) and Oxygen Icons (http://www.oxygen-icons.org/)
+</string>
+<!--end changed-->
+
+<!--added-->
+<string id="31009">Big Thumbs</string>
+<string id="31014">Thumbnails</string>
+<string id="31932">No plot description available</string>
+<string id="31035">Enable Virtual Keyboard</string>
+<string id="31039">Fade out background while submenu is open</string>
+<string id="31925">Light Dim</string>
+<string id="31926">Strong Dim</string>
+<string id="31036">Rating</string>	
+<string id="31037">Highlight the first letter while scrolling</string>
+<string id="31038">Select Custom Background Images</string>
+<string id="31934">Dim Background Images</string>
+<string id="31935">No Plot Info in Fanart View</string>
+<string id="31936">Bigger Posters in List View (Movies and TV Show Posters)</string>
+<string id="31937">Welcome</string>
+<string id="31938">Display Fanart In Video Info Screens</string>
+<string id="31940">Use Dark Accent Color</string>
+<string id="31941">Use Neutral Midtone Color</string>
+<!-- end added-->
+
+<!--removed
+<string id="31918">Show Plot in TV Shows List View</string>
+<string id="31919">Show Plot in Episode List View (when idle)</string>
+-->
+
+<string id="31001">
+Here are a couple of quick tips that are good for you to know:
+[CR][CR]
+- On the home screen you can use the direction down buttons to open submenus for every category, providing you quick access to the various sections of XBMC.
+[CR]
+- Hitting one of the media categories will always take you into file-mode. The mentioned submenus will take you to various library related functions.
+[CR]
+- Opening the shutdown menu will also provide you with a system wide navigation menu which enables you to get quick access to virtually any part of XBMC no matter which screen you are currently in. 
+[CR][CR]
+Hit the OK button to start using Focus. This message will not reappear after that.
+</string>
+
+
+
 <string id="31003">Show LastFM Information in Music Playlist</string>
-	
 <string id="31006">Accessories</string>
-	
+<string id="31010">Pictures</string>	
 <string id="31011">Apple Movie Trailers</string>
 <string id="31012">Video Playlist</string>
 <string id="31013">Exit</string>
-<string id="31015">Home Screen</string>
+
+<string id="31015">Info Settings</string>
 <string id="31016">Fanart</string>
 <string id="31017">Manage Profiles</string>	
 <string id="31018">Custom</string>
@@ -18,15 +67,18 @@
 <string id="31020">Backgrounds</string>
 <string id="31021">Profile Settings</string>
 <string id="31022">Viewtypes</string>
-	
+<string id="31023">Show Mini Video Window</string>
+<string id="31024">Enable Custom Background</string>	
 <string id="31025">Use Media Overlays</string>
 <string id="31026">Show Plot in Wide Icons View</string>
 <string id="31027">Use Now Playing Screens</string>
-
+<string id="31028">Display Playing Video in Background</string>
+<string id="31029">Display Visualisation in Background</string>
 <string id="31030">Choose Custom Background</string>
 <string id="31031">Reset Custom Background</string>
-<string id="31032">Blend Visuals With Background</string>
+<string id="31032">Use Single Background in all Screens</string>
 <string id="31033">Appearance settings</string>
+<string id="31034">Use Default</string>
 
 <string id="31069">Video settings</string>
 <string id="31007">Programs settings</string>
@@ -35,22 +87,20 @@
 <string id="31902">Network settings</string>
 <string id="31903">Weather settings</string>
 <string id="31904">System settings</string>
-
 <string id="31905">Update XBMC</string>
 <string id="31906">Please Wait...</string>
-	
+
 <string id="31908">Backgrounds</string>
 <string id="31909">Skin Credits</string>
-	
+
 <string id="31911">Shutdown in 30 min.</string>
 <string id="31912">Shutdown in 60 min.</string>
 <string id="31913">Shutdown in 120 min.</string>
 <string id="31914">Plugins</string>
 <string id="31915">Fanart</string>
 <string id="31916">Custom Timer</string>
-	
-<string id="31918">Show Plot in TV Shows List View</string>
-<string id="31919">Show Plot in Episode List View (when idle)</string>
+<string id="31917">Use Smooth Scrolling in Lists</string>
+
 <string id="31920">Show Plot in Movies List View (when idle)</string>
 
 <string id="31922">Watched State Overlays for Movies</string>
@@ -62,7 +112,7 @@
 <string id="31929">Enable Global Fanart</string>
 <string id="31930">Dim Fanart Images</string>
 <string id="31931">Trailer Available</string>
-<string id="31932">not rated</string>
+
 <string id="31933">Enable Dedicated Fanart View</string>
 
 <string id="31040">PAUSED</string>
@@ -76,6 +126,7 @@
 <string id="31048">RWD 8X</string>
 <string id="31049">RWD 16X</string>
 <string id="31050">RWD 32X</string>
+<string id="31051">PLAYING</string>
 	
 <string id="31064">High</string>
 <string id="31065">Low</string>
@@ -92,13 +143,12 @@
 <string id="31081">[COLOR=sublabel-text]Playing [/COLOR]$INFO[VideoPlayer.Title] [COLOR=sublabel-text]by [/COLOR]$INFO[VideoPlayer.Artist] [COLOR=sublabel-text]</string>
 <string id="31082">[COLOR=sublabel-text]Status: [/COLOR]$INFO[AudioScrobbler.ConnectState ] [COLOR=sublabel-text]Submit in: [/COLOR]$INFO[AudioScrobbler.SubmitState] [COLOR=sublabel-text]$INFO[AudioScrobbler.FilesCached][/COLOR]</string>
 	
-	
-<string id="32000">by</string>
-<string id="32001">Viewtypes</string>
-<string id="32003">$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</string>
-<string id="32004">Files</string>
-<string id="32024">season</string>
-<string id="32025">episode</string>
-<string id="32026">First aired:</string>
+<string id="31083">by</string>
+<string id="31084">Viewtypes</string>
+<string id="31085">$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</string>
+<string id="31086">Files</string>
+<string id="31087">season</string>
+<string id="31088">episode</string>
+<string id="31089">First aired:</string>
 	
 </strings>

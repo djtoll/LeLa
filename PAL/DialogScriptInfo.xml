@@ -22,7 +22,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<label>262</label>
-			<font>h1</font>
+			<font>h1D</font>
 		</control>
 		
 		<control type="textbox" id="5">
@@ -31,11 +31,10 @@
 			<posy>40</posy>
 			<width>400</width>
 			<height>287</height>
-			<font>h4</font>
-			<textcolor>button-text</textcolor>
+			<font>h4D</font>
+			<textcolor>label-text</textcolor>
 			<spinposx>340</spinposx>
 			<spinposy>295</spinposy>
 		</control>
-		
 	</controls>
 </window>

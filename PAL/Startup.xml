@@ -2,9 +2,8 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-
-		<!-- STARTUP PLAYLIST -->	
-
+		
+<!--- STARTUP PLAYLIST ---------------------------------->		
 
 		<control type="button" id="10">
 			<description>trigger</description>
@@ -23,7 +22,7 @@
 			<animation effect="fade" start="0" end="0">Focus</animation>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
-
+		
 		<control type="image">
 			<description>startup animation</description>
 			<posx>285</posx>
@@ -36,7 +35,7 @@
 				<effect type="fade" start="100" end="0" delay="2000" time="1000" />
 			</animation>
 		</control>
-
+		
 		<control type="image">
 			<description>startup animation</description>
 			<posx>285</posx>
@@ -49,6 +48,19 @@
 				<effect type="fade" start="100" end="0" delay="2000" time="1000" />
 			</animation>
 		</control>
-
+		
+		<control type="label">
+			<description>welcome user</description>
+			<posy>310</posy>
+			<width>720</width>
+			<label>[COLOR=sublabel-text]$LOCALIZE[31937][/COLOR] $INFO[System.ProfileName]</label>
+			<align>center</align>
+			<font>menu</font>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" easing="InOut" time="1000" />
+				<effect type="fade" start="100" end="0" delay="2000" time="1000" />
+			</animation>
+		</control>
+		
 	</controls>
 </window>

@@ -1,0 +1,1955 @@
+<includes>
+		
+<!---------- BIG LIST --------------------------------------------------------------------------------------------->
+
+	<include name="BigList">
+		<control type="list" id="51">
+			<viewtype label="537">List</viewtype>
+			<posx>30</posx>
+			<posy>75</posy>
+			<width>660</width>
+			<height>456</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<wraparound>yes</wraparound>
+			<visible>
+				!Skin.HasSetting(viewtypeBigList) + Container.Content(movies) + IsEmpty(Container.PluginName)
+				| !Skin.HasSetting(viewtypeBigListEP) + Container.Content(episodes)
+				| !Skin.HasSetting(viewtypeBigListTV) + Container.Content(tvshows) + Skin.HasSetting(tvshowPosters)
+			</visible>
+			<include>pageslide</include>	
+			
+			<itemlayout condition="Container.Content(episodes)" width="660" height="152">
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>list-nofocus.png</texture>	
+				</control>
+				
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<posx>45</posx>
+					<posy>21</posy>
+					<info>ListItem.Icon</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<width>150</width>
+					<height>127</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="left">stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<width>24</width>
+					<height>24</height>
+					<posx>135</posx>
+					<posy>112</posy>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>180</posx>
+					<posy>12</posy>
+					<width>500</width>
+					<font>h2</font>
+					<align>left</align>
+					<textcolor>label-text</textcolor>
+					<label>[B]$INFO[ListItem.Title][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>14</posy>
+					<width>200</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Rating</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>180</posx>
+					<posy>44</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.TVShowTitle</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>180</posx>
+					<posy>74</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</label>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>180</posx>
+					<posy>104</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Premiered</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout condition="Container.Content(episodes)" width="660" height="152">
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-nofocus.png</texture>
+				</control>
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-focus.png</texture>
+					<include>BigListScroll</include>
+				</control>
+				
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<posx>45</posx>
+					<posy>21</posy>
+					<info>ListItem.Icon</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<width>150</width>
+					<height>127</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="left">stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<width>24</width>
+					<height>24</height>
+					<posx>135</posx>
+					<posy>112</posy>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>180</posx>
+					<posy>12</posy>
+					<width>500</width>
+					<font>h2</font>
+					<align>left</align>
+					<textcolor>label-text</textcolor>
+					<label>[B]$INFO[ListItem.Title][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>14</posy>
+					<width>200</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Rating</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>180</posx>
+					<posy>44</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.TVShowTitle</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>180</posx>
+					<posy>74</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</label>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>180</posx>
+					<posy>104</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Premiered</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+
+			</focusedlayout>
+			
+			<itemlayout condition="Container.Content(movies)" width="660" height="152">
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+				
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<posx>10</posx>
+					<posy>20</posy>
+					<info>ListItem.Icon</info>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<width>180</width>
+					<height>127</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<width>24</width>
+					<height>24</height>
+					<posx>59</posx>
+					<posy>114</posy>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(overlayMovies)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>14</posy>
+					<width>500</width>
+					<font>h2</font>
+					<align>left</align>
+					<textcolor>label-text</textcolor>
+					<label>[B]$INFO[ListItem.Title][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>14</posy>
+					<width>430</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.RatingAndVotes</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>14</posy>
+					<width>430</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>$INFO[ListItem.Studio]</label>
+					<visible>!IsEmpty(ListItem.PluginName)</visible>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>45</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>[B]$INFO[ListItem.Tagline][/B]</label>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>45</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>$INFO[ListItem.Property(ReleaseDate)]</label>
+					<visible>!IsEmpty(ListItem.PluginName)</visible>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+
+				<control type="label">
+					<posx>100</posx>
+					<posy>72</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Genre</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>100</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Duration</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>100</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>31931</label>
+					<visible>!IsEmpty(ListItem.Trailer)</visible>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout condition="Container.Content(movies)" width="660" height="152">
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-nofocus.png</texture>
+					<include>BigListScroll</include>
+				</control>
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-focus.png</texture>
+					<include>BigListScroll</include>
+				</control>
+				
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<posx>10</posx>
+					<posy>20</posy>
+					<info>ListItem.Icon</info>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<width>180</width>
+					<height>127</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="image">
+					<width>24</width>
+					<height>24</height>
+					<posx>59</posx>
+					<posy>114</posy>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(overlayMovies)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>14</posy>
+					<width>500</width>
+					<font>h2</font>
+					<align>left</align>
+					<textcolor>label-text</textcolor>
+					<label>[B]$INFO[ListItem.Title][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>14</posy>
+					<width>430</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.RatingAndVotes</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>14</posy>
+					<width>430</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>$INFO[ListItem.Studio]</label>
+					<visible>!IsEmpty(ListItem.PluginName)</visible>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>45</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>[B]$INFO[ListItem.Tagline][/B]</label>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>45</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>$INFO[ListItem.Property(ReleaseDate)]</label>
+					<visible>!IsEmpty(ListItem.PluginName)</visible>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+
+				<control type="label">
+					<posx>100</posx>
+					<posy>72</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Genre</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>100</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Duration</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>100</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>31931</label>
+					<visible>!IsEmpty(ListItem.Trailer)</visible>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+			</focusedlayout>
+			
+			<itemlayout condition="Container.Content(tvshows) + Skin.HasSetting(tvshowPosters) + !Skin.HasSetting(viewtypeBigListTV)" width="660" height="152">
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+				
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<posx>10</posx>
+					<posy>20</posy>
+					<info>ListItem.Icon</info>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<width>180</width>
+					<height>127</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>14</posy>
+					<width>500</width>
+					<font>h2</font>
+					<align>left</align>
+					<textcolor>label-text</textcolor>
+					<label>[B]$INFO[ListItem.Title][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>14</posy>
+					<width>430</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.RatingAndVotes</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>45</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>[B]$INFO[ListItem.Genre][/B]</label>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+
+				<control type="label">
+					<posx>100</posx>
+					<posy>72</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Label2</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>100</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>$LOCALIZE[20416]: $INFO[ListItem.Premiered]</label>
+					<visible>!IsEmpty(ListItem.Premiered)</visible>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+
+			</itemlayout>
+			
+			<focusedlayout condition="Container.Content(tvshows) + Skin.HasSetting(tvshowPosters) + !Skin.HasSetting(viewtypeBigListTV)" width="660" height="152">
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-nofocus.png</texture>
+					<include>BigListScroll</include>
+				</control>
+				
+				<control type="image">
+					<width>660</width>
+					<height>148</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-focus.png</texture>
+					<include>BigListScroll</include>
+				</control>
+				
+				<control type="image">
+					<width>96</width>
+					<height>96</height>
+					<posx>10</posx>
+					<posy>20</posy>
+					<info>ListItem.Icon</info>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<width>180</width>
+					<height>127</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>14</posy>
+					<width>500</width>
+					<font>h2</font>
+					<align>left</align>
+					<textcolor>label-text</textcolor>
+					<label>[B]$INFO[ListItem.Title][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>645</posx>
+					<posy>14</posy>
+					<width>430</width>
+					<font>h4</font>
+					<align>right</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.RatingAndVotes</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>45</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>[B]$INFO[ListItem.Genre][/B]</label>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+
+				<control type="label">
+					<posx>100</posx>
+					<posy>72</posy>
+					<width>500</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Label2</info>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+				<control type="label">
+					<posx>100</posx>
+					<posy>100</posy>
+					<width>540</width>
+					<font>h4</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>$LOCALIZE[20416]: $INFO[ListItem.Premiered]</label>
+					<visible>!IsEmpty(ListItem.Premiered)</visible>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+		
+<!---------- SLIDE VIEW (MOVIES + TVSHOW POSTERS) ----------------------------------------------------------------->
+	
+	<include name="MovieSlide">
+		<control type="wraplist" id="52">
+			<viewtype label="Slide">Coverslide</viewtype>
+			<posx>-64</posx>
+			<posy>90</posy>
+			<width>900</width>
+			<height>425</height>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<orientation>horizontal</orientation>
+			<focusposition>1</focusposition>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<visible>!Skin.HasSetting(viewtypeCoverSlide) + Container.Content(movies) | !Skin.HasSetting(viewtypeSlideTV) + Skin.HasSetting(tvshowPosters) + Container.Content(tvshows) | Window.IsActive(60)</visible>
+			<include>pageslide</include>
+		
+			<itemlayout height="300" width="120">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>50</posy>
+					<width>125</width>
+					<height>203</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>243</posy>
+					<width>125</width>
+					<height>203</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<posx>37</posx>
+					<posy>111</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+						
+				<control type="image">
+					<posx>107</posx>
+					<posy>224</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(overlayMovies)</visible>
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout height="300" width="140">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>50</posy>
+					<width>125</width>
+					<height>203</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2" >list-focus.png</bordertexture>
+					<bordersize>5</bordersize>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,125" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>243</posy>
+					<width>125</width>
+					<height>203</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,125" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>37</posx>
+					<posy>111</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,125" time="200"/>
+					</animation>
+				</control>
+
+				<control type="image">
+					<posx>107</posx>
+					<posy>224</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<animation effect="slide" start="0,0" end="23,25" tween="quadratic" delay="100" time="400">Focus</animation>
+					<visible>Skin.HasSetting(overlayMovies)</visible>
+				</control>
+				
+			</focusedlayout>
+			
+			
+		</control>
+	
+	</include>
+	
+	
+<!---------- SLIDE VIEW (TV SHOWS - WIDE ICONS ) ------------------------------------------------------------------>
+				
+	<include name="TVShowSlide">
+		<control type="wraplist" id="52">
+			<viewtype label="Slide">Slide</viewtype>
+			<posx>-230</posx>
+			<posy>85</posy>
+			<width>1000</width>
+			<height>430</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>2</onup>
+			<ondown>999</ondown>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>1</focusposition>
+			<include>pageslide</include>
+			<visible>!Skin.HasSetting(viewtypeCoverSlideTV) + Container.Content(tvshows) + !Skin.HasSetting(tvshowPosters)</visible>
+									
+			<itemlayout height="200" width="285">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>50</posy>
+					<width>285</width>
+					<height>85</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>125</posy>
+					<width>285</width>
+					<height>85</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<texture flipy="true" diffuse="fade.png" /> 
+					<aspectratio aligny="bottom">stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<posx>124</posx>
+					<posy>66</posy>
+					<width>48</width>
+					<height>48</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+	
+			</itemlayout>
+			
+			<focusedlayout height="300" width="285">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>50</posy>
+					<width>285</width>
+					<height>85</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<bordertexture border="2" >list-focus.png</bordertexture>
+					<bordersize>5</bordersize>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="50,100" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="50,100" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>125</posy>
+					<width>285</width>
+					<height>85</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade.png" /> 
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="50,100" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="50,100" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>124</posx>
+					<posy>66</posy>
+					<width>48</width>
+					<height>48</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,101" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,101" time="200"/>
+					</animation>
+				</control>
+				
+			</focusedlayout>
+		</control>
+	</include>
+
+	
+<!---------- SLIDE VIEW (EPISODES)---------------------------------------------------------------------------->
+				
+	<include name="EpisodeSlide">
+		<control type="wraplist" id="52">
+			<viewtype label="Slide">Slide</viewtype>
+			<posx>-125</posx>
+			<posy>90</posy>
+			<width>860</width>
+			<height>430</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>2</onup>
+			<ondown>999</ondown>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>1</focusposition>
+			<include>pageslide</include>
+			<visible>Container.Content(episodes) + !Skin.HasSetting(viewtypeSlideEP)</visible>
+									
+			<itemlayout height="200" width="185">	
+				<control type="image">
+					<posx>10</posx>
+					<posy>50</posy>
+					<width>190</width>
+					<height>150</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>190</posy>
+					<width>190</width>
+					<height>150</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<posx>69</posx>
+					<posy>84</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+						
+				<control type="image">
+					<posx>173</posx>
+					<posy>172</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout height="300" width="200">
+				
+				<control type="image">
+					<posx>20</posx>
+					<posy>50</posy>
+					<width>170</width>
+					<height>150</height>
+					<texture border="2">list-focus.png</texture>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="65,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="65,125" time="200"/>
+					</animation>
+				</control>
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>50</posy>
+					<width>190</width>
+					<height>150</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2" >list-focus.png</bordertexture>
+					<bordersize>5</bordersize>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,125" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>190</posy>
+					<width>190</width>
+					<height>150</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,125" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>69</posx>
+					<posy>84</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,125" time="200"/>
+					</animation>
+				</control>
+
+				<control type="image">
+					<posx>173</posx>
+					<posy>172</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<animation effect="slide" start="0,0" end="35,15" tween="quadratic" delay="100" time="400">Focus</animation>
+					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+				</control>
+				
+			</focusedlayout>	
+		</control>
+	</include>
+
+		
+<!---------- BIG THUMBNAILS (EPISODES & PICTURES)  ---------------------------------------------------------------->
+
+	<include name="BigThumbs">
+		<control type="panel" id="56">
+			<viewtype label="31009">Thumbnails</viewtype>	
+			<posx>35</posx>
+			<posy>85</posy>
+			<width>685</width>
+			<height>440</height>
+			<onleft>2</onleft>
+			<onright>25</onright>
+			<onup>56</onup>
+			<ondown>56</ondown>
+			<scrolltime>200</scrolltime>
+			<include>pageslide</include>
+			<pagecontrol>25</pagecontrol>
+			<visible>
+				Window.IsActive(2)
+				| Container.Content(episodes) + !Skin.HasSetting(viewtypeThumbsEP)
+			</visible>							
+
+			<itemlayout height="220" width="225">
+
+				<control type="image">
+					<posx>58</posx>
+					<posy>34</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>8</posx>
+					<posy>8</posy>
+					<width>195</width>
+					<height>160</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="label">
+					<posx>106</posx>
+					<posy>180</posy>
+					<width>195</width>
+					<font>h4</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+															
+			<focusedlayout height="220" width="225">
+				
+				<control type="image">
+					<posx>58</posx>
+					<posy>34</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>211</width>
+					<height>176</height>
+					<texture border="2">list-focus.png</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+				
+				<control type="image">
+					<posx>8</posx>
+					<posy>8</posy>
+					<width>195</width>
+					<height>160</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="label">
+					<posx>106</posx>
+					<posy>180</posy>
+					<width>195</width>
+					<font>h4</font>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+		
+<!---------- THUMBNAILS (MOVIES, SEASONS + TV SHOW POSTERS) ------------------------------------------------------->
+			
+	<include name="MovieThumbs">
+		<control type="panel" id="56">
+			<viewtype label="21371">MovieThumbs</viewtype>
+			<posx>30</posx>
+			<posy>77</posy>
+			<width>685</width>
+			<height>372</height>
+			<onleft>2</onleft>
+			<onright>25</onright>
+			<onup>56</onup>
+			<ondown>56</ondown>
+			<scrolltime>200</scrolltime>
+			<include>pageslide</include>
+			<pagecontrol>25</pagecontrol>
+			<visible>
+				!Skin.HasSetting(viewtypeThumbs) + Container.Content(movies) 
+				| !Skin.HasSetting(viewtypeThumbs) + Container.Content(seasons) 
+				| !Skin.HasSetting(viewtypeWideIcons) + Skin.HasSetting(tvshowPosters) + Container.Content(tvshows)
+			</visible>
+			
+			<itemlayout height="184" width="108">
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>120</width>
+					<height>182</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>6</bordersize>
+				</control>
+				
+				<control type="image">
+					<posx>24</posx>
+					<posy>55</posy>
+					<width>72</width>
+					<height>72</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+
+				<control type="image">
+					<posx>85</posx>
+					<posy>155</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<visible>[Container.Content(movies) + !Skin.HasSetting(overlayMovies)] | [Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
+				</control>
+
+			</itemlayout>
+			
+			<focusedlayout height="184" width="108">
+	
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>120</width>
+					<height>182</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">list-focus.png</bordertexture>
+					<bordersize>6</bordersize>
+				</control>
+				
+				<control type="image">
+					<posx>24</posx>
+					<posy>55</posy>
+					<width>72</width>
+					<height>72</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+
+				<control type="image">
+					<posx>85</posx>
+					<posy>155</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<visible>[Container.Content(movies) + !Skin.HasSetting(overlayMovies)] | [Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)]</visible>
+				</control>
+
+			</focusedlayout>
+			</control>
+		</include>
+		
+		
+<!---------- THUMBNAILS (TVSHOWS WIDE ICONS) ---------------------------------------------------------------------->
+
+	<include name="TVShowThumbs">
+		
+		<control type="panel" id="56">
+			<viewtype label="21371">Thumbnails</viewtype>
+			<posx>30</posx>
+			<posy>75</posy>
+			<width>690</width>
+			<height>365</height>
+			<onleft>2</onleft>
+			<onright>65</onright>
+			<onup>56</onup>
+			<ondown>56</ondown>
+			<scrolltime>200</scrolltime>
+			<include>pageslide</include>
+			<pagecontrol>65</pagecontrol>
+			<visible>Container.Content(tvshows) + !Skin.HasSetting(viewtypeWideIcons) + !Skin.HasSetting(tvshowPosters)</visible>
+
+			<itemlayout height="90" width="325">
+				<control type="image">
+					<posx>125</posx>
+					<posy>6</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>																						
+			
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>435</width>
+					<height>80</height>
+					<aspectratio align="left">keep</aspectratio>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>6</bordersize>
+				</control>
+
+			</itemlayout>
+
+			<focusedlayout height="90" width="325">
+				
+				<control type="image">
+					<posx>2</posx>
+					<posy>1</posy>
+					<width>329</width>
+					<height>92</height>
+					<texture border="2">list-focus.png</texture>
+					<bordersize>6</bordersize>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>125</posx>
+					<posy>6</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>	
+																											
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>435</width>
+					<height>80</height>
+					<aspectratio align="left">keep</aspectratio>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">list-focus.png</bordertexture>
+					<bordersize>6</bordersize>
+				</control>
+				
+			</focusedlayout>
+			
+		</control>
+		
+	</include>																										
+
+		
+<!---------- FANART VIEW ------------------------------------------------------------------------------------------>
+						
+	<include name="TVShowFanart">																																																																
+		<control type="wraplist" id="54">
+			<viewtype label="Fanart">Fanart</viewtype>
+			<posx>-120</posx>
+			<posy>400</posy>
+			<width>960</width>
+			<height>430</height>
+			<onleft>54</onleft>
+			<onright>54</onright>
+			<onup>2</onup>
+			<ondown>999</ondown>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>1</focusposition>
+			<include>pageslide</include>
+			<visible>!Skin.HasSetting(FanartViewEnable) + Container.Content(episodes) + !Skin.HasSetting(FanartNoPlot) + !Window.IsActive(129)</visible>
+			
+			<itemlayout height="300" width="150">
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">scale</aspectratio>
+					<include>fanartIdleFade</include>
+					<visible>!System.IdleTime(2) | ControlGroup(9000).HasFocus(0)</visible>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>130</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">scale</aspectratio>
+					<include>fanartIdleFade</include>
+					<visible>!System.IdleTime(2) | ControlGroup(9000).HasFocus(0)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>45</posx>
+					<posy>30</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb) + !System.IdleTime(2) | IsEmpty(ListItem.Thumb) + ControlGroup(9000).HasFocus(0)</visible>
+				</control>
+						
+				<control type="image">
+					<posx>137</posx>
+					<posy>116</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<include>fanartIdleFade</include>
+					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+					<visible>!System.IdleTime(2) | ControlGroup(9000).HasFocus(0)</visible>
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout height="300" width="150">
+				
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>150</width>
+					<height>130</height>
+					<texture border="2">list-focus.png</texture>
+					<aspectratio aligny="left">scale</aspectratio>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="50,80" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="50,80" time="200"/>
+					</animation>
+				</control>
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">scale</aspectratio>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="50,80" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="50,80" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>130</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">scale</aspectratio>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="50,80" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="50,80" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>45</posx>
+					<posy>30</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="50,80" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="50,80" time="200"/>
+					</animation>
+				</control>
+
+				<control type="image">
+					<posx>137</posx>
+					<posy>116</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<animation effect="slide" start="0,0" end="17,9" tween="quadratic" delay="100" time="400">Focus</animation>
+					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+				</control>
+			</focusedlayout>	
+		</control>
+	</include>
+	
+	<include name="TVShowFanartNoPlot">																																																																
+		<control type="wraplist" id="54">
+			<viewtype label="Fanart">Fanart</viewtype>
+			<posx>-25</posx>
+			<posy>410</posy>
+			<width>960</width>
+			<height>430</height>
+			<onleft>54</onleft>
+			<onright>54</onright>
+			<onup>2</onup>
+			<ondown>999</ondown>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<include>pageslide</include>
+			<visible>!Skin.HasSetting(FanartViewEnable) + Container.Content(episodes) + Skin.HasSetting(FanartNoPlot) + !Window.IsActive(129)</visible>
+			
+			<itemlayout height="300" width="150">
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>130</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">scale</aspectratio>
+				</control>
+				
+				<control type="image">
+					<posx>45</posx>
+					<posy>30</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+						
+				<control type="image">
+					<posx>137</posx>
+					<posy>116</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout height="300" width="150">
+				
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>150</width>
+					<height>130</height>
+					<texture border="2">list-focus.png</texture>
+					<visible>!Control.HasFocus(9000)</visible>
+					<aspectratio aligny="left">scale</aspectratio>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="50,80" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="50,80" time="200"/>
+					</animation>
+				</control>
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">scale</aspectratio>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="50,80" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="50,80" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>130</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">scale</aspectratio>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="50,80" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="50,80" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>45</posx>
+					<posy>30</posy>
+					<width>72</width>
+					<height>72</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="50,80" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="50,80" time="200"/>
+					</animation>
+				</control>
+
+				<control type="image">
+					<posx>137</posx>
+					<posy>116</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<animation effect="slide" start="0,0" end="17,9" tween="quadratic" delay="100" time="400">Focus</animation>
+					<visible>Skin.HasSetting(overlayEpisodes)</visible>
+				</control>
+			</focusedlayout>	
+		</control>
+	</include>
+
+		
+<!---------- FANART VIEW (MOVIES) --------------------------------------------------------------------------------->
+						
+	<include name="MoviesFanart">																																																																
+		<control type="wraplist" id="54">
+			<viewtype label="Fanart">Fanart</viewtype>
+			<posx>-82</posx>
+			<posy>357</posy>
+			<width>960</width>
+			<height>430</height>
+			<onleft>54</onleft>
+			<onright>54</onright>
+			<onup>2</onup>
+			<ondown>999</ondown>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>1</focusposition>
+			<include>pageslide</include>
+			<visible>!Skin.HasSetting(MovieFanartViewEnable) + !Skin.HasSetting(movieFanartNoPlot) + Container.Content(movies) + !Window.IsActive(129)</visible>
+			
+			<itemlayout height="300" width="105">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>105</width>
+					<height>170</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<visible>!System.IdleTime(2) | ControlGroup(9000).HasFocus(0)</visible>
+					<include>fanartIdleFade</include>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>170</posy>
+					<width>105</width>
+					<height>170</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+					<visible>!System.IdleTime(2) | ControlGroup(9000).HasFocus(0)</visible>
+					<include>fanartIdleFade</include>
+				</control>
+				
+				<control type="image">
+					<posx>31</posx>
+					<posy>58</posy>
+					<width>64</width>
+					<height>64</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>
+						IsEmpty(ListItem.Thumb) + !System.IdleTime(2) | IsEmpty(ListItem.Thumb) + ControlGroup(9000).HasFocus(0)
+					</visible>
+				</control>
+						
+				<control type="image">
+					<posx>87</posx>
+					<posy>151</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(overlayMovies) + !System.IdleTime(2) | ControlGroup(9000).HasFocus(0)</visible>
+					<include>fanartIdleFade</include>
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout height="300" width="115">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>105</width>
+					<height>170</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2" >list-focus.png</bordertexture>
+					<bordersize>5</bordersize>
+					<include>movieFanartFocus</include>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>170</posy>
+					<width>105</width>
+					<height>170</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<include>movieFanartFocus</include>
+				</control>
+				
+				<control type="image">
+					<posx>31</posx>
+					<posy>58</posy>
+					<width>64</width>
+					<height>64</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<include>movieFanartFocus</include>
+				</control>
+
+				<control type="image">
+					<posx>87</posx>
+					<posy>151</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<include>movieFanartFocusOverlay</include>
+					<visible>!Skin.HasSetting(overlayMovies)</visible>
+				</control>
+				
+			</focusedlayout>
+		</control>
+	</include>
+	
+	<include name="MoviesFanartNoPlot">																																																																
+		<control type="wraplist" id="54">
+			<viewtype label="Fanart">Fanart</viewtype>
+			<posx>-22</posx>
+			<posy>357</posy>
+			<width>960</width>
+			<height>430</height>
+			<onleft>54</onleft>
+			<onright>54</onright>
+			<onup>2</onup>
+			<ondown>999</ondown>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>3</focusposition>
+			<include>pageslide</include>
+			<visible>!Skin.HasSetting(MovieFanartViewEnable) + Skin.HasSetting(movieFanartNoPlot) + Container.Content(movies) + !Window.IsActive(129)</visible>
+			
+			<itemlayout height="300" width="105">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>105</width>
+					<height>170</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>170</posy>
+					<width>105</width>
+					<height>170</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<posx>31</posx>
+					<posy>58</posy>
+					<width>64</width>
+					<height>64</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+						
+				<control type="image">
+					<posx>87</posx>
+					<posy>151</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(overlayMovies)</visible>
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout height="300" width="115">	
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>105</width>
+					<height>170</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2" >list-focus.png</bordertexture>
+					<bordersize>5</bordersize>
+					<include>movieFanartFocus</include>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>170</posy>
+					<width>105</width>
+					<height>170</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio aligny="left">stretch</aspectratio>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>5</bordersize>
+					<include>movieFanartFocus</include>
+				</control>
+				
+				<control type="image">
+					<posx>31</posx>
+					<posy>58</posy>
+					<width>64</width>
+					<height>64</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<include>movieFanartFocus</include>
+				</control>
+
+				<control type="image">
+					<posx>87</posx>
+					<posy>151</posy>
+					<width>24</width>
+					<height>24</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(overlayMovies)</visible>
+					<include>movieFanartFocusOverlay</include>
+				</control>
+				
+			</focusedlayout>
+		</control>
+	</include>
+
+<!---------- VIDEO PLAYLIST VIEW ---------------------------------------------------------------------------------->
+
+	<include name="VideoPlaylistView">
+		<control type="list" id="50">
+			<viewtype label="535">List</viewtype>
+			<posx>30</posx>
+			<posy>67</posy>
+			<width>395</width>
+			<height>455</height>
+			<onleft>9000</onleft>
+			<onright>63</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>200</scrolltime>	
+			<pagecontrol>63</pagecontrol>
+			<include>pageslide</include>	
+
+			<itemlayout width="395" height="35">
+				
+				<control type="image">
+					<width>395</width>
+					<height>33</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>list-nofocus.png</texture>
+				</control>
+
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>375</width>
+					<height>30</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+																																	
+				<control type="label">
+					<posx>385</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>30</height>
+					<font>menu</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Duration</info>
+				</control>
+				
+			</itemlayout>
+
+			<focusedlayout width="395" height="35">
+				<control type="image">
+					<width>395</width>
+					<height>33</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="5,0,5,0">list-focus.png</texture>
+					<include>ListScroll</include>
+				</control>
+				
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>375</width>
+					<height>30</height>
+					<font>menu</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>100</textoffsetx>
+					<info>ListItem.Label</info>
+				</control>
+																																	
+				<control type="label">
+					<posx>385</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>30</height>
+					<font>menu</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textoffsetx>6</textoffsetx>
+					<textcolor>sublabel-text</textcolor>
+					<info>ListItem.Duration</info>
+				</control>
+				
+			</focusedlayout>
+			
+					
+		</control>
+	</include>
+
+</includes>

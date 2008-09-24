@@ -9,91 +9,85 @@
 	
 	<controls>
 
-		<control type="image">
-			<posx>295</posx>
-			<posy>90</posy>
-			<width>128</width>
-			<height>29</height>
-			<aspectratio>keep</aspectratio>
-			<texture>focuslogosmall.png</texture>
-		</control>
-		
-		<control type="label">
-			<description>date label</description>
-			<posx>0</posx>
-			<posy>140</posy>
-			<width>720</width>
-			<label>$INFO[System.Date] [COLOR=sublabel-text] |  $INFO[System.Time][/COLOR]</label>
-			<align>center</align>
-			<aligy>center</aligy>
-			<font>h2</font>
-			<include>fadeinout</include>
-		</control>
-
 		<control type="fixedlist" id="52">
-			<posx>160</posx>
-			<posy>200</posy>
-			<width>400</width>
+			<posx>172</posx>
+			<posy>190</posy>
+			<width>360</width>
 			<height>500</height>
 			<onleft>100</onleft>
 			<onright>100</onright>
 			<onup>52</onup>
 			<ondown>52</ondown>
 			<wraparound>yes</wraparound>
-			<focusposition>0</focusposition>
-			<orientation>vertical</orientation>
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
 			<include>fadeinout</include>
 			
-			<itemlayout height="40" width="400">
-				<control type="label">
-					<posx>65</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<font>h2</font>
-					<align>left</align>
-					<info>ListItem.Label</info>
+			<itemlayout height="130" width="120">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio>scale</aspectratio>
+					<info>ListItem.Icon</info>
 				</control>
 			</itemlayout>
 			
-			<focusedlayout height="70"  width="451">
+			<focusedlayout height="130"  width="120">
+				
 				<control type="image">
 					<posx>0</posx>
-					<posy>3</posy>
-					<width>400</width>
-					<height>60</height>
+					<posy>0</posy>
+					<width>120</width>
+					<height>120</height>
 					<aspectratio>keep</aspectratio>
-					<texture>list-focus.png</texture>
+					<texture border="2">list-focus.png</texture>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,50" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,50" time="200"/>
+					</animation>
 				</control>
 
 				<control type="image">
-					<posx>7</posx>
-					<posy>7</posy>
-					<width>48</width>
-					<height>48</height>
-					<aspectratio>keep</aspectratio>
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio>scale</aspectratio>
 					<info>ListItem.Icon</info>
-				</control>
-
-				<control type="label">
-					<posx>65</posx>
-					<posy>3</posy>
-					<width>250</width>
-					<font>h1</font>
-					<align>left</align>
-					<info>ListItem.Label</info>
-				</control>
-				
-				<control type="label">
-					<posx>65</posx>
-					<posy>33</posy>
-					<width>250</width>
-					<font>h5</font>
-					<align>left</align>
-					<textcolor>sublabel-text</textcolor>
-					<info>ListItem.Label2</info>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,50" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,50" time="200"/>
+					</animation>
 				</control>
 		
 			</focusedlayout>
+		</control>
+		
+		<control type="label">
+			<description>date label</description>
+			<posy>350</posy>
+			<width>720</width>
+			<label>[B]$INFO[ListItem.Label][/B]</label>
+			<align>center</align>
+			<font>h2</font>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="label">
+			<description>date label</description>
+			<posy>380</posy>
+			<width>720</width>
+			<label>$INFO[ListItem.Label2]</label>
+			<align>center</align>
+			<font>menu</font>
+			<textcolor>sublabel-text</textcolor>
+			<include>fadeinout</include>
 		</control>
 
 	</controls>

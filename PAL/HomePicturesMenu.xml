@@ -5,7 +5,7 @@
 			<include>home-start-column</include>
 			<include>zoomout</include>
 			<include>home-submenu</include>
-			<posx>164</posx>
+			<posx>158</posx>
 			<posy>61</posy>
 			<onup>9000</onup>
 		
@@ -15,10 +15,10 @@
 				<visible allowhiddenfocus="true">Control.HasFocus(600)</visible>
 				<posx>72</posx>
 				<posy>0</posy>
-				<width>215</width>
+				<width>315</width>
 				<height>37</height>
 				<buttongap>0</buttongap>
-				<numbuttons>2</numbuttons>
+				<numbuttons>3</numbuttons>
 				<orientation>vertical</orientation>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -27,11 +27,11 @@
 				<wraparound>yes</wraparound>
 				<smoothscrolling>yes</smoothscrolling>
 				<alpha>70</alpha>
-				<font>homemenu</font>
+				<font>menubarhomesub</font>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<ondown>8000</ondown>
-				<onup>8000</onup>
+				<ondown>600</ondown>
+				<onup>600</onup>
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textoffsetx>0</textoffsetx>
@@ -42,14 +42,20 @@
 				<buttons>
 					
 					<button id="1">
-						<label>31914</label>
-						<onclick>ActivateWindow(MyMusicFiles,plugin://pictures)</onclick>
+						<!-- <label>31914</label> -->
+						<label>Plugin´s</label>
+						<onclick>ActivateWindow(Pictures,plugin://pictures)</onclick>
 					</button>
 					
 					<button id="2">
 						<label>108</label>
 						<onclick>ActivateWindow(2007)</onclick>
 					</button>
+					<button id="3">
+						<label>1</label>
+						<onclick>ActivateWindow(MyPictures)</onclick>
+					</button>
+					
 
 				</buttons>
 			</control>

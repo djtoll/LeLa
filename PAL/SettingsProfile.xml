@@ -1,128 +1,109 @@
 <window id="34">
 	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	
 	<controls>
 		<include>background</include>
 		<include>allscreens</include>
-		<include>infobar</include>	
-		
+
 		<control type="label">
-			<description>description label</description>
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>4</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>31021</label>
-			<font>page</font>
 		</control>
-		
+
 		<control type="group">
 			<include>pageslide</include>
 			<include>viewsmenu</include>
-			<include>viewsmenucontext</include>
-			
+
 			<control type="label" id="3">
 				<description>Last loaded</description>
-				<posx>40</posx>
-				<posy>300</posy>
-				<width>250</width>
-				<label>$LOCALIZE[13204] $INFO[system.profilename]</label>
+				<posx>211</posx>
+				<posy>150</posy>
+				<width>300</width>
+				<label>[B]$LOCALIZE[13204] $INFO[system.profilename][/B]</label>
+				<align>left</align>
 				<font>h2</font>
-				<textcolor>sublabel-text</textcolor>
 			</control>
 			
 			<control type="radiobutton" id="4">
 				<description>enable login screen</description>
-				<posx>30</posx>
-				<posy>325</posy>
-				<width>160</width>
-				<height>33</height>
-				<onright>2</onright>
-				<onup>4</onup>
-				<ondown>4</ondown>
-				<onleft>2</onleft>
-				<label>20096</label>
-				<aligny>-</aligny>
-				<textoffsety>2</textoffsety>
-				<textoffsetx>10</textoffsetx>
-				<textcolor>button-text</textcolor>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus border="2">-</texturenofocus>
-				<font>menu</font>
+				<posx>208</posx>
+				<posy>187</posy>
+				<width>300</width>
+				<height>35</height>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<label>$LOCALIZE[20096]</label>
+			</control>
+			
+			<control type="label" id="3">
+				<description>Profiles label</description>
+				<posx>211</posx>
+				<posy>250</posy>
+				<width>300</width>
+				<label>[B]$LOCALIZE[13200][/B]</label>
+				<align>left</align>
+				<font>h2</font>
 			</control>
 
-		
-
-		<control type="list" id="2">
-			<posx>30</posx>
-			<posy>67</posy>
-			<width>370</width>
-			<height>300</height>
-			<onleft>4</onleft>
-			<onright>4</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
-			<scrolltime>1</scrolltime>
-			<viewtype label="List">List</viewtype>
-			<include>pageslide</include>
-
-			<itemlayout height="35">
-				<control type="image">
-					<width>480</width>
-					<height>33</height>
-					<posx>0</posx>
-					<posy>0</posy>
-					<texture border="2">list-nofocus.png</texture>
-				</control>
-				<control type="label">
-					<posx>10</posx>
-					<posy>3</posy>
-					<width>460</width>
-					<height>35</height>
-					<font>menu</font>
-					<align>left</align>
-					<textcolor>button-text</textcolor>
-					<selectedcolor>listselectedtext</selectedcolor>
-					<info>ListItem.Label</info>
-				</control>	
-			</itemlayout>
-			
-			<focusedlayout height="35">
-				<control type="image">
-					<width>480</width>
-					<height>33</height>
-					<texture border="2">list-nofocus.png</texture>
-					<visible>!Control.HasFocus(2)</visible>
-					<posx>0</posx>
-					<posy>0</posy>
-				</control>
-				<control type="image">
-					<width>480</width>
-					<height>33</height>
-					<texture border="2">list-focus.png</texture>
-					<visible>Control.HasFocus(2)</visible>
-					<posx>0</posx>
-					<posy>0</posy>
-				</control>
-				<control type="label">
-					<posx>10</posx>
-					<posy>3</posy>
-					<width>460</width>
-					<height>35</height>
-					<font>menu</font>
-					<align>left</align>
-					<textcolor>button-text</textcolor>
-					<selectedcolor>listselectedtext</selectedcolor>
-					<scroll>true</scroll>
-					<info>ListItem.Label</info>
-				</control>
-
-			</focusedlayout>
-
-	</control>		
-		
+			<control type="list" id="2">
+				<posx>208</posx>
+				<posy>287</posy>
+				<width>300</width>
+				<height>300</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<scrolltime>1</scrolltime>
+				<viewtype label="List">List</viewtype>
+				<include>pageslide</include>
+	
+				<itemlayout height="35">
+					<control type="image">
+						<width>300</width>
+						<height>33</height>
+						<texture border="2">list-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>3</posy>
+						<width>460</width>
+						<height>35</height>
+						<font>menu</font>
+						<selectedcolor>listselectedtext</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>	
+				</itemlayout>
+				
+				<focusedlayout height="35">
+					<control type="image">
+						<width>480</width>
+						<height>33</height>
+						<texture border="2">list-nofocus.png</texture>
+						<visible>!Control.HasFocus(2)</visible>
+					</control>
+					<control type="image">
+						<width>480</width>
+						<height>33</height>
+						<texture border="2">list-focus.png</texture>
+						<visible>Control.HasFocus(2)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>3</posy>
+						<width>460</width>
+						<height>35</height>
+						<font>menu</font>
+						<selectedcolor>listselectedtext</selectedcolor>
+						<scroll>true</scroll>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				
+			</control>		
 		</control>
-
 	</controls>
 </window>

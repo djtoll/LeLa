@@ -1,0 +1,172 @@
+<window id="2006">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+		</control>
+
+<!-- NOW PLAYING -->
+
+		<control type="group" id="1">
+			<posx>-10</posx>
+			<posy>380</posy>
+			<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<include>fadeinout-osd-info</include>
+			
+			<control type="image" id="1">
+				<posx>-10</posx>
+				<posy>68</posy>
+				<width>760</width>
+				<height>150</height>
+				<texture border="0,0,22,0">osd-infobar.png</texture>
+				<include>fadeinout-osd</include>
+				<visible>Player.ShowInfo</visible>
+			</control>
+			
+			<include>fadeinout-osd-info</include>
+				
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>20</posx>
+				<posy>97</posy>
+				<width>100</width>
+				<height>90</height>
+				<bordertexture border="2">list-focus.png</bordertexture>
+				<bordersize>4</bordersize>
+				<info>MusicPlayer.Cover</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+	
+			<control type="label" id="1">
+				<description>Title</description>
+				<width>420</width>
+				<posx>125</posx>
+				<posy>100</posy>
+				<info>musicplayer.Title</info>
+				<align>left</align>
+				<font>h1</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Artist</description>
+				<width>520</width>
+				<posx>125</posx>
+				<posy>127</posy>
+				<info>musicplayer.artist</info>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Album</description>
+				<width>520</width>
+				<posx>125</posx>
+				<posy>156</posy>
+				<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]$INFO[musicplayer.year, - (,)]</label>
+				<align>left</align>
+				<font>h3</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Progress</description>
+				<posx>710</posx>
+				<posy>156</posy>
+				<width>520</width>
+				<align>right</align>
+				<font>h3</font>
+				<include>timeProgress</include>
+			</control>
+	
+			<control type="label" id="1">
+				<description>Playlist Pos No</description>
+				<width>200</width>
+				<posx>710</posx>
+				<posy>127</posy>
+				<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label>
+				<textcolor>sublabel-text</textcolor>
+				<visible>!MusicPartyMode.Enabled</visible>
+				<align>right</align>
+				<font>h3</font>
+			</control>
+	
+			<control type="label" id="1">
+				<description>PartyMode Enabled</description>
+				<posx>710</posx>
+				<posy>100</posy>
+				<width>200</width>
+				<label>589</label>
+				<visible>MusicPartyMode.Enabled</visible>
+				<align>right</align>
+				<font>h3</font>
+			</control>
+	
+		</control>
+		
+	
+	<!-- CODEC & VISUALISATION INFO -------------------------------->
+	
+		<control type="group" id="0">
+			<visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+			
+			<control type="image" id="0">
+				<description>preset background image</description>
+				<posx>-10</posx>
+				<posy>-10</posy>
+				<width>740</width>
+				<height>100</height>
+				<texture>black.png</texture>
+			</control>
+			
+			<control type="label" id="0">
+				<description>Codecinfo</description>
+				<width>660</width>
+				<posx>30</posx>
+				<posy>30</posy>
+				<label>$LOCALIZE[445] | $INFO[musicplayer.Codec,Codec: ,]$INFO[musicplayer.Bitrate, - Bitrate: ,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>
+				<align>left</align>
+				<font>description</font>
+			</control>
+			
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>30</posx>
+				<posy>55</posy>
+				<width>660</width>
+				<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+				<font>description</font>
+				<align>left</align>
+				<visible>Visualisation.Locked</visible>
+			</control>
+			
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>30</posx>
+				<posy>80</posy>
+				<width>660</width>
+				<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name]</label>
+				<font>description</font>
+				<align>left</align>
+				<visible>!Visualisation.Locked</visible>
+			</control>
+			
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>30</posx>
+				<posy>100</posy>
+				<width>630</width>
+				<label>$LOCALIZE[13388] | $INFO[Visualisation.Preset]</label>
+				<font>description</font>
+				<align>left</align>
+			</control>
+		</control>
+	</controls>
+</window>

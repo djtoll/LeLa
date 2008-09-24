@@ -40,10 +40,17 @@
 	
 	<font>
 		<name>menubar</name>
-		<filename>DejaVuSansCondensed.ttf</filename>
-		<size>24</size>
+		<filename>LeroyLetteringLightBeta01.ttf</filename>
+		<size>34</size>
 		<shadow>ff000000</shadow>
 		<aspect>1.1</aspect>
+	</font>
+	<font>
+		<name>menubarhomesub</name>
+		<filename>idua.ttf</filename>
+		<size>30</size>
+		<shadow>ff000000</shadow>
+		<aspect>0.98</aspect>
 	</font>
   	
   	<!--
@@ -62,6 +69,18 @@
 		<filename>DroidSans.ttf</filename>
 		<size>20</size>
 	</font>
+	<font>
+      <name>rsslela</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>21</size>
+    </font>
+	<font>
+      <name>mach7</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>28</size>
+	  <shadow>ff000000</shadow>
+	  <aspect>1.4</aspect>
+    </font>
   	
 <!--- PAGE --------------------------------->
   	
@@ -112,7 +131,7 @@
 		<filename>DroidSans.ttf</filename>
 		<size>26</size>
 		<shadow>ff000000</shadow>
-		<aspect>1.1</aspect>
+		<aspect>1.4</aspect>
 	</font>
 	<font>
 		<name>cali38</name>

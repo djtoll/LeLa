@@ -2,7 +2,17 @@
 	<defaultcontrol>-</defaultcontrol>
 	<controls>
 		
-		
+	<control type="label" id="200">
+			<description>Time and Date Label</description>
+			<posx>710</posx>
+			<posy>6</posy>
+			<width>415</width>
+			<label>$INFO[System.Time]</label>
+			<align>right</align>
+			<font>date</font>
+			<include>home-menubar</include>
+			<visible>Player.ShowInfo</visible>
+		</control>
 
 	<control type="group" id="1">
 		<posx>-10</posx>
@@ -11,25 +21,17 @@
 		
 		<control type="image" id="1">
 			<posx>-10</posx>
-			<posy>63</posy>
+			<posy>68</posy>
 			<width>760</width>
 			<height>150</height>
 			<texture border="0,0,22,0">osd-infobar.png</texture>
 			<include>fadeinout-osd</include>
 			<visible>Player.ShowInfo</visible>
 		</control>
-
 		
-		<animation type="Visible">
-			<effect type="slide" start="0,70" end="0" time="100" />
-			<effect type="fade" start="0" end="80" time="100" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="slide" start="0,0" end="0,70" time="100" />
-			<effect type="fade" start="80" end="0" time="100" />
-		</animation>
+		<include>fadeinout-osd-info</include>
 
-		
+
 <!---------- MOVIES --------------------------------------------------------------------------------------->
 		
 		<control type="group" id="1">
@@ -38,9 +40,9 @@
 			<control type="image" id="1">
 				<description>cover image</description>
 				<posx>25</posx>
-				<posy>95</posy>
+				<posy>97</posy>
 				<width>100</width>
-				<height>85</height>
+				<height>90</height>
 				<info>videoplayer.cover</info>
 				<bordertexture border="2">list-focus.png</bordertexture>
 				<bordersize>2</bordersize>
@@ -51,60 +53,56 @@
 			<control type="label" id="1">
 				<description>Movie Title</description>
 				<width>420</width>
-				<posx>0</posx>
-				<posy>95</posy>
+				<posx>90</posx>
+				<posy>100</posy>
 				<info>VideoPlayer.Title</info>
 				<align>left</align>
 				<font>h1</font>
 				<visible>videoplayer.content(movies)</visible>
-				<animation effect="slide" start="0" end="90" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
 			</control>
 			
 			<control type="label" id="1">
 				<description>Movie Genre</description>
 				<width>520</width>
-				<posx>0</posx>
-				<posy>126</posy>
+				<posx>90</posx>
+				<posy>124</posy>
 				<info>VideoPlayer.Genre</info>
 				<align>left</align>
 				<font>h2</font>
 				<textcolor>sublabel-text</textcolor>
-				<animation effect="slide" start="0" end="90" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
 			</control>
 			
 			<control type="label" id="1">
 				<description>Progress</description>
 				<width>520</width>
-				<posx>0</posx>
-				<posy>154</posy>
-				<label>$INFO[player.Time]$INFO[player.Duration, / ]</label>
+				<posx>90</posx>
+				<posy>156</posy>
 				<align>left</align>
-				<font>h2</font>
-				<textcolor>sublabel-text</textcolor>
-				<animation effect="slide" start="0" end="90" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
+				<font>h3</font>
+				<include>timeProgress</include>
 			</control>
 
 			<control type="label" id="1">
 				<description>FINISH time label</description>
 				<width>310</width>
 				<posx>710</posx>
-				<posy>153</posy>
+				<posy>156</posy>
 				<label>$LOCALIZE[31068]</label>	
 				<align>right</align>
-				<font>h4</font>
+				<font>h3</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
 			
 			<control type="label" id="1">
-				<description>Chapter Pos No</description>
+				<description>CHAPTER info</description>
 				<width>310</width>
-				<posx>0</posx>
-				<posy>166</posy>
+				<posx>710</posx>
+				<posy>127</posy>
 				<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
 				<visible>player.chaptercount</visible>
 				<align>right</align>
-				<font>h2</font>
-				<animation effect="slide" start="0" end="90" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
+				<textcolor>sublabel-text</textcolor>
+				<font>h4</font>
 			</control>
 		
 		</control>
@@ -123,7 +121,7 @@
 				<height>85</height>
 				<info>videoplayer.cover</info>
 				<bordertexture border="2">list-focus.png</bordertexture>
-				<bordersize>6</bordersize>
+				<bordersize>5</bordersize>
 				<aspectratio align="left">stretch</aspectratio>
 				<visible>videoplayer.content(episodes)</visible>
 			</control>
@@ -132,7 +130,7 @@
 				<description>Video Title</description>
 				<width>500</width>
 				<posx>0</posx>
-				<posy>95</posy>
+				<posy>97</posy>
 				<info>VideoPlayer.Title</info>
 				<align>left</align>
 				<font>h1</font>
@@ -143,23 +141,22 @@
 				<description>TV Show Title</description>
 				<width>420</width>
 				<posx>0</posx>
-				<posy>125</posy>
+				<posy>127</posy>
 				<label>$INFO[VideoPlayer.tvshowtitle] - $LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
 				<align>left</align>
-				<font>h2</font>
+				<font>h4</font>
 				<textcolor>sublabel-text</textcolor>
 				<visible>videoplayer.content(episodes)</visible>
 				<animation effect="slide" start="0" end="140" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
 			</control>
 			
 			<control type="label" id="1">
-				<description>TV Show Title</description>
 				<width>420</width>
 				<posx>0</posx>
-				<posy>150</posy>
+				<posy>156</posy>
 				<label></label>
 				<align>left</align>
-				<font>h2</font>
+				<font>h3</font>
 				<textcolor>sublabel-text</textcolor>
 				<visible>videoplayer.content(episodes)</visible>
 				<animation effect="slide" start="0" end="140" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
@@ -169,11 +166,10 @@
 				<description>time label</description>
 				<width>310</width>
 				<posx>0</posx>
-				<posy>150</posy>
-				<label>$INFO[player.Time]$INFO[player.Duration, / ]</label>	
+				<posy>156</posy>
+				<label>[B]$INFO[player.Time][COLOR=sublabel-text]$INFO[player.Duration, / ][/COLOR][/B]</label>	
 				<align>left</align>
-				<font>h4</font>
-				<textcolor>sublabel-text</textcolor>
+				<font>h3</font>
 				<animation effect="slide" start="0" end="140" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
 			</control>
 			
@@ -181,29 +177,17 @@
 				<description>FINISH time label</description>
 				<width>310</width>
 				<posx>710</posx>
-				<posy>150</posy>
-				<label>$LOCALIZE[31068]</label>	
+				<posy>156</posy>
+				<label>[B]$LOCALIZE[31068][/B]</label>	
 				<align>right</align>
-				<font>h4</font>
+				<font>h3</font>
 				<textcolor>sublabel-text</textcolor>
-			</control>
-			
-			<control type="label" id="1">
-				<description>Chapter Pos No</description>
-				<width>310</width>
-				<posx>0</posx>
-				<posy>166</posy>
-				<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
-				<visible>player.chaptercount</visible>
-				<align>right</align>
-				<font>h2</font>
-				<animation effect="slide" start="0" end="190" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
 			</control>
 			
 		</control>
 		
 			
-	<!---------- MUSIC VIDEOS -------------------------------------------------------------------------------->			
+<!---------- MUSIC VIDEOS -------------------------------------------------------------------------------->			
 			
 		<control type="group" id="1">
 			<visible>videoplayer.content(musicvideos)</visible>
@@ -211,47 +195,76 @@
 			<control type="image" id="1">
 				<description>cover image</description>
 				<posx>25</posx>
-				<posy>18</posy>
-				<width>120</width>
-				<height>120</height>
+				<posy>98</posy>
+				<width>100</width>
+				<height>85</height>
 				<info>videoplayer.cover</info>
-				<aspectratio align="center">stretch</aspectratio>
+				<bordertexture border="2">list-focus.png</bordertexture>
+				<bordersize>5</bordersize>
+				<aspectratio align="left">stretch</aspectratio>
 				<visible>videoplayer.content(musicvideos)</visible>
 			</control>
 			
 			<control type="label" id="1">
-				<description>Artist Label</description>
-				<width>540</width>
-				<posx>160</posx>
-				<posy>10</posy>
-				<info>VideoPlayer.Artist</info>
+				<description>Video Title</description>
+				<width>500</width>
+				<posx>0</posx>
+				<posy>98</posy>
+				<info>VideoPlayer.Title</info>
 				<align>left</align>
 				<font>h1</font>
+				<animation effect="slide" start="0,0" end="40,0" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
 			</control>
 			
 			<control type="label" id="1">
-				<description>Musicvideo Label</description>
-				<width>540</width>
-				<posx>160</posx>
-				<posy>45</posy>
-				<info>VideoPlayer.Title</info>
+				<description>Artist</description>
+				<width>420</width>
+				<posx>0</posx>
+				<posy>124</posy>
+				<label>$INFO[VideoPlayer.Artist]</label>
 				<align>left</align>
 				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+				<visible>videoplayer.content(musicvideos)</visible>
+				<animation effect="slide" start="0,0" end="40,0" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
+			</control>
+
+			<control type="label" id="1">
+				<description>time label</description>
+				<width>310</width>
+				<posx>0</posx>
+				<posy>156</posy>
+				<label>[B]$INFO[player.Time][COLOR=sublabel-text]$INFO[player.Duration, / ][/COLOR][/B]</label>	
+				<align>left</align>
+				<font>h3</font>
+				<animation effect="slide" start="0,0" end="40,0" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
 			</control>
 			
-			<control type="fadelabel" id="1">
-				<description>Studio Label</description>
-				<width>540</width>
-				<posx>160</posx>
-				<posy>75</posy>
-				<info>VideoPlayer.Studio</info>
-				<align>left</align>
+			<control type="label" id="1">
+				<description>Playlist</description>
+				<width>200</width>
+				<posx>710</posx>
+				<posy>124</posy>
+				<label>$INFO[VideoPlayer.PlaylistPosition]$INFO[VideoPlayer.PlaylistLength, / ]</label>
+				<align>right</align>
 				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="1">
+				<description>FINISH time label</description>
+				<width>310</width>
+				<posx>710</posx>
+				<posy>156</posy>
+				<label>[B]$LOCALIZE[31068][/B]</label>	
+				<align>right</align>
+				<font>h3</font>
+				<textcolor>sublabel-text</textcolor>
 			</control>
 			
 		</control>
 		
-<!---------- OTHER -------------------------------------------------------------------------------->	
+<!---------- OTHER / FILE MODE -------------------------------------------------------------------------------->	
 			
 		<control type="group" id="1">
 			<visible>![videoplayer.content(movies) | videoplayer.content(episodes) | videoplayer.content(musicvideos)]</visible>
@@ -259,64 +272,61 @@
 			<control type="image" id="1">
 				<description>cover image</description>
 				<posx>25</posx>
-				<posy>75</posy>
-				<width>84</width>
-				<height>84</height>
-				<texture>defaultVideoBig.png</texture>
-				<aspectratio align="center">keep</aspectratio>
-				<visible>IsEmpty(videoplayer.cover)</visible>
+				<posy>98</posy>
+				<width>100</width>
+				<height>85</height>
+				<info>videoplayer.cover</info>
+				<bordertexture border="2">list-focus.png</bordertexture>
+				<bordersize>5</bordersize>
+				<aspectratio align="left">stretch</aspectratio>
 			</control>
 			
-			<control type="image" id="1">
-				<description>cover image</description>
-				<posx>30</posx>
-				<posy>95</posy>
-				<width>120</width>
-				<height>100</height>
-				<info>videoplayer.cover</info>
-				<aspectratio align="center">stretch</aspectratio>
-			</control>
-
 			<control type="label" id="1">
 				<description>Video Title</description>
 				<width>500</width>
-				<posx>165</posx>
-				<posy>95</posy>
+				<posx>0</posx>
+				<posy>97</posy>
 				<info>VideoPlayer.Title</info>
 				<align>left</align>
 				<font>h1</font>
-			</control>
-			
-			<control type="label" id="1">
-				<description>Genre</description>
-				<width>500</width>
-				<posx>165</posx>
-				<posy>130</posy>
-				<info>VideoPlayer.Genre</info>
-				<textcolor>sublabel-text</textcolor>
-				<align>left</align>
-				<font>h2</font>
+				<animation effect="slide" start="0" end="140" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
 			</control>
 
 			<control type="label" id="1">
-				<description>Progress</description>
-				<width>500</width>
-				<posx>165</posx>
-				<posy>160</posy>
-				<textcolor>sublabel-text</textcolor>
-				<label>$INFO[player.Time]$INFO[player.Duration, / ]</label>
+				<description>time label</description>
+				<width>310</width>
+				<posx>0</posx>
+				<posy>156</posy>
+				<label>[B]$INFO[player.Time][COLOR=sublabel-text]$INFO[player.Duration, / ][/COLOR][/B]</label>	
 				<align>left</align>
+				<font>h3</font>
+				<animation effect="slide" start="0" end="140" time="0" condition="!IsEmpty(videoplayer.cover)">conditional</animation>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Playlist</description>
+				<width>200</width>
+				<posx>710</posx>
+				<posy>127</posy>
+				<label>$INFO[VideoPlayer.PlaylistPosition]$INFO[VideoPlayer.PlaylistLength, / ]</label>
+				<align>right</align>
 				<font>h4</font>
-				<visible>!Window.IsActive(115)</visible>
+				<textcolor>sublabel-text</textcolor>
 			</control>
+			
+			<control type="label" id="1">
+				<description>FINISH time label</description>
+				<width>310</width>
+				<posx>710</posx>
+				<posy>156</posy>
+				<label>[B]$LOCALIZE[31068][/B]</label>	
+				<align>right</align>
+				<font>h3</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
 		</control>
-			
-			
-<!---------- TIME --------------------------------------------------------------------------------------->
-			
-			
 
-			
 <!---------- BUFFERING --------------------------------------------------------------------------------------->
 
 			<control type="label" id="24">
@@ -333,55 +343,43 @@
 
 <!---------- CODEC INFO -------------------------------------------------------------------------------------->
 
-			<control type="image" id="0">
-				<description>media info background image</description>
-				<posx>-10</posx>
-				<posy>0</posy>
-				<width>740</width>
-				<height>170</height>
-				<texture flipy="true">info-background.png</texture>
-			</control>
-			
-			<control type="label" id="10">
-				<description>row 1 label</description>
-				<posx>20</posx>
-				<posy>10</posy>
-				<label>-</label>
-				<align>left</align>
-				<font>description</font>
-			</control>
-			<control type="label" id="11">
-				<description>row 2 label</description>
-				<posx>20</posx>
-				<posy>35</posy>
-				<label>-</label>
-				<align>left</align>
-				<font>description</font>
-			</control>
-			<control type="label" id="12">
-				<description>row 3 label</description>
-				<posx>20</posx>
-				<posy>60</posy>
-				<label>-</label>
-				<align>left</align>
-				<font>description</font>
-			</control>
+		<control type="image" id="0">
+			<description>media info background image</description>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>740</width>
+			<height>135</height>
+			<texture flipy="true">black.png</texture>
+			<include>fadeinout</include>
+		</control>
 		
-<!---------- SYSTEM TIME ------------------------------------------------------------------------------------>
-
-		<control type="fadelabel" id="200">
-			<posx>655</posx>
-			<posy>8</posy>
-			<width>315</width>
-			<label>$INFO[System.Time]</label>
-			<scrollout>false</scrollout>
-			<pauseatend>5000</pauseatend>
-			<textcolor>label-text</textcolor>
-			<align>right</align>
-			<font>date</font>
-			<include>home-menubar</include>
-			<visible>Player.ShowInfo</visible>
-		</control>		
-		
+		<control type="label" id="10">
+			<description>row 1 label</description>
+			<posx>20</posx>
+			<posy>10</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>description</font>
+			<include>fadeinout</include>
+		</control>
+		<control type="label" id="11">
+			<description>row 2 label</description>
+			<posx>20</posx>
+			<posy>35</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>description</font>
+			<include>fadeinout</include>
+		</control>
+		<control type="label" id="12">
+			<description>row 3 label</description>
+			<posx>20</posx>
+			<posy>60</posy>
+			<label>-</label>
+			<align>left</align>
+			<font>description</font>
+			<include>fadeinout</include>
+		</control>
+	
 	</controls>
 </window>

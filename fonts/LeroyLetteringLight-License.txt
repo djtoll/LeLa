@@ -1,0 +1,23 @@
+Family name
+LeroyLetteringLightBETA01
+
+Font name
+LeroyLetteringLightBETA01
+
+Version
+Version 1.000 2003 initial release
+
+Copyright
+Copyright (c) Character, 2003. All rights waived
+
+Designer
+Character
+
+License
+A free and unrestircted license is hereby granted. This font is placed in the public domain.
+
+Vendor
+Character (Herb)
+
+Glyphs
+234

@@ -1,0 +1,182 @@
+<includes>
+
+<!---------- SLIDE VIEW (PICTURES) -------------------------------------------------------------------------------->
+
+	<include name="PictureSlide">
+		<control type="wraplist" id="52">
+			<viewtype label="Slide">Slide</viewtype>
+			<posx>-80</posx>
+			<posy>70</posy>
+			<width>800</width>
+			<height>400</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>2</onup>
+			<ondown>999</ondown>
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<include>pageslide</include>
+
+			<itemlayout height="270" width="200">
+				
+				<control type="image">
+					<posx>65</posx>
+					<posy>130</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>40</posy>
+					<width>200</width>
+					<height>215</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>183</posy>
+					<width>200</width>
+					<height>215</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture flipy="true" diffuse="fade.png">-</texture>
+				</control>
+			</itemlayout>
+
+			<focusedlayout height="270" width="215">
+				
+				<control type="image">
+					<posx>65</posx>
+					<posy>130</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="140,140" center="120,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="140,140" end="100,100" center="120,125" time="200"/>
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>40</posy>
+					<width>200</width>
+					<height>215</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">list-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="140,140" center="120,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="140,140" end="100,100" center="120,125" time="200"/>
+					</animation>
+				</control>
+
+				<control type="image">
+					<posx>10</posx>
+					<posy>183</posy>
+					<width>200</width>
+					<height>215</height>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture flipy="true" diffuse="fade.png">-</texture>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="140,140" center="120,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="140,140" end="100,100" center="120,125" time="200"/>
+					</animation>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+
+	<!---------- ICONS VIEW ------------------------------------------------------------------------------------------->																																	
+	<include name="PictureThumbs">
+		<control type="panel" id="55">
+			<posx>33</posx>
+			<posy>67</posy>
+			<width>685</width>
+			<height>400</height>
+			<onleft>9000</onleft>
+			<onright>24</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">Icons</viewtype>
+			<pagecontrol>24</pagecontrol>
+			<include>pageslide</include>
+															
+			<itemlayout height="131" width="130">
+				<control type="image">
+					<posx>14</posx>
+					<posy>11</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>115</width>
+					<height>115</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+			</itemlayout>
+															
+			<focusedlayout height="131" width="130">
+				
+				<control type="image">
+					<width>128</width>
+					<height>128</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture border="2">list-focus.png</texture>
+				</control>
+				
+				<control type="image">
+					<posx>14</posx>
+					<posy>11</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>115</width>
+					<height>115</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+			</focusedlayout>
+		</control>
+	</include>
+		
+</includes>

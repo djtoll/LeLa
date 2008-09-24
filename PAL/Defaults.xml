@@ -5,84 +5,75 @@
 		<posy>0</posy>
 		<texture>-</texture>
 		<colorkey>0</colorkey>
-		<colordiffuse>ffffffff</colordiffuse>
 	</default>
-	
-	
+
 	<default type="label">
-		<posx>80</posx>
-		<posy>60</posy>
-		<label>-</label>
-		<font>font13</font>
-		<textcolor>button-text</textcolor>
+		<font>h1</font>
+		<textcolor>label-text</textcolor>
 		<selectedcolor>listselectedtext</selectedcolor>
+		<disabledcolor>disabled-text</disabledcolor>
 	</default>
-	
-	
+
 	<default type="spinbutton">
-		<posx>300</posx>
-		<posy>200</posy>
-		<width>22</width>
-		<height>40</height>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>32</width>
+		<height>32</height>
 		<texturedownfocus>spinbutton4.png</texturedownfocus>
 		<textureupfocus>spinbutton3.png</textureupfocus>
 		<texturefocus>spinbutton2.png</texturefocus>
 		<texturenofocus>spinbutton1.png</texturenofocus>
 		<textcolor>button-text</textcolor>
-		<disabledcolor>60d0d0d0</disabledcolor>
+		<disabledcolor>disabled-text</disabledcolor>
 	</default>
-
 
 	<default type="button">
 		<width>110</width>
-		<height>37</height>
-		<texturefocus>button.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
-		<font>Button</font>
+		<height>33</height>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus border="2">list-nofocus.png</texturenofocus>
+		<font>menu</font>
 		<textcolor>button-text</textcolor>
-		<disabledcolor>60d0d0d0</disabledcolor>
+		<disabledcolor>disabled-text</disabledcolor>
 		<selectedcolor>listselectedtext</selectedcolor>
-		<textoffsety>2</textoffsety>
+		<align>left</align>
 		<textoffsetx>10</textoffsetx>
-		<aligny>-</aligny>
+		<textoffsety>3</textoffsety>
 	</default>
 	
-	<default type="buttonS">
-		<posx>300</posx>
-		<posy>200</posy>
-		<width>285</width>
-		<height>40</height>
-		<texturefocus>-</texturefocus>
-		<texturenofocus>-</texturenofocus>
-		<font>Button</font>
-		<textcolor>ff52b9e6</textcolor>
-		<disabledcolor>60d0d0d0</disabledcolor>
-		<focusedcolor>ffffffff</focusedcolor>
-		<textoffsetx>22</textoffsetx>
-		<aligny>center</aligny>
+	<default type="radiobutton">
+		<description>default radio button</description>
+		<width>110</width>
+		<height>33</height>
+		<textureradiofocus>check-box.png</textureradiofocus>
+		<textureradionofocus>check-boxnf.png</textureradionofocus>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus border="2">list-nofocus.png</texturenofocus>
+		<font>menu</font>
+		<textcolor>label-text</textcolor>
+		<disabledcolor>disabled-text</disabledcolor>
+		<selectedcolor>listselectedtext</selectedcolor>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>4</textoffsety>
+		<aligny>-</aligny>
 	</default>
-		
-		
-		
+
 	<default type="togglebutton">
-		<posx>185</posx>
-		<posy>167</posy>
 		<width>15</width>
 		<height>15</height>
 		<texturefocus>scroll-up-focus.png</texturefocus>
 		<texturenofocus>scroll-up.png</texturenofocus>
 		<alttexturefocus>scroll-down-focus.png</alttexturefocus>
 		<alttexturenofocus>scroll-down.png</alttexturenofocus>
-		<label>-</label>
-		<font>font13</font>
-		<textcolor>button-text</textcolor>
-		<colordiffuse>ffffffff</colordiffuse>
-		<disabledcolor>60d0d0d0</disabledcolor>
-		<textoffset>12</textoffset>
-		<aligny>center</aligny>
+		<font>menu</font>
+		<textcolor>label-text</textcolor>
+		<disabledcolor>disabled-text</disabledcolor>
+		<selectedcolor>listselectedtext</selectedcolor>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>2</textoffsety>
+		<aligny>-</aligny>
 	</default>
-	
-	
+
 	<default type="listcontrol">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -110,6 +101,7 @@
 		<textoffsety>0</textoffsety>
 		<aligny>-</aligny>
 	</default>
+	
 	<default type="listcontrolex">
 		<posx>0</posx>
 		<posy>65</posy>
@@ -135,6 +127,7 @@
 		<textoffsety>0</textoffsety>
 		<aligny>-</aligny>
 	</default>
+	
 	<default type="thumbnailpanel">
 		<posx>50</posx>
 		<posy>65</posy>
@@ -169,48 +162,35 @@
 		<suffix>-</suffix>
 		<onright>2</onright>
 	</default>
+	
 	<default type="fadelabel">
-		<posx>55</posx>
-		<posy>530</posy>
-		<width>180</width>
 		<align>left</align>
-		<font>font12</font>
-		<textcolor>button-text</textcolor>
+		<font>menu</font>
+		<textcolor>label-text</textcolor>
 	</default>
+	
 	<default type="textbox">
-		<posx>220</posx>
-		<posy>330</posy>
-		<width>470</width>
-		<height>210</height>
 		<spinwidth>16</spinwidth>
 		<spinheight>16</spinheight>
 		<spinposx>420</spinposx>
 		<spinposy>210</spinposy>
-		<include></include>
 		<textureup>scroll-up.png</textureup>
 		<texturedown>scroll-down.png</texturedown>
 		<textureupfocus>scroll-up-focus.png</textureupfocus>
 		<texturedownfocus>scroll-down-focus.png</texturedownfocus>
-		<image>icon-folder.png</image>
-		<font>font13</font>
-		<textcolor>button-text</textcolor>
-		<colordiffuse>ffffffff</colordiffuse>
+		<font>description</font>
+		<textcolor>label-text</textcolor>
+		<include>fadeinout</include>
 	</default>
+	
 	<default type="progress">
-		<posx>100</posx>
-		<posy>325</posy>
 		<texturebg>progress_back.png</texturebg>
 		<lefttexture>progress_left.png</lefttexture>
 		<midtexture>progress_mid.png</midtexture>
 		<righttexture>progress_right.png</righttexture>
 		<overlaytexture>progress_over.png</overlaytexture>
 	</default>
-	
-	
-	
-	
-	
-	
+
 	<default type="spincontrol">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -232,63 +212,24 @@
 	
 	
 	<default type="spincontrolex">
-		<posx>530</posx>
-		<posy>150</posy>
 		<width>285</width>
+		<font>menu</font>
 		<height>33</height>
-		<spinwidth>22</spinwidth>
-		<spinheight>22</spinheight>
-		<texturefocus>default-button.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
+		<spinwidth>15</spinwidth>
+		<spinheight>15</spinheight>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus border="2">list-nofocus.png</texturenofocus>
 		<textureup>scroll-up.png</textureup>
 		<texturedown>scroll-down.png</texturedown>
 		<textureupfocus>scroll-up-focus.png</textureupfocus>
 		<texturedownfocus>scroll-down-focus.png</texturedownfocus>
 		<textcolor>button-text</textcolor>
-		<disabledcolor>60d0d0d0</disabledcolor>
-		<textoffsetx>8</textoffsetx>
+		<disabledcolor>disabled-text</disabledcolor>
 		<reverse>no</reverse>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>3</textoffsety>
 	</default>
-	
-	
-	
-	
-	
-	
-	
-	
-	<default type="checkmark">
-		<posx>208</posx>
-		<posy>166</posy>
-		<textcolor>button-text</textcolor>
-		<disabledcolor>80d0d0d0</disabledcolor>
-		<textcolor>button-text</textcolor>
-		<font>font13</font>
-		<label>167</label>
-		<texturecheckmark>check-box.png</texturecheckmark>
-		<texturecheckmarknofocus>check-boxnf.png</texturecheckmarknofocus>
-		<markwidth>16</markwidth>
-		<markheight>20</markheight>
-		<align>left</align>
-		<shadow>no</shadow>
-	</default>
-	<default type="radiobutton">
-		<posx>50</posx>
-		<posy>268</posy>
-		<width>285</width>
-		<height>40</height>
-		<textureradiofocus>check-box.png</textureradiofocus>
-		<textureradionofocus>check-boxnf.png</textureradionofocus>
-		<texturefocus>default-button.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
-		<label>215</label>
-		<font>font12</font>
-		<textcolor>button-text</textcolor>
-		<colordiffuse>ffffffff</colordiffuse>
-		<disabledcolor>60d0d0d0</disabledcolor>
-		<textoffsetx>12</textoffsetx>
-		<aligny>center</aligny>
-	</default>
+
 	<default type="selectbutton">
 		<posx>60</posx>
 		<posy>192</posy>
@@ -296,8 +237,8 @@
 		<height>40</height>
 		<label>132</label>
 		<font>font13</font>
-		<texturefocus>default-button.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus border="2">list-nofocus.png</texturenofocus>
 		<texturebg>button-menu-background.png</texturebg>
 		<textureleft>scroll-left.png</textureleft>
 		<textureleftfocus>scroll-left-focus.png</textureleftfocus>
@@ -314,6 +255,8 @@
 		<textoffsetx>12</textoffsetx>
 		<aligny>center</aligny>
 	</default>
+	
+	<!--
 	<default type="slider">
 		<controloffsetx>75</controloffsetx>
 		<controloffsety>0</controloffsety>
@@ -330,4 +273,40 @@
 		<texturefocus>default-button.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 	</default>
+	
+	<default type="buttonS">
+		<posx>300</posx>
+		<posy>200</posy>
+		<width>285</width>
+		<height>40</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<font>Button</font>
+		<textcolor>ff52b9e6</textcolor>
+		<disabledcolor>disabled-text</disabledcolor>
+		<focusedcolor>ffffffff</focusedcolor>
+		<textoffsetx>22</textoffsetx>
+		<aligny>center</aligny>
+	</default>
+	
+	<default type="checkmark">
+		<posx>208</posx>
+		<posy>166</posy>
+		<textcolor>button-text</textcolor>
+		<disabledcolor>80d0d0d0</disabledcolor>
+		<textcolor>button-text</textcolor>
+		<font>font13</font>
+		<label>167</label>
+		<texturecheckmark>check-box.png</texturecheckmark>
+		<texturecheckmarknofocus>check-boxnf.png</texturecheckmarknofocus>
+		<markwidth>16</markwidth>
+		<markheight>20</markheight>
+		<align>left</align>
+		<shadow>no</shadow>
+	</default>
+	
+	
+	
+	
+-->
 </includes>

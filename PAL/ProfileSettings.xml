@@ -21,8 +21,8 @@
 				<description>background image</description>
 				<posx>-35</posx>
 				<posy>-30</posy>
-				<width>490</width>
-				<height>455</height>
+				<width>485</width>
+				<height>450</height>
 				<texture border="38">dialogpanel.png</texture>
 			</control>
 			
@@ -36,18 +36,6 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>unknown-user.png</texture>
 			</control>
-	
-			<!--
-			<control type="label" id="0">
-				<description>profile name label</description>
-				<posx>120</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<align>left</align>
-				<font>h4</font>
-				<label>$LOCALIZE[ 20093 ]</label>
-			</control>
-			-->
 			
 			<control type="label" id="1000">
 				<description>profile name</description>
@@ -83,9 +71,9 @@
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<posx>0</posx>
-				<posy>120</posy>
+				<posy>118</posy>
 				<width>420</width>
-				<height>210</height>
+				<height>214</height>
 				<itemgap>2</itemgap>
 				<pagecontrol>60</pagecontrol>
 				<onleft>28</onleft>
@@ -96,50 +84,45 @@
 
 			<control type="button" id="7">
 				<description>Default Button</description>
-				<posx>530</posx>
-				<posy>150</posy>
-				<height>33</height>
+				<height>34</height>
 				<font>menu</font>
 				<textoffsetx>10</textoffsetx>
-				<aligny>-</aligny>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textoffsety>3</textoffsety>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 			</control>
 			
 			<control type="radiobutton" id="8">
-				<description>Default RadioButton</description>
-				<posx>530</posx>
-				<posy>150</posy>
-				<height>33</height>
+				<description>default radio button</description>
+				<height>34</height>
+				<textureradiofocus>check-box.png</textureradiofocus>
+				<textureradionofocus>check-boxnf.png</textureradionofocus>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<font>menu</font>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textcolor>label-text</textcolor>
+				<disabledcolor>disabled-text</disabledcolor>
 				<textoffsetx>10</textoffsetx>
-				<aligny>-</aligny>
-				<textureradiofocus>settings-check-box.png</textureradiofocus>
-				<textureradionofocus>settings-check-boxNF.png</textureradionofocus>
+				<textoffsety>3</textoffsety>
 			</control>
 			
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
-				<posx>530</posx>
-				<posy>150</posy>
-				<height>33</height>
 				<width>300</width>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<textureup>scroll-up.png</textureup>
-				<texturedown>scroll-down.png</texturedown>
-				<textureupfocus>scroll-up-focus.png</textureupfocus>
-				<texturedownfocus>scroll-down-focus.png</texturedownfocus>
-				<font>h4</font>
-				<disabledcolor>disabled</disabledcolor>
-				<textoffsetx>10</textoffsetx>
-				<aligny>-</aligny>
+				<font>menu</font>
+				<height>34</height>
+				<textcolor>button-text</textcolor>
+				<disabledcolor>disabled-text</disabledcolor>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocus.png</texturenofocus>
+				<spinwidth>16</spinwidth>
+				<spinheight>16</spinheight>
 				<reverse>yes</reverse>
+				<textoffsetx>10</textoffsetx>
+				<textoffsety>3</textoffsety>
 			</control>
 			
-			<control type="sliderex" id="10">
+			<!--<control type="sliderex" id="10">
 				<description>Default Slider</description>
 				<posx>1530</posx>
 				<posy>150</posy>
@@ -156,59 +139,31 @@
 				<textcolor>white</textcolor>
 				<disabledcolor>disabled</disabledcolor>
 				<textoffsetx>12</textoffsetx>
-			</control>
-			
-			<control type="image" id="11">
-				<description>separator image</description>
-				<width>350</width>
-				<height>0</height>
-				<texture>separatorOSD.png</texture>
-				<visible>false</visible>
-			</control>
-			
+			</control>-->
+
 			<control type="button" id="28">
-				<description>Ok Button</description>
+				<description>OK button</description>
 				<posx>230</posx>
 				<posy>350</posy>
-				<width>90</width>
-				<height>36</height>
-				<font>buttonD</font>
-				<align>center</align>
-				<aligny>-</aligny>
-				<textoffsety>2</textoffsety>
-				<texturenofocus>button2.png</texturenofocus>
-				<texturefocus>button2-focus.png</texturefocus>
 				<label>186</label>
-				<onup>5</onup>
-				<onleft>29</onleft>
+				<onleft>6</onleft>
 				<onright>29</onright>
-				<ondown>5</ondown>
-				<textcolor>button-text</textcolor>
-				<focusedcolor>button-alttext</focusedcolor>
+				<onup>30</onup>
+				<ondown>3</ondown>
+				<include>dialogConfirmButton</include>
 			</control>
 			
 			<control type="button" id="29">
-				<description>Cancel Button</description>
+				<description>Cancel button</description>
 				<posx>330</posx>
 				<posy>350</posy>
-				<width>90</width>
-				<height>36</height>
-				<font>buttonD</font>
-				<align>center</align>
-				<aligny>-</aligny>
-				<textoffsety>2</textoffsety>
-				<texturenofocus>button2.png</texturenofocus>
-				<texturefocus>button2-focus.png</texturefocus>
 				<label>222</label>
-				<onup>5</onup>
 				<onleft>28</onleft>
-				<onright>28</onright>
-				<ondown>5</ondown>
-				<textcolor>button-text</textcolor>
-				<focusedcolor>button-alttext</focusedcolor>
-			</control>
-		
+				<onright>6</onright>
+				<onup>30</onup>
+				<ondown>3</ondown>
+				<include>dialogConfirmButton</include>
+			</control>	
 		</control>
-
 	</controls>
 </window>

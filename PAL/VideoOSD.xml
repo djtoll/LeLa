@@ -1,293 +1,283 @@
 <window id="2901">
-	<defaultcontrol>213</defaultcontrol>
+	<defaultcontrol>15</defaultcontrol>
 	
-	<animation type="WindowOpen">
-		<effect type="slide" start="0,70" end="0" time="150" />
-		<effect type="fade" start="0" end="80" time="150" />
-	</animation>
-	<animation type="WindowClose">
-		<effect type="slide" start="0,0" end="0,70" time="150" />
-		<effect type="fade" start="80" end="0" time="150" />
-	</animation>
+	<include>OSDcontrolSlide</include>
 	
 	<controls>
 		
-	<control type="image">
-		<posx>-35</posx>
-		<posy>485</posy>
-		<height>100</height>
-		<width>800</width>
-		<texture border="0,0,51,0">osd-controls.png</texture>
-	</control>
+		<control type="image">
+			<posx>-35</posx>
+			<posy>485</posy>
+			<height>100</height>
+			<width>800</width>
+			<texture border="0,0,51,0">osd-controls.png</texture>
+		</control>
 
-
-	<!---------- INFO IS ACTIVE -------------------->
+<!---------- INFO IS ACTIVE -------------------->
 	
-	<control type="group" id="213">
-		<posx>0</posx>
-		<posy>539</posy>
-		<width>720</width>
-		<height>140</height>
+		<control type="group" id="213">
+			<posx>0</posx>
+			<posy>539</posy>
+			<width>720</width>
+			<height>140</height>
+			
+			<control type="group">
+				<posx>10</posx>
+				
+				<control type="button" id="12">
+					<posx>0</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>17</onleft>
+					<onright>18</onright>
+				    <texturefocus border="1">osd-bookmarks-focus.png</texturefocus>
+			        <texturenofocus border="1">osd-bookmarks.png</texturenofocus>
+					<onclick>XBMC.ActivateWindow(125)</onclick>
+				</control>
+				<control type="button" id="18">
+					<posx>35</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>12</onleft>
+					<onright>19</onright>
+				    <texturefocus border="1">osd-audio-focus.png</texturefocus>
+			        <texturenofocus border="1">osd-audio.png</texturenofocus>
+					<onclick>XBMC.ActivateWindow(124)</onclick>
+				</control>
+				<control type="button" id="19">
+					<posx>71</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>18</onleft>
+					<onright>13</onright>
+				    <texturefocus border="1">osd-video-focus.png</texturefocus>
+			        <texturenofocus border="1">osd-video.png</texturenofocus>
+					<onclick>XBMC.ActivateWindow(123)</onclick>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>245</posx>
 		
-		<control type="group">
-			<posx>10</posx>
-			
-			<control type="button" id="12">
-				<posx>0</posx>
-				<posy>-4</posy>
-				<width>50</width>
-				<height>40</height>
-				<onleft>19</onleft>
-				<onright>13</onright>
-		        <texturefocus>osd-controls-bookmarks-focus.png</texturefocus>
-		        <texturenofocus>osd-controls-bookmarks.png</texturenofocus>
-				<onclick>XBMC.ActivateWindow(125)</onclick>
+				<control type="button" id="13">
+					<posx>0</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>19</onleft>
+					<onright>14</onright>
+			        <texturefocus border="1">osd-prev-focus.png</texturefocus>
+			        <texturenofocus border="1">osd-prev.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="14">
+					<posx>45</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>13</onleft>
+					<onright>15</onright>
+				    <texturefocus border="1">osd-rew-focus.png</texturefocus>
+			        <texturenofocus border="1">osd-rew.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="button" id="15">
+					<posx>90</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>14</onleft>
+					<onright>16</onright>
+				    <texturefocus border="1">osd-pause-focus.png</texturefocus>
+			        <texturenofocus border="1">osd-pause.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+					<visible>!Player.Paused</visible>
+				</control>
+				<control type="button" id="15">
+					<posx>90</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>14</onleft>
+					<onright>16</onright>
+				    <texturefocus border="1">osd-play-focus.png</texturefocus>
+				    <texturenofocus border="1">osd-play.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+					<visible>Player.Paused</visible>
+				</control>
+				<control type="button" id="16">
+					<posx>135</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>15</onleft>
+					<onright>17</onright>
+				    <texturefocus border="1">osd-fwd-focus.png</texturefocus>
+				    <texturenofocus border="1">osd-fwd.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="17">
+					<posx>180</posx>
+					<posy>-1</posy>
+					<width>34</width>
+					<height>34</height>
+					<onleft>16</onleft>
+					<onright>12</onright>
+				    <texturefocus border="1">osd-next-focus.png</texturefocus>
+			        <texturenofocus border="1">osd-next.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Next)</onclick>
+				</control>
+				<control type="label" id="22">
+					<description>seek time</description>
+					<posx>685</posx>
+					<posy>1</posy>
+					<font>h4</font>
+					<align>right</align>
+					<label>$INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<textcolor>label-text</textcolor>
+					<width>300</width>
+					<visible>Player.Playing</visible>
+				</control>
 			</control>
 	
-			<control type="button" id="13">
-				<posx>50</posx>
-				<posy>-4</posy>
-				<width>50</width>
-				<height>40</height>
-				<onleft>12</onleft>
-				<onright>14</onright>
-		        <texturefocus>osd-controls-prev-focus.png</texturefocus>
-		        <texturenofocus>osd-controls-prev.png</texturenofocus>
-				<onclick>XBMC.PlayerControl(Previous)</onclick>
-			</control>
-	
-			<control type="button" id="14">
-				<posx>100</posx>
-				<posy>-4</posy>
-				<width>50</width>
-				<height>40</height>
-				<onleft>13</onleft>
-				<onright>15</onright>
-			    <texturefocus>osd-controls-rewind-focus.png</texturefocus>
-		        <texturenofocus>osd-controls-rewind.png</texturenofocus>
-				<onclick>XBMC.PlayerControl(Rewind)</onclick>
-			</control>
-	
-			
-			<control type="button" id="15">
-				<posx>150</posx>
-				<posy>-4</posy>
-				<width>50</width>
-				<height>40</height>
-				<onleft>14</onleft>
-				<onright>16</onright>
-			    <texturefocus>osd-controls-pause-focus.png</texturefocus>
-		        <texturenofocus>osd-controls-pause.png</texturenofocus>
-				<onclick>XBMC.PlayerControl(Play)</onclick>
-				<visible>!Player.Paused</visible>
-			</control>
-			
-			<control type="button" id="15">
-				<posx>150</posx>
-				<posy>-4</posy>
-				<width>50</width>
-				<height>40</height>
-				<onleft>14</onleft>
-				<onright>16</onright>
-			    <texturefocus>osd-controls-play-focus.png</texturefocus>
-			    <texturenofocus>osd-controls-play.png</texturenofocus>
-				<onclick>XBMC.PlayerControl(Play)</onclick>
-				<visible>Player.Paused</visible>
-			</control>
-	
-			<control type="button" id="16">
-				<posx>200</posx>
-				<posy>-4</posy>
-				<width>50</width>
-				<height>40</height>
-				<onleft>15</onleft>
-				<onright>17</onright>
-			    <texturefocus>osd-controls-forward-focus.png</texturefocus>
-			    <texturenofocus>osd-controls-forward.png</texturenofocus>
-				<onclick>XBMC.PlayerControl(Forward)</onclick>
-			</control>
-			
-			<control type="button" id="17">
-				<posx>250</posx>
-				<posy>-4</posy>
-				<width>50</width>
-				<height>40</height>
-				<onleft>16</onleft>
-				<onright>18</onright>
-			    <texturefocus>osd-controls-next-focus.png</texturefocus>
-			    <texturenofocus>osd-controls-next.png</texturenofocus>
-				<onclick>XBMC.PlayerControl(Next)</onclick>
-			</control>
-			
-			<control type="button" id="18">
-				<width>50</width>
-				<height>40</height>
-				<posx>300</posx>
-				<posy>-4</posy>
-				<onleft>17</onleft>
-				<onright>19</onright>
-				<texturefocus>osd-controls-audio-focus.png</texturefocus>
-			    <texturenofocus>osd-controls-audio.png</texturenofocus>
-				<onclick>XBMC.ActivateWindow(124)</onclick>
-			</control>
-			
-			<control type="button" id="19">
-				<width>50</width>
-				<height>40</height>
-				<posx>350</posx>
-				<posy>-4</posy>
-				<onleft>18</onleft>
-				<onright>12</onright>
-				<texturefocus>osd-controls-video-focus.png</texturefocus>
-		        <texturenofocus>osd-controls-video.png</texturenofocus>
-				<onclick>XBMC.ActivateWindow(123)</onclick>
-			</control>
-			
-			<control type="label" id="22">
-				<description>seek time</description>
-				<posx>685</posx>
-				<posy>0</posy>
-				<font>h4</font>
-				<align>right</align>
-				<label>$INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<textcolor>label-text</textcolor>
-				<width>300</width>
-				<visible>Player.Playing</visible>
+			<control type="group">
+				<posx>695</posx>
+				<posy>2</posy>
+				
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+				</control>
+				<!--
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31040] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Paused</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31041] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Forwarding2x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31042] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Forwarding4x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31043] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Forwarding8x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31044] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Forwarding16x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31045] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Forwarding32x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31046] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Rewinding2x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31047] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Rewinding4x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31048] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Rewinding8x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31049] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Rewinding16x</visible>
+				</control>
+		
+				<control type="label" id="0">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<align>right</align>
+					<font>h4</font>
+					<textcolor>label-text</textcolor>
+					<label>$LOCALIZE[31050] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<visible>Player.Rewinding32x</visible>
+				</control>-->
 			</control>
 		</control>
-	
-		
-		
-		<control type="group">
-			<posx>20</posx>
-			<posy>0</posy>
-			
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31040] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Paused</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31041] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Forwarding2x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31042] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Forwarding4x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31043] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Forwarding8x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31044] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Forwarding16x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31045] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Forwarding32x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31046] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Rewinding2x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31047] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Rewinding4x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31048] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Rewinding8x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31049] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Rewinding16x</visible>
-			</control>
-	
-			<control type="label" id="0">
-				<posx>685</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<align>right</align>
-				<font>h4</font>
-				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31050] - $INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-				<visible>Player.Rewinding32x</visible>
-			</control>
-		</control>
-	</control>
-	
-	
-	
-
-
-</controls>
+	</controls>
 </window>

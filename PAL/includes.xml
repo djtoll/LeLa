@@ -1,5 +1,9 @@
 <includes>
-	<include file="CommonViewTypes.xml">-</include>
+	<!--<include file="CommonViewTypes.xml">-</include>-->
+	<include file="ViewsCommon.xml">-</include>
+	<include file="ViewsMusic.xml">-</include>
+	<include file="ViewsVideo.xml">-</include>
+	<include file="ViewsPictures.xml">-</include>
 	<include file="Defaults.xml">-</include>
 	<include file="References.xml">-</include>
 	<include file="3D_CoverView.xml">-</include>
@@ -13,9 +17,13 @@
 	<include file="LibraryVideoMenu.xml">-</include>
 	<include file="LibraryMusicMenu.xml">-</include>
 	<include file="LibraryPlaylistMenu.xml">-</include>
-	<include file="LibraryPlaylistEditorMenu.xml">-</include>
+	<include file="script-Apple_Movie_Trailers-menu.xml">-</include>
+	<include file="LibraryPlaylistMenu.xml">-</include>
 	<include file="FilesMenu.xml">-</include>
-	
+	<include file="WeatherMenu.xml">-</include>
+	<include file="custom2.xml">-</include>
+	<include file="custom3.xml">-</include>
+	<include file="custom_SubMenuVideo.xml">-</include>
 
 <!-- ALL SCREEN INCLUDES --------------------------------------------------------------------->
 
@@ -24,144 +32,315 @@
 			<include>home-start-panel</include>
 			<include>home-menubar</include>
 			<include>zoomout</include>
-			<posx>0</posx>
-			<posy>0</posy>
 			<width>720</width>
-			<height>85</height>
+			<height>84</height>
 			<texture>menubar.png</texture>
 		</control>
 		<control type="label" id="12">
-			<description>number of files text label</description>
+			<description>number of files label</description>
 			<posx>20</posx>
 			<posy>7</posy>
-			<align>left</align>
 			<label>-</label>
 			<font>objects</font>
 			<textcolor>label-text</textcolor>
 			<include>home-menubar</include>
+			<visible>!Window.IsActive(3)</visible>
 		</control>
 		<control type="fadelabel" id="200">
 			<description>Time and Date Label</description>
-			<posx>655</posx>
-			<posy>7</posy>
+			<posx>650</posx>
+			<posy>6</posy>
 			<width>415</width>
 			<label>$INFO[System.Time]</label>
-			<scrollout>false</scrollout>
-			<pauseatend>5000</pauseatend>
 			<textcolor>label-text</textcolor>
 			<align>right</align>
 			<font>date</font>
 			<include>home-menubar</include>
 		</control>
-		<control type="label" id="1000">
-			<description>profile Label</description>
-			<posx>640</posx>
-			<posy>5</posy>
-			<width>315</width>
-			<info>system.profilename</info>
-			<textcolor>sublabel-text</textcolor>
-			<align>right</align>
-			<font>h3</font>
+		
+		<control type="image">
+			<posx>600</posx>
+			<posy>10</posy>
+			<width>24</width>
+			<height>24</height>
+			<texture>muteicon.png</texture>
+			<visible>Player.Muted</visible>
 			<include>home-menubar</include>
-			<visible>Skin.HasSetting(ProfileNameEnable)</visible>
+			<include>home-menubar-startup</include>
+			<include>fadeinout</include>
 		</control>
+
+	</include>
+
+
+<!-- CONTROLS ------------------------------------------------------------------------->
 	
+	<include name="indicatorFirst">
+		<control type="image">
+			<width>72</width>
+			<height>72</height>
+			<texture border="1">indicatorScrolling.png</texture>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>72</width>
+			<height>72</height>
+			<info>ListItem.SortLetter</info>
+			<font>scroller</font>
+			<align>center</align>
+		</control>
 	</include>
 	
+	<include name="indicatorScrolling">
+		<control type="group">
+			<posx>150</posx>
+			<posy>240</posy>
+			<visible>Container.Scrolling + Control.IsVisible(50) + Skin.HasSetting(indicatorScrolling)</visible>
+			<include>indicatorFirst</include>
+		</control>
+		<control type="group">
+			<posx>58</posx>
+			<posy>142</posy>
+			<visible>
+				Container.Scrolling + Skin.HasSetting(indicatorScrolling)
+				+ Control.IsVisible(52) + Container.Content(tvshows) + !Skin.HasSetting(tvshowPosters)	
+			</visible>
+			<include>indicatorFirst</include>
+		</control>
+		<control type="group">
+			<posx>80</posx>
+			<posy>200</posy>
+			<visible>
+				Container.Scrolling + Skin.HasSetting(indicatorScrolling)
+				+ Control.IsVisible(52) + Container.Content(tvshows) + Skin.HasSetting(tvshowPosters)	
+			</visible>
+			<include>indicatorFirst</include>
+		</control>
+		<control type="group">
+			<posx>320</posx>
+			<posy>270</posy>
+			<visible>
+				Container.Scrolling + Skin.HasSetting(indicatorScrolling)
+				+ Control.IsVisible(54) + Container.Content(movies)	
+			</visible>
+			<include>indicatorFirst</include>
+		</control>
+		<control type="group">
+			<posx>30</posx>
+			<posy>240</posy>
+			<visible>
+				Container.Scrolling + Skin.HasSetting(indicatorScrolling)
+				+ Control.IsVisible(54) + Container.Content(episodes)	
+			</visible>
+			<include>indicatorFirst</include>
+		</control>
+	</include>
+
+
+	<include name="screentype">
+		<width>720</width>
+		<height>576</height>
+	</include>
 	
+	<include name="screenwidth">
+		<width>720</width>
+	</include>
+	
+	<include name="thumbBorder">
+		<bordertexture border="2">list-focus.png</bordertexture>
+		<bordersize>4</bordersize>
+	</include>
+	
+	<include name="categoryButton">
+		<height>34</height>
+		<width>150</width>
+		<font>menu</font>
+		<textcolor>button-text</textcolor>
+		<align>left</align>
+		<textoffsety>3</textoffsety>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus>list-nofocus.png</texturenofocus>
+	</include>
+	
+	<include name="dialogWindow">
+		<width>612</width>
+		<height>300</height>
+		<posx>-135</posx>
+		<posy>-30</posy>
+		<texture border="38">dialogpanel.png</texture>
+	</include>
+	
+	<include name="dialogButton">	
+		<description>dialog confirm</description>
+		<width>90</width>
+		<height>36</height>
+		<font>buttonD</font>
+		<align>center</align>
+		<aligny>-</aligny>
+		<textoffsety>3</textoffsety>
+		<texturenofocus>buttonD.png</texturenofocus>
+		<texturefocus>buttonD-focus.png</texturefocus>
+	</include>
+	
+	<include name="dialogInfoButton">	
+		<description>dialog confirm</description>
+		<width>95</width>
+		<height>34</height>
+		<font>buttonD</font>
+		<align>center</align>
+		<aligny>-</aligny>
+		<textoffsety>3</textoffsety>
+		<texturenofocus>buttonD.png</texturenofocus>
+		<texturefocus>buttonD-focus.png</texturefocus>
+	</include>
+	
+	<include name="dialogConfirmButton">	
+		<description>dialog confirm</description>
+		<width>104</width>
+		<height>50</height>
+		<font>cali38</font>
+		<align>center</align>
+		<aligny>-</aligny>
+		<textoffsety>4</textoffsety>
+		<texturenofocus>buttonD.png</texturenofocus>
+		<texturefocus>buttonD-focus.png</texturefocus>
+	</include>
+	
+	<include name="pageLabel">	
+		<include>home-menubar</include>
+		<posx>0</posx>
+		<posy>6</posy>
+		<width>720</width>
+		<align>center</align>
+		<font>page</font>
+	</include>
+	
+	<include name="listIcon">	
+		<posx>415</posx>
+		<posy>100</posy>
+		<width>256</width>
+		<height>256</height>
+		<info>ListItem.Icon</info>
+		<aspectratio align="bottom">keep</aspectratio>
+		<include>pageslide</include>
+	</include>
+	
+	<include name="listIconRef">	
+		<posx>415</posx>
+		<posy>356</posy>
+		<width>256</width>
+		<height>256</height>
+		<info>ListItem.Icon</info>
+		<include>pageslide</include>
+		<aspectratio align="bottom">keep</aspectratio>
+		<texture flipy="true" diffuse="fade2.png">-</texture>
+	</include>
+	
+	<include name="listThumb">	
+		<include>pageslide</include>
+		<info>ListItem.Thumb</info>
+		<aspectratio align="bottom">keep</aspectratio>
+	</include>
+	
+	<include name="listThumbRef">	
+		<include>pageslide</include>
+		<info>ListItem.Thumb</info>
+		<aspectratio align="bottom">keep</aspectratio>
+		<texture flipy="true" diffuse="fade2.png">-</texture>
+	</include>
+	
+	<include name="listOverlay">	
+		<width>24</width>
+		<height>24</height>
+		<info>ListItem.Overlay</info>
+		<include>fadeinout</include>
+	</include>
+	
+	<include name="listHeadLabel">
+		<posx>400</posx>	
+		<width>290</width>
+		<scroll>true</scroll>
+		<font>h1</font>
+		<align>center</align>
+		<textcolor>label-text</textcolor>
+		<include>fadeinout</include>
+	</include>
+	
+	<include name="listSubLabel">
+		<posx>400</posx>
+		<width>290</width>
+		<scroll>true</scroll>
+		<font>h2</font>
+		<align>center</align>
+		<textcolor>sublabel-text</textcolor>
+		<include>fadeinout</include>
+	</include>
+
+	
+	<include name="slideHeadLabel">
+		<font>h1</font>
+		<textcolor>label-text</textcolor>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="slideSubLabel">
+		<font>h2</font>
+		<textcolor>sublabel-text</textcolor>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="timeProgress">
+		<label>[B]$INFO[player.Time][/B][COLOR=sublabel-text]$INFO[player.Duration, / ][/COLOR]</label>
+		<font>h2</font>
+		<scroll>true</scroll>
+	</include>
 
 
-<!-- ANIMATIONS ------------------------------------------------------------------------->
+<!-- GENERAL ANIMATIONS ------------------------------------------------------------------------->
 
+	<include name="pageslide">		
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="350" />
+			<effect type="slide" start="200" end="0" time="350" tween="Back" easing="Out"/>
+		</animation>
+		
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="150" />
+			<effect type="slide" start="0" end="200" time="250" tween="Quadratic" easing="In" />
+		</animation>
+	</include>
+
+	<include name="ListScroll">
+    	<animation effect="slide" start="0,-53" end="0,0" time="180" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,53" end="0,0" time="180" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+
+  	
+  	<include name="BigListScroll">
+    	<animation effect="slide" start="0,-152" end="0,0" time="180" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,152" end="0,0" time="180" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+  	
+  	<include name="BigListScrollM">
+    	<animation effect="slide" start="0,-74" end="0,0" time="180" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,74" end="0,0" time="180" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+  	
+  	<include name="WideIconScroll">
+    	<animation effect="slide" start="0,-68" end="0,0" time="180" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,68" end="0,0" time="180" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+  	
 	<include name="autoscroll-plot">
-		<autoscroll delay="9000" time="3000" repeat="10000">!Control.HasFocus(4)</autoscroll>
+		<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(4)</autoscroll>
 	</include>
 	
-	<include name="autoscroll-singleline">
-		<autoscroll delay="8000" time="2500" repeat="10000">!Control.HasFocus(4)</autoscroll>
-	</include>
-	
-	<include name="viewsmenu">		
-		<animation effect="slide" start="0" end="340" time="150" acceleration="1.2" reversible="false" condition="ControlGroup(9000).HasFocus(0)" >Conditional</animation>		
-		<animation effect="slide" start="340" end="0" time="150" acceleration="1.1" reversible="false" condition="!ControlGroup(9000).HasFocus(0)" >Conditional</animation>
-	</include>
-	<!-- <include name="viewsmenu-right">		
-		<animation effect="slide" start="720" end="1340" time="150" acceleration="1.2" reversible="false" condition="ControlGroup(9006).HasFocus(0)" >Conditional</animation>		
-		<animation effect="slide" start="1340" end="720" time="150" acceleration="1.1" reversible="false" condition="!ControlGroup(9006).HasFocus(0)" >Conditional</animation>
-	</include> -->
-	
-	<include name="viewsmenucontext">
-		<animation effect="slide" start="0" end="440" time="150" acceleration="1.2" reversible="false" condition="Window.IsActive(106)">Conditional</animation>
-		<animation effect="slide" start="440" end="0" time="150" acceleration="1.1" reversible="false" condition="!Window.IsActive(106)" >Conditional</animation>
+	<include name="autoscroll-line">
+		<scrollspeed>20</scrollspeed>
 	</include>
 
-	<include name="dialog-open">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="50" end="100" center="212,125" tween="back" time="250" />
-			<effect type="fade" start="0" end="95" time="400" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="50" center="212,125" time="150" />
-			<effect type="fade" start="95" end="0" time="200" />
-		</animation>
-	</include>
-	
-	<include name="dialog-open-info">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="50" end="100" center="212,125" tween="back" time="250" />
-			<effect type="fade" start="0" end="100" time="400" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="50" center="212,125" time="150" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
-	</include>
-	
-	<include name="dialog-open-fav">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="50" end="100" center="100,100" tween="back" time="250" />
-			<effect type="fade" start="0" end="95" time="400" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="50" center="100,100" time="150" />
-			<effect type="fade" start="95" end="0" time="200" />
-		</animation>
-	</include>
-	
-	<include name="dialog-open-num">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="50" end="100" center="100,100" tween="back" time="250" />
-			<effect type="fade" start="0" end="95" time="400" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="50" center="100,100" time="150" />
-			<effect type="fade" start="95" end="0" time="200" />
-		</animation>
-	</include>
-	
-	<include name="dialog-open-fs">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="50" end="100" center="auto" time="200" />
-			<effect type="fade" time="200" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="50" center="auto" time="200" />
-			<effect type="fade" time="200" />
-		</animation>
-	</include>
-	
-	<include name="dialog-open-kb">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="50" end="100" center="340,400" tween="back" time="250" />
-			<effect type="fade" start="0" end="95" time="400" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="50" center="340,400" time="150" />
-			<effect type="fade" start="95" end="0" time="200" />
-		</animation>
-	</include>
-
-	
 	<include name="fadeinout">
 		<animation type="WindowOpen">
 			<effect type="fade" start="0" end="300" time="300" />
@@ -172,33 +351,203 @@
 	</include>
 	
 	<include name="fadeinout-osd">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="90" time="350" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="90" end="0" time="200" />
+		</animation>
 		<animation type="Visible">
-			<effect type="fade" start="0" end="100" time="600" />
+			<effect type="fade" start="0" end="90" time="350" />
 		</animation>
 		<animation type="Hidden">
-			<effect type="fade" start="100" end="0" time="600" />
+			<effect type="fade" start="90" end="0" time="200" />
 		</animation>
 	</include>
 	
-	<include name="icon-focus">
-		<animation reversible="false" effect="fade" start="70" end="100" time="100">focus</animation>
-		<animation reversible="false" effect="fade" start="100" end="70" time="100">unfocus</animation>
+	<include name="OSDcontrolSlide">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,70" end="0,0" time="150" />
+			<effect type="fade" start="0" end="80" time="150" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,70" time="150" />
+			<effect type="fade" start="70" end="0" time="150" />
+		</animation>
 	</include>
-	
-	<include name="idle-fade-movie">
-		<animation effect="fade" start="100" end="0" time="150" condition="Skin.HasSetting(movielistPlot) + System.IdleTime(2)">Conditional</animation>
-		<animation effect="fade" start="100" end="0" time="150" condition="Skin.HasSetting(movielistPlot) + System.IdleTime(2)">Conditional</animation>
-	</include>
-	
-	<include name="idle-fade-poster">
 
-		<animation effect="fade" start="100" end="0" time="400" condition="!Skin.HasSetting(movielistPlot) + System.IdleTime(2)">Conditional</animation>
-		<animation effect="fade" start="100" end="0" time="400" condition="!Skin.HasSetting(movielistPlot) + System.IdleTime(2)">Conditional</animation>
+	<include name="fadeinout-osd-info">
+		<animation type="Visible">
+			<effect type="slide" start="0,70" end="0" tween="Quadratic" easing="Out" time="150" />
+			<effect type="fade" start="0" end="100" time="100" tween="Quadratic" easing="Out" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" start="0,0" end="0,70" tween="Quadratic" easing="Out" time="100" />
+			<effect type="fade" start="100" end="0" tween="Quadratic" easing="Out" time="100" />
+		</animation>
 	</include>
 	
-	<include name="idle-fade-episode">
-		<animation effect="fade" start="100" end="0" time="150" condition="!IsEmpty(ListItem.Plot) + Skin.HasSetting(episodelistPlot) + System.IdleTime(2)">Conditional</animation>
+	<include name="fadescreen">
+		<control type="image">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>720</width>
+			<height>592</height>
+			<texture>black.png</texture>
+			<visible>Window.IsActive(126)</visible>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="90" time="350" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="90" end="0" time="200" />
+			</animation>
+		</control>
 	</include>
+
+	<include name="idle-fade-movie">
+		<animation effect="fade" start="100" end="0" time="150" condition="Skin.HasSetting(movielistPlot) + System.IdleTime(4)">Conditional</animation>
+	</include>
+
+	<include name="idle-fade-episode">
+		<animation effect="fade" start="100" end="0" time="150" condition="!IsEmpty(ListItem.Plot) + Skin.HasSetting(episodelistPlot) + System.IdleTime(4)">Conditional</animation>
+	</include>
+	
+	<include name="fanartIdleFade">
+		<animation effect="fade" start="0" end="500" time="300">Visible</animation>
+		<animation effect="fade" start="500" end="0" time="150" condition="![Window.IsActive(106) | Window.IsActive(103) | Window.IsActive(100)]">Hidden</animation>
+	</include>
+	
+	<include name="movieFanartFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="30,125" time="400" delay="100"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="30,125" time="200"/>
+		</animation>
+	</include>
+
+	
+	<include name="movieFanartFocusOverlay">
+		<animation effect="slide" start="0,0" end="13,8" tween="quadratic" delay="100" time="400">Focus</animation>
+	</include>
+	
+	
+<!-- PAGE ANIMATIONS ------------------------------------------------------------------------->
+
+	<!-- <include name="viewsmenu">
+		<animation effect="slide" start="0" end="190" time="150" acceleration="1.1" tween="Quadratic" Easing="Out" reversible="false" condition="ControlGroup(9000).HasFocus(0)" >Conditional</animation>		
+		<animation effect="slide" start="190" end="0" time="150" acceleration="1.1" tween="Quadratic" Easing="In" reversible="false" condition="!ControlGroup(9000).HasFocus(0)" >Conditional</animation>
+	</include> -->
+	
+	<include name="viewsmenu">		
+		<animation effect="slide" start="0" end="340" time="150" acceleration="1.2" reversible="false" condition="ControlGroup(9000).HasFocus(0)" >Conditional</animation>		
+		<animation effect="slide" start="340" end="0" time="150" acceleration="1.1" reversible="false" condition="!ControlGroup(9000).HasFocus(0)" >Conditional</animation>
+	</include>
+		
+	<include name="viewsmenucontext">
+		<animation effect="slide" start="0" end="440" time="150" acceleration="1.2" reversible="false" condition="Window.IsActive(106)">Conditional</animation>
+		<animation effect="slide" start="440" end="0" time="150" acceleration="1.1" reversible="false" condition="!Window.IsActive(106)" >Conditional</animation>
+	</include>
+	
+	<include name="pagemenus">
+		<animation effect="slide" start="-190" end="0" time="150" acceleration="1.1" tween="Quadratic" Easing="Out" reversible="false" >Visible</animation>
+		<animation effect="slide" start="0" end="-190" time="150" acceleration="1.1" tween="Quadratic" Easing="Out" reversible="false" >Hidden</animation>
+	</include>
+
+	<!-- <include name="viewsmenucontext">
+		<animation effect="slide" start="0" end="200" time="150" acceleration="1.1" reversible="false" condition="Window.IsActive(106)">Conditional</animation>
+		<animation effect="slide" start="200" end="0" time="150" acceleration="1.1" reversible="false" condition="!Window.IsActive(106)" >Conditional</animation>
+	</include> -->
+	
+	<include name="contextSelectFade">
+		<animation effect="fade" start="100" end="60" time="600" condition="Window.IsActive(106)">Conditional</animation>
+	</include>
+	
+	<include name="pagetransition">
+		<include>screentype</include>
+		<aspectratio>scale</aspectratio>
+		<animation effect="fade" start="100" end="65" time="150" condition="Skin.HasSetting(subMenuFade) + [ControlGroup(1100).HasFocus() | ControlGroup(1200).HasFocus() | ControlGroup(1800).HasFocus() | ControlGroup(1600).HasFocus() | ControlGroup(1400).HasFocus()]" >Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="50">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="50">WindowOpen</animation>
+		<animation effect="fade" start="100" end="85" time="0" condition="Skin.HasSetting(backgroundDimEnable) + Skin.HasSetting(backgroundDim)" >Conditional</animation>
+		<animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(backgroundDimEnable) + Skin.HasSetting(backgroundDimStrong)" >Conditional</animation>
+		<animation effect="fade" start="0" end="100" condition="!Window.Previous(startup)" time="200">WindowOpen</animation>
+		<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(backgroundVideo)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="0" condition="Player.HasAudio + Visualisation.Enabled  + Skin.HasSetting(backgroundVisuals)">Conditional</animation>
+	</include>
+	
+	
+<!-- DIALOG ANIMATIONS ------------------------------------------------------------------------->
+
+	<include name="dialog-open">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="190,110" tween="back" time="250" />
+			<effect type="fade" start="0" end="97" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="190,110" time="150" />
+			<effect type="fade" start="97" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-info">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="360,288" tween="back" time="250" />
+			<effect type="fade" start="0" end="100" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="360,288" time="150" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-fav">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="107,210" tween="back" time="250" />
+			<effect type="fade" start="0" end="97" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="107,110" time="150" />
+			<effect type="fade" start="97" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-num">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="100,100" tween="back" time="250" />
+			<effect type="fade" start="0" end="97" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="100,100" time="150" />
+			<effect type="fade" start="97" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-fs">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="97" center="auto" time="200" />
+			<effect type="fade" time="200" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="97" end="50" center="auto" time="200" />
+			<effect type="fade" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-kb">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="97" center="340,300" tween="back" time="250" />
+			<effect type="fade" start="0" end="90" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="97" end="50" center="340,300" time="150" />
+			<effect type="fade" start="90" end="0" time="200" />
+		</animation>
+	</include>
+
+	
+<!-- HOMESCREEN ANIMATIONS ------------------------------------------------------------------------->	
 	
 	<include name="home-submenu">
 		<animation type="Focus">
@@ -210,39 +559,26 @@
 			<effect type="fade" start="400" end="0" time="800"/>
 		</animation>
 	</include>
-	
-	<include name="pageslide">		
-		<animation type="WindowOpen">
-			<effect type="fade" start="0" end="100" time="600" />
-			<effect type="slide" start="200" end="0" time="300" tween="Back" easing="Out"/>
-		</animation>
-		
-		<animation type="WindowClose">
-			<effect type="fade" start="100" end="0" time="150" />
-			<effect type="slide" start="0" end="200" time="150" />
-		</animation>
-	</include>
-	
+
 	<include name="home-start">
 		<animation effect="fade" start="0" end="300" condition="Window.Previous(startup)" time="400">WindowOpen</animation> 
 	</include>
 	
-	<include name="home-start-panel">
-		<animation effect="slide" easing="Out" tween="back" start="0,-200" end="0,0" condition="Window.Previous(startup)" time="250" delay="1000">WindowOpen</animation> 
-	</include>
-	
-	<include name="home-start-column">
-		<animation effect="slide" easing="Out" tween="back" start="0,-200" end="0,0" condition="Window.Previous(startup)" time="250" delay="1000">WindowOpen</animation> 
-	</include>
-	
 	<include name="home-menubar">
 		<animation type="WindowOpen">
-			<effect type="slide" start="0,-100" end="0,0" tween="back" condition="!Window.Previous(startup)" time="100" />
-			<effect type="fade" condition="!Window.Previous(startup)" time="200" />
+			<effect type="slide" start="0,-100" end="0,0" tween="Quadratic" easing="In" condition="!Window.Previous(startup)" time="300" />
+			<effect type="fade" condition="!Window.Previous(startup)" time="300" />
 		</animation>
 		<animation type="WindowClose">
-			<effect type="slide" start="0,0" end="0,-100" tween="back" condition="!Window.Previous(startup)" time="150" />
-			<effect type="fade" condition="!Window.Previous(startup)" time="200" />
+			<effect type="slide" start="0,0" end="0,-100" tween="Quadratic"  condition="!Window.Previous(startup)" time="300" />
+			<effect type="fade" condition="!Window.Previous(startup)" time="300" />
+		</animation>
+	</include>
+	
+	<include name="home-menubar-startup">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,-100" end="0,0" tween="Quadratic" easing="In" condition="Window.Previous(startup)" time="300" />
+			<effect type="fade" condition="Window.Previous(startup)" time="200" />
 		</animation>
 	</include>
 
@@ -252,160 +588,266 @@
 	<include name="background">
 				
 		<control type="visualisation">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<visible>!Window.IsActive(2005) + [![Container.Content(episodes) | Container.Content(seasons)] + Skin.HasSetting(FanartEnable)]</visible>
+			<include>screentype</include>
+			<visible>!Window.IsActive(2005) + [![Container.Content(episodes) | Container.Content(seasons)] + Skin.HasSetting(backgroundVisuals)]</visible>
 		</control>
 		
 		<control type="videowindow">
-       		<posx>0</posx>
-       		<posy>0</posy>
-       		<width>720</width>
-       		<height>576</height>
-       		<visible>!Skin.HasSetting(HomeViewToggle) + ![Container.Content(episodes) | Container.Content(seasons)]</visible>
+       		<include>screentype</include>
+       		<visible>!Skin.HasSetting(backgroundVideo)<!-- + ![Container.Content(episodes) | Container.Content(seasons)]-->
+       		</visible>
 	  	</control>
 		
 		<control type="image">
-			<description>background</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<texture diffuse="background-diffuse2.png">background.bmp</texture>
-			<visible>!Skin.HasSetting(backgroundFolder)</visible>
-			
+			<description>default background</description>
+			<include>screentype</include>
+			<texture diffuse="background-diffuse.png">Background5.png</texture>
+			<visible>
+				!Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(genericBackgroundEnable)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundHomeEnable) + Window.IsActive(0)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundVideoEnable) + Window.IsActive(25)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundMusicEnable) + Window.IsActive(502)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundPicturesEnable) + Window.IsActive(2)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundSettingsEnable) + [Window.IsActive(4) | Window.IsActive(59) | Window.IsActive(10007) | Window.IsActive(10019) | Window.IsActive(10012) | Window.IsActive(10013) | Window.IsActive(10015) | Window.IsActive(10016) | Window.IsActive(10017) | Window.IsActive(10018) | Window.IsActive(10019)]
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundWeatherEnable) + [Window.IsActive(MyWeather) | Window.IsActive(weathersettings)]
+			</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<animation effect="fade" start="100" end="0" condition="!IsEmpty(listitem.property(fanart_image))" time="0">Hidden</animation>
+			<animation effect="fade" start="100" end="0" condition="!IsEmpty(Fanart.Image)" time="0">Hidden</animation>
 			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
-			<animation effect="fade" start="100" end="70" time="0" condition="Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<timeperimage>10000</timeperimage>
-			<fadetime>2000</fadetime>
-			<visible>Skin.HasSetting(backgroundFolder) + [![Container.Content(episodes) | Container.Content(seasons)] + Skin.HasSetting(FanartEnable)]</visible>
-			<info>Skin.String(backgroundFolderSet)</info>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="0" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
-			<animation effect="fade" start="100" end="70" time="0" reversible="true" condition="Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
-			<colordiffuse>ffa3a3a3</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(backgroundVideo)">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="0" condition="Player.HasAudio + Visualisation.Enabled  + Skin.HasSetting(backgroundVisuals)">Conditional</animation>
+			<animation effect="fade" start="100" end="85" time="0" condition="True">Conditional</animation>
 		</control>
 		
 		<control type="image">
-			<description>multiimage overlay</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<texture>multiimage-overlay.png</texture>
-			<colordiffuse>ffa3a3a3</colordiffuse>
-			<visible>Skin.HasSetting(backgroundFolder) + Skin.String(backgroundFolderSet)</visible>
-		</control>
-
-		<control type="image">
-			<description>multiimage overlay</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<texture>black.png</texture>
-			<visible>Player.HasVideo + !Skin.HasSetting(HomeViewToggle)</visible>
+			<description>single background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(genericBackground)]</texture>
+			<visible>
+				Skin.HasSetting(defaultBackgroundEnable) + Skin.HasSetting(defaultBackgroundEnable)
+			</visible>
+			<include>screentype</include>
+			<animation effect="fade" start="100" end="65" time="150" condition="Skin.HasSetting(subMenuFade) + [ControlGroup(1100).HasFocus() | ControlGroup(1200).HasFocus() | ControlGroup(1800).HasFocus() | ControlGroup(1600).HasFocus() | ControlGroup(1400).HasFocus()]" >Conditional</animation>
+			<animation effect="fade" start="100" end="85" time="0" condition="Skin.HasSetting(backgroundDimEnable) + Skin.HasSetting(backgroundDim)" >Conditional</animation>
+			<animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(backgroundDimEnable) + Skin.HasSetting(backgroundDimStrong)" >Conditional</animation>
+			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(backgroundVideo)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasAudio + Visualisation.Enabled  + Skin.HasSetting(backgroundVisuals)">Conditional</animation>
 		</control>
 		
 		<control type="image">
-			<description>fanart background</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<texture diffuse="background-diffuse2.png">$INFO[FanArt.Image]</texture>
-			<aspectratio>scale</aspectratio>
-			<visible>!IsEmpty(FanArt.Image) + Control.IsVisible(54) + Skin.HasSetting(FanartViewEnable)</visible>
-			<animation effect="fade" start="0" end="800" time="400">WindowOpen</animation>
-			<animation effect="fade" start="800" end="0" time="400">WindowClose</animation> 
+			<description>home background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundHome)]</texture>
+			<visible>
+				Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundHomeEnable) + Window.IsActive(0)
+			</visible>
+			<include>pagetransition</include>
+		</control>
+		
+		<control type="image">
+			<description>video background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundVideo)]</texture>
+			<visible>
+				Skin.HasSetting(genericBackgroundEnable) 
+				+ Skin.HasSetting(backgroundVideoEnable) 
+				+ [Window.IsActive(25) | Window.IsActive(MyVideoFiles) | Window.IsActive(28)]
+				+ ![Container.Content(episodes) | Container.Content(seasons) + Skin.HasSetting(FanartEnable)]
+			</visible>
+			<include>pagetransition</include>
+		</control>
+		
+		<control type="image">
+			<description>music background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundMusic)]</texture>
+			<visible>Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundMusicEnable) + [Window.IsActive(502) | Window.IsActive(MyMusicFiles) | Window.IsActive(500)]</visible>
+			<include>pagetransition</include>
 		</control>
 
 		<control type="image">
+			<description>pictures background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundPictures)]</texture>
+			<visible>Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundPicturesEnable) + Window.IsActive(2)</visible>
+			<include>pagetransition</include>
+		</control>
+		
+		<control type="image">
+			<description>settings background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundSettings)]</texture>
+			<visible>Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundSettingsEnable) + [Window.IsActive(4) | Window.IsActive(59) | Window.IsActive(10007) | Window.IsActive(10019) | Window.IsActive(10012) | Window.IsActive(10013) | Window.IsActive(10015) | Window.IsActive(10016) | Window.IsActive(10017) | Window.IsActive(10018) | Window.IsActive(10019) | Window.IsActive(filemanager)| Window.IsActive(20)]</visible>
+			<include>pagetransition</include>
+		</control>
+		
+		<control type="image">
+			<description>weather background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundWeather)]</texture>
+			<visible>Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundWeatherEnable) + [Window.IsActive(MyWeather) | Window.IsActive(weathersettings)]</visible>
+			<include>pagetransition</include>
+		</control>
+
+		<control type="image">
+			<description>Overlay When Video or Vis Is Playing</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<visible>!Control.IsVisible(54) +  Skin.HasSetting(FanartEnable)</visible>
+			<include>screentype</include>
+			<texture>video-overlay.png</texture>
+			<visible>
+				Player.HasVideo + !Skin.HasSetting(backgroundVideo)
+				| Player.HasAudio + Visualisation.Enabled  + Skin.HasSetting(backgroundVisuals)
+			</visible>
+		</control>
+
+		<control type="image">
+			<description>fanart image (tvshow viewtype)</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>screentype</include>
 			<texture>$INFO[FanArt.Image]</texture>
 			<aspectratio>scale</aspectratio>
-			<animation effect="fade" start="100" end="60" time="100" condition="Skin.HasSetting(FanartDim) + Skin.HasSetting(FanartDimLight)">Conditional</animation>
-			<animation effect="fade" start="100" end="30" time="100" condition="Skin.HasSetting(FanartDim) + Skin.HasSetting(FanartDimStrong)">Conditional</animation>
+			<visible>!IsEmpty(FanArt.Image) + Control.IsVisible(54) + !Skin.HasSetting(FanartViewEnable) + Container.Content(episodes)</visible>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation> 
 		</control>
 		
 		<control type="image">
+			<description>fanart overlay (tvshow viewtype)</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<visible>!Control.IsVisible(54) + Skin.HasSetting(FanartEnable) + Container.Content(movies)</visible>
+			<include>screentype</include>
+			<texture>fanart-overlay.png</texture>
+			<aspectratio>scale</aspectratio>
+			<visible>!IsEmpty(FanArt.Image) + Control.IsVisible(54) + !Skin.HasSetting(FanartViewEnable) + Container.Content(episodes)</visible>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation> 
+		</control>
+		
+		<control type="image">
+			<description>fanart overlay (movies viewtype)</description>
+			<include>screentype</include>
+			<texture>fanart-overlay.png</texture>
+			<aspectratio>scale</aspectratio>
+			<visible>System.IdleTime(2) + Control.IsVisible(54) + !Skin.HasSetting(MovieFanartViewEnable) + Container.Content(movies) + !IsEmpty(listitem.property(fanart_image))</visible>
+			<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="0">Hidden</animation> 
+		</control>
+		
+		<control type="image">
+			<description>fanart image (movies viewtype)</description>
+			<include>screentype</include>
 			<texture>$INFO[listitem.property(fanart_image)]</texture>
 			<aspectratio>scale</aspectratio>
-			<animation effect="fade" start="100" end="60" time="100" condition="Skin.HasSetting(FanartDim) + Skin.HasSetting(FanartDimLight)">Conditional</animation>
-			<animation effect="fade" start="100" end="30" time="100" condition="Skin.HasSetting(FanartDim) + Skin.HasSetting(FanartDimStrong)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" reversible="true" time="100">Visible</animation>
+			<visible>System.IdleTime(2) + Control.IsVisible(54) + !Skin.HasSetting(MovieFanartViewEnable) + Container.Content(movies)</visible>
+			<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="0">Hidden</animation> 
 		</control>
 		
 		<control type="image">
-			<description>multiimage overlay</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<texture>multiimage-overlay.png</texture>
-			<colordiffuse>ffa3a3a3</colordiffuse>
-			<visible>[Container.Content(seasons) | Container.Content(episodes)] + !Control.IsVisible(54) + Skin.HasSetting(FanartEnable)</visible>
+			<description>fanart overlay (movies viewtype)</description>
+			<include>screentype</include>
+			<texture>fanart-overlay.png</texture>
+			<aspectratio>scale</aspectratio>
+			<visible>System.IdleTime(2) + Control.IsVisible(54) + !Skin.HasSetting(MovieFanartViewEnable) + Container.Content(movies) + !IsEmpty(listitem.property(fanart_image))</visible>
+			<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="0">Hidden</animation> 
 		</control>
 
-	</include>		
-	
+		<control type="image">
+			<description>tvshow fanart dim bg</description>
+			<include>screentype</include>
+			<texture>black.jpg</texture>
+			<visible>!Control.IsVisible(54) + Skin.HasSetting(FanartEnable) + !IsEmpty(Fanart.Image) + !Player.HasVideo</visible>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" reversible="true" time="150">WindowClose</animation>
+		</control>
 
-<!-- FANART INCLUDES -------------------------------------------------------------------->
+		<control type="image">
+			<description>TV Show Fanart (global)</description>
+			<include>screentype</include>
+			<visible>!Control.IsVisible(54) + Skin.HasSetting(FanartEnable)</visible>
+			<texture>$INFO[FanArt.Image]</texture>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>99FFFFFF</colordiffuse>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo + !Skin.HasSetting(backgroundVideo)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="0" condition="!Player.HasVideo  + !Skin.HasSetting(backgroundVideo)">Conditional</animation>
+			<animation effect="fade" start="100" end="85" time="0" condition="Skin.HasSetting(FanartDimLight) + Skin.HasSetting(FanartDim)">Conditional</animation>
+			<animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(FanartDimStrong) + Skin.HasSetting(FanartDim)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" reversible="true" time="150">WindowClose</animation>
+		</control>
+
+		<control type="image">
+			<description>movie fanart dim bg</description>
+			<include>screentype</include>
+			<texture>black.jpg</texture>
+			<visible>!Control.IsVisible(54) + Skin.HasSetting(MovieFanartEnable) + !IsEmpty(listitem.property(fanart_image)) + Container.Content(movies) + System.IdleTime(2) + !Player.HasVideo</visible>
+			<animation effect="fade" end="100" time="200" easing="In" reversible="false">Visible</animation>
+			<animation effect="fade" end="0" time="0">Hidden</animation>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">WindowClose</animation>
+		</control>
+
+		<control type="image">
+			<description>Movie Fanart (global)</description>
+			<include>screentype</include>
+			<visible>Skin.HasSetting(MovieFanartEnable) + Container.Content(movies) + System.IdleTime(2) + ![Control.IsVisible(54) | Control.IsVisible(57)]</visible>
+			<texture diffuse="background-diffuse.png">$INFO[listitem.property(fanart_image)]</texture>
+			<aspectratio>scale</aspectratio>
+			<animation effect="fade" end="100" time="200" easing="In" reversible="false">Visible</animation>
+			<animation effect="fade" end="0" reversible="true" time="0">Hidden</animation>
+			<animation effect="fade" start="100" end="85" reversible="true" time="0" condition="Skin.HasSetting(MovieFanartDimLight)">Conditional</animation>
+			<animation effect="fade" start="100" end="65" reversible="true" time="0" condition="Skin.HasSetting(MovieFanartDimStrong)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">WindowClose</animation>
+		</control>
+
+	</include>
+
+
+<!-- FANART VIEW INCLUDES -------------------------------------------------------------------->
 
 	<include name="Fanart">
-
-		<control>
-			<description>fanart osd background, fanart colors available</description>
-			<type>image</type>
+	
+		<control type="image">
+			<description>fanart osd background, fanart colors available, color 3</description>
 			<posx>0</posx>
-			<posy>120</posy>
+			<posy>280</posy>
 			<width>720</width>
-			<height>460</height>
-			<texture>fanart-overlay-colors.png</texture>
-			<colordiffuse>Fanart.Color2</colordiffuse>
-			<visible>Container.Content(episodes) + Control.IsVisible(54)</visible>
-			<animation effect="fade" start="0" end="800" time="400">WindowOpen</animation>
-			<animation effect="fade" start="800" end="0" time="400">WindowClose</animation> 
+			<height>300</height>
+			<texture>fanart-bg.png</texture>
+			<colordiffuse>Fanart.Color3</colordiffuse>
+			<visible>!IsEmpty(Fanart.Color3) + Skin.HasSetting(fanartcolorEnable) + Container.Content(episodes) + Control.IsVisible(54) + !Skin.HasSetting(fanartcolorDarkBG)</visible>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation> 
 			<include>fadeinout</include>
-			<visible>!IsEmpty(Fanart.Color2) + Skin.HasSetting(fanartcolorEnable)</visible>
 		</control>
 		
-		<control>
-			<description>fanart osd background, no fanart colors available</description>
-			<type>image</type>
+		<control type="image">
+			<description>fanart osd background, fanart colors available, color 2</description>
 			<posx>0</posx>
-			<posy>120</posy>
+			<posy>280</posy>
 			<width>720</width>
-			<height>460</height>
-			<texture>fanart-overlay.png</texture>
-			<visible>Container.Content(episodes) + Control.IsVisible(54)</visible>
-			<animation effect="fade" start="0" end="800" time="400">WindowOpen</animation>
-			<animation effect="fade" start="800" end="0" time="400">WindowClose</animation> 
+			<height>300</height>
+			<texture>fanart-bg.png</texture>
+			<colordiffuse>Fanart.Color2</colordiffuse>
+			<visible>!IsEmpty(Fanart.Color2) + Skin.HasSetting(fanartcolorEnable) + Skin.HasSetting(fanartcolorDarkBG) + Container.Content(episodes) + Control.IsVisible(54)</visible>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation> 
 			<include>fadeinout</include>
-			<visible>!Skin.HasSetting(fanartcolorEnable) | IsEmpty(Fanart.Color2)</visible>
 		</control>
-
+		
+		<control type="image">
+			<description>fanart osd background, no fanart colors available or moviefanart</description>
+			<posx>0</posx>
+			<posy>260</posy>
+			<width>720</width>
+			<height>320</height>
+			<texture>fanart-bg2.png</texture>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation> 
+			<include>fadeinout</include>
+			<visible>
+				Control.IsVisible(54) + Container.Content(episodes) + [!Skin.HasSetting(fanartcolorEnable) | IsEmpty(Fanart.Color2)]
+				| Control.IsVisible(54) + Container.Content(movies)
+			</visible>
+		</control>
+		
 	</include>		
 
 </includes>

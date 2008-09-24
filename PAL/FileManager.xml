@@ -25,7 +25,7 @@
 			<control type="image">
 				<description>separator</description>
 				<posx>360</posx>
-				<posy>90</posy>
+				<posy>65</posy>
 				<width>1</width>
 				<height>390</height>
 				<texture>separator-vert.png</texture>
@@ -33,13 +33,23 @@
 				<include>fadeinout</include>
 			</control>
 			
-			<control type="fadelabel" id="101">
+			<control type="label" id="101">
 				<description>current Directory text label left</description>
 				<align>left</align>
 				<posx>30</posx>
-				<posy>70</posy>
+				<posy>65</posy>
 				<width>270</width>
-				<font>h2</font>
+				<font>h2b</font>
+				<label>-</label>
+				<textcolor>sublabel-text</textcolor>
+				<include>fadeinout</include>
+			</control>
+			<control type="label" id="12">
+				<description>number of files in left list text label</description>
+				<posx>40</posx>
+				<posy>460</posy>
+				<label>-</label>
+				<font>h4</font>
 				<textcolor>sublabel-text</textcolor>
 				<include>fadeinout</include>
 			</control>
@@ -48,40 +58,27 @@
 				<description>current Directory text label right</description>
 				<align>left</align>
 				<posx>376</posx>
-				<posy>70</posy>
+				<posy>65</posy>
 				<width>270</width>
-				<font>h2</font>
+				<font>h2b</font>
 				<textcolor>sublabel-text</textcolor>
 				<include>fadeinout</include>
 			</control>
-			
-			<control type="label" id="12">
-				<description>number of files in left list text label</description>
-				<posx>30</posx>
-				<posy>465</posy>
-				<label>-</label>
-				<font>h4</font>
-				<textcolor>sublabel-text</textcolor>
-				<include>fadeinout</include>
-				<visible>false</visible>
-			</control>
-			
 			<control type="label" id="13">
 				<description>number of files in right list text label</description>
-				<posx>376</posx>
-				<posy>465</posy>
+				<posx>386</posx>
+				<posy>460</posy>
 				<label>-</label>
 				<font>h4</font>
 				<textcolor>sublabel-text</textcolor>
 				<include>fadeinout</include>
-				<visible>false</visible>
 			</control>
 			
 			<control type="list" id="20">
 				<posx>30</posx>
 				<posy>100</posy>
 				<width>315</width>
-				<height>385</height>
+				<height>350</height>
 				<onleft>21</onleft>
 				<onright>21</onright>
 				<onup>20</onup>
@@ -134,6 +131,7 @@
 						<posy>2</posy>
 						<texture>list-focus.png</texture>
 						<visible>Control.HasFocus(20)</visible>
+						<include>ListScroll</include>
 					</control>
 					
 					<control type="image">
@@ -143,6 +141,7 @@
 						<posy>2</posy>
 						<texture>list-focus.png</texture>
 						<visible>!Control.HasFocus(20)</visible>
+						<include>ListScroll</include>
 					</control>
 					
 					<control type="label">
@@ -176,7 +175,7 @@
 				<posx>376</posx>
 				<posy>100</posy>
 				<width>315</width>
-				<height>385</height>
+				<height>350</height>
 				<onleft>20</onleft>
 				<onright>20</onright>
 				<onup>21</onup>
@@ -228,6 +227,7 @@
 						<posy>2</posy>
 						<texture>list-focus.png</texture>
 						<visible>Control.HasFocus(21)</visible>
+						<include>ListScroll</include>
 					</control>
 					
 					<control type="image">
@@ -237,6 +237,7 @@
 						<posy>2</posy>
 						<texture>list-focus.png</texture>
 						<visible>!Control.HasFocus(21)</visible>
+						<include>ListScroll</include>
 					</control>
 					
 					<control type="label">
@@ -267,12 +268,12 @@
 			</control>
 			
 			<control type="group">
+				<description>free space labels</description>
 				<include>fadeinout</include>
 				<posx>40</posx>
-				<posy>500</posy>
+				<posy>505</posy>
 				
 				<control type="label">
-					<description>free space label</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>142</width>
@@ -285,7 +286,6 @@
 					<textoffsetx>5</textoffsetx>
 				</control>
 				<control type="label">
-					<description>free space label</description>
 					<posx>150</posx>
 					<posy>0</posy>
 					<width>142</width>
@@ -298,7 +298,6 @@
 					<textoffsetx>5</textoffsetx>
 				</control>
 				<control type="label">
-					<description>free space label</description>
 					<posx>300</posx>
 					<posy>0</posy>
 					<width>142</width>
@@ -311,7 +310,6 @@
 					<textoffsetx>5</textoffsetx>
 				</control>
 				<control type="label">
-					<description>free space label</description>
 					<posx>450</posx>
 					<posy>0</posy>
 					<width>142</width>

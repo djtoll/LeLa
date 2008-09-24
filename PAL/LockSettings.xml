@@ -11,13 +11,11 @@
 	</coordinates>
 	
 	<controls>
-		
-		
 		<control type="image">
 			<posx>-35</posx>
 			<posy>-30</posy>
-			<width>430</width>
-			<height>405</height>
+			<width>428</width>
+			<height>397</height>
 			<texture border="38">dialogpanel.png</texture>
 		</control>
 		
@@ -28,7 +26,6 @@
 			<width>410</width>
 			<align>left</align>
 			<font>h1</font>
-			<textcolor>label-text</textcolor>
 		</control>
 		
 		<control type="label" id="3">
@@ -71,23 +68,20 @@
 		<control type="button" id="7">
 			<description>Default Button</description>
 			<height>33</height>
-			<font>h4D</font>
-			<textoffsetx>10</textoffsetx>
-			<textoffsety>0</textoffsety>
+			<textoffsety>2</textoffsety>
 			<aligny>-</aligny>
-			<texturefocus>list-focus.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus border="2">list-focus.png</texturefocus>
+			<texturenofocus border="2">list-nofocus.png</texturenofocus>
 		</control>
 		
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
 			<height>33</height>
-			<font>h4D</font>
 			<textoffsetx>10</textoffsetx>
-			<textoffsety>0</textoffsety>
+			<textoffsety>2</textoffsety>
 			<aligny>-</aligny>
-			<texturefocus>list-focus.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus border="2">list-focus.png</texturefocus>
+			<texturenofocus border="2">list-nofocus.png</texturenofocus>
 		</control>
 		
 		<control type="spincontrolex" id="9">
@@ -110,7 +104,7 @@
 			<reverse>yes</reverse>
 		</control>
 		
-		<control type="sliderex" id="10">
+		<!--<control type="sliderex" id="10">
 			<description>Default Slider</description>
 			<posx>1530</posx>
 			<posy>150</posy>
@@ -127,55 +121,31 @@
 			<textcolor>white</textcolor>
 			<disabledcolor>disabled</disabledcolor>
 			<textoffsetx>12</textoffsetx>
-		</control>
-		
-		<control type="image" id="11">
-			<description>separator image</description>
-			<width>350</width>
-			<height>5</height>
-			<texture>separatorOSD.png</texture>
-			<visible>false</visible>
-		</control>
+		</control>-->
 		
 		<control type="button" id="28">
-			<description>Ok button</description>
-			<posx>150</posx>
-			<posy>300</posy>
-			<width>100</width>
-			<height>36</height>
+			<description>OK button</description>
+			<posx>170</posx>
+			<posy>295</posy>
 			<label>186</label>
-			<font>buttonD</font>
-			<focusedcolor>button-alttext</focusedcolor>
-			<textoffsety>2</textoffsety>
-			<aligny>-</aligny>
-			<align>center</align>
-			<texturenofocus>button2.png</texturenofocus>
-			<texturefocus>button2-focus.png</texturefocus>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<onup>11</onup>
-			<ondown>11</ondown>
+			<onleft>6</onleft>
+			<onright>29</onright>
+			<onup>30</onup>
+			<ondown>3</ondown>
+			<include>dialogConfirmButton</include>
 		</control>
 		
 		<control type="button" id="29">
 			<description>Cancel button</description>
-			<posx>260</posx>
-			<posy>300</posy>
-			<width>100</width>
-			<height>36</height>
+			<posx>270</posx>
+			<posy>295</posy>
 			<label>222</label>
-			<font>buttonD</font>
-			<focusedcolor>button-alttext</focusedcolor>
-			<textoffsety>2</textoffsety>
-			<aligny>-</aligny>
-			<align>center</align>
-			<texturenofocus>button2.png</texturenofocus>
-			<texturefocus>button2-focus.png</texturefocus>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<onup>11</onup>
-			<ondown>11</ondown>
-		</control>
+			<onleft>28</onleft>
+			<onright>6</onright>
+			<onup>30</onup>
+			<ondown>3</ondown>
+			<include>dialogConfirmButton</include>
+		</control>	
 
 	</controls>
 </window>

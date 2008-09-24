@@ -2,31 +2,13 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>Home</previouswindow>
+	
 	<controls>
+		
 		<include>background</include>
-		<include>allscreens</include>
-		<include>mediaoverlay</include>
-		<include>infobar</include>
-		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
-			<label>3</label>
-			<font>page</font>
-			<visible>IsEmpty(Container.PluginName)</visible>
-		</control>
-		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>720</width>
-			<align>center</align>
-			<info>Container.Pluginname</info>
-			<visible>!IsEmpty(Container.PluginName)</visible>
-			<font>page</font>
-		</control>
+
+		<include>pagebar</include>
+		
 		<control type="group">
 			<description>page content</description>
 			<include>PageControl</include>
@@ -37,65 +19,21 @@
 			<include>Icons</include>
 			<include>BigIconsF</include>
 			<include>AllViewCommonPageControls</include>
-			<control type="group">
-				<posx>-14</posx>
-				<posy>40</posy>
+
+			<control type="image">
+				<description>list item icon</description>
+				<posx>415</posx>
+				<posy>65</posy>
+				<width>260</width>
+				<height>450</height>
+				<info>ListItem.Icon</info>
+				<aspectratio align="bottom">keep</aspectratio>
 				<visible>Control.IsVisible(50)</visible>
-				<visible allowhiddenfocus="true">![Control.IsVisible(50) + System.IdleTime(4)]</visible>
-				<control type="image" id="999">
-					<description>list item icon</description>
-					<posx>540</posx>
-					<posy>48</posy>
-					<height>180</height>
-					<width>180</width>
-					<info>ListItem.Icon</info>
-					<bordertexture border="2">itbg.png</bordertexture>
-					<bordersize>18</bordersize>
-					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
-					<aspectratio align="bottom">keep</aspectratio>
-				</control>
-				<control type="image" id="999">
-					<description>list item icon</description>
-					<posx>540</posx>
-					<posy>218</posy>
-					<height>180</height>
-					<width>180</width>
-					<info>ListItem.Icon</info>
-					<bordertexture border="2">itbgdiff.png</bordertexture>
-					<bordersize>18</bordersize>
-					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
-					<texture flipy="true" diffuse="fade2.png">-</texture>
-					<aspectratio align="bottom">keep</aspectratio>
-				</control>
-				<control type="image">
-					<description>list item thumb</description>
-					<posx>540</posx>
-					<posy>48</posy>
-					<height>180</height>
-					<width>180</width>
-					<info>ListItem.Thumb</info>
-					<bordertexture border="2">itbg.png</bordertexture>
-					<bordersize>18</bordersize>
-					<aspectratio align="bottom">keep</aspectratio>
-					<visible>Control.IsVisible(50)</visible>
-				</control>
-				<control type="image">
-					<description>list item thumb</description>
-					<posx>540</posx>
-					<posy>218</posy>
-					<height>180</height>
-					<width>180</width>
-					<info>ListItem.Thumb</info>
-					<bordertexture border="2">itbgdiff.png</bordertexture>
-					<bordersize>18</bordersize>
-					<texture flipy="true" diffuse="fade2.png">-</texture>
-					<aspectratio align="bottom">keep</aspectratio>
-					<visible>Control.IsVisible(50)</visible>
-				</control>
 			</control>
-			<!-- <control type="label">
+		
+			<control type="label">
 				<description>Genre</description>
-				<posx>430</posx>
+				<posx>415</posx>
 				<posy>480</posy>
 				<width>260</width>
 				<height>200</height>
@@ -105,22 +43,29 @@
 				<align>center</align>
 				<textcolor>sublabel-text</textcolor>
 				<include>fadeinout</include>
-			</control> -->
-			<control type="label">
-				<posx>30</posx>
-				<posy>531</posy>
-				<width>260</width>
-				<label>$INFO[ListItem.size]</label>
-				<scroll>true</scroll>
-				<font>cali36</font>
-				<textcolor>ffcd5c5c</textcolor>
-				<align>left</align>
-				<visible>Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
 			</control>
+
+			
 		</control>
-		<!-- PAGE HEADER -->
-		<!-- <include>allscreens</include> -->
-		<include>FilesMenu</include>
+		
+		
+<!-- PAGE HEADER -->
+		
+		<include>allscreens</include>
+
+		<control type="label">
+			<include>pageLabel</include>
+			<label>3</label>
+			<visible>IsEmpty(Container.PluginName)</visible>
+		</control>
+		
+		<control type="label">
+			<include>pageLabel</include>
+			<info>Container.Pluginname</info>
+			<visible>!IsEmpty(Container.PluginName)</visible>
+		</control>
+	
+	<include>FilesMenu</include>
+	
 	</controls>
-</window>
+</window>  

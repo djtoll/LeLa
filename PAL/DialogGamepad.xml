@@ -1,45 +1,50 @@
-﻿<window id="110">
-	<defaultcontrol>0</defaultcontrol>
-	<include>shutdown-ani</include>
-	<controls>
-		<control type="image">
-			<posx>165</posx>
-			<posy>205</posy>
-			<width>390</width>
-			<height>190</height>
-			<texture>button-menu-background.png</texture>
-		</control>
-		<control type="label" id="1">
-			<description>dialog Heading</description>
-			<posx>190</posx>
-			<posy>218</posy>
-			<label>12325</label>
-			<font>font12</font>
-			<textcolor>DDced8da</textcolor>
-		</control>
-		<control type="label" id="2">
-			<description>dialog line 1</description>
-			<posx>190</posx>
-			<posy>260</posy>
-			<label>12330</label>
-			<font>font11</font>
-			<textcolor>button-text</textcolor>
-		</control>
-		<control type="label" id="3">
-			<description>dialog line 2</description>
-			<posx>190</posx>
-			<posy>280</posy>
-			<label>12331</label>
-			<font>font11</font>
-			<textcolor>button-text</textcolor>
-		</control>
-		<control type="label" id="4">
-			<description>dialog line 3</description>
-			<posx>190</posx>
-			<posy>320</posy>
-			<label>12323</label>
-			<font>font12</font>
-			<textcolor>button-text</textcolor>
-		</control>
+﻿<coordinates>
+		<system>1</system>
+		<posx>190</posx>
+		<posy>120</posy>
+	</coordinates>
+
+	<controls>	
+		<control type="group">	
+			<control type="image">
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>412</width>
+				<height>240</height>
+				<texture border="38">dialogpanel.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>dialog Heading</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>342</width>	
+				<label>-</label>
+				<align>center</align>
+				<font>h1</font>
+				<textcolor>label-text</textcolor>
+			</control>
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>0</posx>
+				<width>342</width>	
+				<align>center</align>
+				<posy>40</posy>
+				<label>-</label>
+				<font>h2D</font>
+				<textcolor>label-text</textcolor>
+				<scroll>yes</scroll>
+			</control>
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>0</posx>
+				<width>342</width>	
+				<align>center</align>
+				<posy>70</posy>
+				<label>-</label>
+				<font>h4D</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>yes</scroll>
+			</control>
+		</control>		
 	</controls>
 </window>

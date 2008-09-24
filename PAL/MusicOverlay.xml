@@ -3,34 +3,23 @@
 	<controls>
 		
 		<control type="group">
-			<posx>0</posx>
-			<posy>536</posy>
+			<posx>30</posx>
+			<posy>537</posy>
 	
-			<control type="image">
-				<posx>30</posx>
-				<posy>3</posy>
-				<width>32</width>
-				<height>32</height>
-				<texture>lastfm.png</texture>
-				<aspectratio align="left">keep</aspectratio>
-				<include>fadeinout</include>
-				<visible>LastFM.RadioPlaying + ![Window.IsActive(0) | Window.IsActive(107) | Window.IsActive(114) | Window.IsActive(112) | Window.IsActive(2006) | Window.IsActive(136)]</visible>
-			</control>
-			
 			<control type="fadelabel" id="200">
 				<include>home-start</include>
-				<posx>60</posx>
-				<posy>4</posy>
-				<width>600</width>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>660</width>
 				<label>$LOCALIZE[31078]</label>
 				<label>$LOCALIZE[31077]</label>
 				<textcolor>label-text</textcolor>
 				<align>center</align>
-				<font>h4</font>
+				<font>rsslela</font>
 				<include>fadeinout</include>	
 				<scrollout>no</scrollout>
-				<pauseatend>8000</pauseatend>
-				<visible>!Skin.HasSetting(overlay) + ![Window.IsActive(112) | Window.IsActive(107) | Window.IsActive(114) | Window.IsActive(2006) | Window.IsActive(136) | Window.IsActive(500) | Window.IsActive(28)]</visible>
+				<pauseatend>6000</pauseatend>
+				<visible>Player.Playing + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(114) | Window.IsActive(2006) | Window.IsActive(136) | Window.IsActive(500) | Window.IsActive(28) | Window.IsActive(10133)]</visible>
 			</control>
 		
 		</control>

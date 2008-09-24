@@ -8,32 +8,24 @@
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
 			<onright>50</onright>
 			<include>pageslide</include>
+			<include>pagemenus</include>
 			
-			<animation effect="slide" time="150" start="-190,0" end="0,0" acceleration="1.1">Visible</animation>
-			<animation effect="slide" time="150" start="0,0" end="-190,0" acceleration="1.1">Hidden</animation>
-
 			<control type="button" id="2">
 				<description>View As Icons button</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>286</width>
-				<height>37</height>
-				<label>100</label>	
-				<font>cali38</font>
-				<textcolor>button-text</textcolor>
-				<textoffsety>2</textoffsety>
-				<aligny>center</aligny>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
+				<width>185</width>
+				<height>33</height>
+				<label>100</label>
 				<onleft>50</onleft>
-				<onright>50</onright>
+				<onright>40</onright>
 				<onup>32</onup>
 				<ondown>3</ondown>
 			</control>
 			
-			<!-- <control type="button" id="40">
+			<control type="button" id="40">
 				<description>previous viewtype</description>
-				<posx>210</posx>
+				<posx>146</posx>
 				<posy>8</posy>
 				<height>15</height>
 				<width>15</width>
@@ -48,7 +40,7 @@
 			</control>
 			<control type="button" id="41">
 				<description>next viewtype</description>
-				<posx>238</posx>
+				<posx>163</posx>
 				<posy>8</posy>
 				<height>15</height>
 				<width>15</width>
@@ -60,21 +52,14 @@
 				<onright>50</onright>
 				<onup>2</onup>
 				<ondown>3</ondown>
-			</control> -->
+			</control>
 			
 			<control type="button" id="3">
 				<description>Sort by button</description>
 				<posx>0</posx>
 				<posy>35</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
-				<textcolor>button-text</textcolor>
-				<textoffsety>2</textoffsety>
-				<aligny>center</aligny>
+				<width>185</width>
 				<label>103</label>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>4</onright>
 				<onup>2</onup>
@@ -82,7 +67,7 @@
 			</control>
 			<control type="togglebutton" id="4">
 				<description>Sort asc</description>
-				<posx>237</posx>
+				<posx>160</posx>
 				<posy>43</posy>
 				<label>-</label>
 				<onleft>3</onleft>
@@ -90,19 +75,13 @@
 				<onup>2</onup>
 				<ondown>5</ondown>
 			</control>
+			
 			<control type="radiobutton" id="5">
 				<description>Library button</description>
 				<posx>0</posx>
 				<posy>70</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
-				<font>cali38</font>
-				<textcolor>button-text</textcolor>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>	
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>3</onup>
@@ -114,14 +93,7 @@
 				<description>Filter Button</description>
 				<posx>0</posx>
 				<posy>105</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
-				<textcolor>button-text</textcolor>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
+				<width>185</width>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>5</onup>
@@ -132,15 +104,8 @@
 				<description>Search Button</description>
 				<posx>0</posx>
 				<posy>140</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>137</label>
-				<font>cali38</font>
-				<textcolor>button-text</textcolor>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>10</onup>
@@ -151,15 +116,8 @@
 				<description>Filter</description>
 				<posx>0</posx>
 				<posy>175</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>587</label>
-				<textcolor>button-text</textcolor>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>8</onup>
@@ -170,15 +128,8 @@
 				<description>Party Mode Button</description>
 				<posx>0</posx>
 				<posy>210</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>589</label>
-				<textcolor>button-text</textcolor>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>19</onup>
@@ -189,35 +140,20 @@
 				<description>Flatten Button</description>
 				<posx>0</posx>
 				<posy>245</posy>
-				<width>286</width>
-				<height>37</height>
-				<font>cali38</font>
+				<width>185</width>
 				<label>20411</label>
-				<textcolor>button-text</textcolor>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>16</onup>
 				<ondown>9</ondown>
 			</control>
 			
-			
 			<control type="button" id="9">
 				<description>IMDB Button</description>
 				<posx>0</posx>
 				<posy>280</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>IMDB</label>
-				<font>cali38</font>
-				<textcolor>button-text</textcolor>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>17</onup>
@@ -229,15 +165,8 @@
 				<description>Trailer Button</description>
 				<posx>0</posx>
 				<posy>315</posy>
-				<width>286</width>
-				<height>37</height>
-				<label>Trailer</label>
-				<font>cali38</font>
-				<textcolor>button-text</textcolor>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
+				<width>185</width>
+				<label>20410</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>9</onup>
@@ -250,38 +179,25 @@
 				<description>Favourites Button</description>
 				<posx>0</posx>
 				<posy>350</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>1036</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onclick>ActivateWindow(Favourites)</onclick>
 				<onup>11</onup>
 				<ondown>31</ondown>
-				<font>cali38</font>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 			</control>
 			
 			<control type="button" id="31">
 				<description>LastFM Love button</description>
 				<posx>0</posx>
 				<posy>385</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>LastFM Love</label>
 				<onleft>50</onleft>
 				<onright>50	</onright>
 				<onup>30</onup>
 				<ondown>32</ondown>
-				<font>cali38</font>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<include>View-as</include>
 				<onclick>XBMC.LastFM.Love</onclick>
 				<visible>LastFM.RadioPlaying</visible>
 			</control>
@@ -290,27 +206,15 @@
 				<description>LastFM Ban button</description>
 				<posx>0</posx>
 				<posy>420</posy>
-				<width>286</width>
-				<height>37</height>
+				<width>185</width>
 				<label>LastFM Ban</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>31</onup>
 				<ondown>2</ondown>
-				<font>cali38</font>
-				<aligny>center</aligny>
-				<textoffsety>2</textoffsety>
-				<texturefocus border="2">list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onclick>XBMC.LastFM.Ban</onclick>
 				<visible>LastFM.RadioPlaying</visible>
-			</control>
-																	
+			</control>																	
 		</control>
-		
-		
-		
-
 	</include>
-
 </includes>

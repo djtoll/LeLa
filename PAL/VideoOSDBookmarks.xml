@@ -11,207 +11,121 @@
 	
 	<controls>
 		
+		<control type="group">	
+			<control type="image" id="1">
+				<description>background image</description>
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>470</width>
+				<height>330</height>
+				<texture border="38">dialogpanel.png</texture>
+				<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
+			</control>
 		
-	<control type="group">	
-		<control type="image" id="1">
-			<description>background image</description>
-			<posx>-35</posx>
-			<posy>-30</posy>
-			<width>470</width>
-			<height>340</height>
-			<texture border="38">dialogpanel.png</texture>
-			<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
-		</control>
-		
-		
-		<control type="wraplist" id="11">
-			<posx>0</posx>
-			<posy>20</posy>
-			<width>400</width>
-			<height>430</height>
-			<onleft>56</onleft>
-			<onright>56</onright>
-			<onup>999</onup>
-			<ondown>999</ondown>
-			<scrolltime>200</scrolltime>
-			<orientation>horizontal</orientation>
-			<focusposition>1</focusposition>
-								
-			<itemlayout height="170" width="130">
-
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>130</width>
-					<height>110</height>
-					<info>ListItem.Thumb</info>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-				</control>
-
-				<control type="image">
-					<posx>0</posx>
-					<posy>110</posy>
-					<width>130</width>
-					<height>110</height>
-					<info>ListItem.Thumb</info>
-					<aspectratio aligny="top">stretch</aspectratio>
-					<texture flipy="true" diffuse="fade.png">-</texture>
-				</control>
-				
-				<control type="label">
-					<posx>65</posx>
-					<posy>110</posy>
-					<width>130</width>
-					<height>110</height>
-					<align>center</align>
-					<info>ListItem.Label</info>
-					<font>h4</font>
-				</control>
-				
-			</itemlayout>
-		
-			<focusedlayout height="170" width="130">
-				
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>130</width>
-					<height>110</height>
-					<info>ListItem.Thumb</info>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<animation effect="zoom" end="-20,-15,180,160" time="250">Focus</animation>
-				</control>
-
-				<control type="image">
-					<posx>0</posx>
-					<posy>110</posy>
-					<width>130</width>
-					<height>100</height>
-					<info>ListItem.Thumb</info>
-					<aspectratio aligny="top">stretch</aspectratio>
-					<texture flipy="true" diffuse="fade.png">-</texture>
-					<animation effect="zoom" end="-20,145,180,160" time="250">Focus</animation>
-				</control>
-
-				<control type="label">
-					<posx>65</posx>
-					<posy>150</posy>
-					<width>130</width>
-					<height>110</height>
-					<align>center</align>
-					<info>ListItem.Label</info>
-					<font>h4</font>
-				</control>
-
-			</focusedlayout>	
-		</control>
-
-		<control type="panel" id="11">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>500</width>
-			<height>270</height>
-			<onleft>11</onleft>
-			<onright>11</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
-			<scrolltime>200</scrolltime>
-			<viewtype label="536">icon</viewtype>
-			<pagecontrol>60</pagecontrol>
-			<orientation>vertical</orientation>
-			<visible>false</visible>
+			<control type="wraplist" id="11">
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>400</width>
+				<height>430</height>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<onup>999</onup>
+				<ondown>999</ondown>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<focusposition>1</focusposition>
+									
+				<itemlayout height="170" width="130">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>130</width>
+						<height>110</height>
+						<info>ListItem.Thumb</info>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>110</posy>
+						<width>130</width>
+						<height>110</height>
+						<info>ListItem.Thumb</info>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<texture flipy="true" diffuse="fade.png">-</texture>
+					</control>
+					
+					<control type="label">
+						<posx>65</posx>
+						<posy>110</posy>
+						<width>130</width>
+						<height>110</height>
+						<align>center</align>
+						<info>ListItem.Label</info>
+						<font>h4</font>
+					</control>
+				</itemlayout>
 			
-			<itemlayout height="135" width="107">
-				<control type="image">
-					<posx>2</posx>
-					<posy>3</posy>
-					<width>102</width>
-					<height>120</height>
-					<info>ListItem.Icon</info>
-				</control>
-				<control type="label">
-					<posx>53</posx>
-					<posy>114</posy>
-					<width>101</width>
-					<height>24</height>
-					<font>font12</font>
-					<selectedcolor>red</selectedcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-					<info>ListItem.Label</info>
-				</control>
-			</itemlayout>
-			<focusedlayout height="135" width="107">
-				<control type="image">
+				<focusedlayout height="170" width="130">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>130</width>
+						<height>110</height>
+						<info>ListItem.Thumb</info>
+						<aspectratio aligny="bottom">stretch</aspectratio>
+						<animation effect="zoom" end="-20,-15,180,160" time="250">Focus</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>110</posy>
+						<width>130</width>
+						<height>100</height>
+						<info>ListItem.Thumb</info>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<texture flipy="true" diffuse="fade.png">-</texture>
+						<animation effect="zoom" end="-20,145,180,160" time="250">Focus</animation>
+					</control>
+	
+					<control type="label">
+						<posx>65</posx>
+						<posy>150</posy>
+						<width>130</width>
+						<height>110</height>
+						<align>center</align>
+						<info>ListItem.Label</info>
+						<font>h4</font>
+					</control>
+				</focusedlayout>	
+			</control>
+
+			<control type="group" id="999">
+				<posx>45</posx>
+				<posy>230</posy>
+						
+				<control type="button" id="2">
+					<description>Create Bookmark button</description>
 					<posx>0</posx>
-					<posy>0</posy>
-					<width>107</width>
-					<height>126</height>
-					<info>ListItem.Icon</info>
-					<bordertexture border="4">folder-focus.png</bordertexture>
-					<bordersize>4</bordersize>
+					<width>150</width>
+					<label>294</label>
+					<onleft>4</onleft>
+					<onright>3</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<include>dialogConfirmButton</include>
 				</control>
-	
-				<control type="label">
-					<posx>53</posx>
-					<posy>114</posy>
-					<width>101</width>
-					<height>24</height>
-					<font>font12</font>
-					<selectedcolor>red</selectedcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-					<info>ListItem.Label</info>
+				<control type="button" id="3">
+					<description>Clear Bookmarks button</description>
+					<posx>160</posx>
+					<width>150</width>
+					<label>296</label>
+					<onleft>2</onleft>
+					<onright>4</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<include>dialogConfirmButton</include>
 				</control>
-			</focusedlayout>
-		</control>
-		
-	
-	<control type="group" id="999">
-		<posx>45</posx>
-		<posy>230</posy>
 				
-		<control type="button" id="2">
-			<description>Create Bookmark button</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>150</width>
-			<height>38</height>
-			<label>294</label>
-			<font>buttonD</font>
-			<align>center</align>
-			<textoffsety>-</textoffsety>
-			<aligny>center</aligny>
-			<onleft>4</onleft>
-			<texturenofocus>buttonD.png</texturenofocus>
-			<texturefocus>buttonD-focus.png</texturefocus>
-			<textoffsety>2</textoffsety>
-			<onright>3</onright>
-			<onup>11</onup>
-			<ondown>11</ondown>
+			</control>
 		</control>
-		<control type="button" id="3">
-			<description>Clear Bookmarks button</description>
-			<posx>160</posx>
-			<posy>0</posy>
-			<width>150</width>
-			<height>38</height>
-			<label>296</label>
-			<font>buttonD</font>
-			<align>center</align>
-			<textoffsety>-</textoffsety>
-			<aligny>center</aligny>
-			<texturenofocus>buttonD.png</texturenofocus>
-			<texturefocus>buttonD-focus.png</texturefocus>
-			<textoffsety>2</textoffsety>
-			<onleft>2</onleft>
-			<onright>4</onright>
-			<onup>11</onup>
-			<ondown>11</ondown>
-		</control>
-	</control>
-		
-		
-	</control>
 	</controls>
 </window>

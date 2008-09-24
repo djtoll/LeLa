@@ -8,14 +8,7 @@
 		<posy>485</posy>
 	</coordinates>
 	
-	<animation type="WindowOpen">
-		<effect type="slide" start="0,70" end="0" time="100" />
-		<effect type="fade" start="0" end="80" time="100" />
-	</animation>
-	<animation type="WindowClose">
-		<effect type="slide" start="0,0" end="0,70" time="100" />
-		<effect type="fade" start="80" end="0" time="100" />
-	</animation>
+	<include>OSDcontrolSlide</include>
 	
 	<controls>
 		
@@ -25,17 +18,13 @@
 		<height>100</height>
 		<width>800</width>
 		<texture border="0,0,51,0">osd-controls.png</texture>
-		<visible>Window.IsActive(2005)</visible>
+		<visible>!Window.IsActive(2901) + Window.IsActive(2005)</visible>
 	</control>
-	
-		
 		
 		<control type="group" id="901">
 			<include>fadeinout</include>
 			<visible>![Window.IsActive(2901) | Window.IsActive(114)]</visible>
-			
-			
-			
+
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -45,13 +34,12 @@
 				<visible>Window.IsActive(2005) + !Player.ShowInfo</visible>
 				<include>fadeinout</include>
 			</control>
-	
-		
+
 			<control type="progress" id="1">
 				<description>Progressbar</description>
-				<posx>110</posx>
+				<posx>160</posx>
 				<posy>67</posy>
-				<width>425</width>
+				<width>400</width>
 				<height>8</height>
 				<info>Player.Progress</info>
 				<texturebg>progress_back.png</texturebg>
@@ -63,21 +51,21 @@
 			</control>
 			
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>100</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31040]</label>
-				<visible>!Window.IsActive(2901) + Player.Paused</visible>
+				<visible>![Window.IsActive(2901) | Window.IsActive(0)] + Player.Paused</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31041]</label>
@@ -85,10 +73,10 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31042]</label>
@@ -96,10 +84,10 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31043]</label>
@@ -107,10 +95,10 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31044]</label>
@@ -118,10 +106,10 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31045]</label>
@@ -129,10 +117,10 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31046]</label>
@@ -140,10 +128,10 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31047]</label>
@@ -151,10 +139,10 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31048]</label>
@@ -162,10 +150,10 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31049]</label>
@@ -173,26 +161,37 @@
 			</control>
 	
 			<control type="label" id="0">
-				<posx>30</posx>
-				<posy>54</posy>
+				<posx>140</posx>
+				<posy>57</posy>
 				<width>720</width>
-				<align>left</align>
+				<align>right</align>
 				<font>h4</font>
 				<textcolor>label-text</textcolor>
 				<label>$LOCALIZE[31050]</label>
 				<visible>Player.Rewinding32x</visible>
 			</control>
 			
+			<control type="label" id="0">
+				<posx>140</posx>
+				<posy>57</posy>
+				<width>100</width>
+				<align>right</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>$LOCALIZE[31051]</label>
+				<visible>![Window.IsActive(2901) | Window.IsActive(0)] + Player.Playing</visible>
+			</control>
+			
 			<control type="label" id="22">
 				<description>seek time</description>
-				<posx>680</posx>
-				<posy>54</posy>
+				<posx>560</posx>
+				<posy>57</posy>
 				<font>h4</font>
-				<align>right</align>
+				<align>left</align>
 				<label>$INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
 				<textcolor>label-text</textcolor>
 				<width>400</width>
-				<visible>!Window.IsActive(2006)</visible>
+				<visible>![Window.IsActive(2006) | Window.IsActive(0)]</visible>
 				<animation effect="slide" start="0" end="20" time="0" condition="Window.IsActive(2005)">Conditional</animation>
 			</control>
 

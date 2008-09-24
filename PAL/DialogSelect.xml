@@ -47,17 +47,11 @@
 			<scrolltime>200</scrolltime>
 			
 			<itemlayout height="35">
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>325</width>
-					<height>33</height>
-					<texture>list-nofocus.png</texture>
-				</control>
+
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>315</width>
+					<width>305</width>
 					<height>28</height>
 					<font>menu</font>
 					<align>left</align>
@@ -74,17 +68,11 @@
 					<height>33</height>
 					<texture>list-focus.png</texture>
 				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>325</width>
-					<height>33</height>
-					<texture>input-focus.png</texture>
-				</control>
+
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>315</width>
+					<width>305</width>
 					<height>28</height>
 					<font>menu</font>
 					<align>left</align>
@@ -92,16 +80,6 @@
 					<info>ListItem.Label</info>
 				</control>
 			</focusedlayout>
-		</control>
-		
-		<control type="image">
-			<description>dialog group</description>
-			<posx>25</posx>
-			<posy>295</posy>
-			<width>400</width>
-			<height>1</height>
-			<texture>separator.png</texture>
-			<visible>false</visible>
 		</control>
 		
 		<control type="label" id="2">
@@ -120,59 +98,12 @@
 			<posx>0</posx>
 			<posy>300</posy>
 			<width>100</width>
-			<height>36</height>
-			<align>center</align>
 			<label>368</label>
-			<font>buttonD</font>
-			<texturenofocus>buttonD.png</texturenofocus>
-			<texturefocus>buttonD-focus.png</texturefocus>
-			<textoffsety>2 </textoffsety>
 			<onleft>3</onleft>
 			<onright>3</onright>
 			<onup>3</onup>
 			<ondown>3</ondown>
-		</control>
-		
-		
-		<control type="button">
-			<posx>4470</posx>
-			<posy>45</posy>
-			<include>scrollbar_width</include>
-			<height>20</height>
-			<colordiffuse>99FFFFFF</colordiffuse>
-			<onclick>PageUp(60)</onclick>
-			<texturefocus border="4">scrollbar_arrow_up_focus.png</texturefocus>
-			<texturenofocus border="4">scrollbar_arrow_up.png</texturenofocus>
-			<visible>Control.IsVisible(60)</visible>
-		</control>
-		
-		<control type="button">
-			<posx>4470</posx>
-			<posy>303</posy>
-			<include>scrollbar_width</include>
-			<height>20</height>
-			<colordiffuse>99FFFFFF</colordiffuse>
-			<onclick>PageDown(60)</onclick>
-			<texturefocus border="4">scrollbar_arrow_down_focus.png</texturefocus>
-			<texturenofocus border="4">scrollbar_arrow_down.png</texturenofocus>
-			<visible>Control.IsVisible(60)</visible>
-		</control>
-		
-		<control type="scrollbar" id="60">
-			<posx>4470</posx>
-			<posy>65</posy>
-			<include>scrollbar_width</include>
-			<height>238</height>
-			<colordiffuse>99FFFFFF</colordiffuse>
-			<texturesliderbackground border="4">scrollbar_background.png</texturesliderbackground>
-			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
-			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
-			<textureslidernib>-</textureslidernib>
-			<textureslidernibfocus>-</textureslidernibfocus>
-			<onleft>3</onleft>
-			<onright>5</onright>
-			<showonepage>false</showonepage>
-			<orientation>vertical</orientation>
+			<include>dialogConfirmButton</include>
 		</control>
 
 	</control>

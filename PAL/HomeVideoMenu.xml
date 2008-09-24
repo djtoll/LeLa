@@ -6,7 +6,7 @@
 		<include>zoomout</include>
 		<include>home-submenu</include>
 		<include>fadeinout</include>
-		<posx>40</posx>
+		<posx>30</posx>
 		<posy>55</posy>
 		<onup>9000</onup>
 		
@@ -16,8 +16,8 @@
 				<visible allowhiddenfocus="true">Control.HasFocus(500)</visible>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>300</width>
-				<height>37</height>
+				<width>500</width>
+				<height>35</height>
 				<buttongap>0</buttongap>
 				<numbuttons>7</numbuttons>
 				<orientation>vertical</orientation>
@@ -27,8 +27,8 @@
 				<defaultbutton>2</defaultbutton>
 				<wraparound>yes</wraparound>
 				<smoothscrolling>yes</smoothscrolling>
-				<alpha>70</alpha>
-				<font>homemenu</font>
+				<alpha>80</alpha>
+				<font>menubarhomesub</font>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<ondown>500</ondown>
@@ -41,48 +41,46 @@
 				<include>select</include>
 	
 				<buttons>
-							
-					<button id="1">
-						<label>31914</label>
-						<onclick>ActivateWindow(MyVideoLibrary,plugin://video)</onclick>
-					</button>
 
-					<button id="2">
+					<button id="1">
 						<label>342</label>
 						<onclick>ActivateWindow(MyVideoLibrary,movietitles)</onclick>
 					</button>
 			
-					<button id="3">
+					<button id="2">
 						<label>20343</label>
 						<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles)</onclick>
 					</button>
 					
-					<button id="4">
+					<button id="3">
 						<label>20386</label>
 						<onclick>ActivateWindow(MyVideoLibrary,recentlyaddedmovies)</onclick>
 					</button>
 			
-					<button id="5">
+					<button id="4">
 						<label>20387</label>
 						<onclick>ActivateWindow(MyVideoLibrary,recentlyaddedepisodes)</onclick>
 					</button>
 					
-					<button id="6">
+					<button id="5">
 						<label>20389</label>
 						<onclick>ActivateWindow(MyVideoLibrary,musicvideotitles)</onclick>
 						<visible>false</visible>
 					</button>
 					
-					<button id="7">
+					<button id="6">
 						<label>31011</label>
-						<onclick>ActivateWindow(MyVideoFiles,plugin://video/Apple Movie Trailers)</onclick>
+						<onclick>ActivateWindow(MyVideoLibrary,plugin://video/Apple Movie Trailers)</onclick>
+					</button>
+					
+					<button id="7">
+						<label>31914</label>
+						<onclick>ActivateWindow(MyVideoLibrary,plugin://video)</onclick>
 					</button>
 	
 				</buttons>
 			</control>
-			
 
-			
 		</control>
 		
 	</include>

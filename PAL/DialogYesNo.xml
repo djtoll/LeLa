@@ -12,102 +12,80 @@
 		
 		<control type="group">
 			
-			<control type="image">
-				<posx>-35</posx>
-				<posy>-30</posy>
-				<width>412</width>
-				<height>240</height>
-				<texture border="38">dialogpanel.png</texture>
+			<control type="image">	
+				<height>300</height>			
+				<include>dialogWindow</include>
 			</control>
 			
 			<control type="label" id="1">
 				<description>dialog Heading</description>
-				<posx>0</posx>
+				<posx>-125</posx>
 				<posy>0</posy>
-				<width>342</width>	
+				<width>590</width>	
 				<label>-</label>
 				<align>center</align>
-				<font>h1D</font>
-				<textcolor>button-text</textcolor>
+				<font>h1Dlela</font>
 			</control>
 		
 			<control type="label" id="2">
 				<description>dialog line 1</description>
-				<posx>0</posx>
-				<width>342</width>	
+				<posx>-125</posx>
+				<width>590</width>	
 				<align>center</align>
-				<posy>40</posy>
+				<posy>50</posy>
 				<label>-</label>
-				<font>h2D</font>
-				<textcolor>button-text</textcolor>
+				<font>h2Dlela</font>
 				<scroll>yes</scroll>
 			</control>
 			
 			<control type="label" id="3">
 				<description>dialog line 2</description>
-				<posx>0</posx>
-				<width>342</width>	
+				<posx>-125</posx>
+				<width>590</width>	
 				<align>center</align>
-				<posy>70</posy>
+				<posy>90</posy>
 				<label>-</label>
-				<font>h4D</font>
-				<textcolor>button-text</textcolor>
+				<font>h4Dlela</font>
 				<scroll>yes</scroll>
 			</control>
 			
 			<control type="label" id="4">
 				<description>dialog line 3</description>
-				<posx>0</posx>
-				<width>342</width>	
+				<posx>-125</posx>
+				<width>590</width>	
 				<align>center</align>
-				<posy>100</posy>
+				<posy>140</posy>
 				<label>-</label>
-				<font>h4D</font>
-				<textcolor>button-text</textcolor>
+				<font>h4Dlela</font>
 				<scroll>yes</scroll>
 			</control>
 			
 			<control type="button" id="11">
 				<description>Yes button</description>
-				<posx>80</posx>
-				<posy>135</posy>
-				<width>90</width>
-				<height>36</height>
+				<posx>55</posx>
+				<posy>180</posy>
+				<hight>50</hight>
 				<label>107</label>
-				<font>buttonD</font>
-				<focusedcolor>button-alttext</focusedcolor>
-				<textoffsety>0</textoffsety>
-				<aligny>center</aligny>
-				<align>center</align>
-				<texturenofocus>buttonD.png</texturenofocus>
-				<texturefocus>buttonD-focus.png</texturefocus>
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<onup>11</onup>
-				<ondown>11</ondown>
+				<ondown>11</ondown><font>cali38</font>
+				<include>dialogConfirmButton</include>
 			</control>
 			
 			<control type="button" id="10">
 				<description>No button</description>
-				<posx>180</posx>
-				<posy>135</posy>
-				<width>90</width>
-				<height>36</height>
+				<posx>185</posx>
+				<posy>180</posy>
+				<hight>50</hight>
 				<label>106</label>
-				<font>buttonD</font>
-				<align>center</align>
-				<textoffsety>0</textoffsety>
-				<aligny>center</aligny>
-				<texturenofocus>buttonD.png</texturenofocus>
-				<texturefocus>buttonD-focus.png</texturefocus>
 				<onleft>11</onleft>
 				<onright>11</onright>
 				<onup>10</onup>
-				<ondown>10</ondown>
+				<ondown>10</ondown><font>cali38</font>
+				<include>dialogConfirmButton</include>
 			</control>
-
-		</control>	
-
+			
+		</control>
 	</controls>
-	
 </window>

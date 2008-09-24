@@ -3,23 +3,21 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>background</include>
-		<include>infobar</include>
-		
+
 		<control type="group">
 			<include>PageControl</include>
 			<include>viewsmenu</include>
 			<include>viewsmenucontext</include>
 			<include>ListView</include>
 			<include>Icons</include>
-			<include>BigIcons</include>
-			
+		
 					
 <!--- COMMON -------------------------->
 					
 		<control type="image" id="999">
 			<description>list item icon</description>
-			<posx>430</posx>
-			<posy>90</posy>
+			<posx>415</posx>
+			<posy>100</posy>
 			<height>256</height>
 			<width>256</width>
 			<info>ListItem.Icon</info>
@@ -30,8 +28,8 @@
 	
 		<control type="image" id="999">
 			<description>list item icon</description>
-			<posx>430</posx>
-			<posy>345</posy>
+			<posx>415</posx>
+			<posy>356</posy>
 			<height>256</height>
 			<width>256</width>
 			<info>ListItem.Icon</info>
@@ -49,14 +47,8 @@
 		<include>allscreens</include>
 	
 		<control type="label">
-			<description>description label</description>
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>4</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>247</label>
-			<font>page</font>
 		</control>	
 		
 		<include>FilesMenu</include>
