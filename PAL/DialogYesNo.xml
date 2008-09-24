@@ -69,7 +69,8 @@
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<onup>11</onup>
-				<ondown>11</ondown><font>cali38</font>
+				<ondown>11</ondown>
+				<font>cali38</font>
 				<include>dialogConfirmButton</include>
 			</control>
 			
@@ -82,7 +83,8 @@
 				<onleft>11</onleft>
 				<onright>11</onright>
 				<onup>10</onup>
-				<ondown>10</ondown><font>cali38</font>
+				<ondown>10</ondown>
+				<font>cali38</font>
 				<include>dialogConfirmButton</include>
 			</control>
 			

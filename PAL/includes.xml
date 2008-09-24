@@ -38,10 +38,11 @@
 		</control>
 		<control type="label" id="12">
 			<description>number of files label</description>
-			<posx>20</posx>
+			<posx>10</posx>
 			<posy>7</posy>
 			<label>-</label>
-			<font>objects</font>
+			<font>objectslela</font>
+			<align>left</align>
 			<textcolor>label-text</textcolor>
 			<include>home-menubar</include>
 			<visible>!Window.IsActive(3)</visible>
@@ -54,7 +55,7 @@
 			<label>$INFO[System.Time]</label>
 			<textcolor>label-text</textcolor>
 			<align>right</align>
-			<font>date</font>
+			<font>datelela</font>
 			<include>home-menubar</include>
 		</control>
 		
@@ -208,10 +209,22 @@
 		<texturefocus>buttonD-focus.png</texturefocus>
 	</include>
 	
+	<include name="dialogConfirmButtonprogressDialog">	
+		<description>dialog confirm</description>
+		<width>140</width>
+		<height>50</height>
+		<font>cali38</font>
+		<align>center</align>
+		<aligny>-</aligny>
+		<textoffsety>4</textoffsety>
+		<texturenofocus>buttonD.png</texturenofocus>
+		<texturefocus>buttonD-focus.png</texturefocus>
+	</include>
+	
 	<include name="pageLabel">	
 		<include>home-menubar</include>
 		<posx>0</posx>
-		<posy>6</posy>
+		<posy>3</posy>
 		<width>720</width>
 		<align>center</align>
 		<font>page</font>

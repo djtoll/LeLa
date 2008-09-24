@@ -5,64 +5,69 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>185</posx>
-		<posy>100</posy>
+		<posx>190</posx>
+		<posy>120</posy>
 	</coordinates>
 	
 	<controls>
 		
 		<control type="group">
 			
-			<control type="image">
-				<description>background image</description>
-				<posx>-30</posx>
-				<posy>-30</posy>
-				<width>395</width>
-				<height>250</height>
-				<texture border="38">dialogpanel.png</texture>
-				<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
+			<control type="image">	
+				<height>330</height>			
+				<include>dialogWindow</include>
 			</control>
 
 			<control type="label" id="1">
 				<description>dialog Heading</description>
-				<width>335</width>	
+				<posx>-100</posx>
+				<posy>0</posy>
+				<width>540</width>	
 				<label>-</label>
 				<align>center</align>
-				<font>h1D</font>
+				<font>h1Dlela</font>
+				<textcolor>label-text</textcolor>
 			</control>
-
+		
 			<control type="label" id="2">
 				<description>dialog line 1</description>
-				<width>325</width>	
+				<posx>-100</posx>
+				<width>540</width>	
 				<align>center</align>
-				<posy>30</posy>
+				<posy>50</posy>
 				<label>-</label>
-				<font>h4D</font>
+				<font>h2Dlela</font>
+				<textcolor>label-text</textcolor>
+				<scroll>yes</scroll>
 			</control>
 			
 			<control type="label" id="3">
 				<description>dialog line 2</description>
-				<width>325</width>	
+				<posx>-100</posx>
+				<width>540</width>	
 				<align>center</align>
-				<posy>55</posy>
+				<posy>90</posy>
 				<label>-</label>
-				<font>h4D</font>
+				<font>h4Dlela</font>
 				<textcolor>sublabel-text</textcolor>
+				<scroll>yes</scroll>
 			</control>
 			
 			<control type="label" id="4">
 				<description>dialog line 3</description>
-				<width>325</width>	
+				<posx>-100</posx>
+				<width>540</width>	
 				<align>center</align>
-				<posy>80</posy>
+				<posy>140</posy>
 				<label>-</label>
-				<font>h4D</font>
+				<font>h4Dlela</font>
 				<textcolor>sublabel-text</textcolor>
+				<scroll>yes</scroll>
 			</control>
 			
 			<control type="image">
 				<posx>5</posx>
-				<posy>120</posy>
+				<posy>188</posy>
 				<width>325</width>
 				<height>8</height>
 				<texture>progressbar-background.png</texture>
@@ -71,7 +76,7 @@
 			<control type="progress" id="20">
 				<description>progress control</description>
 				<posx>5</posx>
-				<posy>120</posy>
+				<posy>188</posy>
 				<width>325</width>
 				<height>8</height>
 				<texturebg>progressbar-background.png</texturebg>
@@ -83,10 +88,12 @@
 			
 			<control type="button" id="10">
 				<description>Cancel button</description>
-				<posx>128</posx>
-				<posy>147</posy>
+				<posx>100</posx>
+				<posy>214</posy>
+				<hight>50</hight>
 				<label>222</label>
-				<include>dialogConfirmButton</include>
+				<font>cali38</font>
+				<include>dialogConfirmButtonprogressDialog</include>
 			</control>
 			
 		</control>

@@ -88,7 +88,7 @@
 		<name>page</name>
 		<filename>DroidSans.ttf</filename>
 		<shadow>ff000000</shadow>
-		<size>24</size>
+		<size>30</size>
 		<aspect>1.1</aspect>
 	</font>
   	
@@ -99,12 +99,26 @@
 		<size>22</size>
 		<aspect>1.1</aspect>
 	</font>
+	<font>
+		<name>datelela</name>
+		<filename>DroidSans-Bold.ttf</filename>
+		<shadow>ff000000</shadow>
+		<size>24</size>
+		<aspect>1.1</aspect>
+	</font>
 	
 	<font>
 		<name>objects</name>
 		<filename>DroidSans.ttf</filename>
 		<shadow>ff000000</shadow>
 		<size>22</size>
+		<aspect>1.1</aspect>
+	</font>
+	<font>
+		<name>objectslela</name>
+		<filename>DroidSans.ttf</filename>
+		<shadow>ff000000</shadow>
+		<size>24</size>
 		<aspect>1.1</aspect>
 	</font>
 
