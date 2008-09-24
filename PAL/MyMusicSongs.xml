@@ -128,8 +128,7 @@
 				<font>mach7</font>
 				<textcolor>ffcd5c5c</textcolor>
 				<align>left</align>				
-				<visible>Control.IsVisible(50) + Skin.HasSetting(overlay)</visible>
-				
+				<visible>Control.IsVisible(50) + Skin.HasSetting(overlay)</visible>				
 				<include>fadeinout</include>
 			</control>
 
