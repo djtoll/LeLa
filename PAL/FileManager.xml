@@ -84,9 +84,10 @@
 				<onright>21</onright>
 				<onup>20</onup>
 				<ondown>20</ondown>
-				<scrolltime>260</scrolltime>
+				<scrolltime>260</scrolltime>				
 				<animation effect="fade" start="100" end="60" time="200" condition="Control.HasFocus(21)">Conditional</animation>
 				<include>pageslideleft</include>
+				
 				
 				<itemlayout width="315" height="35">
 					<control type="image">

@@ -55,9 +55,19 @@
 			
 		<control type="group">
 				<posx>-14</posx>
-				<posy>40</posy>
+				<posy>55</posy>
 				<visible>Control.IsVisible(50)</visible>
-				<visible allowhiddenfocus="true">![Control.IsVisible(50) + System.IdleTime(4)]</visible>
+				<visible allowhiddenfocus="true">![Control.IsVisible(50) + System.IdleTime(3)]</visible>
+				<control type="image">
+					<description>list item icon background2</description>
+					<posx>458</posx>
+					<posy>-20</posy>
+					<height>318</height>
+					<width>340</width>
+					<texture>ListItem.Thumb.bg2.png</texture>					
+					<visible>[Control.IsVisible(50) | Control.IsVisible(51)]</visible>
+					<aspectratio align="bottom">keep</aspectratio>
+				</control>
 				<control type="image" id="999">
 					<description>list item icon</description>
 					<posx>540</posx>
@@ -69,7 +79,7 @@
 					<bordersize>18</bordersize>
 					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 					<aspectratio align="bottom">keep</aspectratio>
-				</control>
+				</control>				
 				<control type="image" id="999">
 					<description>list item icon</description>
 					<posx>540</posx>

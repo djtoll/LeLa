@@ -717,9 +717,9 @@
 		<control type="list" id="50">
 			<viewtype label="535">List</viewtype>
 			<posx>30</posx>
-			<posy>245</posy>
+			<posy>254</posy>
 			<width>660</width>
-			<height>280</height>
+			<height>270</height>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<onup>50</onup>
@@ -800,7 +800,10 @@
 					<info>ListItem.Duration</info>
 				</control>
 				
-			</focusedlayout>		
+			</focusedlayout>
+
+			
+		
 		</control>
 	</include>
 				

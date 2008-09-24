@@ -217,6 +217,7 @@
 		<aspect>1.1</aspect>
 	</font>
 	
+	
 	<font>
 		<name>h4</name>
 		<filename>DejaVuSans.ttf</filename>
@@ -228,6 +229,14 @@
 		<name>no-img</name>
 		<filename>DroidSans.ttf</filename>
 		<size>40</size>
+		<aspect>1.1</aspect>
+	</font>
+	
+	<font>
+		<name>partymodus</name>
+		<filename>DroidSans.ttf</filename>
+		<size>28</size>
+		<shadow>ff000000</shadow>
 		<aspect>1.1</aspect>
 	</font>
 	
@@ -268,12 +277,25 @@
 		<size>24</size>
 		<aspect>1.1</aspect>
 	</font>
+	<font>
+		<name>h1Dlela</name>
+		<filename>DroidSans-Bold.ttf</filename>
+		<shadow>FF000000</shadow>	
+		<size>32</size>
+		<aspect>1.1</aspect>
+	</font>
 
 	<font>
 		<name>h2D</name>
 		<filename>DroidSans.ttf</filename>
 		<size>20</size>
 		<aspect>1.1</aspect>
+	</font>
+	<font>
+		<name>h2Dlela</name>
+		<filename>DroidSans.ttf</filename>
+		<size>28</size>
+		<aspect>1.2</aspect>
 	</font>
 	
 	<font>
@@ -282,11 +304,22 @@
 		<size>22</size>
 		<aspect>1.1</aspect>
 	</font>
+	<font>
+		<name>h3Dlela</name>
+		<filename>DroidSans.ttf</filename>
+		<size>30</size>
+		<aspect>1.1</aspect>
+	</font>
 	
 	<font>
 		<name>h4D</name>
 		<filename>DroidSans.ttf</filename>
 		<size>20</size>
+	</font>
+	<font>
+		<name>h4Dlela</name>
+		<filename>DroidSans.ttf</filename>
+		<size>28</size>
 	</font>
 	
 	<font>

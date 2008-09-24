@@ -433,7 +433,7 @@
 			<animation effect="fade" time="200000">VisibleChange</animation>
 			<include>zoom</include>
 			<align>left</align>
-			<font>cali36</font>
+			<font>mach7</font>
 		</control>
 		<control>
 			<description>Volume Label</description>

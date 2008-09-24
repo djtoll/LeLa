@@ -229,6 +229,13 @@
 		<size>40</size>
 		<aspect>1.1</aspect>
 	</font>
+	<font>
+		<name>partymodus</name>
+		<filename>DroidSans.ttf</filename>
+		<size>28</size>
+		<shadow>ff000000</shadow>
+		<aspect>1.1</aspect>
+	</font>
 	
 	<!---
 	<font>

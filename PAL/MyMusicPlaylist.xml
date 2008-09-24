@@ -15,9 +15,47 @@
 			<align>center</align>
 			<label>10517</label>
 			<font>page</font>
+			<visible>!MusicPartyMode.Enabled</visible>
 		</control>
+		<control type="label">
+			<description>description label</description>
+			<include>home-menubar</include>
+			<posx>530</posx>
+			<posy>1</posy>
+			<width>400</width>
+			<align>right</align>
+			<label>10517</label>
+			<font>page</font>
+			<visible>MusicPartyMode.Enabled</visible>
+		</control>
+		<control type="label">
+			<description>PartyMode Enabled</description>			
+			<width>752</width>
+			<posx>-100</posx>
+			<posy>1</posy>
+			<label>589</label>			
+			<align>center</align>
+			<font>page</font>
+			<textcolor>ffcd5c5c</textcolor>
+			<visible>MusicPartyMode.Enabled</visible>
+			<include>home-menubar</include>			
+		</control>
+		
 	
 	<include>LibraryPlaylistMenu</include>
+	
+	<!-- <control type="label">
+				<posx>32</posx>
+				<posy>534</posy>
+				<width>260</width>
+				<label>$INFO[ListItem.size]</label>
+				<scroll>true</scroll>
+				<font>mach5</font>
+				<textcolor>ffcd5c5c</textcolor>
+				<align>left</align>				
+				<visible>Control.IsVisible(50) + Skin.HasSetting(overlay)</visible>				
+				<include>fadeinout</include>
+			</control> -->
 	
 	<control type="group">		
 		<include>viewsmenu</include>
