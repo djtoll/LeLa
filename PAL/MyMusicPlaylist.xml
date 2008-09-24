@@ -10,7 +10,7 @@
 			<description>description label</description>
 			<include>home-menubar</include>
 			<posx>0</posx>
-			<posy>5</posy>
+			<posy>1</posy>
 			<width>752</width>
 			<align>center</align>
 			<label>10517</label>

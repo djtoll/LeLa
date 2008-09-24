@@ -11,7 +11,7 @@
 			<description>description label</description>
 			<include>home-menubar</include>
 			<posx>0</posx>
-			<posy>5</posy>
+			<posy>0</posy>
 			<width>720</width>
 			<align>center</align>
 			<info>System.CurrentWindow</info>
@@ -26,31 +26,40 @@
 				<description>separator</description>
 				<posx>360</posx>
 				<posy>65</posy>
-				<width>1</width>
+				<width>2</width>
 				<height>390</height>
 				<texture>separator-vert.png</texture>
 				<aspectratio align="bottom">stretch</aspectratio>
 				<include>fadeinout</include>
 			</control>
 			
-			<control type="label" id="101">
+			<control type="fadelabel" id="101">
 				<description>current Directory text label left</description>
 				<align>left</align>
 				<posx>30</posx>
-				<posy>65</posy>
+				<posy>56</posy>
 				<width>270</width>
-				<font>h2b</font>
+				<font>cali36aspect</font>
 				<label>-</label>
 				<textcolor>sublabel-text</textcolor>
 				<include>fadeinout</include>
 			</control>
 			<control type="label" id="12">
 				<description>number of files in left list text label</description>
-				<posx>40</posx>
+				<posx>55</posx>
 				<posy>460</posy>
 				<label>-</label>
-				<font>h4</font>
-				<textcolor>sublabel-text</textcolor>
+				<font>mach5</font>
+				<textcolor>FF777777</textcolor>
+				<include>fadeinout</include>
+			</control>
+			<control type="label" id="13">
+				<description>number of files in right list text label</description>
+				<posx>401</posx>
+				<posy>460</posy>
+				<label>-</label>
+				<font>mach5</font>
+				<textcolor>FF777777</textcolor>
 				<include>fadeinout</include>
 			</control>
 			
@@ -58,21 +67,13 @@
 				<description>current Directory text label right</description>
 				<align>left</align>
 				<posx>376</posx>
-				<posy>65</posy>
+				<posy>56</posy>
 				<width>270</width>
-				<font>h2b</font>
+				<font>cali36aspect</font>
 				<textcolor>sublabel-text</textcolor>
 				<include>fadeinout</include>
 			</control>
-			<control type="label" id="13">
-				<description>number of files in right list text label</description>
-				<posx>386</posx>
-				<posy>460</posy>
-				<label>-</label>
-				<font>h4</font>
-				<textcolor>sublabel-text</textcolor>
-				<include>fadeinout</include>
-			</control>
+			
 			
 			<control type="list" id="20">
 				<posx>30</posx>
@@ -83,7 +84,7 @@
 				<onright>21</onright>
 				<onup>20</onup>
 				<ondown>20</ondown>
-				<scrolltime>1</scrolltime>
+				<scrolltime>260</scrolltime>
 				<animation effect="fade" start="100" end="60" time="200" condition="Control.HasFocus(21)">Conditional</animation>
 				<include>pageslideleft</include>
 				
@@ -101,7 +102,7 @@
 						<posy>-1</posy>
 						<width>290</width>
 						<height>35</height>
-						<font>menu</font>
+						<font>cali38aspect</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>button-text</textcolor>
@@ -114,7 +115,7 @@
 						<width>100</width>
 						<height>35</height>
 						<aligny>center</aligny>
-						<font>menu</font>
+						<font>cali36aspect</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>sublabel-text</textcolor>
@@ -149,7 +150,7 @@
 						<posy>-1</posy>
 						<width>290</width>
 						<height>35</height>
-						<font>menu</font>
+						<font>cali38aspect</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>button-text</textcolor>
@@ -161,7 +162,7 @@
 						<posy>-1</posy>
 						<width>100</width>
 						<height>35</height>
-						<font>menu</font>
+						<font>cali36aspect</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>sublabel-text</textcolor>
@@ -180,7 +181,7 @@
 				<onright>20</onright>
 				<onup>21</onup>
 				<ondown>21</ondown>
-				<scrolltime>1</scrolltime>
+				<scrolltime>260</scrolltime>
 				<include>pageslideright</include>
 				<animation effect="fade" start="100" end="60" time="200" condition="Control.HasFocus(20)">Conditional</animation>
 				
@@ -198,7 +199,7 @@
 						<posy>-1</posy>
 						<width>290</width>
 						<height>35</height>
-						<font>menu</font>
+						<font>cali38aspect</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>button-text</textcolor>
@@ -211,7 +212,7 @@
 						<width>100</width>
 						<height>35</height>
 						<aligny>center</aligny>
-						<font>menu</font>
+						<font>cali36aspect</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>sublabel-text</textcolor>
@@ -245,7 +246,7 @@
 						<posy>-1</posy>
 						<width>290</width>
 						<height>35</height>
-						<font>menu</font>
+						<font>cali38aspect</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>button-text</textcolor>
@@ -257,7 +258,7 @@
 						<posy>-1</posy>
 						<width>100</width>
 						<height>35</height>
-						<font>menu</font>
+						<font>cali36aspect</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>sublabel-text</textcolor>
@@ -274,50 +275,50 @@
 				<posy>505</posy>
 				
 				<control type="label">
-					<posx>0</posx>
+					<posx>-10</posx>
 					<posy>0</posy>
 					<width>142</width>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>$INFO[System.Freespace(C)]</label>
 					<textcolor>sublabel-text</textcolor>
-					<font>h4</font>
+					<font>cali36aspect</font>
 					<align>left</align>
 					<textoffsetx>5</textoffsetx>
 				</control>
 				<control type="label">
-					<posx>150</posx>
+					<posx>160</posx>
 					<posy>0</posy>
 					<width>142</width>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>$INFO[System.Freespace(E)]</label>
 					<textcolor>sublabel-text</textcolor>
-					<font>h4</font>
+					<font>cali36aspect</font>
 					<align>left</align>
 					<textoffsetx>5</textoffsetx>
 				</control>
 				<control type="label">
-					<posx>300</posx>
+					<posx>330</posx>
 					<posy>0</posy>
 					<width>142</width>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>$INFO[System.Freespace(F)]</label>
 					<textcolor>sublabel-text</textcolor>
-					<font>h4</font>
+					<font>cali36aspect</font>
 					<align>left</align>
 					<textoffsetx>5</textoffsetx>
 				</control>
 				<control type="label">
-					<posx>450</posx>
+					<posx>520</posx>
 					<posy>0</posy>
 					<width>142</width>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>$INFO[System.Freespace(G)]</label>
 					<textcolor>sublabel-text</textcolor>
-					<font>h4</font>
+					<font>cali36aspect</font>
 					<align>left</align>
 					<textoffsetx>5</textoffsetx>
 				</control>

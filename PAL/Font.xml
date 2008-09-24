@@ -52,6 +52,7 @@
 		<shadow>ff000000</shadow>
 		<aspect>0.98</aspect>
 	</font>
+	
   	
   	<!--
   	<font>
@@ -73,6 +74,13 @@
       <name>rsslela</name>
       <filename>TitleCaps.ttf</filename>
       <size>21</size>
+    </font>
+	<font>
+      <name>mach5</name>
+      <filename>TitleCaps.ttf</filename>
+	  <shadow>ff000000</shadow>
+      <size>24</size>
+	  <aspect>1.2</aspect>
     </font>
 	<font>
       <name>mach7</name>
@@ -148,11 +156,25 @@
 		<aspect>1.4</aspect>
 	</font>
 	<font>
+		<name>cali36aspect</name>
+		<filename>DroidSans.ttf</filename>
+		<size>26</size>
+		<shadow>ff000000</shadow>
+		<aspect>0.91</aspect>
+	</font>
+	<font>
 		<name>cali38</name>
 		<filename>DroidSans.ttf</filename>
 		<size>30</size>
 		<shadow>ff000000</shadow>
 		<aspect>1.1</aspect>
+	</font>
+	<font>
+		<name>cali38aspect</name>
+		<filename>DroidSans.ttf</filename>
+		<size>30</size>
+		<shadow>ff000000</shadow>
+		<aspect>0.88</aspect>
 	</font>
 	
 	<font>
