@@ -61,7 +61,24 @@
 				<visible>LastFM.RadioPlaying</visible>
 			</control>
 
-
+			<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posx>0</posx>
+				<posy>148</posy>
+				<width>270</width>
+				<height>37</height>
+					<font>cali38</font>
+					<label>100</label>		
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>31</onup>
+					<ondown>20</ondown>
+					<textcolor>button-text</textcolor>
+					<aligny>center</aligny>
+					<textoffsetx>10</textoffsetx>
+				</control>
 
 
 
@@ -82,7 +99,7 @@
 				<texturenofocus border="2">list-nofocus.png</texturenofocus>
 				<onleft>50</onleft>
 				<onright>50</onright>
-				<onup>31</onup>
+				<onup>2</onup>
 				<ondown>26</ondown>
 				<textcolor>button-text</textcolor>
 			</control>
@@ -194,7 +211,7 @@
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>30</onup>
-				<ondown>20</ondown>
+				<ondown>2</ondown>
 				<font>cali38</font>
 				<aligny>center</aligny>	
 				<texturefocus border="2">list-focus.png</texturefocus>

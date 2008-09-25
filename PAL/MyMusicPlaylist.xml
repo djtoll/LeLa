@@ -44,7 +44,18 @@
 	
 	<include>LibraryPlaylistMenu</include>
 	
-	<!-- <control type="label">
+	
+	
+	<control type="group">		
+		<include>viewsmenu</include>
+		<include>viewsmenucontext</include>
+		<include>PageControl</include>
+		<include>pageslide</include>
+		<include>PlaylistView</include>
+		<include>PictureSlide</include>
+		<include>BigIcons</include>
+		
+		<control type="label">
 				<posx>32</posx>
 				<posy>534</posy>
 				<width>260</width>
@@ -55,14 +66,7 @@
 				<align>left</align>				
 				<visible>Control.IsVisible(50) + Skin.HasSetting(overlay)</visible>				
 				<include>fadeinout</include>
-			</control> -->
-	
-	<control type="group">		
-		<include>viewsmenu</include>
-		<include>viewsmenucontext</include>
-		<include>PageControl</include>
-		<include>pageslide</include>
-		<include>PlaylistView</include>
+			</control>
 
 		<control type="image">
 			<posx>30</posx>
