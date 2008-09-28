@@ -52,21 +52,10 @@
 		<include>PageControl</include>
 		<include>pageslide</include>
 		<include>PlaylistView</include>
-		<include>PictureSlide</include>
+		<include>PlaylistSlide</include>
 		<include>BigIcons</include>
 		
-		<control type="label">
-				<posx>32</posx>
-				<posy>534</posy>
-				<width>260</width>
-				<label>$INFO[ListItem.size]</label>
-				<scroll>true</scroll>
-				<font>mach5</font>
-				<textcolor>ffcd5c5c</textcolor>
-				<align>left</align>				
-				<visible>Control.IsVisible(50) + Skin.HasSetting(overlay)</visible>				
-				<include>fadeinout</include>
-			</control>
+		
 
 		<control type="image">
 			<posx>30</posx>
@@ -115,8 +104,79 @@
 			<visible>!Player.HasAudio</visible>
 			<include>fadereplace</include>
 		</control>
+		
+		<control type="group">
+				<posx>-539</posx>
+				<posy>14</posy>
+				<visible>Control.IsVisible(50)</visible>
+				<visible allowhiddenfocus="true">![Control.IsVisible(50) + System.IdleTime(3)]</visible>
+				 <include>pageslide</include>				
+				<control type="image">
+					<description>list item icon background2</description>
+					<posx>458</posx>
+					<posy>-20</posy>
+					<height>318</height>
+					<width>340</width>
+					<texture>ListItem.Thumb.bg2.png</texture>					
+					<visible>!IsEmpty(ListItem.Thumb) + [Control.IsVisible(50)]</visible>
+					<aspectratio align="bottom">keep</aspectratio>
+				</control>
+				<control type="image" id="999">
+					<description>list item icon</description>
+					<posx>540</posx>
+					<posy>48</posy>
+					<height>180</height>
+					<width>180</width>
+					<info>ListItem.Icon</info>
+					<bordertexture border="2">itbg.png</bordertexture>
+					<bordersize>18</bordersize>
+					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50)]</visible>
+					<aspectratio align="bottom">keep</aspectratio>
+				</control>				
+				<control type="image" id="999">
+					<description>list item icon</description>
+					<posx>540</posx>
+					<posy>218</posy>
+					<height>180</height>
+					<width>180</width>
+					<info>ListItem.Icon</info>
+					<bordertexture border="2">itbgdiff.png</bordertexture>
+					<bordersize>18</bordersize>
+					<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50)]</visible>
+					<texture flipy="true" diffuse="fade2.png">-</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>list item thumb</description>
+					<posx>540</posx>
+					<posy>48</posy>
+					<height>180</height>
+					<width>180</width>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">itbg.png</bordertexture>
+					<bordersize>18</bordersize>
+					<aspectratio align="bottom">keep</aspectratio>
+					<visible>Control.IsVisible(50)</visible>
+				</control>
+				<control type="image">
+					<description>list item thumb</description>
+					<posx>540</posx>
+					<posy>218</posy>
+					<height>180</height>
+					<width>180</width>
+					<info>ListItem.Thumb</info>
+					<bordertexture border="2">itbgdiff.png</bordertexture>
+					<bordersize>18</bordersize>
+					<texture flipy="true" diffuse="fade2.png">-</texture>
+					<aspectratio align="bottom">keep</aspectratio>
+					<visible>Control.IsVisible(50)</visible>
+				</control>				
+			</control>
+		
+		
+		
 	
-		<control type="label">
+		<control type="fadelabel">
 			<description>title</description>
 			<posx>188</posx>
 			<posy>57</posy>
@@ -126,9 +186,11 @@
 			<info>MusicPlayer.Title</info>
 			<textcolor>label-text</textcolor>
 			<visible>Player.HasAudio</visible>
+			<scrollout>no</scrollout>
+			<pauseatend>3000</pauseatend>
 		</control>
 	
-		<control type="label">
+		<control type="fadelabel">
 			<description>artist</description>
 			<posx>188</posx>
 			<posy>105</posy>
@@ -138,9 +200,11 @@
 			<info>MusicPlayer.Artist</info>
 			<textcolor>sublabel-text</textcolor>
 			<visible>Player.HasAudio</visible>
+			<scrollout>no</scrollout>
+			<pauseatend>3000</pauseatend>
 		</control>
 	
-		<control type="label">
+		<control type="fadelabel">
 			<description>album</description>
 			<posx>188</posx>
 			<posy>146</posy>
@@ -150,6 +214,8 @@
 			<info>MusicPlayer.Album</info>
 			<textcolor>sublabel-text</textcolor>
 			<visible>Player.HasAudio</visible>
+			<scrollout>no</scrollout>
+			<pauseatend>3000</pauseatend>
 		</control>
 	
 		<control type="label">
@@ -200,15 +266,15 @@
 			<overlaytexture>-</overlaytexture>
 			<visible>Player.HasAudio</visible>
 		</control>
-
-	</control>
+	</control>	
+	
 	<control type="label">
 			<description>no files in the playlist</description>
-			<posx>178</posx>
+			<posx>168</posx>
 			<posy>140</posy>
 			<align>left</align>
 			<font>cali38</font>
-			<label>sorry, no Files in the Playlist !</label>
+			<label>sorry, no Files in the Playlist are Playing!</label>
 			<visible>!Player.HasAudio</visible>			
 		</control>
 		
@@ -234,6 +300,19 @@
 		<include>fadeinout</include>						
 		<visible>Player.HasAudio + Skin.HasSetting(ASStatusEnable) + ![Window.IsActive(114) | Window.IsActive(107)]</visible>
 	</control>
+	
+	<!-- <control type="label">
+				<posx>32</posx>
+				<posy>534</posy>
+				<width>260</width>
+				<label>$INFO[ListItem.size]</label>
+				<scroll>true</scroll>
+				<font>mach5</font>
+				<textcolor>ffcd5c5c</textcolor>
+				<align>left</align>				
+				<visible>Control.IsVisible(50) + Skin.HasSetting(overlay)</visible>				
+				<include>fadeinout</include>
+			</control> -->
 
 
 	</controls>

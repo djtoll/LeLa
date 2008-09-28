@@ -341,9 +341,11 @@
 					<font>cali34aspect</font>
 					<textcolor>sublabel-text</textcolor>
 					<label>15311</label>
+					<textoffsety>-2</textoffsety>
 					<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
 					<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>
 					<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+					
 				</control>
 			</control>
 			
@@ -413,6 +415,7 @@
 					<height>38</height>
 					<font>cali34aspect</font>
 					<label>$LOCALIZE[31038]</label>
+					<textoffsety>-2</textoffsety>
 					<onclick>xbmc.activatewindow(51)</onclick>
 					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
 				</control>
@@ -437,6 +440,7 @@
 					<texturefocus>list-focus.png</texturefocus>
 					<texturenofocus>list-nofocus.png</texturenofocus>
 					<label>1030</label>
+					<textoffsety>-2</textoffsety>
 					<label2>[COLOR=sublabel-text]$INFO[Skin.String(genericBackground)][/COLOR]</label2>
 					<onclick>Skin.SetImage(genericBackground)</onclick>
 					<textoffsety>2</textoffsety>

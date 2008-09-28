@@ -2,6 +2,7 @@
 	<!--<include file="CommonViewTypes.xml">-</include>-->
 	<include file="ViewsCommon.xml">-</include>
 	<include file="ViewsMusic.xml">-</include>
+	<include file="ViewsMusicPlaylist.xml">-</include>
 	<include file="ViewsVideo.xml">-</include>
 	<include file="ViewsPictures.xml">-</include>
 	<include file="Defaults.xml">-</include>
