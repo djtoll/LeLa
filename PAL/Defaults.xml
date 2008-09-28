@@ -54,7 +54,7 @@
 		<disabledcolor>disabled-text</disabledcolor>
 		<selectedcolor>listselectedtext</selectedcolor>
 		<textoffsetx>10</textoffsetx>
-		<textoffsety>4</textoffsety>
+		<textoffsety>-2</textoffsety>
 		<aligny>-</aligny>
 	</default>
 

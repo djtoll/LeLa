@@ -177,6 +177,13 @@
 		<aspect>0.88</aspect>
 	</font>
 	<font>
+		<name>cali34aspect</name>
+		<filename>DroidSans.ttf</filename>
+		<size>34</size>
+		<shadow>ff000000</shadow>
+		<aspect>0.88</aspect>
+	</font>
+	<font>
 		<name>Button</name>
 		<filename>DroidSans.ttf</filename>
 		<size>24</size>
