@@ -37,7 +37,7 @@
 		</control>
 		
 		<control type="group" id="9001">
-			<posx>40</posx>
+			<posx>12</posx>
 			<posy>80</posy>
 			<include>pageslide</include>
 	

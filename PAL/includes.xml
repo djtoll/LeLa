@@ -156,7 +156,7 @@
 	<include name="categoryButton">
 		<height>34</height>
 		<width>150</width>
-		<font>menu</font>
+		<font>cali38aspect</font>
 		<textcolor>button-text</textcolor>
 		<align>left</align>
 		<textoffsety>3</textoffsety>
