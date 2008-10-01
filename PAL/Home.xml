@@ -155,7 +155,7 @@
 		<texturenofocus>button-cd-nofocus.png</texturenofocus>
 		<texturefocus>button-cd-focus.png</texturefocus>
 		<onclick>XBMC.PlayDVD</onclick>
-		<!-- <visible>System.HasMediadvd</visible> -->
+		<visible>System.HasMediadvd</visible>
 		<onleft>5</onleft>
 		<onright>6</onright>
 		<include>home-menubar</include>
@@ -170,8 +170,8 @@
 	<control type="image">
 		<posx>600</posx>
 		<posy>10</posy>
-		<width>24</width>
-		<height>24</height>
+		<width>30</width>
+		<height>30</height>
 		<texture>muteicon.png</texture>
 		<visible>Player.Muted</visible>
 		<include>home-menubar</include>
