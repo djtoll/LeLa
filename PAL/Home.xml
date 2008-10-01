@@ -148,20 +148,24 @@
 	</control>
 
 	<control type="button" id="7">
-		<posx>645</posx>
-		<posy>11</posy>
-		<width>22</width>
-		<height>22</height>
-		<texturenofocus>disc-nofocus.png</texturenofocus>
-		<texturefocus>disc-focus.png</texturefocus>
+		<posx>637</posx>
+		<posy>66</posy>
+		<width>32</width>
+		<height>42</height>
+		<texturenofocus>button-cd-nofocus.png</texturenofocus>
+		<texturefocus>button-cd-focus.png</texturefocus>
 		<onclick>XBMC.PlayDVD</onclick>
-		<visible>System.HasMediadvd</visible>
+		<!-- <visible>System.HasMediadvd</visible> -->
 		<onleft>5</onleft>
 		<onright>6</onright>
 		<include>home-menubar</include>
 		<include>home-menubar-startup</include>
 		<include>fadeinout</include>
 	</control>
+	
+	
+	
+
 	
 	<control type="image">
 		<posx>600</posx>
