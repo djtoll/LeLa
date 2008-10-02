@@ -89,6 +89,13 @@
 	  <shadow>ff000000</shadow>
 	  <aspect>1.4</aspect>
     </font>
+	<font>
+      <name>mach9</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>34</size>
+	  <shadow>ff000000</shadow>
+	  <aspect>1.4</aspect>
+    </font>
   	
 <!--- PAGE --------------------------------->
   	

@@ -250,6 +250,7 @@
 
 	<control type="group">
 		<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+		<visible effect="fade" time="800">!Player.HasAudio | ![Player.HasAudio + System.IdleTime(3)]</visible>
 		<animation effect="fade" time="200">VisibleChange</animation>
 		<include>fadeinout</include>
 		<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="-1.3" delay="0" >WindowClose</animation>>
@@ -274,7 +275,7 @@
 			<posx>223</posx>
 			<posy>4</posy>
 			<height>105</height>
-			<width>89</width>
+			<width>76</width>
 			<texture>black.png</texture>
 			<aspectratio align="left">stretch</aspectratio>
 			<visible>Player.Paused</visible>
@@ -286,7 +287,7 @@
 			<posx>223</posx>
 			<posy>4</posy>
 			<height>105</height>
-			<width>89</width>
+			<width>76</width>
 			<texture>osd-pause.png</texture>
 			<aspectratio align="left">stretch</aspectratio>
 			<visible>Player.Paused</visible>
@@ -333,7 +334,7 @@
 		<control type="label" id="200">
 			<include>home-start</include>
 			<posx>205</posx>
-			<posy>55</posy>
+			<posy>59</posy>
 			<width>315</width>
 			<label>$INFO[MusicPlayer.Album]</label>
 			<textcolor>sublabel-text</textcolor>
@@ -346,7 +347,7 @@
 		<control type="label" id="200">
 			<include>home-start</include>
 			<posx>205</posx>
-			<posy>86</posy>
+			<posy>87</posy>
 			<width>315</width>
 			<label>[B]$INFO[musicplayer.Time][COLOR=sublabel-text]$INFO[musicplayer.Duration, / ][/COLOR][/B]</label>
 			<textcolor>label-text</textcolor>
@@ -365,6 +366,164 @@
 			<textcolor>sublabel-text</textcolor>
 			<align>right</align>
 			<font>h4</font>
+			<include>fadeinout</include>
+			<visible>LastFM.RadioPlaying</visible>
+		</control>			
+									
+	</control>
+	
+	
+	
+	<!--- MUSIC INFO - IDLE TIME-------------------------------->
+
+	<control type="group">
+		<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+		<visible>System.IdleTime(3)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+		<include>fadeinout</include>
+		<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="-1.3" delay="0" >WindowClose</animation>>
+		<include>home-start</include>
+		<posx>330</posx>
+		<posy>120</posy>
+		
+		 <control type="label" id="200">
+			<!-- <include>home-start</include> -->
+			<posx>337</posx>
+			<posy>211</posy>
+			<width>200</width>
+			<label>$INFO[MusicPlayer.Year]</label>
+			<textcolor>sublabel-text</textcolor>
+			<align>right</align>
+			<font>mach9</font>
+			<include>fadeinout</include>
+			<visible>Player.HasAudio</visible>
+		</control>
+
+		<control type="image">
+			<posx>180</posx>
+			<posy>-58</posy>
+			<height>320</height>
+			<width>320</width>
+			<texture>ListItem.Thumb.bg2.png</texture>			
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Player.HasAudio</visible>
+			<include>fadeinout</include>
+		</control>
+									
+		<control type="image">
+			<posx>220</posx>
+			<posy>0</posy>
+			<height>200</height>
+			<width>200</width>
+			<info>MusicPlayer.Cover</info>
+			<bordertexture border="2">list-focus.png</bordertexture>
+			<bordersize>4</bordersize>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Player.HasAudio</visible>
+			<include>fadeinout</include>
+		</control> 
+		
+		
+		<!-- <control type="image">
+			<posx>223</posx>
+			<posy>4</posy>
+			<height>190</height>
+			<width>76</width>
+			<texture>black.png</texture>
+			<aspectratio align="left">stretch</aspectratio>
+			<visible>Player.Paused</visible>
+			<animation effect="fade" start="0" end="100" time="150">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+		</control>
+		
+		<control type="image">
+			<posx>223</posx>
+			<posy>4</posy>
+			<height>105</height>
+			<width>76</width>
+			<texture>osd-pause.png</texture>
+			<aspectratio align="left">stretch</aspectratio>
+			<visible>Player.Paused</visible>
+			<include>fadeinout</include>
+			<animation effect="fade" start="0" end="100" time="75">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="75">Hidden</animation>
+		</control> -->
+
+		
+		
+		<control type="label" id="200">
+			<posx>205</posx>
+			<posy>-4</posy>
+			<width>500</width>
+			<label>[B]$INFO[MusicPlayer.Title][/B]</label>
+			<textcolor>label-text</textcolor>
+			<align>right</align>
+			<font>menu</font>
+			<include>fadeinout</include>
+			<visible>Player.HasAudio</visible>
+		</control>	
+						
+		<control type="label" id="200">
+			<posx>205</posx>
+			<posy>58</posy>
+			<width>500</width>
+			<label>$INFO[MusicPlayer.Artist]</label>
+			<textcolor>sublabel-text</textcolor>
+			<align>right</align>
+			<font>mach9</font>
+			<include>fadeinout</include>
+			<visible>Player.HasAudio</visible>
+			
+		</control>	
+		
+		<control type="label" id="200">
+			<!-- <include>home-start</include> -->
+			<posx>205</posx>
+			<posy>108</posy>
+			<width>500</width>
+			<label>$INFO[MusicPlayer.Album]</label>
+			<textcolor>sublabel-text</textcolor>
+			<align>right</align>
+			<font>menu</font>
+			<include>fadeinout</include>
+			<visible>Player.HasAudio</visible>
+		</control>
+
+		<control type="label" id="200">
+			<!-- <include>home-start</include> -->
+			<posx>205</posx>
+			<posy>168</posy>
+			<width>500</width>
+			<label>[B]$INFO[musicplayer.Time][COLOR=sublabel-text]$INFO[musicplayer.Duration, / ][/COLOR][/B]</label>
+			<textcolor>label-text</textcolor>
+			<align>right</align>
+			<font>cali36</font>
+			<include>fadeinout</include>
+			<visible>!LastFM.RadioPlaying + Player.HasAudio</visible>
+		</control>	
+
+			<control type="image">
+			<posx>174</posx>
+			<posy>263</posy>
+			<width>44</width>
+			<height>44</height>
+			<texture>lastfm.png</texture>
+			<bordertexture border="2">ListItem.Thumb.bg2.png</bordertexture>
+			<bordersize>6</bordersize>			
+			<aspectratio align="left">keep</aspectratio>
+			<include>fadeinout</include>
+			<visible>LastFM.RadioPlaying</visible>
+		</control>
+		
+		<control type="label" id="200">
+			<!-- <include>home-start</include> -->
+			<posx>212</posx>
+			<posy>268</posy>
+			<width>400</width>
+			<label>LastFM Radio</label>
+			<textcolor>sublabel-text</textcolor>
+			<align>left</align>
+			<font>cali36</font>
 			<include>fadeinout</include>
 			<visible>LastFM.RadioPlaying</visible>
 		</control>			

@@ -85,11 +85,11 @@
 		</control>
 		<control type="label">
 			<posx>0</posx>
-			<posy>5</posy>
+			<posy>12</posy>
 			<width>72</width>
 			<height>72</height>
 			<info>ListItem.SortLetter</info>
-			<font>scroller</font>
+			<font>mach9</font>
 			<align>center</align>
 		</control>
 	</include>
