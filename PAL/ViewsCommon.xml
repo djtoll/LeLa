@@ -332,7 +332,7 @@
 			<posx>375</posx>
 			<posy>67</posy>
 			<height>455</height>
-			<width>8</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -350,7 +350,7 @@
 			<posx>693</posx>
 			<posy>75</posy>
 			<height>452</height>
-			<width>8</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -370,7 +370,7 @@
 			<posx>693</posx>
 			<posy>74</posy>
 			<height>454</height>
-			<width>8</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -390,7 +390,7 @@
 			<posx>430</posx>
 			<posy>67</posy>
 			<height>453</height>
-			<width>8</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -408,7 +408,7 @@
 			<posx>693</posx>
 			<posy>71</posy>
 			<height>440</height>
-			<width>8</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -425,7 +425,7 @@
 			<posx>693</posx>
 			<posy>95</posy>
 			<height>395</height>
-			<width>8</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -443,7 +443,7 @@
 			<posx>693</posx>
 			<posy>74</posy>
 			<height>365</height>
-			<width>8</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>

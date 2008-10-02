@@ -3292,7 +3292,7 @@
 			<posx>405</posx>
 			<posy>67</posy>
 			<height>453</height>
-			<width>12</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -3309,7 +3309,7 @@
 			<posx>693</posx>
 			<posy>66</posy>
 			<height>450</height>
-			<width>12</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -3326,7 +3326,7 @@
 			<posx>693</posx>
 			<posy>67</posy>
 			<height>243</height>
-			<width>12</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -3343,7 +3343,7 @@
 			<posx>693</posx>
 			<posy>71</posy>
 			<height>440</height>
-			<width>12</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
@@ -3359,7 +3359,7 @@
 			<posx>693</posx>
 			<posy>80</posy>
 			<height>440</height>
-			<width>12</width>
+			<width>18</width>
 			<texturesliderbackground border="4">list-nofocus.png</texturesliderbackground>
 			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
 			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
