@@ -96,6 +96,14 @@
 	  <shadow>ff000000</shadow>
 	  <aspect>1.4</aspect>
     </font>
+	<font>
+      <name>lastfm</name>
+      <filename>papyrus.ttf</filename>
+      <size>23</size>
+	  <style>bold</style>
+	  <shadow>ff000000</shadow>
+	  <aspect>1.1</aspect>
+    </font>
   	
 <!--- PAGE --------------------------------->
   	
