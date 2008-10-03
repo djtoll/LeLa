@@ -248,9 +248,15 @@
 										
 <!--- MUSIC INFO --------------------------------->
 
-	<control type="group">
+	<control type="group" id="1421">
 		<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
-		<visible effect="fade" time="800">!Player.HasAudio | ![Player.HasAudio + System.IdleTime(3)]</visible>
+		<!-- <visible allowhiddenfocus="true">Control.HasFocus(8000) + System.IdleTime(3)</visible> -->
+		<visible effect="fade" time="400">!Player.HasAudio | ![Player.HasAudio + System.IdleTime(3)]</visible>
+		<visible effect="fade" time="400">!Player.HasAudio | ![Player.HasAudio + Control.HasFocus(1422) + System.IdleTime(3)]</visible>
+
+
+		
+		
 		<animation effect="fade" time="200">VisibleChange</animation>
 		<include>fadeinout</include>
 		<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="-1.3" delay="0" >WindowClose</animation>>
@@ -376,8 +382,16 @@
 	
 	<!--- MUSIC INFO - IDLE TIME-------------------------------->
 
-	<control type="group">
+	<control type="group" id="1422">
 		<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+		<visible allowhiddenfocus="true">!Control.HasFocus(500)</visible>
+		<visible allowhiddenfocus="true">!Control.HasFocus(700)</visible>
+		<visible allowhiddenfocus="true">!Control.HasFocus(600)</visible>
+		<visible allowhiddenfocus="true">!Control.HasFocus(800)</visible>
+		<visible allowhiddenfocus="true">!Control.HasFocus(6000)</visible>
+		<visible allowhiddenfocus="true">!Control.HasFocus(1000)</visible>
+		<visible allowhiddenfocus="true">!Control.HasFocus(8000)</visible>
+		
 		<visible>System.IdleTime(3)</visible>
 		<animation effect="fade" time="200">VisibleChange</animation>
 		<include>fadeinout</include>
