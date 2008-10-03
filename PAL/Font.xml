@@ -156,6 +156,13 @@
 		<aspect>1.1</aspect>
 	</font>
 	<font>
+		<name>menutemperatur</name>
+		<filename>DroidSans.ttf</filename>
+		<size>52</size>
+		<shadow>ff000000</shadow>
+		<aspect>1.1</aspect>
+	</font>
+	<font>
 		<name>menu34</name>
 		<filename>FrancophilSans.ttf</filename>
 		<size>34</size>

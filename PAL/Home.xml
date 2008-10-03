@@ -198,11 +198,11 @@
 				<description>Time Label</description>
 				<include>home-start</include>
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>-78</posy>
 				<width>315</width>
 				<label>$INFO[System.Time]</label>
 				<textcolor>label-text</textcolor>
-				<font>h1</font>
+				<font>menu</font>
 				<include>fadeinout</include>
 				<visible>!Skin.HasSetting(homepageDateTime)</visible>
 			</control>
@@ -210,20 +210,20 @@
 				<description>Date Label</description>
 				<include>home-start</include>
 				<posx>0</posx>
-				<posy>25</posy>
+				<posy>-28</posy>
 				<width>315</width>
 				<label>$INFO[System.Date]</label>
 				<textcolor>sublabel-text</textcolor>
-				<font>h4</font>
+				<font>cali36aspect</font>
 				<include>fadeinout</include>
 				<visible>!Skin.HasSetting(homepageDateTime)</visible>
 			</control>
 			
 			<control type="image" id="700">
 				<posx>2</posx>
-				<posy>53</posy>
-				<width>34</width>
-				<height>34</height>
+				<posy>4</posy>
+				<width>100</width>
+				<height>100</height>
 				<aspectratio align="left">keep</aspectratio>
 				<info>Weather.Conditions</info>
 				<visible>Weather.IsFetched + !Skin.HasSetting(homepageDateTime) + !Skin.HasSetting(homepageWeatherinfo)</visible>
@@ -233,12 +233,24 @@
 			<control type="label" id="200">
 				<description>weather</description>
 				<include>home-start</include>
-				<posx>33</posx>
-				<posy>50</posy>
+				<posx>74</posx>
+				<posy>26</posy>
 				<width>315</width>
-				<label>$INFO[Weather.Temperature], $INFO[Weather.Conditions]</label>
+				<label>$INFO[Weather.Temperature]</label>
 				<textcolor>sublabel-text</textcolor>
-				<font>description</font>
+				<font>menutemperatur</font>
+				<include>fadeinout</include>
+				<visible>Weather.IsFetched + !Skin.HasSetting(homepageDateTime) + !Skin.HasSetting(homepageWeatherinfo)</visible>
+			</control>
+			<control type="label" id="200">
+				<description>weather</description>
+				<include>home-start</include>
+				<posx>90</posx>
+				<posy>-64</posy>
+				<width>315</width>
+				<label>$INFO[Weather.Conditions]</label>
+				<textcolor>FF888888</textcolor>
+				<font>cali36aspect</font>
 				<include>fadeinout</include>
 				<visible>Weather.IsFetched + !Skin.HasSetting(homepageDateTime) + !Skin.HasSetting(homepageWeatherinfo)</visible>
 			</control>
