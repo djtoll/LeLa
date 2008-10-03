@@ -301,7 +301,7 @@
 			<animation effect="fade" start="100" end="0" time="75">Hidden</animation>
 		</control>
 
-		<control type="image">
+		<!-- <control type="image">
 			<posx>302</posx>
 			<posy>88</posy>
 			<width>24</width>
@@ -310,7 +310,22 @@
 			<aspectratio align="left">keep</aspectratio>
 			<include>fadeinout</include>
 			<visible>Skin.HasSetting(overlay) + Player.HasAudio + LastFM.RadioPlaying</visible>
+		</control> -->
+		
+		<control type="image">
+			<posx>285</posx>
+			<posy>82</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>lastfm.png</texture>
+			<bordertexture border="2">ListItem.Thumb.bg2.png</bordertexture>
+			<bordersize>6</bordersize>			
+			<aspectratio align="left">keep</aspectratio>
+			<include>fadeinout</include>
+			<visible>LastFM.RadioPlaying</visible>
 		</control>
+		
+		
 		
 		<control type="label" id="200">
 			<posx>205</posx>
@@ -359,21 +374,10 @@
 			<align>right</align>
 			<font>h3</font>
 			<include>fadeinout</include>
-			<visible>!LastFM.RadioPlaying + Player.HasAudio</visible>
+			<!-- <visible>!LastFM.RadioPlaying + Player.HasAudio</visible> -->
 		</control>		
 		
-		<control type="label" id="200">
-			<include>home-start</include>
-			<posx>205</posx>
-			<posy>100</posy>
-			<width>315</width>
-			<label>LastFM Radio</label>
-			<textcolor>sublabel-text</textcolor>
-			<align>right</align>
-			<font>h4</font>
-			<include>fadeinout</include>
-			<visible>LastFM.RadioPlaying</visible>
-		</control>			
+				
 									
 	</control>
 	
@@ -467,7 +471,7 @@
 		<control type="label" id="200">
 			<posx>205</posx>
 			<posy>-4</posy>
-			<width>500</width>
+			<width>520</width>
 			<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 			<textcolor>label-text</textcolor>
 			<align>right</align>
@@ -478,8 +482,8 @@
 						
 		<control type="label" id="200">
 			<posx>205</posx>
-			<posy>58</posy>
-			<width>500</width>
+			<posy>51</posy>
+			<width>520</width>
 			<label>$INFO[MusicPlayer.Artist]</label>
 			<textcolor>sublabel-text</textcolor>
 			<align>right</align>
@@ -512,12 +516,12 @@
 			<align>right</align>
 			<font>cali36</font>
 			<include>fadeinout</include>
-			<visible>!LastFM.RadioPlaying + Player.HasAudio</visible>
+			<!-- <visible>!LastFM.RadioPlaying + Player.HasAudio</visible> -->
 		</control>
 		
 	
 			<control type="image">
-			<posx>160</posx>
+			<posx>166</posx>
 			<posy>374</posy>
 			<width>44</width>
 			<height>44</height>
@@ -531,13 +535,14 @@
 		
 		<control type="label" id="200">
 			
-			<posx>202</posx>
+			<posx>208</posx>
 			<posy>378</posy>
 			<width>400</width>
 			<label>LAST.FM - Radio</label>
 			<textcolor>sublabel-text</textcolor>
 			<align>left</align>
 			<font>lastfm</font>
+			<size>23</size>
 			<include>fadeinout</include>
 			<visible>LastFM.RadioPlaying</visible>
 		</control>
@@ -596,7 +601,7 @@
 			<animation effect="fade" start="100" end="0" time="75">Hidden</animation>
 		</control>
 
-		<control type="image">
+		<!-- <control type="image">
 			<posx>302</posx>
 			<posy>88</posy>
 			<width>24</width>
@@ -605,7 +610,21 @@
 			<aspectratio align="left">keep</aspectratio>
 			<include>fadeinout</include>
 			<visible>Skin.HasSetting(overlay) + Player.HasAudio + LastFM.RadioPlaying</visible>
+		</control> -->
+		
+		<control type="image">
+			<posx>285</posx>
+			<posy>82</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>lastfm.png</texture>
+			<bordertexture border="2">ListItem.Thumb.bg2.png</bordertexture>
+			<bordersize>6</bordersize>			
+			<aspectratio align="left">keep</aspectratio>
+			<include>fadeinout</include>
+			<visible>LastFM.RadioPlaying</visible>
 		</control>
+		
 		
 		<control type="label" id="200">
 			<posx>205</posx>
@@ -654,21 +673,10 @@
 			<align>right</align>
 			<font>h3</font>
 			<include>fadeinout</include>
-			<visible>!LastFM.RadioPlaying + Player.HasAudio</visible>
+			<!-- <visible>!LastFM.RadioPlaying + Player.HasAudio</visible> -->
 		</control>		
 		
-		<control type="label" id="200">
-			<include>home-start</include>
-			<posx>205</posx>
-			<posy>100</posy>
-			<width>315</width>
-			<label>LastFM Radio</label>
-			<textcolor>sublabel-text</textcolor>
-			<align>right</align>
-			<font>h4</font>
-			<include>fadeinout</include>
-			<visible>LastFM.RadioPlaying</visible>
-		</control>			
+					
 									
 	</control>
 	
