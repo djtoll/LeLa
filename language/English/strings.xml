@@ -150,5 +150,16 @@ Hit the OK button to start using Focus. This message will not reappear after tha
 <string id="31087">season</string>
 <string id="31088">episode</string>
 <string id="31089">First aired:</string>
+
+<!-- Script Settings labels -->
+  <string id="31200">SCRIPT SETTINGS</string>
+  <string id="31201">Home submenu Options</string>
+  <string id="31202">Activate Custom Menu Item</string>
+  <string id="31203">Set Button Label</string>
+  <string id="31204">Script Path</string>
+  <string id="31205">Show Video Plugins Button</string>
+  <string id="31206">Show Music Plugins Button</string>
+  <string id="31207">Music On Screen Display Options</string>
+  <string id="31208">Show Lyrics Script Button in OSD</string>
 	
 </strings>

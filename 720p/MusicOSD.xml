@@ -1,12 +1,12 @@
 <window type="dialog" id="120">
 	<defaultcontrol>213</defaultcontrol>
-	
-	<animation effect="zoom" start="25" end="74" center="auto" time="130">WindowOpen</animation>
-   <animation effect="zoom" start="74" end="20" center="auto" time="150">WindowClose</animation>
+
+	<animation effect="zoom" start="25" end="100" center="auto" time="130">WindowOpen</animation>
+   <animation effect="zoom" start="100" end="20" center="auto" time="150">WindowClose</animation>
 	<coordinates>
 		<system>1</system>
-		<posx>-30</posx>
-		<posy>172</posy>
+		<posx>30</posx>
+		<posy>320</posy>
 	</coordinates>
 	<controls>
 		<control type="button" id="208">
@@ -246,7 +246,7 @@
 			<onright>503</onright>
 			<onup>500</onup>
 			<ondown>500</ondown>
-		<visible>!Skin.HasSetting(LyricScript_Enable)</visible>
+			<visible>!Skin.HasSetting(LyricScript_Enable)</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
 	</controls>

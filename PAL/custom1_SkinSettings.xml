@@ -286,7 +286,7 @@
 					<selected>!Skin.HasSetting(enableRSSFeed)</selected>
 				</control>
 								
-				<control type="radiobutton" id="37">
+				<control type="radiobutton" id="31">
 					<description>enable date/time</description>
 					<font>cali34aspect</font>
 					<width>520</width>
@@ -296,7 +296,7 @@
 					<selected>!Skin.HasSetting(homepageDateTime)</selected>
 				</control>
 						
-				<control type="radiobutton" id="31">
+				<control type="radiobutton" id="32">
 					<description>enable video info</description>
 					<font>cali34aspect</font>
 					<width>520</width>
@@ -306,7 +306,7 @@
 					<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
 				</control>
 						
-				<control type="radiobutton" id="32">
+				<control type="radiobutton" id="33">
 					<description>enable music info</description>
 					<font>cali34aspect</font>
 					<width>520</width>
@@ -316,7 +316,7 @@
 					<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
 				</control>
 						
-				<control type="radiobutton" id="33">
+				<control type="radiobutton" id="34">
 					<description>enable weather info</description>
 					<font>cali34aspect</font>		
 					<width>520</width>
@@ -326,7 +326,7 @@
 					<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
 				</control>
 				
-				<control type="radiobutton" id="34">
+				<control type="radiobutton" id="35">
 					<width>520</width>
 					<height>38</height>
 					<font>cali34aspect</font>
@@ -335,7 +335,7 @@
 					<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 				</control>
 				
-				<control type="button" id="35">
+				<control type="button" id="36">
 					<width>520</width>
 					<height>38</height>
 					<font>cali34aspect</font>
@@ -343,11 +343,32 @@
 					<label>15311</label>
 					<textoffsety>-2</textoffsety>
 					<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
-					<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>
-					<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
-					
+					<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>					
+					<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>					
 				</control>
+				
+				<control type="radiobutton" id="37">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>				
+					<label>31208</label>				
+					<onclick>Skin.ToggleSetting(LyricScript_Enable)</onclick>
+					<selected>Skin.HasSetting(LyricScript_Enable)</selected>
+				</control>
+			
+				<control type="button" id="38">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<textcolor>sublabel-text</textcolor>
+					<textoffsety>-2</textoffsety>
+					<label>- $LOCALIZE[31204]</label>
+					<label2>[COLOR=sublabel-text]$INFO[Skin.String(LyricScript_Path)][/COLOR]</label2>				
+					<onclick>Skin.SetFile(LyricScript_Path,.py)</onclick>
+					<visible>Skin.HasSetting(LyricScript_Enable)</visible>
 			</control>
+			
+		</control>
 			
 <!--- BACKGROUND SETTINGS --------------------------------->
 					
