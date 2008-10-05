@@ -59,13 +59,13 @@ Hit the OK button to start using Focus. This message will not reappear after tha
 <string id="31012">Video Playlist</string>
 <string id="31013">Exit</string>
 
-<string id="31015">Info Einstellungen</string>
+<string id="31015">Info Setup</string>
 <string id="31016">Fanart</string>
 <string id="31017">Manage Profiles</string>	
 <string id="31018">Custom</string>
 <string id="31019">Thumb</string>
 <string id="31020">Backgrounds</string>
-<string id="31021">Profile Einstellungen</string>
+<string id="31021">Profile Setup</string>
 <string id="31022">Viewtypes</string>
 <string id="31023">Show Mini Video Window</string>
 <string id="31024">Enable Custom Background</string>	
@@ -90,7 +90,7 @@ Hit the OK button to start using Focus. This message will not reappear after tha
 <string id="31905">Update XBMC</string>
 <string id="31906">Bitte warten</string>
 
-<string id="31908">Hintergründe</string>
+<string id="31908">Backgrounds</string>
 <string id="31909">Skin Credits</string>
 
 <string id="31911">Ausschalten in 30 min.</string>

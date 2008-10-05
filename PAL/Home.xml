@@ -170,7 +170,7 @@
 	<control type="group" id="9323">
 		<posx>0</posx>
 		<posy>0</posy>
-	
+	<visible>Skin.HasSetting(bigImage)</visible>
 	<animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="800" condition="Window.Previous(startup)">WindowOpen</animation>
 	<animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="50" condition="true + !Window.Previous(startup)">WindowOpen</animation>
 	<!-- <animation effect="slide" time="600" start="-200,0" end="400,0" acceleration="-1.0" tween="Back" easing="Out" delay="130" condition="true">Conditional</animation> -->
