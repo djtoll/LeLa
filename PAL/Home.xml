@@ -172,8 +172,11 @@
 		<posy>0</posy>
 	
 	<animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="800" condition="Window.Previous(startup)">WindowOpen</animation>
+	<animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="50" condition="true + !Window.Previous(startup)">WindowOpen</animation>
+	<!-- <animation effect="slide" time="600" start="-200,0" end="400,0" acceleration="-1.0" tween="Back" easing="Out" delay="130" condition="true">Conditional</animation> -->
+	<animation effect="slide" time="800" start="-100,0" end="300,0" acceleration="-1.0" tween="Back" easing="Out" delay="50" condition="true">WindowClose</animation>
 		<!-- <animation effect="slide" start="-200" end="0,0" time="800" condition="Control.HasFocus(9323)">conditional</animation> -->
-		<!-- <animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="800" condition="Window.Previous(home)"></animation> -->
+		<!-- <animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="800" condition="Window.Previous(startup)"></animation> -->
 	<!-- <control type="image">
 			<description>Video Icon bg</description>
 			<posx>20</posx>
@@ -194,7 +197,7 @@
 			<bordersize>4</bordersize>
 			<!-- <texture flipy="true" diffuse="fade.png">Music.png</texture> -->
 			<aspectratio align="bottom">keep</aspectratio>
-			<visible>Control.HasFocus(1) + !System.IdleTime(2) | [Control.HasFocus(1) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+			<visible>Control.HasFocus(1) + !System.IdleTime(2) | [Control.HasFocus(1) + !System.IdleTime(19) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
 	</control>
 			
 		<control type="image">
@@ -206,11 +209,11 @@
 			<texture>Music.png</texture>			
 			<bordersize>4</bordersize>			
 			<aspectratio align="bottom">keep</aspectratio>
-			<visible>Control.HasFocus(2) + !System.IdleTime(2) | [Control.HasFocus(2) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+			<visible>Control.HasFocus(2) + !System.IdleTime(2) | [Control.HasFocus(2) + !System.IdleTime(19) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
 			</control>
 			
 		<control type="image">
-			<description>Music Icon</description>
+			<description>Pictures Icon</description>
 			<posx>10</posx>
 			<posy>90</posy>
 			<width>500</width>
@@ -218,10 +221,10 @@
 			<texture>Images.png</texture>			
 			<bordersize>4</bordersize>			
 			<aspectratio align="bottom">keep</aspectratio>
-			<visible>Control.HasFocus(3) + !System.IdleTime(2) | [Control.HasFocus(3) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+			<visible>Control.HasFocus(3) + !System.IdleTime(2) | [Control.HasFocus(3) + !System.IdleTime(19) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
 	</control>
 	<control type="image">
-			<description>Music Icon</description>
+			<description>Settings Icon</description>
 			<posx>10</posx>
 			<posy>90</posy>
 			<width>500</width>
@@ -229,7 +232,40 @@
 			<texture>System.png</texture>			
 			<bordersize>4</bordersize>			
 			<aspectratio align="bottom">keep</aspectratio>
-			<visible>Control.HasFocus(5) + !System.IdleTime(2) | [Control.HasFocus(5) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+			<visible>Control.HasFocus(5) + !System.IdleTime(2) | [Control.HasFocus(5) + !System.IdleTime(19) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+	</control>
+	<control type="image">
+			<description>Accessories Icon</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>260</height>
+			<texture>Extras.png</texture>			
+			<bordersize>4</bordersize>			
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Control.HasFocus(4) + !System.IdleTime(2) | [Control.HasFocus(4) + !System.IdleTime(19) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+	</control>
+	<control type="image">
+			<description>CD DVD Icon</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>260</height>
+			<texture>Disc.png</texture>			
+			<bordersize>4</bordersize>			
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Control.HasFocus(7) + !System.IdleTime(2) | [Control.HasFocus(7) + !System.IdleTime(19) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+	</control>
+	<control type="image">
+			<description>Exit Icon</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>260</height>
+			<texture>Exit.png</texture>			
+			<bordersize>4</bordersize>			
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Control.HasFocus(6) + !System.IdleTime(2) | [Control.HasFocus(6) + !System.IdleTime(19) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
 	</control>
 </control>
 	
@@ -267,14 +303,14 @@
 <!--- DATE/TIME/WEATHER--------------------------------->
 	<control type="group">
 		<posx>25</posx>
-		<posy>449</posy>
+		<posy>444</posy>
 		<animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="800" condition="Window.Previous(startup)">WindowOpen</animation>
 				
 			<control type="label" id="200">
 				<description>Time Label</description>
 				<include>home-start</include>
 				<posx>0</posx>
-				<posy>-78</posy>
+				<posy>-77</posy>
 				<width>315</width>
 				<label>$INFO[System.Time]</label>
 				<textcolor>label-text</textcolor>
@@ -297,7 +333,7 @@
 			
 			<control type="image" id="700">
 				<posx>2</posx>
-				<posy>4</posy>
+				<posy>8</posy>
 				<width>100</width>
 				<height>100</height>
 				<aspectratio align="left">keep</aspectratio>
@@ -624,13 +660,12 @@
 		<control type="label" id="200">
 			
 			<posx>208</posx>
-			<posy>378</posy>
+			<posy>379</posy>
 			<width>400</width>
-			<label>LAST.FM - Radio</label>
-			<textcolor>sublabel-text</textcolor>
+			<label> LAST.FM - Radio</label>
+			<textcolor>99fe2b02</textcolor>
 			<align>left</align>
-			<font>lastfm</font>
-			<size>23</size>
+			<font>lastfm</font>			
 			<include>fadeinout</include>
 			<visible>LastFM.RadioPlaying</visible>
 		</control>

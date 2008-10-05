@@ -10,7 +10,7 @@
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<animation effect="fade" start="0" end="0">Focus</animation>
+			<animation effect="fade" start="2000" end="0">Focus</animation>
 			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
 		<control type="button" id="10">
@@ -19,7 +19,7 @@
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<animation effect="fade" start="0" end="0">Focus</animation>
+			<animation effect="fade" start="2000" end="0">Focus</animation>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 		</control>
 		

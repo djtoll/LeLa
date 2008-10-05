@@ -98,11 +98,10 @@
     </font>
 	<font>
       <name>lastfm</name>
-      <filename>papyrus.ttf</filename>
-      
-	  <style>bold</style>
-	  <shadow>ff000000</shadow>
-	  <aspect>1.1</aspect>
+      <filename>TitleCaps.ttf</filename>
+	  <shadow>ff000000</shadow> 
+		<size>24</size>
+	  <aspect>0.92</aspect>
     </font>
   	
 <!--- PAGE --------------------------------->
