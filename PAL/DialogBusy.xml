@@ -2,27 +2,27 @@
 	
 	<controls>
 		<control type="group">
-			<posx>298</posx>
-			<posy>542</posy>
+			<posx>0</posx>
+			<posy>480</posy>
 			<include>fadeinout</include>
 			
 			<control type="image">
 				<description>background image</description>
-				<posx>-30</posx>
-				<posy>-23</posy>
-				<width>185</width>
-				<height>80</height>
-				<texture border="28">keyboardPanel.png</texture>	
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>120</height>
+				<texture border="28">grid-overlay2.png</texture>	
 			</control>
 			
 			<control type="label" id="200">
 				<include>home-start</include>
 				<posx>0</posx>
-				<posy>0</posy>
-				<width>125</width>
+				<posy>46</posy>
+				<width>720</width>
 				<label>31906</label>
 				<align>center</align>
-				<font>h4</font>
+				<font>menu</font>
 				<include>fadeinout</include>	
 			</control>	
 			
