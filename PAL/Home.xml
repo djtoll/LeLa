@@ -62,7 +62,7 @@
 			<align>center</align>
 			<textoffsety>1</textoffsety>
 			<onclick>ActivateWindow(MyMusicFiles)</onclick>
-		</control>
+		</control>			
 				
 		<control type="button" id="3">
 			<label>1</label>
@@ -162,6 +162,82 @@
 		<include>home-menubar-startup</include>
 		<include>fadeinout</include>
 	</control>
+	
+	
+	
+	
+	
+	<control type="group" id="9323">
+		<posx>0</posx>
+		<posy>0</posy>
+	
+	<animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="800" condition="Window.Previous(startup)">WindowOpen</animation>
+		<!-- <animation effect="slide" start="-200" end="0,0" time="800" condition="Control.HasFocus(9323)">conditional</animation> -->
+		<!-- <animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="800" condition="Window.Previous(home)"></animation> -->
+	<!-- <control type="image">
+			<description>Video Icon bg</description>
+			<posx>20</posx>
+			<posy>80</posy>
+			<width>360</width>
+			<height>260</height>
+			<texture>ListItem.Thumb.bg2.png</texture>
+			<colordiffuse>99000000</colordiffuse> 					
+			<visible>Control.HasFocus(1) + !System.IdleTime(2)</visible>			
+		</control> -->		
+		<control type="image">
+			<description>Video Icon</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>260</height>
+			<texture>Movies.png</texture>			
+			<bordersize>4</bordersize>
+			<!-- <texture flipy="true" diffuse="fade.png">Music.png</texture> -->
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Control.HasFocus(1) + !System.IdleTime(2) | [Control.HasFocus(2) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+	</control>
+			
+		<control type="image">
+			<description>Music Icon</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>260</height>
+			<texture>Music.png</texture>			
+			<bordersize>4</bordersize>			
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Control.HasFocus(2) + !System.IdleTime(2) | [Control.HasFocus(2) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+			</control>
+			
+		<control type="image">
+			<description>Music Icon</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>260</height>
+			<texture>Images.png</texture>			
+			<bordersize>4</bordersize>			
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Control.HasFocus(3) + !System.IdleTime(2) | [Control.HasFocus(3) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+	</control>
+	<control type="image">
+			<description>Music Icon</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>500</width>
+			<height>260</height>
+			<texture>System.png</texture>			
+			<bordersize>4</bordersize>			
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>Control.HasFocus(5) + !System.IdleTime(2) | [Control.HasFocus(3) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+	</control>
+</control>
+	
+	
+	
+	
+	
+	
 	
 	
 	
