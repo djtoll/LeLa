@@ -96,7 +96,7 @@
 					</button>
 					<button id="11">
 						<label>Shoutcast</label>
-						<onclick>XBMC.ActivateWindow(MyMusicLibrary.newxml.phtml/</onclick>						
+						<onclick>XBMC.ActivateWindow(MyMusicLibrary,shout://)</onclick>						
 					</button>
 					
 					

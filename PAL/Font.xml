@@ -378,8 +378,50 @@
 ---->	
 
 <!--- ORIGINALS FOR SCRIPT REFERENCE/LEGACY ---------------------------------------->
-	
+	<!-- CHANGED for Adjustment -->
 	<font>
+		<name>font101</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>24</size>
+		<aspect>1.3</aspect>
+	</font>	
+	<font>
+		<name>font10</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>22</size>
+		<style>bold</style>
+		<aspect>1.3</aspect>
+	</font>	
+	<font>
+		<name>font12</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>26</size>
+		<style>bold</style>
+		<aspect>1.3</aspect>
+	</font>
+	<font>
+		<name>font13</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>30</size>
+		<aspect>1.3</aspect>
+	</font>
+	<font>
+		<name>special12</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>28</size>
+		<aspect>1.15</aspect>
+	</font>
+	<font>
+		<name>special13</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>32</size>
+		<style>bold</style>
+		<aspect>1.1</aspect>
+	</font>
+	
+	
+	<!-- originals Focus skin -->	
+	<!-- <font>
 		<name>font101</name>
 		<filename>FrancophilSans.ttf</filename>
 		<size>14</size>
@@ -417,7 +459,10 @@
 		<size>19</size>
 		<style>bold</style>
 		<aspect>1.1</aspect>
-	</font>
+	</font> -->
+	
+	
+	
 				
 		
 <!--- TOGO ------------------------------>
