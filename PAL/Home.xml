@@ -194,7 +194,7 @@
 			<bordersize>4</bordersize>
 			<!-- <texture flipy="true" diffuse="fade.png">Music.png</texture> -->
 			<aspectratio align="bottom">keep</aspectratio>
-			<visible>Control.HasFocus(1) + !System.IdleTime(2) | [Control.HasFocus(2) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+			<visible>Control.HasFocus(1) + !System.IdleTime(2) | [Control.HasFocus(1) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
 	</control>
 			
 		<control type="image">
@@ -229,7 +229,7 @@
 			<texture>System.png</texture>			
 			<bordersize>4</bordersize>			
 			<aspectratio align="bottom">keep</aspectratio>
-			<visible>Control.HasFocus(5) + !System.IdleTime(2) | [Control.HasFocus(3) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
+			<visible>Control.HasFocus(5) + !System.IdleTime(2) | [Control.HasFocus(5) + !System.IdleTime(9) + !Player.HasMedia +!Skin.HasSetting(homepageMusicinfo)]</visible>			
 	</control>
 </control>
 	

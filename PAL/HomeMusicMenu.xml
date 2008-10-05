@@ -1,6 +1,6 @@
 <includes>
 	<include name="HomeMusicMenu">
-		
+
 		<control type="group" id="1200">
 			<include>home-start-column</include>
 			<include>fadeinout</include>
@@ -9,10 +9,22 @@
 			<posx>130</posx>
 			<posy>55</posy>
 			<onup>9000</onup>
-		
+
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(2)</visible>	
-			
+			<visible>!System.IdleTime(22)</visible>
+
+			<control type="image">
+				<posx>-22</posx>
+				<posy>44</posy>
+				<width>14</width>
+				<height>26</height>						
+				<texture>scroll-right.png</texture>				
+				<visible allowhiddenfocus="true">Control.HasFocus(700)</visible>
+			</control>
+
+
 			<control type="buttonscroller" id="700">
+
 				<visible allowhiddenfocus="true">Control.HasFocus(700)</visible>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -39,49 +51,49 @@
 				<textcolor>sublabel-text</textcolor>
 				<focusedcolor>label-text</focusedcolor>				
 				<include>select</include>
-		
+
 				<buttons>
-					
+
 					<button id="0">
 						<label>589</label>
 						<onclick>XBMC.PlayerControl(Partymode)</onclick>
 					</button>
-					
+
 					<button id="1">
 						<label>132</label>
 						<onclick>ActivateWindow(MyMusicLibrary,albums)</onclick>
 					</button>
-						
+
 					<button id="2">
 						<label>517</label>
 						<onclick>ActivateWindow(MyMusicLibrary,recentlyplayedalbums)</onclick>
 					</button>
-					
+
 					<button id="3">
 						<label>359</label>
 						<onclick>ActivateWindow(MyMusicLibrary,recentlyaddedalbums)</onclick>
 					</button>
-					
+
 					<button id="4">
 						<label>133</label>
 						<onclick>ActivateWindow(MyMusicLibrary,artists)</onclick>
 					</button>
-						
+
 					<button id="5">
 						<label>134</label>
 						<onclick>ActivateWindow(MyMusicLibrary,songs)</onclick>
 					</button>
-						
+
 					<button id="6">
 						<label>135</label>
 						<onclick>ActivateWindow(MyMusicLibrary,genres)</onclick>
 					</button>
-						
+
 					<button id="7">
 						<label>136</label>
 						<onclick>ActivateWindow(MyMusicLibrary,playlists)</onclick>
 					</button>
-						
+
 					<button id="8">
 						<label>31914</label>
 						<onclick>ActivateWindow(MyMusicFiles,plugin://music)</onclick>
@@ -98,12 +110,16 @@
 						<label>Shoutcast</label>
 						<onclick>XBMC.ActivateWindow(MyMusicLibrary,shout://)</onclick>						
 					</button>
-					
-					
-									
+
+
+
 				</buttons>
+
+
+
 			</control>
+
 		</control>
-		
+
 	</include>
 </includes>

@@ -11,6 +11,16 @@
 			<onup>9000</onup>
 		
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(4) | ControlGroup(1400).HasFocus(0)</visible>	
+			<visible>!System.IdleTime(22)</visible>
+			<control type="image">
+				<posx>-22</posx>
+				<posy>48</posy>
+				<width>14</width>
+				<height>26</height>						
+				<texture>scroll-right.png</texture>				
+				<visible allowhiddenfocus="true">Control.HasFocus(800)</visible>
+			</control>
+			
 			
 			<control type="buttonscroller" id="800">
 				<visible allowhiddenfocus="true">Control.HasFocus(800)</visible>

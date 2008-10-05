@@ -10,7 +10,15 @@
 			<posy>55</posy>
 			<onup>9000</onup>
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(5)</visible>	
-			
+			<visible>!System.IdleTime(22)</visible>
+			<control type="image">
+				<posx>470</posx>
+				<posy>45</posy>
+				<width>14</width>
+				<height>26</height>						
+				<texture>scroll-left.png</texture>				
+				<visible allowhiddenfocus="true">Control.HasFocus(6000)</visible>
+			</control>
 			<control type="buttonscroller" id="6000">
 				<visible allowhiddenfocus="true">Control.HasFocus(6000)</visible>
 				<posx>100</posx>
