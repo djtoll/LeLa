@@ -46,7 +46,7 @@
 			<include>viewsmenu</include>
 			<include>viewsmenucontext</include>
 			
-		<include>ListView</include> 
+			<include>ListView</include> 
 			<include>MusicSlide</include>
 			<include>AlbumCoverflow</include>
 			<include>BigListAU</include>
@@ -56,7 +56,28 @@
 
 
 <!--- COMMON -------------------------->
-
+		<!-- BACKGROUND BLACK DIFFUSE -->
+			<control type="image">
+				<description>list item icon background</description>
+				<posx>360</posx>
+				<posy>-8</posy>
+				<width>360</width>
+				<height>600</height>
+				<texture>schatten2.png</texture>				
+				<visible>Control.IsVisible(50) + !System.IdleTime(3)</visible>	
+				<include>fadeinout-osd</include>
+			</control>
+			<!-- <control type="image">
+				<description>list item icon background</description>
+				<posx>360</posx>
+				<posy>-8</posy>
+				<width>360</width>
+				<height>600</height>
+				<texture>schatten2.png</texture>				
+				<visible>IsEmpty(ListItem.Thumb) + Control.IsVisible(50) + !System.IdleTime(3)</visible>	
+				<include>fadeinout-osd</include>
+			</control> -->
+		<!-- BACKGROUND BLACK DIFFUSE end-->
 			<control type="image">
 				<description>list item icon</description>
 				<posx>415</posx>
@@ -65,8 +86,8 @@
 				<height>256</height>
 				<info>ListItem.Icon</info>
 				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Thumb) + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<visible>IsEmpty(ListItem.Thumb) + Control.IsVisible(50) + !System.IdleTime(3)</visible>
+				<include>fadeinout-osd</include>
 			</control>
 			<control type="image">
 				<description>list item icon reflection</description>
@@ -77,8 +98,8 @@
 				<info>ListItem.Icon</info>
 				<texture flipy="true" diffuse="fade2.png">-</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>IsEmpty(ListItem.Thumb) + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<visible>IsEmpty(ListItem.Thumb) + Control.IsVisible(50) + !System.IdleTime(3)</visible>
+				<include>fadeinout-osd</include>
 			</control>	
 				
 						
@@ -86,6 +107,7 @@
 	
 	<!----- LIST VIEW ----->
 	
+			
 			<control type="image" id="999">
 				<description>list item thumb</description>
 				<posx>415</posx>
@@ -94,8 +116,8 @@
 				<height>256</height>
 				<info>ListItem.Thumb</info>
 				<aspectratio>keep</aspectratio>
-				<visible>Control.IsVisible(50)+ [Container.Content(albums) | Container.Content(songs)]</visible>
-				<include>fadeinout</include>
+				<visible>Control.IsVisible(50) + !System.IdleTime(3) + [Container.Content(albums) | Container.Content(songs)]</visible>
+				<include>fadeinout-osd</include>
 			</control>					
 			<control type="image">
 				<description>list item thumb reflection</description>
@@ -106,8 +128,8 @@
 				<info>ListItem.Thumb</info>
 				<texture flipy="true" diffuse="fade2.png">-</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>Control.IsVisible(50)+ [Container.Content(albums) | Container.Content(songs)]</visible>
-				<include>fadeinout</include>
+				<visible>Control.IsVisible(50) + !System.IdleTime(3) + [Container.Content(albums) | Container.Content(songs)]</visible>
+				<include>fadeinout-osd</include>
 			</control>
 										
 			<control type="label">
@@ -120,8 +142,8 @@
 				<font>h1</font>
 				<align>center</align>
 				<textcolor>label-text</textcolor>
-				<visible>Container.Content(albums) + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<visible>Container.Content(albums) + Control.IsVisible(50) + !System.IdleTime(3)</visible>
+				<include>fadeinout-osd</include>
 			</control>
 								
 			<control type="label">
@@ -134,8 +156,8 @@
 				<font>h2</font>
 				<align>center</align>
 				<textcolor>sublabel-text</textcolor>
-				<visible>Container.Content(albums) + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<visible>Container.Content(albums) + Control.IsVisible(50) + !System.IdleTime(3)</visible>
+				<include>fadeinout-osd</include>
 			</control>
 								
 			<control type="label">
@@ -148,8 +170,8 @@
 				<font>h2</font>
 				<align>center</align>
 				<textcolor>sublabel-text</textcolor>
-				<visible>Container.Content(albums) + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<visible>Container.Content(albums) + Control.IsVisible(50) + !System.IdleTime(3)</visible>
+				<include>fadeinout-osd</include>
 			</control>
 								
 			<control type="label">
@@ -162,8 +184,8 @@
 				<font>h2</font>
 				<align>center</align>
 				<textcolor>sublabel-text</textcolor>
-				<visible>Container.Content(albums) + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<visible>Container.Content(albums) + Control.IsVisible(50) + !System.IdleTime(3)</visible>
+				<include>fadeinout-osd</include>
 			</control>
 	
 
@@ -179,7 +201,7 @@
 				<scroll>true</scroll>
 				<info>ListItem.Label</info>
 				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 			
 			<control type="label">
@@ -192,7 +214,7 @@
 				<scroll>true</scroll>
 				<label>[B]$INFO[ListItem.Artist][/B]</label>
 				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 			
 			<control type="label">
@@ -205,7 +227,7 @@
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.Genre]</label>
 				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 			
 			<control type="label">
@@ -218,7 +240,7 @@
 				<scroll>true</scroll>
 				<info>ListItem.Year</info>
 				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 
 
@@ -248,7 +270,7 @@
 			<font>h1</font>
 			<align>center</align>
 			<visible>Container.Content(artists) + Control.IsVisible(50)</visible>
-			<include>fadeinout</include>
+			<include>fadeinout-osd</include>
 		</control>
 		
 		<control type="label">
@@ -262,7 +284,7 @@
 			<align>center</align>
 			<textcolor>sublabel-text</textcolor>
 			<visible>!IsEmpty(ListItem.Property(Born)) + Container.Content(artists) + Control.IsVisible(50)</visible>
-			<include>fadeinout</include>
+			<include>fadeinout-osd</include>
 		</control>
 		
 		<control type="label">
@@ -276,7 +298,7 @@
 			<align>center</align>
 			<textcolor>sublabel-text</textcolor>
 			<visible>!IsEmpty(ListItem.Property(Died)) + Container.Content(artists) + Control.IsVisible(50)</visible>
-			<include>fadeinout</include>
+			<include>fadeinout-osd</include>
 		</control>
 		
 		<control type="label">
@@ -332,7 +354,7 @@
 			<font>h1</font>
 			<align>center</align>
 			<visible>Container.Content(songs) + Control.IsVisible(50)</visible>
-			<include>fadeinout</include>
+			<include>fadeinout-osd</include>
 		</control>
 							
 		<control type="label">
@@ -346,7 +368,7 @@
 			<align>center</align>
 			<textcolor>sublabel-text</textcolor>
 			<visible>Container.Content(songs) + Control.IsVisible(50)</visible>
-			<include>fadeinout</include>
+			<include>fadeinout-osd</include>
 		</control>
 		
 		<control type="label">
@@ -360,7 +382,7 @@
 			<align>center</align>
 			<textcolor>sublabel-text</textcolor>
 			<visible>Container.Content(songs) + Control.IsVisible(50)</visible>
-			<include>fadeinout</include>
+			<include>fadeinout-osd</include>
 		</control>								
 													
 		<control type="image">
@@ -388,7 +410,7 @@
 				<info>ListItem.Icon</info>
 				<aspectratio>keep</aspectratio>
 				<visible>![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 			<control type="image">
 				<description>list item icon reflection</description>
@@ -400,7 +422,7 @@
 				<texture flipy="true" diffuse="fade2.png">-</texture>
 				<aspectratio>keep</aspectratio>
 				<visible>![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 										
 			<control type="label">
@@ -413,7 +435,7 @@
 				<font>h1</font>
 				<align>center</align>
 				<visible>![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 								
 			<control type="label">
@@ -427,7 +449,7 @@
 				<align>center</align>
 				<textcolor>sublabel-text</textcolor>
 				<visible>![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 			
 			<control type="label">
@@ -441,7 +463,7 @@
 				<align>center</align>
 				<textcolor>sublabel-text</textcolor>
 				<visible>![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 			
 			<control type="label">
@@ -455,7 +477,7 @@
 				<align>center</align>
 				<textcolor>sublabel-text</textcolor>
 				<visible>![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)] + Control.IsVisible(50)</visible>
-				<include>fadeinout</include>
+				<include>fadeinout-osd</include>
 			</control>
 
 		</control>
