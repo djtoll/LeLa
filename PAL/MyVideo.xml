@@ -19,16 +19,31 @@
 			<include>Icons</include>
 			<include>BigIconsF</include>
 			<include>AllViewCommonPageControls</include>
+			
+			<control type="image">
+				<description>list item icon background</description>
+				<posx>360</posx>
+				<posy>-8</posy>
+				<width>360</width>
+				<height>600</height>
+				<texture>schatten2.png</texture>				
+				<visible>Control.IsVisible(50) + !System.IdleTime(3)</visible>	
+				<include>fadeinout-osd</include>
+			</control>
 
 			<control type="image">
 				<description>list item icon</description>
 				<posx>415</posx>
-				<posy>65</posy>
+				<posy>70</posy>
 				<width>260</width>
 				<height>450</height>
 				<info>ListItem.Icon</info>
+				<bordertexture border="2">list-focus.png</bordertexture>
+				<bordersize>10</bordersize>
 				<aspectratio align="bottom">keep</aspectratio>
-				<visible>Control.IsVisible(50)</visible>
+				<!-- <visible allowhiddenfocus="true">![Control.IsVisible(50) + System.IdleTime(3)]</visible> -->
+				<visible>Control.IsVisible(50) + !System.IdleTime(3)</visible>
+				<include>fadeinout-osd</include>
 			</control>
 		
 			<control type="label">
