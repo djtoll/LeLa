@@ -343,8 +343,8 @@
 				<posy>191</posy>
 				<width>740</width>
 				<height>377</height>
-				<texture border="0,0,22,0">osd-infobar.png</texture>
-				<colordiffuse>99000000</colordiffuse>
+				<texture border="0,0,22,0">schatten2.png</texture>
+				<!-- <colordiffuse>99000000</colordiffuse> -->
 				<include>fadeinout-osd</include>
 				<animation effect="fade" time="1000">VisibleChange</animation>
 				<visible>Player.ShowInfo</visible>
