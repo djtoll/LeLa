@@ -138,21 +138,21 @@
 				<control type="label">
 					<posx>78</posx>
 					<posy>360</posy>
-					<width>800</width>
+					<width>650</width>
 					<height>30</height>
 					<font>menu</font>
 					<style>bold</style>
 					<textcolor>button-text</textcolor>
 					<scroll>true</scroll>
-					<info>ListItem.Label</info>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<!-- <visible>Container.Content(albums) + Control.IsVisible(52)</visible> -->				
 					<include>fadeinout-osd</include>
 				</control>
 
 				<control type="label">
 					<posx>78</posx>
-					<posy>390</posy>
-					<width>530</width>
+					<posy>408</posy>
+					<width>650</width>
 					<height>30</height>
 					<font>mach9</font>
 					<textcolor>sublabel-text</textcolor>
@@ -164,8 +164,8 @@
 
 				<control type="label">
 					<posx>78</posx>
-					<posy>420</posy>
-					<width>577</width>
+					<posy>442</posy>
+					<width>650</width>
 					<height>30</height>
 					<font>menu</font>
 					<textcolor>sublabel-text</textcolor>
@@ -176,8 +176,8 @@
 
 				<control type="label">
 					<posx>78</posx>
-					<posy>486</posy>
-					<width>577</width>
+					<posy>489</posy>
+					<width>260</width>
 					<height>30</height>					
 					<textcolor>sublabel-text</textcolor>
 					<font>cali36</font>
@@ -186,7 +186,7 @@
 				</control>
 				<control type="label">
 					<posx>178</posx>
-					<posy>486</posy>
+					<posy>489</posy>
 					<width>260</width>
 					<label>$INFO[ListItem.size]</label>
 					<scroll>true</scroll>
