@@ -191,7 +191,76 @@
 
 	<!-----  SLIDE VIEW ALL GENRES, ----->
 	
-			<control type="label">
+	<control type="group">    <!-- SLIDE VIEW -->
+				<posx>-46</posx>
+				<posy>0</posy>
+				<visible>Control.IsVisible(52)</visible>
+				<control type="label">
+					<posx>78</posx>
+					<posy>360</posy>
+					<width>650</width>
+					<height>30</height>
+					<font>menu</font>
+					<style>bold</style>
+					<textcolor>button-text</textcolor>
+					<scroll>true</scroll>
+					<label>[B]$INFO[ListItem.Label][/B]</label>					
+					<visible>!Container.Content(artists)</visible> 			
+					<include>fadeinout-osd</include>
+				</control>
+
+				<control type="label">
+					<posx>78</posx>
+					<posy>408</posy>
+					<width>650</width>
+					<height>30</height>
+					<font>mach9</font>
+					<textcolor>sublabel-text</textcolor>
+					<scroll>true</scroll>
+					<label>[B]$INFO[ListItem.Artist][/B]</label>
+					<visible>Container.Content(albums) | Container.Content(songs) | Container.Content(artists)</visible> 
+					<!-- <visible>Container.Content(albums) + Control.IsVisible(52)</visible> -->				
+					<include>fadeinout-osd</include>
+				</control>
+
+				<control type="label">
+					<posx>78</posx>
+					<posy>442</posy>
+					<width>650</width>
+					<height>30</height>
+					<font>menu</font>
+					<textcolor>sublabel-text</textcolor>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Genre]</label>	
+					<visible>Container.Content(albums) | Container.Content(songs) | Container.Content(artists)</visible> 
+					<include>fadeinout-osd</include>
+				</control>
+
+				<control type="label">
+					<posx>78</posx>
+					<posy>489</posy>
+					<width>260</width>
+					<height>30</height>					
+					<textcolor>sublabel-text</textcolor>
+					<font>cali36</font>
+					<info>ListItem.Year</info>
+					<visible>Container.Content(albums) | Container.Content(songs) | Container.Content(artists)</visible> 
+					<include>fadeinout-osd</include>
+				</control>
+				<!-- <control type="label">
+					<posx>178</posx>
+					<posy>489</posy>
+					<width>260</width>
+					<label>$INFO[ListItem.size]</label>
+					<scroll>true</scroll>
+					<font>h1</font>
+					<textcolor>ffcd5c5c</textcolor>
+					<align>left</align>				
+					<include>fadeinout-osd</include>
+				</control> --> 
+			</control>
+	
+			<!-- <control type="label">
 				<posx>78</posx>
 				<posy>360</posy>
 				<width>800</width>
@@ -200,7 +269,7 @@
 				<textcolor>button-text</textcolor>
 				<scroll>true</scroll>
 				<info>ListItem.Label</info>
-				<!-- <visible>Container.Content(albums) + Control.IsVisible(52)</visible> -->
+				<visible>Container.Content(albums) + Control.IsVisible(52)</visible> 
 				<visible>Control.IsVisible(52)</visible>
 				<include>fadeinout-osd</include>
 			</control>
@@ -214,7 +283,7 @@
 				<textcolor>sublabel-text</textcolor>
 				<scroll>true</scroll>
 				<label>[B]$INFO[ListItem.Artist][/B]</label>
-				<!-- <visible>Container.Content(albums) + Control.IsVisible(52)</visible> -->
+				<visible>Container.Content(albums) + Control.IsVisible(52)</visible> 
 				<visible>Control.IsVisible(52)</visible>
 				<include>fadeinout-osd</include>
 			</control>
@@ -243,7 +312,7 @@
 					<visible>Control.IsVisible(52)</visible>
 					<include>fadeinout-osd</include>
 				</control>
-			<!-- <control type="label">
+			<control type="label">
 					<posx>178</posx>
 					<posy>486</posy>
 					<width>260</width>
@@ -254,7 +323,7 @@
 					<align>left</align>				
 					<visible>Control.IsVisible(52)</visible>				
 					<include>fadeinout-osd</include>
-				</control> -->
+				</control>  -->
 
 
 <!--- ARTISTS ---------------------------------->

@@ -181,7 +181,7 @@
 					<height>30</height>					
 					<textcolor>sublabel-text</textcolor>
 					<font>cali36</font>
-					<info>ListItem.Year</info>				
+					<info>ListItem.Year</info>											
 					<include>fadeinout-osd</include>
 				</control>
 				<control type="label">
