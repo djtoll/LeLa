@@ -189,7 +189,7 @@
 			</control>
 	
 
-	<!-----  SLIDE VIEW ----->
+	<!-----  SLIDE VIEW ALL GENRES, ----->
 	
 			<control type="label">
 				<posx>78</posx>
@@ -200,7 +200,8 @@
 				<textcolor>button-text</textcolor>
 				<scroll>true</scroll>
 				<info>ListItem.Label</info>
-				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+				<!-- <visible>Container.Content(albums) + Control.IsVisible(52)</visible> -->
+				<visible>Control.IsVisible(52)</visible>
 				<include>fadeinout-osd</include>
 			</control>
 			
@@ -213,7 +214,8 @@
 				<textcolor>sublabel-text</textcolor>
 				<scroll>true</scroll>
 				<label>[B]$INFO[ListItem.Artist][/B]</label>
-				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+				<!-- <visible>Container.Content(albums) + Control.IsVisible(52)</visible> -->
+				<visible>Control.IsVisible(52)</visible>
 				<include>fadeinout-osd</include>
 			</control>
 			
@@ -226,22 +228,33 @@
 				<textcolor>sublabel-text</textcolor>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.Genre]</label>
-				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+				<visible>Control.IsVisible(52)</visible>
 				<include>fadeinout-osd</include>
 			</control>
 			
 			<control type="label">
-				<posx>78</posx>
-				<posy>450</posy>
-				<width>577</width>
-				<height>30</height>
-				<font>h2</font>
-				<textcolor>sublabel-text</textcolor>
-				<scroll>true</scroll>
-				<info>ListItem.Year</info>
-				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
-				<include>fadeinout-osd</include>
-			</control>
+					<posx>78</posx>
+					<posy>486</posy>
+					<width>577</width>
+					<height>30</height>					
+					<textcolor>sublabel-text</textcolor>
+					<font>h1</font>
+					<info>ListItem.Year</info>	
+					<visible>Control.IsVisible(52)</visible>
+					<include>fadeinout-osd</include>
+				</control>
+			<!-- <control type="label">
+					<posx>178</posx>
+					<posy>486</posy>
+					<width>260</width>
+					<label>$INFO[ListItem.size]</label>
+					<scroll>true</scroll>
+					<font>h1</font>
+					<textcolor>ffcd5c5c</textcolor>
+					<align>left</align>				
+					<visible>Control.IsVisible(52)</visible>				
+					<include>fadeinout-osd</include>
+				</control> -->
 
 
 <!--- ARTISTS ---------------------------------->
