@@ -2,20 +2,161 @@
 	<defaultcontrol always="true">15</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
 	
-	<include>OSDcontrolSlide</include>
+	
 
 	<controls>
 			
 		<control type="group" id="1">
-			<posx>-10</posx>
-			<posy>483</posy>
-			<visible>!Window.IsActive(107)</visible>
-			
+			<posx>-10</posx>						
+			<posy>411</posy>
+			<visible>!Window.IsActive(107) + Window.IsActive(115)</visible>
+			<include>OSDcontrolSlide</include>
+			<include>OSDcontrolSlide2</include>
 			<control type="image" id="1">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>760</width>
-				<height>100</height>
+				<height>110</height>
+				<texture border="0,0,23,0">osd-controls.png</texture>
+			</control>
+			
+			<control type="group">
+				<posx>20</posx>
+				<posy>54</posy>
+				
+				<control type="radiobutton" id="600">
+					<description>Random button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<label>590</label>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<texturenofocus border="2">-</texturenofocus>
+					<onclick>XBMC.PlayerControl(Random)</onclick>
+					<selected>Playlist.IsRandom</selected>
+					<onleft>17</onleft>
+					<onright>601</onright>
+					<onup>400</onup>
+					<ondown>600</ondown>
+					<visible>!Player.HasVideo</visible>
+					<textoffsety>3</textoffsety>
+				</control>
+				
+				<control type="togglebutton" id="601">
+					<description>Repeat button</description>
+					<posx>105</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>34</height>
+					<label>$LOCALIZE[486]: $INFO[Playlist.Repeat]</label>
+					<align>center</align>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<texturenofocus border="2">-</texturenofocus>
+					<alttexturefocus border="2">list-focus.png</alttexturefocus>
+					<alttexturenofocus border="2">-</alttexturenofocus>
+					<onclick>XBMC.PlayerControl(Repeat)</onclick>
+					<onleft>600</onleft>
+					<onright>13</onright>
+					<onup>400</onup>
+					<ondown>600</ondown>
+					<visible>!Player.HasVideo</visible>
+					<textoffsety>3</textoffsety>
+				</control>
+				
+			</control>
+			
+			<control type="group">
+				<defaultcontrol>15</defaultcontrol>
+				<posx>308</posx>
+				<posy>53</posy>
+		
+				<control type="button" id="13">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>38</width>
+					<height>38</height>
+					<onleft>601</onleft>
+					<onright>15</onright>
+			        <texturefocus border="2">osd-prev-focus.png</texturefocus>
+			        <texturenofocus border="2">osd-prev.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Previous)</onclick>
+				</control>
+
+				<control type="button" id="15">
+					<posx>45</posx>
+					<posy>0</posy>
+					<width>38</width>
+					<height>38</height>
+					<onleft>13</onleft>
+					<onright>17</onright>
+				    <texturefocus border="2">osd-pause-focus.png</texturefocus>
+			        <texturenofocus border="2">osd-pause.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+					<visible>!Player.Paused</visible>
+				</control>
+				
+				<control type="button" id="15">
+					<posx>45</posx>
+					<posy>0</posy>
+					<width>38</width>
+					<height>38</height>
+					<onleft>13</onleft>
+					<onright>17</onright>
+				    <texturefocus border="1">osd-play-focus.png</texturefocus>
+				    <texturenofocus border="1">osd-play.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+					<visible>Player.Paused</visible>
+				</control>
+
+				<control type="button" id="17">
+					<posx>90</posx>
+					<posy>0</posy>
+					<width>38</width>
+					<height>38</height>
+					<onleft>15</onleft>
+					<onright>600</onright>
+				    <texturefocus border="1">osd-next-focus.png</texturefocus>
+			        <texturenofocus border="1">osd-next.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(Next)</onclick>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>710</posx>
+				<posy>55</posy>
+				<control type="label" id="22">
+					<description>seek time</description>
+					<posx>0</posx>
+					<posy>4</posy>
+					<font>h4</font>
+					<align>right</align>
+					<label>$INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+					<textcolor>label-text</textcolor>
+					<width>300</width>
+					<visible>Player.Playing</visible>
+				</control>
+			</control>
+				
+		</control>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<control type="group" id="2">
+			<posx>-10</posx>
+			<posy>465</posy>
+			<visible>!Window.IsActive(107) + !Window.IsActive(115)</visible>
+			<include>OSDcontrolSlide</include>
+			<control type="image" id="1">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>760</width>
+				<height>110</height>
 				<texture border="0,0,23,0">osd-controls.png</texture>
 			</control>
 			
@@ -136,6 +277,15 @@
 				</control>
 			</control>
 			
-		</control>	
+		</control>
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</controls>
 </window>

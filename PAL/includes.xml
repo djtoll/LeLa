@@ -381,12 +381,45 @@
 	
 	<include name="OSDcontrolSlide">
 		<animation type="WindowOpen">
-			<effect type="slide" start="0,70" end="0,0" time="150" />
-			<effect type="fade" start="0" end="80" time="150" />
+			<effect type="slide" start="0,70" end="0,0" time="250" />
+			<effect type="fade" start="0" end="80" time="240" />
 		</animation>
 		<animation type="WindowClose">
-			<effect type="slide" start="0,0" end="0,70" time="150" />
-			<effect type="fade" start="70" end="0" time="150" />
+			<effect type="slide" start="0,0" end="0,70" time="250" />
+			<effect type="fade" start="70" end="0" time="260" />
+		</animation>
+	</include>
+	
+	<include name="OSDcontrolSlide0">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,70" end="0,0" delay="180" time="250" />
+			<effect type="fade" start="0" end="80" delay="180" time="240" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,70" delay="180" time="250" />
+			<effect type="fade" start="70" end="0" delay="180" time="260" />
+		</animation>
+	</include>
+	
+	<include name="OSDcontrolSlide1">
+		<animation type="Visible">
+			<effect type="slide" start="0,70" end="0,0" delay="180" time="250" />
+			<effect type="fade" start="0" end="80" delay="180" time="240" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" start="0,0" end="0,70" delay="180" time="250" />
+			<effect type="fade" start="70" end="0" delay="180" time="260" />
+		</animation>
+	</include>	
+	
+	<include name="OSDcontrolSlide2">
+		<animation type="Visible">
+			<effect type="slide" start="0,70" end="0,0" time="250" />
+			<effect type="fade" start="0" end="80" time="240" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" start="0,0" end="0,70" time="250" />
+			<effect type="fade" start="70" end="0" time="260" />
 		</animation>
 	</include>
 

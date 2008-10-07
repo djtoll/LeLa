@@ -5,7 +5,7 @@
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
-		<posy>485</posy>
+		<posy>465</posy>
 	</coordinates>
 	
 	<include>OSDcontrolSlide</include>
@@ -15,15 +15,16 @@
 	<control type="image">
 		<posx>-35</posx>
 		<posy>0</posy>
-		<height>100</height>
+		<height>110</height>
 		<width>800</width>
 		<texture border="0,0,51,0">osd-controls.png</texture>
-		<visible>!Window.IsActive(2901) + Window.IsActive(2005)</visible>
+		<!-- <visible>!Window.IsActive(2901) + Window.IsActive(2005)</visible> -->
+		<visible>!Window.IsActive(2901)</visible>
 	</control>
 		
 		<control type="group" id="901">
 			<include>fadeinout</include>
-			<visible>![Window.IsActive(2901) | Window.IsActive(114)]</visible>
+			<!-- <visible>![Window.IsActive(2901) | !Window.IsActive(114)]</visible> -->
 
 			<control type="image">
 				<posx>0</posx>
@@ -31,154 +32,154 @@
 				<height>40</height>
 				<width>720</width>
 				<texture border="4">infobar2.png</texture>
-				<visible>Window.IsActive(2005) + !Player.ShowInfo</visible>
+				<!-- <visible>Window.IsActive(2005) + !Player.ShowInfo</visible> -->
 				<include>fadeinout</include>
 			</control>
 
 			<control type="progress" id="1">
 				<description>Progressbar</description>
-				<posx>160</posx>
-				<posy>67</posy>
-				<width>400</width>
-				<height>8</height>
+				<posx>200</posx>
+				<posy>75</posy>
+				<width>320</width>
+				<height>12</height>
 				<info>Player.Progress</info>
 				<texturebg>progress_back.png</texturebg>
 				<lefttexture>progress_left.png</lefttexture>
 				<midtexture>progress_mid.png</midtexture>
 				<righttexture>progress_right.png</righttexture>
 				<overlaytexture>-</overlaytexture>
-				<visible>Window.IsActive(2005)</visible>
+				<!-- <visible>Window.IsActive(2005)</visible> -->
 			</control>
 			
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
-				<width>100</width>
+				<width>300</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31040]</label>
-				<visible>![Window.IsActive(2901) | Window.IsActive(0)] + Player.Paused</visible>
+				<label>[B]$LOCALIZE[31040][/B]</label>				
+				<visible>!Window.IsActive(2901) + Player.Paused</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31041]</label>
+				<label>[B]$LOCALIZE[31041][/B]</label>
 				<visible>Player.Forwarding2x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31042]</label>
+				<label>[B]$LOCALIZE[31042][/B]</label>
 				<visible>Player.Forwarding4x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31043]</label>
+				<label>[B]$LOCALIZE[31043][/B]</label>
 				<visible>Player.Forwarding8x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31044]</label>
+				<label>[B]$LOCALIZE[31044][/B]</label>
 				<visible>Player.Forwarding16x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31045]</label>
+				<label>[B]$LOCALIZE[31045][/B]</label>
 				<visible>Player.Forwarding32x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31046]</label>
+				<label>[B]$LOCALIZE[31046][/B]</label>
 				<visible>Player.Rewinding2x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31047]</label>
+				<label>[B]$LOCALIZE[31047][/B]</label>
 				<visible>Player.Rewinding4x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31048]</label>
+				<label>[B]$LOCALIZE[31048][/B]</label>
 				<visible>Player.Rewinding8x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31049]</label>
+				<label>[B]$LOCALIZE[31049][/B]</label>
 				<visible>Player.Rewinding16x</visible>
 			</control>
 	
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
 				<width>720</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31050]</label>
+				<label>[B]$LOCALIZE[31050][/B]</label>
 				<visible>Player.Rewinding32x</visible>
 			</control>
 			
 			<control type="label" id="0">
-				<posx>140</posx>
+				<posx>156</posx>
 				<posy>57</posy>
-				<width>100</width>
+				<width>210</width>
 				<align>right</align>
-				<font>h4</font>
+				<font>menu</font>
 				<textcolor>label-text</textcolor>
-				<label>$LOCALIZE[31051]</label>
+				<label>[B]$LOCALIZE[31051][/B]</label>
 				<visible>![Window.IsActive(2901) | Window.IsActive(0)] + Player.Playing</visible>
 			</control>
 			
@@ -186,9 +187,9 @@
 				<description>seek time</description>
 				<posx>560</posx>
 				<posy>57</posy>
-				<font>h4</font>
+				<font>menu</font>
 				<align>left</align>
-				<label>$INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+				<label>[B]$INFO[Player.Time] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR][/B]</label>
 				<textcolor>label-text</textcolor>
 				<width>400</width>
 				<visible>![Window.IsActive(2006) | Window.IsActive(0)]</visible>
