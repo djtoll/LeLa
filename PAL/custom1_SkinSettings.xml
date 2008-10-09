@@ -7,20 +7,30 @@
 		<include>allscreens</include>
 		
 		<control type="image">
-			<posx>60</posx>
-			<posy>480</posy>
-			<width>128</width>
-			<height>29</height>
+			<posx>12</posx>
+			<posy>460</posy>
+			<width>158</width>
+			<height>49</height>
 			<texture>focus-skinsettings.png</texture>
 			<include>fadeinout</include>
 			<aspectratio align="left">keep</aspectratio>
 		</control>
 		<control type="image">
-			<posx>60</posx>
-			<posy>509</posy>
-			<width>128</width>
-			<height>29</height>
+			<posx>12</posx>
+			<posy>511</posy>
+			<width>158</width>
+			<height>49</height>
 			<texture flipy="true" diffuse="fade.png">focus-skinsettings.png</texture>
+			<include>fadeinout</include>
+			<aspectratio align="left">keep</aspectratio>
+		</control>
+		<control type="image">
+			<posx>170</posx>
+			<posy>500</posy>
+			<width>158</width>
+			<height>90</height>
+			<texture>lela.png</texture>
+			<colordiffuse>66fda702</colordiffuse>
 			<include>fadeinout</include>
 			<aspectratio align="left">keep</aspectratio>
 		</control>
@@ -496,16 +506,19 @@
 			<itemgap>4</itemgap>
 			<visible>Skin.String(SkinSettings,4)</visible>
 			
+			
+			
+			
 			<!--- TV SHOWS -------------------->
 								
-			<control type="button" id="400">
+			<control type="label" id="400">
 				<width>520</width>
 				<height>38</height>
 				<font>cali34aspect</font>
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>list-nofocus.png</texturenofocus>
 				<label>[B]$LOCALIZE[20343][/B]</label>
-				<textcolor>label-text</textcolor>
+				<textcolor>FFfda702</textcolor>
 				<aligny>-</aligny>
 				<textoffsety>3</textoffsety>
 				<textoffsetx>10</textoffsetx>
@@ -603,14 +616,14 @@
 
 			<!--- MOVIES -------------------->
 			
-			<control type="button" id="420">
+			<control type="label" id="420">
 				<width>520</width>
 				<height>38</height>
 				<font>cali34aspect</font>
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>list-nofocus.png</texturenofocus>
 				<label>[B]$LOCALIZE[342][/B]</label>
-				<textcolor>label-text</textcolor>
+				<textcolor>FFfda702</textcolor>
 				<aligny>-</aligny>
 				<textoffsety>3</textoffsety>
 				<textoffsetx>10</textoffsetx>
@@ -751,10 +764,12 @@
 			<onup>9007</onup>
 			<ondown>9007</ondown>
 			<include>pageslide</include>
+			
 			<itemgap>4</itemgap>
+			
 			<visible>Skin.String(SkinSettings,5)</visible>
 
-			<control type="button" id="500">
+			<control type="label" id="500">
 				<description>movies</description>
 				<width>520</width>
 				<height>38</height>
@@ -762,7 +777,7 @@
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>list-nofocus.png</texturenofocus>
 				<label>[B]$LOCALIZE[342][/B]</label>
-				<textcolor>label-text</textcolor>
+				<textcolor>FFfda702</textcolor>
 				<aligny>-</aligny>
 				<textoffsety>2</textoffsety>
 				<textoffsetx>10</textoffsetx>
@@ -804,7 +819,7 @@
 				<selected>!Skin.HasSetting(viewtypeCoverFlow)</selected>
 			</control>
 
-			<control type="button" id="510">
+			<control type="label" id="510">
 				<description>TV SHOWS</description>
 				<width>520</width>
 				<height>38</height>
@@ -812,7 +827,7 @@
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>list-nofocus.png</texturenofocus>
 				<label>[B]$LOCALIZE[20343][/B]</label>
-				<textcolor>label-text</textcolor>
+				<textcolor>FFfda702</textcolor>
 				<aligny>-</aligny>
 				<textoffsety>2</textoffsety>
 				<textoffsetx>10</textoffsetx>
@@ -856,7 +871,7 @@
 				<enable>Skin.HasSetting(tvshowPosters)</enable>
 			</control>
 
-			<control type="button" id="520">
+			<control type="label" id="520">
 				<description>SEASONS</description>
 				<width>520</width>
 				<height>38</height>
@@ -864,7 +879,7 @@
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>list-nofocus.png</texturenofocus>
 				<label>[B]$LOCALIZE[20373][/B]</label>
-				<textcolor>label-text</textcolor>
+				<textcolor>FFfda702</textcolor>
 				<aligny>-</aligny>
 				<textoffsety>2</textoffsety>
 				<textoffsetx>10</textoffsetx>
@@ -878,7 +893,7 @@
 				<selected>Skin.HasSetting(viewtypeCoverFlowS)</selected>
 			</control>
 			
-			<control type="button" id="530">
+			<control type="label" id="530">
 				<description>EPISODES</description>
 				<width>520</width>
 				<height>38</height>
@@ -886,7 +901,7 @@
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>list-nofocus.png</texturenofocus>
 				<label>[B]$LOCALIZE[20360][/B]</label>
-				<textcolor>label-text</textcolor>
+				<textcolor>FFfda702</textcolor>
 				<aligny>-</aligny>
 				<textoffsety>2</textoffsety>
 				<textoffsetx>10</textoffsetx>
@@ -916,7 +931,7 @@
 				<selected>!Skin.HasSetting(viewtypeSlideEP)</selected>
 			</control>
 			
-			<control type="button" id="540">
+			<control type="label" id="540">
 				<description>MUSIC</description>
 				<width>520</width>
 				<height>38</height>
@@ -924,7 +939,7 @@
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>list-nofocus.png</texturenofocus>
 				<label>[B]$LOCALIZE[2][/B]</label>
-				<textcolor>label-text</textcolor>
+				<textcolor>FFfda702</textcolor>
 				<aligny>-</aligny>
 				<textoffsety>2</textoffsety>
 				<textoffsetx>10</textoffsetx>
@@ -1014,7 +1029,28 @@
 					<spinposx>425</spinposx>
 					<spinposy>385</spinposy>
 				</control>
-			</control>				
-		</control>						
+			</control>
+		</control>
+				<control type="image">
+					<width>24</width>
+					<height>20</height>
+					<posx>676</posx>
+					<posy>57</posy>					
+					<texture>scroll-upp.png</texture>
+					<colordiffuse>98FFFFFF</colordiffuse>
+					<visible>Skin.String(SkinSettings,4) | Skin.String(SkinSettings,5)</visible>
+					<include>pageslide</include>
+				</control>
+				<control type="image">
+					<width>24</width>
+					<height>20</height>
+					<posx>676</posx>
+					<posy>510</posy>	
+					<colordiffuse>98FFFFFF</colordiffuse>
+					<texture>scroll-downn.png</texture>
+					<visible>Skin.String(SkinSettings,4) | Skin.String(SkinSettings,5)</visible>
+					<include>pageslide</include>					
+				</control>
+								
 	</controls>
 </window>
