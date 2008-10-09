@@ -518,14 +518,13 @@
 		<posx>330</posx>
 		<posy>120</posy>
 		
-		 <control type="label" id="200">
-			<!-- <include>home-start</include> -->
-			<posx>337</posx>
+		 <control type="label" id="200">			
+			<posx>222</posx>
 			<posy>211</posy>
-			<width>200</width>
+			<width>140</width>
 			<label>$INFO[MusicPlayer.Year]</label>
 			<textcolor>sublabel-text</textcolor>
-			<align>right</align>
+			<align>center</align>
 			<font>mach9</font>
 			<include>fadeinout</include>
 			<visible>Player.HasAudio</visible>
@@ -629,7 +628,7 @@
 			<label>[B]$INFO[musicplayer.Time][COLOR=sublabel-text]$INFO[musicplayer.Duration, / ][/COLOR][/B]</label>
 			<textcolor>label-text</textcolor>
 			<align>right</align>
-			<font>cali36</font>
+			<font>cali38</font>
 			<include>fadeinout</include>
 			<!-- <visible>!LastFM.RadioPlaying + Player.HasAudio</visible> -->
 		</control>

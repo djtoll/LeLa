@@ -3,30 +3,38 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>530</posx>
-		<posy>70</posy>
+		<posx>460</posx>
+		<posy>72</posy>
 	</coordinates>
 	
 	<controls>
 
 		<control type="group">
-			<include>fadeinout</include>
-			
+		
+			<animation type="WindowOpen">
+			<effect type="fade" start="0" end="300" time="300" />
+		</animation>
+		
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" delay="2000" time="150" />
+			<effect type="slide" start="0" end="200" delay="2000" time="350" tween="Quadratic" easing="In" />
+		</animation>
+			<!-- <include>pageslide</include> -->
 			<control type="image">
 				<description>background image</description>
 				<posx>-30</posx>
 				<posy>-23</posy>
-				<width>225</width>
-				<height>65</height>
+				<width>280</width>
+				<height>80</height>
 				<texture border="28">keyboardPanel.png</texture>	
 			</control>
 			
 			<control type="progress">
 				<description>progress control</description>
 				<posx>-4</posx>
-				<posy>3</posy>
-				<width>100</width>
-				<height>13</height>
+				<posy>8</posy>
+				<width>120</width>
+				<height>16</height>
 				<info>Player.Volume</info>
 				<texturebg>progress_back.png</texturebg>
 				<lefttexture>-</lefttexture>
@@ -38,12 +46,12 @@
 
 			<control type="label" id="0">
 				<description>Volume Label</description>
-				<posx>110</posx>
+				<posx>220</posx>
 				<posy>-2</posy>
-				<font>h3</font>
-				<align>left</align>
+				<font>cali38</font>
+				<align>right</align>
 				<info>Player.Volume</info>
-				<width>80</width>
+				<width>180</width>
 				<textcolor>label-text</textcolor>
 				<!--<visible>!Window.IsActive(113)</visible>-->
 			</control>
