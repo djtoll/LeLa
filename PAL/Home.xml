@@ -548,7 +548,7 @@
 			<width>200</width>
 			<info>MusicPlayer.Cover</info>
 			<bordertexture border="2">list-focus.png</bordertexture>
-			<bordersize>4</bordersize>
+			<bordersize>5</bordersize>
 			<aspectratio align="left">keep</aspectratio>
 			<visible>Player.HasAudio</visible>
 			<include>fadeinout</include>

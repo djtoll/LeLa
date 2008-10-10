@@ -2,10 +2,13 @@
 	<defaultcontrol>0</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>58</previouswindow>
-	
+
 	<controls>
-		<include>background</include>
+		<include>background</include>		
 		<include>allscreens</include>
+
+
+
 
 		<control type="label">
 			<include>pageLabel</include>
@@ -52,95 +55,96 @@
 			<label>31904</label>
 			<visible>Window.IsActive(systemsettings)</visible>
 		</control>
-				
+
 		<control type="group">
 			<include>pageslide</include>
-		
-				<control type="grouplist" id="3">
-					<description>button area</description>
-					<posx>40</posx>
-					<posy>90</posy>
-					<width>160</width>
-					<height>410</height>
-					<itemgap>2</itemgap>
-					<onleft>5</onleft>
-					<onright>5</onright>
-					<onup>3</onup>
-					<ondown>3</ondown>
-				</control>
 
-				<control type="grouplist" id="5">
-					<description>control area</description>
-					<posx>210</posx>
-					<posy>90</posy>
-					<width>480</width>
-					<height>433</height>
-					<itemgap>2</itemgap>
-					<onleft>3</onleft>
-					<onright>3</onright>
-					<onup>5</onup>
-					<ondown>5</ondown>
-				</control>
-				
-				<control type="button" id="7">
-					<description>Default Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<height>34</height>
-					<font>menu</font>
-					<aligny>center</aligny>
-					<textoffsetx>10</textoffsetx>
-					<texturefocus>list-focus.png</texturefocus>
-					<texturenofocus>list-nofocus.png</texturenofocus>
-					<textcolor>button-text</textcolor>
-				</control>
-				
-				<control type="radiobutton" id="8">
-					<description>Default RadioButton</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>225</width>
-					<height>34</height>
-					<font>menu</font>
-				</control>
-				
-				<control type="spincontrolex" id="9">
-					<description>Default SpinControlex</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>34</height>
-					<texturefocus>list-focus.png</texturefocus>
-					<texturenofocus>list-nofocus.png</texturenofocus>
-					<textureup>scroll-up.png</textureup>
-					<texturedown>scroll-down.png</texturedown>
-					<textureupfocus>scroll-up-focus.png</textureupfocus>
-					<texturedownfocus>scroll-down-focus.png</texturedownfocus>
-					<font>menu</font>
-					<disabledcolor>60d0d0d0</disabledcolor>
-					<textoffsetx>10</textoffsetx>
-					<reverse>yes</reverse>
-					<textcolor>button-text</textcolor>
-					<textoffsety>2</textoffsety>
-					<spinwidth>15</spinwidth>
-					<spinheight>15</spinheight>
-				</control>
-				
-				<control type="button" id="10">
-					<description>Default Category Button</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>150</width>
-					<height>34</height>
-					<label>224</label>
-					<font>menu</font>
-					<align>left</align>
-					<textoffsety>3</textoffsety>
-					<textoffsetx>10</textoffsetx>
-					<texturefocus border="2">list-focus.png</texturefocus>
-					<texturenofocus>list-nofocus.png</texturenofocus>
-					<textcolor>button-text</textcolor>
-				</control>
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<posx>40</posx>
+				<posy>90</posy>
+				<width>160</width>
+				<height>410</height>
+				<textcolor>FFfda702</textcolor>
+				<itemgap>6</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>210</posx>
+				<posy>90</posy>
+				<width>480</width>
+				<height>433</height>
+				<itemgap>8</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>34</height>
+				<font>cali34aspect</font>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textcolor>button-text</textcolor>
+			</control>
+
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>225</width>
+				<height>34</height>
+				<font>cali34aspect</font>
+			</control>
+
+			<control type="spincontrolex" id="9">
+				<description>Default SpinControlex</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>34</height>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textureup>scroll-up.png</textureup>
+				<texturedown>scroll-down.png</texturedown>
+				<textureupfocus>scroll-up-focus.png</textureupfocus>
+				<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+				<font>cali34aspect</font>
+				<disabledcolor>60d0d0d0</disabledcolor>
+				<textoffsetx>10</textoffsetx>
+				<reverse>yes</reverse>
+				<textcolor>button-text</textcolor>
+				<textoffsety>2</textoffsety>
+				<spinwidth>15</spinwidth>
+				<spinheight>15</spinheight>
+			</control>
+
+			<control type="button" id="10">
+				<description>Default Category Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>34</height>
+				<label>224</label>
+				<font>cali34aspect</font>
+				<align>left</align>
+				<textoffsety>3</textoffsety>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<textcolor>button-text</textcolor>
+			</control>
 
 		</control>
 	</controls>

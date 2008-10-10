@@ -1006,7 +1006,7 @@
 				</control>
 				<control type="label">
 					<font>h2</font>
-					<label>version: alpha 5</label>
+					<label>Version: alpha 5</label>
 					<posx>210</posx>
 					<posy>110</posy>
 					<width>500</width>
