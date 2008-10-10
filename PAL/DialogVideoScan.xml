@@ -1,16 +1,29 @@
 <window id="112">
-	
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
-		<posy>536</posy>
+		<posy>534</posy>
 	</coordinates>
-	
 	<controls>
-		
 		<control type="group">
-
-			<control type="label" id="401">
+			<include>fadeinout</include>
+			<control type="image">
+				<description>background</description>
+				<posx>-77</posx>
+				<posy>-11</posy>
+				<width>847</width>
+				<height>63</height>
+				<texture>list-focus.png</texture>
+			</control>
+			<control type="image">
+				<description>background</description>
+				<posx>-77</posx>
+				<posy>-14</posy>
+				<width>847</width>
+				<height>53</height>
+				<texture>ListItem.Thumb.bg2.png</texture>
+			</control>
+			<!-- <control type="label" id="401">
 				<description>Caption Label</description>
 				<posx>30</posx>
 				<posy>4</posy>
@@ -19,36 +32,32 @@
 				<width>400</width>
 				<textcolor>label-text</textcolor>
 				<include>fadeinout</include>
-			</control>
-			
+			</control> -->
 			<control type="label" id="402">
 				<description>Current Directory Label</description>
 				<posx>690</posx>
-				<posy>4</posy>
-				<width>400</width>
+				<posy>-4</posy>
+				<width>660</width>
 				<haspath>yes</haspath>
-				<font>h4</font>
-				<textcolor>sublabel-text</textcolor>
+				<font>cali36</font>
+				<textcolor>rss-title</textcolor>
 				<onleft>402</onleft>
 				<onright>402</onright>
 				<onup>402</onup>
 				<align>right</align>
 				<ondown>402</ondown>
-				<include>fadeinout</include>
 			</control>
-			
 			<control type="progress" id="403">
 				<description>progress control</description>
-				<posx>-5</posx>
-				<posy>36</posy>
-				<width>730</width>
-				<height>3</height>
+				<posx>-10</posx>
+				<posy>35</posy>
+				<width>738</width>
+				<height>10</height>
 				<texturebg>progressbar-background.png</texturebg>
 				<lefttexture>progress-left.png</lefttexture>
 				<midtexture>progress-middle.png</midtexture>
 				<righttexture>progress-right.png</righttexture>
 				<overlaytexture>-</overlaytexture>
-				<include>fadeinout</include>
 			</control>
 		</control>
 	</controls>
