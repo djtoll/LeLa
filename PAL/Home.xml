@@ -540,6 +540,22 @@
 			<visible>Player.HasAudio</visible>
 			<include>fadeinout</include>
 		</control>
+		
+		<control type="progress">
+				<description>progress control</description>
+				<posx>-140</posx>
+				<posy>528</posy>
+				<width>140</width>
+				<height>6</height>
+				<info>Player.Progress</info>
+				<!-- <texturebg>progressbar-background.png</texturebg> -->
+				<texturebg>progressbar-background-lela.png</texturebg>
+				<!-- <lefttexture>progress-left.png</lefttexture> -->
+				<midtexture>progress-middle-lela.png</midtexture>
+				<!-- <righttexture>progress-right.png</righttexture> -->
+				<animation effect="rotate" start="0" end="-270" time="20" condition="true">conditional</animation>
+				<overlaytexture>-</overlaytexture>
+			</control>
 									
 		<control type="image">
 			<posx>220</posx>
@@ -633,7 +649,9 @@
 			<!-- <visible>!LastFM.RadioPlaying + Player.HasAudio</visible> -->
 		</control>
 		
-	
+		
+			
+			
 			<control type="image">
 			<posx>166</posx>
 			<posy>374</posy>
