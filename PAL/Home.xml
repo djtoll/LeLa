@@ -556,6 +556,16 @@
 				<animation effect="rotate" start="0" end="-270" time="20" condition="true">conditional</animation>
 				<overlaytexture>-</overlaytexture>
 			</control>
+			
+		<control type="image">
+			<description>Song Rating Value</description>
+			<posx>128</posx>
+			<posy>260</posy>
+			<height>40</height>
+			<width>330</width>		
+			<aspectratio>keep</aspectratio>			
+			<info>musicplayer.rating</info>			
+		</control>	
 									
 		<control type="image">
 			<posx>220</posx>
@@ -612,7 +622,7 @@
 						
 		<control type="label" id="200">
 			<posx>205</posx>
-			<posy>51</posy>
+			<posy>53</posy>
 			<width>520</width>
 			<label>$INFO[MusicPlayer.Artist]</label>
 			<textcolor>sublabel-text</textcolor>
@@ -626,10 +636,10 @@
 		<control type="label" id="200">
 			<!-- <include>home-start</include> -->
 			<posx>205</posx>
-			<posy>108</posy>
+			<posy>100</posy>
 			<width>500</width>
-			<label>$INFO[MusicPlayer.Album]</label>
-			<textcolor>sublabel-text</textcolor>
+			<label>[B]$INFO[MusicPlayer.Album][/B]</label>
+			<textcolor>label-text</textcolor>
 			<align>right</align>
 			<font>menu</font>
 			<include>fadeinout</include>
@@ -639,12 +649,12 @@
 		<control type="label" id="200">
 			<!-- <include>home-start</include> -->
 			<posx>205</posx>
-			<posy>168</posy>
+			<posy>160</posy>
 			<width>500</width>
-			<label>[B]$INFO[musicplayer.Time][COLOR=sublabel-text]$INFO[musicplayer.Duration, / ][/COLOR][/B]</label>
+			<label>$INFO[musicplayer.Time][B][COLOR=rss-title]$INFO[musicplayer.Duration, @ ][/COLOR][/B]</label>
 			<textcolor>label-text</textcolor>
 			<align>right</align>
-			<font>cali38</font>
+			<font>menu</font>
 			<include>fadeinout</include>
 			<!-- <visible>!LastFM.RadioPlaying + Player.HasAudio</visible> -->
 		</control>

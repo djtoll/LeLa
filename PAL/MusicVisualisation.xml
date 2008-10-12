@@ -4,7 +4,7 @@
 	<visible>!Window.IsVisible(2004)</visible>
 
 	<controls>
-	
+
 		<control type="visualisation" id="2">
 			<description>visualisation</description>
 			<posx>0</posx>
@@ -12,10 +12,10 @@
 			<width>720</width>
 			<height>576</height>
 		</control>
-		
-		
-		
-<!-- codec & vis info -->
+
+
+
+		<!-- codec & vis info -->
 
 		<control type="image">
 			<description>preset background image</description>
@@ -28,7 +28,7 @@
 			<visible>Player.ShowCodec</visible>
 			<animation effect="fade" time="300">VisibleChange</animation>
 		</control>
-		
+
 		<!-- <control type="label">
 			<description>Codecinfo</description>
 			<width>720</width>
@@ -64,9 +64,9 @@
 			<animation effect="fade" time="300">VisibleChange</animation>
 			<texture>arenaitem-private.png</texture>
 		</control> -->
-			
-			
-<!-- "Now Playing"-->
+
+
+		<!-- "Now Playing"-->
 
 		<!-- <control type="image">
 			<description>background</description>
@@ -90,15 +90,83 @@
 			<texture diffuse="background-diffuse.png">$INFO[Skin.String(custom-background)]</texture>
 			<animation effect="fade" start="100" end="85" time="0" condition="[Player.HasAudio + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
 		</control> -->
+
+
+
+		<control type="image" id="1">
+			<description>media info background image FOR OFFSETS auf die 2 folgende labels</description>
+			<posx>120</posx>
+			<posy>-220</posy>
+			<width>740</width>
+			<height>377</height>
+			<texture border="0,0,22,0">schatten2.png</texture>
+			<colordiffuse>ff000000</colordiffuse>				
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="250" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+			<visible>Player.ShowInfo</visible>
+		</control>
+
 		
-		
-		
-		
-		
-		
-		
-		
-		
+		<control type="label" id="1">
+			<posx>706</posx>
+			<posy>20</posy>
+			<width>470</width>
+			<height>25</height>
+			<label>[B]$LOCALIZE[209] :[/B] $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>menu</font>
+			<textcolor>ffaaaaaa</textcolor>
+			<scroll>true</scroll>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="1200"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="150"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="label" id="1">
+			<posx>706</posx>
+			<posy>62</posy>
+			<width>388</width>
+			<height>25</height>
+			<label>[B]$LOCALIZE[31537] 2nd:[/B] $INFO[MusicPlayer.offset(2).Artist,, - ]$INFO[MusicPlayer.offset(2).Title]</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>cali36</font>
+			<textcolor>ffaaaaaa</textcolor>
+			<scroll>true</scroll>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="1350"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="100"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="image" id="1">
+			<description>media info background image FOR OFFSETS NACH DEN 2 OBEREN LABELS</description>
+			<posx>120</posx>
+			<posy>-3</posy>
+			<width>140</width>
+			<height>77</height>
+			<texture>schatten2.png</texture>
+			<!-- <colordiffuse>96000000</colordiffuse> -->				
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="450" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="100" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="image" id="1">
+			<description>media info background image FOR OFFSETS NACH DEN 2 OBEREN LABELS - offset label klein</description>
+			<posx>199</posx>
+			<posy>53</posy>
+			<width>140</width>
+			<height>50</height>
+			<texture>schatten2.png</texture>
+			<!-- <colordiffuse>96000000</colordiffuse> -->				
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="550" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="100" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+
+<!-- OFFSET IMAGES -->
+
 		<control type="image" id="19">
 			<description>cover image cd_case offset 3</description>
 			<posx>363</posx>
@@ -220,36 +288,7 @@
 			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="50" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
 			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="100" condition="!Skin.HasSetting(animated)">WindowClose</animation>
 		</control>
-		<control type="label" id="1">
-			<posx>706</posx>
-			<posy>20</posy>
-			<width>470</width>
-			<height>25</height>
-			<label>[B]$LOCALIZE[209] :[/B] $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>menu</font>
-			<textcolor>ffaaaaaa</textcolor>
-			<scroll>true</scroll>
-			<visible>Player.ShowInfo</visible>
-			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="1200"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
-			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="150"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
-		</control>
-		<control type="label" id="1">
-			<posx>706</posx>
-			<posy>62</posy>
-			<width>388</width>
-			<height>25</height>
-			<label>[B]$LOCALIZE[31537] 2nd:[/B] $INFO[MusicPlayer.offset(2).Artist,, - ]$INFO[MusicPlayer.offset(2).Title]</label>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>cali36</font>
-			<textcolor>ffaaaaaa</textcolor>
-			<scroll>true</scroll>
-			<visible>Player.ShowInfo</visible>
-			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="1350"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
-			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="100"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
-		</control>
+
 		<!-- <control type="label" id="1">
 			<posx>706</posx>
 			<posy>81</posy>
@@ -336,19 +375,31 @@
 			</control>
 		</control>
 		<!-- media infos -->
-		
+
 		<control type="image" id="1">
-				<description>media info background image</description>
-				<posx>-10</posx>
-				<posy>191</posy>
-				<width>740</width>
-				<height>377</height>
-				<texture border="0,0,22,0">schatten2.png</texture>
-				<!-- <colordiffuse>99000000</colordiffuse> -->
-				<include>fadeinout-osd</include>
-				<animation effect="fade" time="1000">VisibleChange</animation>
-				<visible>Player.ShowInfo</visible>
-			</control>
+			<description>media info background image</description>
+			<posx>-40</posx>
+			<posy>191</posy>
+			<width>800</width>
+			<height>420</height>
+			<texture border="0,0,22,0">schatten2.png</texture>
+			<!-- <colordiffuse>99000000</colordiffuse> -->				
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<visible>Player.ShowInfo</visible>
+		</control>
+		<control type="image" id="1">
+			<description>media info background image 2</description>
+			<posx>-10</posx>
+			<posy>191</posy>
+			<width>740</width>
+			<height>377</height>
+			<texture border="0,0,22,0">schatten2.png</texture>
+			<colordiffuse>91000000</colordiffuse>				
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<visible>Player.ShowInfo</visible>
+		</control>
+
+
 		<control>
 			<description>Artist label</description>
 			<type>fadelabel</type>
@@ -356,11 +407,11 @@
 			<width>640</width>
 			<posx>50</posx>
 			<posy>249</posy>
-			<info>MusicPlayer.Artist</info>
+			<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
 			<visible>Player.ShowInfo</visible>
 			<animation effect="fade" time="1000">VisibleChange</animation>
 			<align>left</align>
-			<textcolor>ffcd5c5c</textcolor>
+			<textcolor>rss-title</textcolor>
 			<shadow>ffaaaaaa</shadow>
 			<font>menu</font>
 		</control>
@@ -371,7 +422,7 @@
 			<width>640</width>
 			<posx>50</posx>
 			<posy>300</posy>
-			<info>MusicPlayer.Title</info>
+			<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 			<visible>Player.ShowInfo</visible>
 			<animation effect="fade" time="1000">VisibleChange</animation>
 			<align>left</align>
@@ -390,7 +441,7 @@
 			<visible>Player.ShowInfo</visible>
 			<animation effect="fade" time="1000">VisibleChange</animation>
 			<align>left</align>
-			<textcolor>FF888888</textcolor>
+			<textcolor>ff1e90ff</textcolor>
 			<font>menu</font>
 		</control>
 		<control>
@@ -399,8 +450,8 @@
 			<id>1</id>
 			<width>460</width>
 			<posx>50</posx>
-			<posy>400</posy>
-			<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+			<posy>408</posy>
+			<label>[B]$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ][/B]</label>
 			<visible>Player.ShowInfo</visible>
 			<animation effect="fade" time="1000">VisibleChange</animation>
 			<align>left</align>
@@ -414,12 +465,13 @@
 			<width>300</width>
 			<posx>50</posx>
 			<posy>460</posy>
-			<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
+			<!-- <label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label> -->
+			<label>$INFO[musicplayer.Playlistposition]$INFO[musicplayer.Playlistlength, / ]</label>
 			<visible>Player.ShowInfo + !MusicPartyMode.Enabled</visible>
 			<animation effect="fade" time="1000">VisibleChange</animation>
 			<align>left</align>
 			<textcolor>FFaaaaaa</textcolor>
-			<font>cali38</font>
+			<font>menu</font>
 		</control>
 		<control>
 			<description>PartyMode Enabled</description>
@@ -430,12 +482,27 @@
 			<posy>464</posy>
 			<label>589</label>
 			<visible>Player.ShowInfo + MusicPartyMode.Enabled</visible>
-			<animation effect="fade" time="200000">VisibleChange</animation>
-			<include>zoom</include>
+			<!-- <animation effect="fade" time="200000">VisibleChange</animation> -->
+			<animation effect="fade" time="400">VisibleChange</animation>			
 			<align>left</align>
 			<font>mach7</font>
 		</control>
 		<control>
+			<description>PartyMode Enabled</description>
+			<type>label</type>
+			<id>1</id>
+			<width>400</width>
+			<posx>28</posx>
+			<posy>530</posy>
+			<label>589</label>
+			<visible>!Player.ShowInfo + MusicPartyMode.Enabled</visible>
+			<animation effect="fade" delay="1400" time="200">Conditional</animation>
+			<animation effect="fade" time="200">Conditional</animation>
+			<include>zoom</include>
+			<align>left</align>
+			<font>mach7</font>
+		</control>
+		<!-- <control>
 			<description>Volume Label</description>
 			<type>label</type>
 			<posx>650</posx>
@@ -452,7 +519,7 @@
 			<animation effect="fade" time="800">VisibleChange</animation>
 			<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
 			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
-		</control>
+		</control> -->
 		<control>
 			<description>Year label</description>
 			<type>label</type>
@@ -461,11 +528,11 @@
 			<posy>512</posy>
 			<label>$INFO[MusicPlayer.Year]</label>
 			<font>menu</font>
-			<textcolor>FFdcd563</textcolor>
+			<textcolor>rss-title</textcolor>
 			<align>left</align>
 			<visible>Player.ShowInfo</visible>
 			<include>zoom</include>
-			<animation effect="fade" time="1000">VisibleChange</animation>
+			<animation effect="fade" time="100">VisibleChange</animation>
 		</control>
 		<control>
 			<description>Uhr label</description>
@@ -476,7 +543,7 @@
 			<label>time</label>
 			<info>System.Time</info>
 			<font>menu</font>
-			<textcolor>ffff8c00</textcolor>
+			<textcolor>rss-title</textcolor>
 			<align>right</align>
 			<include>zoom</include>
 			<animation effect="fade" time="1000">VisibleChange</animation>
@@ -487,7 +554,7 @@
 			<description>Uhr.png</description>
 			<type>image</type>
 			<posx>667</posx>
-			<posy>517</posy>
+			<posy>519</posy>
 			<height>38</height>
 			<width>28</width>
 			<include>zoom</include>
@@ -496,17 +563,18 @@
 			<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
 			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
 		</control>
+
 		<control>
 			<type>image</type>
 			<description>Song Rating Image</description>
-			<height>32</height>
+			<height>38</height>
 			<width>146</width>
 			<posx>20</posx>
-			<posy>520</posy>
+			<posy>517</posy>
 			<include>zoom</include>
 			<visible>Player.ShowInfo</visible>
 			<info>musicplayer.rating</info>
-			<animation effect="fade" time="800">VisibleChange</animation>
+			<animation effect="fade" time="100">VisibleChange</animation>
 		</control>
 		<control>
 			<description>System.CPUTemperature</description>
@@ -539,7 +607,7 @@
 			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
 		</control>
 		<control type="progress" id="20">
-		<description>progress control track</description>
+			<description>progress control track</description>
 			<posx>49</posx>
 			<posy>232</posy>
 			<width>584</width>
@@ -566,7 +634,7 @@
 			<animation effect="fade" time="800">VisibleChange</animation>
 		</control>
 		<!-- volume minibar -->
-		 <control type="progress">
+		<control type="progress">
 			<description>progress control volume</description>
 			<posx>657</posx>
 			<posy>471</posy>
@@ -608,7 +676,7 @@
 			<posx>444</posx>
 			<posy>524</posy>
 			<label>$INFO[System.FreeMemory]</label>
-			<font>cali36</font>
+			<font>cali38</font>
 			<textcolor>ffaaaaaa</textcolor>
 			<align>right</align>
 			<visible>Player.ShowInfo</visible>

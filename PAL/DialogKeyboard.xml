@@ -1,12 +1,13 @@
 <window id="103">
 	<defaultcontrol always="true">65</defaultcontrol>
-	<include>dialog-open-kb</include>
-	
+	<!-- <include>dialog-open-kb</include> -->
+	<animation effect="zoom" start="90" end="150-" center="auto" time="130">WindowOpen</animation>
+   <animation effect="zoom" start="150" end="110" center="auto" time="100">WindowClose</animation>
 	<controls>
 		
 		<control type="group">
 			<posx>150</posx>
-			<posy>300</posy>
+			<posy>190</posy>
 
 		<control type="image">
 			<description>background image</description>
@@ -42,7 +43,7 @@
 			<posy>5</posy>
 			<width>400</width>
 			<height>16</height>
-			<font>keyboard</font>
+			<font>cali34</font>
 			<align>center</align>
 			
 		</control>
@@ -66,7 +67,7 @@
 				<focusedcolor>sublabel-text</focusedcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			
 			<control type="togglebutton" id="302">
@@ -87,7 +88,7 @@
 				<alttexturefocus>keyboard-btn-mid-sel-focus.png</alttexturefocus>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			
 			<control type="togglebutton" id="303">
@@ -108,7 +109,7 @@
 				<alttexturefocus>keyboard-btn-mid-sel-focus.png</alttexturefocus>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			
 			<control type="togglebutton" id="304">
@@ -129,7 +130,7 @@
 				<alttexturefocus>keyboard-btn-mid-sel-focus.png</alttexturefocus>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			
 			<control type="button" id="48">
@@ -147,7 +148,7 @@
 				<ondown>65</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="49">
 				<description>'1' button</description>
@@ -164,7 +165,7 @@
 				<ondown>66</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="50">
 				<description>'2' button</description>
@@ -181,7 +182,7 @@
 				<ondown>67</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="51">
 				<description>'3' button</description>
@@ -198,7 +199,7 @@
 				<ondown>68</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="52">
 				<description>'4' button</description>
@@ -215,7 +216,7 @@
 				<ondown>69</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="53">
 				<description>'5' button</description>
@@ -232,7 +233,7 @@
 				<ondown>70</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="54">
 				<description>'6' button</description>
@@ -249,7 +250,7 @@
 				<ondown>71</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="55">
 				<description>'7' button</description>
@@ -266,7 +267,7 @@
 				<ondown>72</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="56">
 				<description>'8' button</description>
@@ -283,7 +284,7 @@
 				<ondown>73</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="57">
 				<description>'9' button</description>
@@ -300,7 +301,7 @@
 				<ondown>74</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			
 			<control type="button" id="65">
@@ -318,7 +319,7 @@
 				<ondown>75</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="66">
 				<description>'B' button</description>
@@ -335,7 +336,7 @@
 				<ondown>76</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="67">
 				<description>'C' button</description>
@@ -352,7 +353,7 @@
 				<ondown>77</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="68">
 				<description>'D' button</description>
@@ -369,7 +370,7 @@
 				<ondown>78</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="69">
 				<description>'E' button</description>
@@ -386,7 +387,7 @@
 				<ondown>79</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="70">
 				<description>'F' button</description>
@@ -403,7 +404,7 @@
 				<ondown>80</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="71">
 				<description>'G' button</description>
@@ -420,7 +421,7 @@
 				<ondown>81</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="72">
 				<description>'H' button</description>
@@ -437,7 +438,7 @@
 				<ondown>82</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="73">
 				<description>'I' button</description>
@@ -454,7 +455,7 @@
 				<ondown>83</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="74">
 				<description>'J' button</description>
@@ -471,7 +472,7 @@
 				<ondown>84</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			
 			<control type="button" id="75">
@@ -489,7 +490,7 @@
 				<ondown>85</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="76">
 				<description>'L' button</description>
@@ -506,7 +507,7 @@
 				<ondown>86</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="77">
 				<description>'M' button</description>
@@ -523,7 +524,7 @@
 				<ondown>87</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="78">
 				<description>'N' button</description>
@@ -540,7 +541,7 @@
 				<ondown>88</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="79">
 				<description>'O' button</description>
@@ -557,7 +558,7 @@
 				<ondown>89</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="80">
 				<description>'P' button</description>
@@ -574,7 +575,7 @@
 				<ondown>90</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="81">
 				<description>'Q' button</description>
@@ -591,7 +592,7 @@
 				<ondown>305</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="82">
 				<description>'R' button</description>
@@ -608,7 +609,7 @@
 				<ondown>305</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="83">
 				<description>'S' button</description>
@@ -625,7 +626,7 @@
 				<ondown>306</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="84">
 				<description>'T' button</description>
@@ -642,7 +643,7 @@
 				<ondown>306</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			
 			<control type="button" id="85">
@@ -660,7 +661,7 @@
 				<ondown>32</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="86">
 				<description>'V' button</description>
@@ -677,7 +678,7 @@
 				<ondown>32</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="87">
 				<description>'W' button</description>
@@ -694,7 +695,7 @@
 				<ondown>32</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="88">
 				<description>'X' button</description>
@@ -711,7 +712,7 @@
 				<ondown>32</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="89">
 				<description>'Y' button</description>
@@ -728,7 +729,7 @@
 				<ondown>32</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="90">
 				<description>'Z' button</description>
@@ -745,7 +746,7 @@
 				<ondown>32</ondown>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="8">
 				<description>BACKSPACE button</description>
@@ -763,7 +764,7 @@
 				<focusedcolor>sublabel-text</focusedcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			
 			<control type="button" id="307">
@@ -776,7 +777,7 @@
 				<texturenofocus border="2"></texturenofocus>
 				<focusedcolor>sublabel-text</focusedcolor>
 				<label>IP</label>
-				<font>keyboard</font>
+				<font>cali34</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<onleft>32</onleft>
@@ -801,7 +802,7 @@
 				<focusedcolor>sublabel-text</focusedcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>keyboard</font>
+				<font>cali34</font>
 			</control>
 			<control type="button" id="305">
 				<description>previous button</description>
@@ -814,7 +815,7 @@
 				<onup>81</onup>
 				<ondown>32</ondown>
 				<label>BWD</label>
-				<font>keyboard</font>
+				<font>cali34</font>
 				<texturefocus border="2">key-focus.png</texturefocus>
 				<texturenofocus border="2"></texturenofocus>
 				<focusedcolor>sublabel-text</focusedcolor>
@@ -830,7 +831,7 @@
 				<onup>84</onup>
 				<ondown>307</ondown>
 				<label>FWD</label>
-				<font>keyboard</font>
+				<font>cali34</font>
 				<texturefocus border="2">key-focus.png</texturefocus>
 				<texturenofocus border="2"></texturenofocus>
 				<focusedcolor>sublabel-text</focusedcolor>
