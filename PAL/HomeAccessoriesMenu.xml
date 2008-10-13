@@ -29,7 +29,7 @@
 				<width>420</width>
 				<height>40</height>
 				<buttongap>0</buttongap>
-				<numbuttons>6</numbuttons>
+				<numbuttons>7</numbuttons>
 				<orientation>vertical</orientation>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -80,6 +80,11 @@
 					<button id="6">
 						<label>130</label>
 						<onclick>ActivateWindow(SystemInfo)</onclick>
+					</button>
+					
+					<button id="7">
+						<label>31905</label>
+						<onclick>XBMC.RunScript(Q:\skin\Lela\extras\LeLaLoader\LeLaLoader.py)</onclick>
 					</button>
 						
 				</buttons>

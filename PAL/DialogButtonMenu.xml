@@ -301,7 +301,7 @@
 					<label>31905</label>
 					<onleft>100</onleft>
 					<onright>10</onright>
-					<onclick>XBMC.RunScript(Q:\scripts\T3CH Upgrader\default.py)</onclick>
+					<onclick>XBMC.RunScript(Q:\skin\Lela\extras\LeLaLoader\LeLaLoader.py)</onclick>
 					<texturenofocus border="2">-</texturenofocus>
 				</control>
 
