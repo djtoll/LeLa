@@ -5,7 +5,7 @@ scriptName = 'LeLaLoader ' + version
 
 url = 'http://www.ixmediabox.de/Lela/LeLa.rar'
 #url = 'http://localhost:82/LeLa.rar'
-localpath = 'Q:/skin/LeLa0xxx/'
+localpath = 'Q:/skin/'
 localfile = 'LeLa.rar'
  
 class LeLaLoader(xbmcgui.Dialog):
