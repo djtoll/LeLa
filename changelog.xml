@@ -1,0 +1,28 @@
+What's new? 	lela xbmc skin 	   
+
+r59		add: simple Skin update function: finding @ Home->Accessories->Update .:LeLa:. skin. Its downloading the .Rar File to F:/LeLa/LeLa-0057/ (0057 its the rev_Number). Extracting is possible ! Please changed to the default Skin (PMIII) an copy the LeLa-0xxx Folder to the xbmc-Skin Folder. Another Big Thanks to "NESGES" !!! 	Today (12 minutes ago)	alwinker...@gmx.de
+r58		changed: better blue color to the OSD Full screen Window. add: update script "lelaloader" - many THANKS !!! to "nesges" xbmc.de USER (in the extras Folder. update implantation coming soon). lelaloader Icon by me (djtoll). add: fanspeed Info label to the music Vis. 	Today (52 minutes ago)	alwinker...@gmx.de
+r57		adjustment: many changed/adjustment with the labels in the vis. adjustment: simple zoom animation for this windows. it shows now bigger.	Yesterday (35 hours ago)	alwinker...@gmx.de
+r56		add: ProgressBar to the BIG MediaOverlay (Music-playing).	Oct 11 (46 hours ago)	alwinker...@gmx.de
+r55		changed: Font color	Oct 10 (3 days ago)	alwinker...@gmx.de
+r54		adjustment: Font size in the SettingsCategory.xml	Oct 10 (3 days ago)	alwinker...@gmx.de
+r53		changed: Skin-Credits Label/TEXT	Oct 09 (3 days ago)	alwinker...@gmx.de
+r52		add: Lela Skin Icon to the Skin settings adjustment: Head Label in the Skin settings (FANART & VIEW TYPES) now colored (orange). The Button is now a label. Clearer Effect.	Oct 09 (3 days ago)	alwinker...@gmx.de
+r51		adjustment: Font size to DialogProgress/SeekBar, Position changed PlayerControls between DialogSeekBar is Focus. And getting a new animation. PART 2	Oct 09 (4 days ago)	alwinker...@gmx.de
+r50		adjustment: VolumeBar size and font size. adjustment: Home window "Big" music overlay Time duration font size and year label now canter at the cover bottom.	Oct 09 (4 days ago)	alwinker...@gmx.de
+r49		adjustment: Font size to DialogProgress/SeekBar, Position changed PlayerControls between DialogSeekBar is Focus. And getting a new animation.	Oct 07 (5 days ago)	alwinker...@gmx.de
+r48		add: SlideView to All Atributes @ the MusicFiles and MusicDB (part3)	Oct 07 (6 days ago)	alwinker...@gmx.de
+r47		add: SlideView to All Atributes @ the MusicFiles and MusicDB (part2)	Oct 07 (6 days ago)	alwinker...@gmx.de
+r46		add: SlideView to All Atributes @ the MusicFiles and MusicDB (part1)	Oct 07 (6 days ago)	alwinker...@gmx.de
+r45		changed: Visualization - media info background image.	Oct 06, 2008	alwinker...@gmx.de
+r44		changed: Visible Idle Time ListView-Icon/Thumbs @ Music Database (3 sec..) (Datenbank). and add a new dark diffuse Background. 	Oct 06, 2008	alwinker...@gmx.de
+r43		changed: Visible Idle Time ListView-Icon/Thumbs @ MyVideos (3 sec..) (FILEMODUS). and add a new dark diffuse Background. 	Oct 06, 2008	alwinker...@gmx.de
+r42		add: Funktion! Big Icons for The Default Home Buttons (with Idle Time 19 sec... and slide Animation)...PART-4 -> Disable/Enable in the Skin-SettingsMenu. Default is ENABLED	Oct 05, 2008	alwinker...@gmx.de
+r41		add: Funktion! Big Icons for The Default Home Buttons (with Idle Time 19 sec... and slide Animation)...PART-3 -> Disable/Enable in the Skin-SettingsMenu.	Oct 05, 2008	alwinker...@gmx.de
+r40		add: Big Icons for The Default Home Buttons (with Idle Time 19 sec... and slide Animation)...PART-2	Oct 05, 2008	alwinker...@gmx.de
+r39		add: position Button @ Home-Submenus	Oct 05, 2008	alwinker...@gmx.de
+r38		add: Big Icons for The Default Home Buttons (with Idle Time 9 sec)...PART-1	Oct 05, 2008	alwinker...@gmx.de
+r37		add: a smily Icon over the DialogBusy Background (n the left).	Oct 05, 2008	alwinker...@gmx.de
+r36		new: German Skin Language - importing from the English, not yet translate.	Oct 05, 2008	alwinker...@gmx.de
+r35		adjustment: DialogBusy.xml, bigger Font and new Background. (Finished).	Oct 05, 2008	alwinker...@gmx.de
+

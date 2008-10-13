@@ -1,6 +1,6 @@
 <includes>
 	<include name="HomeAccessoriesMenu">
-		
+
 		<control type="group" id="1400">
 			<include>home-start-column</include>
 			<include>zoomout</include>
@@ -9,7 +9,7 @@
 			<posx>338</posx>
 			<posy>55</posy>
 			<onup>9000</onup>
-		
+
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(4) | ControlGroup(1400).HasFocus(0)</visible>	
 			<visible>!System.IdleTime(22)</visible>
 			<control type="image">
@@ -20,8 +20,9 @@
 				<texture>scroll-right.png</texture>				
 				<visible allowhiddenfocus="true">Control.HasFocus(800)</visible>
 			</control>
-			
-			
+
+
+
 			<control type="buttonscroller" id="800">
 				<visible allowhiddenfocus="true">Control.HasFocus(800)</visible>
 				<posx>0</posx>
@@ -49,29 +50,29 @@
 				<textcolor>FF97d9ff</textcolor>
 				<focusedcolor>ffffffff</focusedcolor>
 				<include>select</include>
-	
+
 				<buttons>
 
 					<button id="1">
 						<label>1036</label>
 						<onclick>ActivateWindow(Favourites)</onclick>
 					</button>
-					
+
 					<button id="2">
 						<label>10001</label>
 						<onclick>ActivateWindow(MyPrograms)</onclick>
 					</button>
-					
+
 					<button id="3">
 						<label>10020</label>
 						<onclick>ActivateWindow(MyScripts)</onclick>
 					</button>
-				
+
 					<button id="4">
 						<label>10508</label>
 						<onclick>ActivateWindow(MyWeather)</onclick>
 					</button>
-					
+
 					<button id="5">
 						<label>7</label>
 						<onclick>ActivateWindow(Filemanager)</onclick>
@@ -81,15 +82,24 @@
 						<label>130</label>
 						<onclick>ActivateWindow(SystemInfo)</onclick>
 					</button>
-					
+
 					<button id="7">
 						<label>31905</label>
-						<onclick>XBMC.RunScript(Q:\skin\Lela\extras\LeLaLoader\LeLaLoader.py)</onclick>
+						<onclick>XBMC.RunScript(Q:\skin\Lela\extras\LeLaLoader\LeLaLoader.py)</onclick>						
 					</button>
-						
+
 				</buttons>
 			</control>
+
 		</control>
-		
+		<control type="image">
+			<posx>0</posx>
+			<posy>68</posy>
+			<width>256</width>
+			<height>256</height>						
+			<texture>LeLaLoader.png</texture>				
+			<aspectratio>keep</aspectratio>
+			<visible allowhiddenfocus="true">Control.HasFocus(800)</visible>
+		</control>
 	</include>
 </includes>
