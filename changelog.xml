@@ -1,5 +1,12 @@
-What's new? 	lela xbmc skin 	   
+What's new? 	lela xbmc skin 
 
+
+
+
+r63		update: changelog
+r62		delete: .psd Files	   
+r61		testing: update script test test test	Yesterday (20 hours ago)	alwinker...@gmx.de
+r60		add: Skin changelog.xml testing: update script test test
 r59		add: simple Skin update function: finding @ Home->Accessories->Update .:LeLa:. skin. Its downloading the .Rar File to F:/LeLa/LeLa-0057/ (0057 its the rev_Number). Extracting is possible ! Please changed to the default Skin (PMIII) an copy the LeLa-0xxx Folder to the xbmc-Skin Folder. Another Big Thanks to "NESGES" !!! 	Today (12 minutes ago)	alwinker...@gmx.de
 r58		changed: better blue color to the OSD Full screen Window. add: update script "lelaloader" - many THANKS !!! to "nesges" xbmc.de USER (in the extras Folder. update implantation coming soon). lelaloader Icon by me (djtoll). add: fanspeed Info label to the music Vis. 	Today (52 minutes ago)	alwinker...@gmx.de
 r57		adjustment: many changed/adjustment with the labels in the vis. adjustment: simple zoom animation for this windows. it shows now bigger.	Yesterday (35 hours ago)	alwinker...@gmx.de
