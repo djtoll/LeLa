@@ -14,7 +14,7 @@
 				
 			<control type="image">
 				
-				<height>300</height>
+				<height>340</height>
 				<include>dialogWindow</include>
 			</control>
 				
@@ -68,7 +68,7 @@
 			<control type="button" id="10">
 				<description>Ok button</description>
 				<posx>120</posx>
-				<posy>180</posy>
+				<posy>200</posy>
 				<hight>50</hight>
 				<label>186</label>
 				<font>cali38</font>

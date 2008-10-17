@@ -2,14 +2,15 @@ What's new? 	lela xbmc skin
 
 
 
-
-r63		update: changelog
-r62		delete: .psd Files	   
-r61		testing: update script test test test	Yesterday (20 hours ago)	alwinker...@gmx.de
-r60		add: Skin changelog.xml testing: update script test test
-r59		add: simple Skin update function: finding @ Home->Accessories->Update .:LeLa:. skin. Its downloading the .Rar File to F:/LeLa/LeLa-0057/ (0057 its the rev_Number). Extracting is possible ! Please changed to the default Skin (PMIII) an copy the LeLa-0xxx Folder to the xbmc-Skin Folder. Another Big Thanks to "NESGES" !!! 	Today (12 minutes ago)	alwinker...@gmx.de
-r58		changed: better blue color to the OSD Full screen Window. add: update script "lelaloader" - many THANKS !!! to "nesges" xbmc.de USER (in the extras Folder. update implantation coming soon). lelaloader Icon by me (djtoll). add: fanspeed Info label to the music Vis. 	Today (52 minutes ago)	alwinker...@gmx.de
-r57		adjustment: many changed/adjustment with the labels in the vis. adjustment: simple zoom animation for this windows. it shows now bigger.	Yesterday (35 hours ago)	alwinker...@gmx.de
+r65		...
+r64		changed: default background image, resize image size. adjustment: Fontsize at SystemInformation window. animating: default Lelaloader thumbnail, HomeAccessories SubMenu.	Yesterday (21 hours ago)	alwinker...@gmx.de
+r63		update: changelog	Oct 14 (2 days ago)	alwinker...@gmx.de
+r62		delete: .psd Files	Oct 14 (3 days ago)	alwinker...@gmx.de
+r61		testing: update script test test test	Oct 13 (3 days ago)	alwinker...@gmx.de
+r60		add: Skin changelog.xml testing: update script test test	Oct 13 (3 days ago)	alwinker...@gmx.de
+r59		add: simple Skin update function: finding @ Home->Accessories->Update .:LeLa:. skin. Its downloading the .Rar File to F:/LeLa/LeLa-0057/ (0057 its the rev_Number). Extracting is possible ! Please changed to the default Skin (PMIII) an copy the LeLa-0xxx Folder to the xbmc-Skin Folder. Another Big Thanks to "NESGES" !!! 	Oct 13 (3 days ago)	alwinker...@gmx.de
+r58		changed: better blue color to the OSD Full screen Window. add: update script "lelaloader" - many THANKS !!! to "nesges" xbmc.de USER (in the extras Folder. update implantation coming soon). lelaloader Icon by me (djtoll). add: fanspeed Info label to the music Vis. 	Oct 13 (3 days ago)	alwinker...@gmx.de
+r57		adjustment: many changed/adjustment with the labels in the vis. adjustment: simple zoom animation for this windows. it shows now bigger.
 r56		add: ProgressBar to the BIG MediaOverlay (Music-playing).	Oct 11 (46 hours ago)	alwinker...@gmx.de
 r55		changed: Font color	Oct 10 (3 days ago)	alwinker...@gmx.de
 r54		adjustment: Font size in the SettingsCategory.xml	Oct 10 (3 days ago)	alwinker...@gmx.de

@@ -85,7 +85,7 @@
 
 					<button id="7">
 						<label>31905</label>
-						<onclick>XBMC.RunScript(Q:\skin\Lela\extras\LeLaLoader\LeLaLoader.py)</onclick>						
+						<onclick>XBMC.RunScript(Q:\skin\Lela\extras\LeLaLoader\default.py)</onclick>						
 					</button>
 
 				</buttons>

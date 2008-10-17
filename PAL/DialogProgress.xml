@@ -14,7 +14,7 @@
 		<control type="group">
 			
 			<control type="image">	
-				<height>330</height>			
+				<height>340</height>			
 				<include>dialogWindow</include>
 			</control>
 
