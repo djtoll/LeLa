@@ -50,6 +50,21 @@
 				<overlaytexture>-</overlaytexture>
 				<!-- <visible>Window.IsActive(2005)</visible> -->
 			</control>
+			<control type="slider" id="401">
+				<description>Seek Slider</description>
+				<posx>200</posx>
+				<posy>75</posy>
+				<width>320</width>
+				<height>12</height>
+				<texturesliderbar>seekslider.png</texturesliderbar>
+				<textureslidernib>slider_nibFO.png</textureslidernib>
+				<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<visible>Player.Seeking</visible>
+			</control>
 
 			<control type="label" id="0">
 				<posx>156</posx>
@@ -175,15 +190,16 @@
 				<posx>-26</posx>
 				<posy>7</posy>
 				<control type="label" id="0">
-					<posx>156</posx>
-					<posy>57</posy>
-					<width>210</width>
+					<posx>180</posx>
+					<posy>50</posy>
+					<width>300</width>
 					<align>right</align>
-					<font>cali38</font>
+					<font>menu</font>
 					<textcolor>label-text</textcolor>
 					<label>[B]$LOCALIZE[31051][/B]</label>
 					<visible>![Window.IsActive(2901) | !Window.IsActive(0)] + Player.Playing</visible>
 				</control>
+				
 
 				<control type="label" id="22">
 					<description>seek time</description>
