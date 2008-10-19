@@ -2,7 +2,7 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<include>dialog-open</include>
-	
+
 	<coordinates>
 		<system>1</system>
 		<posx>80</posx>
@@ -10,10 +10,10 @@
 	</coordinates>
 
 	<controls>
-		
+
 		<control type="group">
 			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(128)">Conditional</animation>
-	
+
 			<control type="image">
 				<posx>-35</posx>
 				<posy>-30</posy>
@@ -21,7 +21,7 @@
 				<height>556</height>
 				<texture border="38">dialogpanel.png</texture>
 			</control>
-	
+
 			<control type="label" id="411">
 				<description>heading label</description>
 				<posx>0</posx>
@@ -32,7 +32,7 @@
 				<label>1023</label>
 				<textcolor>label-text</textcolor>
 			</control>
-			
+
 			<control type="image">
 				<posx>0</posx>
 				<posy>38</posy>
@@ -51,33 +51,33 @@
 				<haspath>true</haspath>
 				<textcolor>sublabel-text</textcolor>
 			</control>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<control type="list" id="450">
 				<posx>0</posx>
 				<posy>112</posy>
@@ -89,9 +89,11 @@
 				<ondown>450</ondown>
 				<pagecontrol>60</pagecontrol>
 				<wraparound>yes</wraparound>
-				<scrolltime>260</scrolltime>
-				
-				
+
+				<scrolltime>260</scrolltime>	
+				<wraparound>yes</wraparound>
+				<include>pageslide</include>
+
 				<itemlayout height="48">
 					<control type="image">
 						<posx>0</posx>
@@ -118,7 +120,7 @@
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				
+
 				<focusedlayout height="48">
 					<control type="image">
 						<posx>0</posx>
@@ -135,6 +137,7 @@
 						<height>48</height>
 						<visible>Control.HasFocus(450)</visible>
 						<texture>list-focus.png</texture>
+						<include>ListScroll</include>
 					</control>
 					<control type="image">
 						<posx>-2</posx>
@@ -155,21 +158,21 @@
 					</control>
 				</focusedlayout>
 			</control>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<control type="panel" id="451">
 				<posx>80</posx>
 				<posy>110</posy>
@@ -183,7 +186,9 @@
 				<viewtype label="536">icon</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<orientation>vertical</orientation>
-				
+				<scrolltime>260</scrolltime>	
+
+				<include>pageslide</include>
 				<itemlayout height="150" width="150">
 					<control type="image">
 						<posx>7</posx>
@@ -201,7 +206,7 @@
 						<info>ListItem.Thumb</info>					
 					</control>
 				</itemlayout>
-				
+
 				<focusedlayout height="150" width="150">
 					<control type="image">
 						<posx>2</posx>
@@ -218,6 +223,7 @@
 						<height>130</height>
 						<visible>Control.HasFocus(451)</visible>
 						<texture border="2">list-focus.png</texture>
+						<include>ListScroll</include>
 					</control>
 					<control type="image">
 						<posx>7</posx>
@@ -236,21 +242,36 @@
 					</control>
 				</focusedlayout>
 			</control>
+			<control type="label">
+				<description>Page label</description>
+				<posx>400</posx>
+				<posy>-4</posy>
+				<width>180</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cali38</font>
+				<textcolor>rss-title</textcolor>
+				<label>($INFO[Container(450).NumItems]) @ $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
+				<visible>!Control.IsVisible(451)</visible>
+			</control>
+			<control type="label">
+				<description>Page label</description>
+				<posx>400</posx>
+				<posy>-4</posy>
+				<width>180</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>cali38</font>
+				<textcolor>rss-title</textcolor>
+				<label>($INFO[Container(451).NumItems]) @ $INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages]</label>
+				<visible>Control.IsVisible(451)</visible>
+			</control>
 
-			<control type="group">
-				<posx>0</posx>
-				<posy>0</posy>
-			<!-- <control type="image" id="0">
-				<posx>100</posx>
-				<posy>90</posy>
-				<width>330</width>
-				<height>330</height>
-				<texture>schatten2.png</texture>
-				<visible>Skin.HasFocus(999)</visible>
-				
-				<include>fadeinout</include>
-			</control> -->
-			
+
+
+
 			<control type="image" id="998">
 				<posx>118</posx>
 				<posy>90</posy>
@@ -263,41 +284,41 @@
 				<visible>System.IdleTime(3)</visible>
 				<include>fadeinout</include>
 			</control>
-			
-			</control>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<control type="group">
 				<visible>false</visible>
 				<posx>400</posx>
 				<posy>80</posy>
-				
+
 				<control type="button">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -335,10 +356,10 @@
 					<visible>Control.IsVisible(60)</visible>
 				</control>
 			</control>
-			
+
 			<control type="group" id="60">
 				<posy>434</posy>
-				
+
 				<control type="button" id="413">
 					<description>OK button</description>
 					<posx>290</posx>
