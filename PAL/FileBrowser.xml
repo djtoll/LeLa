@@ -5,8 +5,8 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>195</posx>
-		<posy>80</posy>
+		<posx>80</posx>
+		<posy>46</posy>
 	</coordinates>
 
 	<controls>
@@ -17,8 +17,8 @@
 			<control type="image">
 				<posx>-35</posx>
 				<posy>-30</posy>
-				<width>398</width>
-				<height>433</height>
+				<width>640</width>
+				<height>556</height>
 				<texture border="38">dialogpanel.png</texture>
 			</control>
 	
@@ -36,27 +36,53 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>38</posy>
-				<width>330</width>
-				<height>37</height>
+				<width>568</width>
+				<height>48</height>
 				<texture border="2">dialog-input.png</texture>
 			</control>
 
 			<control type="label" id="412">
 				<description>path label control</description>
 				<posx>10</posx>
-				<posy>42</posy>
+				<posy>43</posy>
 				<width>300</width>
 				<align>left</align>
-				<font>h4</font>
+				<font>cali38</font>
 				<haspath>true</haspath>
 				<textcolor>sublabel-text</textcolor>
 			</control>
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 			<control type="list" id="450">
 				<posx>0</posx>
-				<posy>95</posy>
+				<posy>112</posy>
 				<width>330</width>
-				<height>210</height>
+				<height>288</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
 				<onup>450</onup>
@@ -64,7 +90,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				
-				<itemlayout height="35">
+				<itemlayout height="48">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -91,7 +117,7 @@
 					</control>
 				</itemlayout>
 				
-				<focusedlayout height="35">
+				<focusedlayout height="48">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -195,16 +221,59 @@
 				</focusedlayout>
 			</control>
 
-			<control type="image" id="0">
+			<control type="group">
 				<posx>0</posx>
+				<posy>0</posy>
+			<!-- <control type="image" id="0">
+				<posx>100</posx>
 				<posy>90</posy>
 				<width>330</width>
-				<height>220</height>
+				<height>330</height>
+				<texture>schatten2.png</texture>
+				<visible>Skin.HasFocus(999)</visible>
+				
+				<include>fadeinout</include>
+			</control> -->
+			<control type="image" id="999">
+				<posx>100</posx>
+				<posy>90</posy>
+				<width>330</width>
+				<height>330</height>
 				<info>ListItem.Thumb</info>
-				<aspectratio>scale</aspectratio>
+				<bordertexture border="-120">schatten3.png</bordertexture>
+				<aspectratio>keep</aspectratio>
+				<!-- <aspectratio>scale</aspectratio> -->
 				<visible>System.IdleTime(3)</visible>
 				<include>fadeinout</include>
 			</control>
+			</control>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			<control type="group">
 				<visible>false</visible>
@@ -250,11 +319,11 @@
 			</control>
 			
 			<control type="group" id="60">
-				<posy>330</posy>
+				<posy>434</posy>
 				
 				<control type="button" id="413">
 					<description>OK button</description>
-					<posx>140</posx>
+					<posx>290</posx>
 					<posy>0</posy>
 					<label>186</label>
 					<onleft>60</onleft>
@@ -265,8 +334,9 @@
 				</control>
 				<control type="button" id="414">
 					<description>Cancel button</description>
-					<posx>240</posx>
+					<posx>420</posx>
 					<posy>0</posy>
+					<width>140</width>
 					<label>222</label>
 					<onleft>60</onleft>
 					<onright>415</onright>
@@ -276,9 +346,9 @@
 				</control>
 				<control type="button" id="415">
 					<description>Create folder button</description>
-					<posx>0</posx>
+					<posx>10</posx>
 					<posy>0</posy>
-					<width>110</width>
+					<width>180</width>
 					<label>119</label>
 					<onleft>60</onleft>
 					<onright>413</onright>
