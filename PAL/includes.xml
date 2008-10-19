@@ -176,12 +176,12 @@
 	
 	<include name="dialogButton">	
 		<description>dialog confirm</description>
-		<width>90</width>
-		<height>36</height>
-		<font>buttonD</font>
+		<width>110</width>
+		<height>40</height>
+		<font>cali38aspect</font>
 		<align>center</align>
 		<aligny>-</aligny>
-		<textoffsety>3</textoffsety>
+		<textoffsety>1</textoffsety>
 		<texturenofocus>buttonD.png</texturenofocus>
 		<texturefocus>buttonD-focus.png</texturefocus>
 	</include>

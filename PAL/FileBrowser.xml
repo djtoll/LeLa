@@ -6,7 +6,7 @@
 	<coordinates>
 		<system>1</system>
 		<posx>80</posx>
-		<posy>46</posy>
+		<posy>50</posy>
 	</coordinates>
 
 	<controls>
@@ -92,7 +92,7 @@
 
 				<scrolltime>260</scrolltime>	
 				<wraparound>yes</wraparound>
-				<include>pageslide</include>
+				
 
 				<itemlayout height="48">
 					<control type="image">
@@ -186,9 +186,7 @@
 				<viewtype label="536">icon</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<orientation>vertical</orientation>
-				<scrolltime>260</scrolltime>	
-
-				<include>pageslide</include>
+				<scrolltime>260</scrolltime>				
 				<itemlayout height="150" width="150">
 					<control type="image">
 						<posx>7</posx>
