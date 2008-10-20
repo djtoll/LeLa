@@ -28,6 +28,18 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
 				</control>
+				<control type="image">
+					<posx>65</posx>
+					<posy>248</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture flipy="true" diffuse="fade.png">-</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
 				
 				<control type="image">
 					<posx>10</posx>
@@ -42,7 +54,7 @@
 
 				<control type="image">
 					<posx>10</posx>
-					<posy>183</posy>
+					<posy>248</posy>
 					<width>200</width>
 					<height>215</height>
 					<info>ListItem.Thumb</info>
@@ -51,11 +63,12 @@
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture flipy="true" diffuse="fade.png">-</texture>
 				</control>
+				
 			</itemlayout>
 
 			<focusedlayout height="270" width="215">
 				
-				<control type="image">
+				<!-- <control type="image">
 					<posx>65</posx>
 					<posy>130</posy>
 					<width>96</width>
@@ -63,6 +76,42 @@
 					<info>ListItem.Icon</info>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="140,140" center="120,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="140,140" end="100,100" center="120,125" time="200"/>
+					</animation>
+				</control> -->
+				
+				<control type="image">
+					<posx>65</posx>
+					<posy>130</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="2">list-focus.png</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="140,140" center="120,125" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="140,140" end="100,100" center="120,125" time="200"/>
+					</animation>
+				</control>
+				<control type="image">
+					<posx>65</posx>
+					<posy>270</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<bordertexture border="2">-</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<texture flipy="true" diffuse="fade.png">-</texture>
 					<animation type="focus">
 						<effect type="zoom" tween="quadratic" start="100,100" end="140,140" center="120,125" time="400" delay="100"/>
 					</animation>
@@ -90,7 +139,7 @@
 
 				<control type="image">
 					<posx>10</posx>
-					<posy>246</posy>
+					<posy>248</posy>
 					<width>200</width>
 					<height>215</height>
 					<info>ListItem.Thumb</info>
