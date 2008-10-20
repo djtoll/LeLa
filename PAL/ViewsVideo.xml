@@ -1076,9 +1076,9 @@
 	<include name="BigThumbs">
 		<control type="panel" id="56">
 			<viewtype label="31009">Thumbnails</viewtype>	
-			<posx>35</posx>
-			<posy>85</posy>
-			<width>685</width>
+			<posx>20</posx>
+			<posy>76</posy>
+			<width>690</width>
 			<height>440</height>
 			<onleft>2</onleft>
 			<onright>25</onright>
@@ -1116,7 +1116,7 @@
 					<posx>106</posx>
 					<posy>180</posy>
 					<width>195</width>
-					<font>h4</font>
+					<font>cali36aspect</font>
 					<align>center</align>
 					<info>ListItem.Label</info>
 				</control>
@@ -1155,8 +1155,9 @@
 					<posx>106</posx>
 					<posy>180</posy>
 					<width>195</width>
-					<font>h4</font>
+					<font>cali38</font>
 					<align>center</align>
+					<textcolor>rss-title</textcolor>
 					<info>ListItem.Label</info>
 				</control>
 			</focusedlayout>

@@ -27,7 +27,7 @@
 			<include>PictureThumbs</include>
 			<include>PictureSlide</include>
 			<include>BigThumbs</include>
-			<include>viewsmenu</include>
+			<include>viewsmenu</include>		
 			<include>viewsmenucontext</include>
 			<include>fadeinout</include>
 			<include>AllViewCommonPageControls</include>
@@ -178,11 +178,11 @@
 		
 		<control type="label">
 			<posx>40</posx>
-			<posy>470</posy>
+			<posy>463</posy>
 			<width>530</width>
 			<height>30</height>
 			<info>ListItem.Label</info>
-			<font>h1</font>
+			<font>menu</font>
 			<textcolor>label-text</textcolor>
 			<scroll>true</scroll>
 			<visible>Control.IsVisible(55)</visible>
@@ -191,11 +191,11 @@
 		
 		<control type="label">
 			<posx>40</posx>
-			<posy>495</posy>
+			<posy>512</posy>
 			<width>530</width>
 			<height>30</height>
-			<label>$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ]</label>
-			<font>h2</font>
+			<label>$INFO[ListItem.PictureResolution]</label>
+			<font>menu34</font>
 			<textcolor>sublabel-text</textcolor>
 			<scroll>true</scroll>
 			<visible>Control.IsVisible(55)</visible>
@@ -204,11 +204,11 @@
 		
 		<control type="label">
 			<posx>676</posx>
-			<posy>495</posy>
+			<posy>512</posy>
 			<width>300</width>
 			<height>30</height>
 			<label>$INFO[ListItem.PictureDateTime]</label>
-			<font>h2</font>
+			<font>menu34</font>
 			<textcolor>sublabel-text</textcolor>
 			<align>right</align>
 			<scroll>true</scroll>
