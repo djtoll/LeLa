@@ -90,7 +90,7 @@
 
 				<control type="image">
 					<posx>10</posx>
-					<posy>183</posy>
+					<posy>246</posy>
 					<width>200</width>
 					<height>215</height>
 					<info>ListItem.Thumb</info>
