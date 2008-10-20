@@ -4,40 +4,41 @@
 
 	<coordinates>
 		<system>1</system>
-		<posx>183</posx>
-		<posy>100</posy>
+		<posx>80</posx>
+		<posy>50</posy>
 	</coordinates>
 
 	<controls>
 
 		<control type="group">
 			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(10140)">Conditional</animation>
-		
-			<control type="image" id="1">
-				<include>dialogWindow</include>
-				<posy>-28</posy>
-				
-				<height>453</height>
+
+			<control type="image">
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>640</width>
+				<height>556</height>
+				<texture border="38">dialogpanel.png</texture>
 			</control>
-			
+
 			<control type="label" id="1000">
 				<description>directory contains label</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>280</width>
+				<width>580</width>
 				<align>left</align>
-				<font>h2</font>
+				<font>h1D</font>
 				<label>[B]$LOCALIZE[20344][/B]</label>
 			</control>
-			
+
 			<control type="spincontrolex" id="3">
 				<description>directory content select spincontrol</description>
 				<align>right</align>
 				<width>190</width>
 				<height>17</height>
-				<posx>173</posx>
+				<posx>380</posx>
 				<posy>6</posy>
-				<font>h2</font>
+				<font>cali38</font>
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textcolor>sublabel-text</textcolor>
@@ -46,27 +47,27 @@
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<disabledcolor>disabled</disabledcolor>
-				<spinwidth>15</spinwidth>
-				<spinheight>15</spinheight>
+				<spinwidth>24</spinwidth>
+				<spinheight>24</spinheight>
 			</control>
 
 			<control type="list" id="4">
-				<posx>0</posx>
-				<posy>40</posy>
-				<width>355</width>
-				<height>140</height>
+				<posx>3</posx>
+				<posy>50</posy>
+				<width>560</width>
+				<height>172</height>
 				<onup>3</onup>
 				<ondown>30</ondown>
 				<onleft>3</onleft>
 				<onright>5</onright>
 				<scrolltime>200</scrolltime>
 				<pagecontrol>60</pagecontrol>
-				
+
 				<itemlayout height="35">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>355</width>
+						<width>560</width>
 						<height>33</height>
 						<texture>list-nofocus.png</texture>
 					</control>
@@ -76,18 +77,19 @@
 						<posy>0</posy>
 						<width>335</width>
 						<height>28</height>
-						<font>menu</font>
+						<font>cali38</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
+						<textcolor>button-alttext</textcolor>
 					</control>
 				</itemlayout>
-				
+
 				<focusedlayout height="35">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>355</width>
+						<width>310</width>
 						<height>33</height>
 						<visible>Control.HasFocus(4)</visible>
 						<texture>list-focus.png</texture>
@@ -96,7 +98,7 @@
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>355</width>
+						<width>560</width>
 						<height>33</height>
 						<visible>!Control.HasFocus(4)</visible>
 						<texture border="3">list-nofocus.png</texture>
@@ -106,12 +108,13 @@
 					<control type="label">
 						<posx>10</posx>
 						<posy>0</posy>
-						<width>335</width>
+						<width>560</width>
 						<height>28</height>
-						<font>menu</font>
+						<font>cali38</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
+						<textcolor>button-alttext</textcolor>
 					</control>
 				</focusedlayout>
 			</control>
@@ -119,28 +122,34 @@
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<posx>-4</posx>
-				<posy>187</posy>
-				<width>360</width>
-				<height>150</height>
-				<itemgap>2</itemgap>
+				<posy>244</posy>
+				<width>580</width>
+				<height>190</height>
+				<itemgap>4</itemgap>				
 				<onup>4</onup>
 				<ondown>28</ondown>
 				<onleft>5</onleft>
 				<onright>5</onright>
-				<font>h4</font>
+				<font>rss</font>
+				<scrolltime>280</scrolltime>
 			</control>
-			
+
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
 				<posx>530</posx>
-				<posy>150</posy>
-			</control>
-			
+				<posy>190</posy>
+				<height>40</height>
+				<font>menu34</font>
+				<textoffsetx>10</textoffsetx>
+				<textoffsety>-2</textoffsety>
+				<aligny>-</aligny>
+			</control> 
+
 			<control type="button" id="6">
 				<description>Settings button</description>
-				<posx>0</posx>
-				<posy>350</posy>
-				<width>110</width>
+				<posx>0</posx>				
+				<width>200</width>
+				<posy>434</posy>
 				<label>5</label>
 				<onleft>29</onleft>
 				<onright>28</onright>
@@ -148,11 +157,11 @@
 				<ondown>3</ondown>
 				<include>dialogConfirmButton</include>
 			</control>
-			
+
 			<control type="button" id="28">
 				<description>OK button</description>
-				<posx>165</posx>
-				<posy>350</posy>
+				<posx>290</posx>
+				<posy>434</posy>
 				<label>186</label>
 				<onleft>6</onleft>
 				<onright>29</onright>
@@ -160,11 +169,12 @@
 				<ondown>3</ondown>
 				<include>dialogConfirmButton</include>
 			</control>
-			
+
 			<control type="button" id="29">
 				<description>Cancel button</description>
-				<posx>265</posx>
-				<posy>350</posy>
+				<posx>420</posx>
+				<posy>434</posy>
+				<width>140</width>
 				<label>222</label>
 				<onleft>28</onleft>
 				<onright>6</onright>
