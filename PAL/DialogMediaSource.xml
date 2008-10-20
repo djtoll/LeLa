@@ -1,21 +1,17 @@
 <window id="129">
 	<defaultcontrol>10</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>	
+	<allowoverlay>yes</allowoverlay>
 	<include>dialog-open</include>
-
 	<coordinates>
 		<system>1</system>
 		<posx>80</posx>
 		<posy>50</posy>
 	</coordinates>
-
 	<controls>
-
 		<control type="group">
 			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(126)">Conditional</animation>
 			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(103)">Conditional</animation>
 			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(132)">Conditional</animation>
-
 			<control type="image">
 				<posx>-35</posx>
 				<posy>-30</posy>
@@ -23,7 +19,6 @@
 				<height>556</height>
 				<texture border="38">dialogpanel.png</texture>
 			</control>
-
 			<control type="label" id="2">
 				<description>heading label</description>
 				<posx>0</posx>
@@ -34,7 +29,6 @@
 				<label>-</label>
 				<textcolor>label-text</textcolor>
 			</control>
-
 			<control type="label">
 				<description>path label</description>
 				<posx>10</posx>
@@ -46,7 +40,6 @@
 				<scroll>true</scroll>
 				<textcolor>disabled-text</textcolor>
 			</control>
-
 			<control type="listcontrol" id="10">
 				<description>Path List Control</description>
 				<posx>5</posx>
@@ -68,7 +61,6 @@
 				<textcolor>button-alttext</textcolor>
 				<include>ListScroll</include>
 			</control>
-			
 			<control type="label">
 				<description>Page label</description>
 				<posx>420</posx>
@@ -82,7 +74,6 @@
 				<label>($INFO[Container(10).NumItems]) @ $INFO[Container(10).CurrentPage]/$INFO[Container(10).NumPages]</label>
 				<visible>Control.IsVisible(10)</visible>
 			</control>
-
 			<control type="group" id="888">
 				<posx>5</posx>
 				<posy>90</posy>
@@ -99,7 +90,6 @@
 					<focusedcolor>ff4169e1</focusedcolor>
 					<include>dialogButton</include>
 				</control>
-
 				<control type="button" id="13">
 					<description>Add Path Button</description>
 					<posx>143</posx>
@@ -127,7 +117,6 @@
 					<include>dialogButton</include>
 				</control>
 			</control>
-
 			<control type="label">
 				<description>Name Label</description>
 				<posx>5</posx>
@@ -138,7 +127,6 @@
 				<align>left</align>
 				<textcolor>disabled-text</textcolor>
 			</control>
-
 			<control type="button" id="12">
 				<description>Name Button</description>
 				<posx>5</posx>
@@ -156,11 +144,9 @@
 				<onright>18</onright>
 				<ondown>999</ondown>
 			</control>
-
 			<control type="group" id="999">
 				<posy>434</posy>
 				<control type="button" id="20">
-
 					<description>set content Button</description>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -172,7 +158,6 @@
 					<ondown>10</ondown>
 					<include>dialogConfirmButton</include>
 				</control>
-
 				<control type="button" id="18">
 					<description>Ok Button</description>
 					<posx>290</posx>
@@ -184,7 +169,6 @@
 					<ondown>10</ondown>
 					<include>dialogConfirmButton</include>
 				</control>
-
 				<control type="button" id="19">
 					<description>Cancel Button</description>
 					<posx>420</posx>

@@ -2,18 +2,14 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<include>dialog-open</include>
-
 	<coordinates>
 		<system>1</system>
 		<posx>80</posx>
 		<posy>50</posy>
 	</coordinates>
-
 	<controls>
-
 		<control type="group">
 			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(128)">Conditional</animation>
-
 			<control type="image">
 				<posx>-35</posx>
 				<posy>-30</posy>
@@ -21,7 +17,6 @@
 				<height>556</height>
 				<texture border="38">dialogpanel.png</texture>
 			</control>
-
 			<control type="label" id="411">
 				<description>heading label</description>
 				<posx>0</posx>
@@ -32,7 +27,6 @@
 				<label>1023</label>
 				<textcolor>label-text</textcolor>
 			</control>
-
 			<control type="image">
 				<posx>0</posx>
 				<posy>38</posy>
@@ -40,7 +34,6 @@
 				<height>48</height>
 				<texture border="2">dialog-input.png</texture>
 			</control>
-
 			<control type="label" id="412">
 				<description>path label control</description>
 				<posx>10</posx>
@@ -51,33 +44,6 @@
 				<haspath>true</haspath>
 				<textcolor>sublabel-text</textcolor>
 			</control>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			<control type="list" id="450">
 				<posx>0</posx>
 				<posy>112</posy>
@@ -89,11 +55,8 @@
 				<ondown>450</ondown>
 				<pagecontrol>60</pagecontrol>
 				<wraparound>yes</wraparound>
-
-				<scrolltime>260</scrolltime>	
+				<scrolltime>260</scrolltime>
 				<wraparound>yes</wraparound>
-				
-
 				<itemlayout height="48">
 					<control type="image">
 						<posx>0</posx>
@@ -120,7 +83,6 @@
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-
 				<focusedlayout height="48">
 					<control type="image">
 						<posx>0</posx>
@@ -158,21 +120,6 @@
 					</control>
 				</focusedlayout>
 			</control>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			<control type="panel" id="451">
 				<posx>80</posx>
 				<posy>110</posy>
@@ -186,7 +133,7 @@
 				<viewtype label="536">icon</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<orientation>vertical</orientation>
-				<scrolltime>260</scrolltime>				
+				<scrolltime>260</scrolltime>
 				<itemlayout height="150" width="150">
 					<control type="image">
 						<posx>7</posx>
@@ -194,17 +141,16 @@
 						<width>120</width>
 						<height>120</height>
 						<info>ListItem.Icon</info>
-						<visible>IsEmpty(ListItem.Thumb)</visible>			
+						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
 						<posx>7</posx>
 						<posy>7</posy>
 						<width>120</width>
 						<height>120</height>
-						<info>ListItem.Thumb</info>					
+						<info>ListItem.Thumb</info>
 					</control>
 				</itemlayout>
-
 				<focusedlayout height="150" width="150">
 					<control type="image">
 						<posx>2</posx>
@@ -229,7 +175,7 @@
 						<width>120</width>
 						<height>120</height>
 						<info>ListItem.Icon</info>
-						<visible>IsEmpty(ListItem.Thumb)</visible>			
+						<visible>IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
 						<posx>7</posx>
@@ -266,10 +212,6 @@
 				<label>($INFO[Container(451).NumItems]) @ $INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages]</label>
 				<visible>Control.IsVisible(451)</visible>
 			</control>
-
-
-
-
 			<control type="image" id="998">
 				<posx>118</posx>
 				<posy>90</posy>
@@ -282,41 +224,10 @@
 				<visible>System.IdleTime(3)</visible>
 				<include>fadeinout</include>
 			</control>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			<control type="group">
 				<visible>false</visible>
 				<posx>400</posx>
 				<posy>80</posy>
-
 				<control type="button">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -354,10 +265,8 @@
 					<visible>Control.IsVisible(60)</visible>
 				</control>
 			</control>
-
 			<control type="group" id="60">
 				<posy>434</posy>
-
 				<control type="button" id="413">
 					<description>OK button</description>
 					<posx>290</posx>
