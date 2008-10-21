@@ -5,8 +5,8 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>185</posx>
-		<posy>100</posy>
+		<posx>80</posx>
+		<posy>50</posy>
 	</coordinates>
 	
 	<controls>
@@ -14,31 +14,31 @@
 	<control type="group">
 		<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(103)">Conditional</animation>
 		
-		<control type="image" id="0">
-			<description>background image</description>
-			<posx>-30</posx>
-			<posy>-30</posy>
-			<width>385</width>
-			<height>400</height>
-			<texture border="38">dialogpanel.png</texture>
-		</control>
+		<control type="image">
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>640</width>
+				<height>556</height>
+				<texture border="38">dialogpanel.png</texture>
+			</control>
 		
 		<control type="label" id="1">
 			<description>heading label</description>
 			<posx>5</posx>
 			<posy>0</posy>
-			<width>325</width>
+			<width>425</width>
 			<align>left</align>
-			<font>h1D</font>
+			<font>h1Dlela</font>
+			<textcolor>rss-title</textcolor>
 			<scroll>true</scroll>
 			<label>1023</label>
 		</control>
 
 		<control type="list" id="3">
-			<posx>0</posx>
-			<posy>40</posy>
-			<width>325</width>
-			<height>245</height>
+			<posx>5</posx>
+			<posy>62</posy>
+			<width>560</width>
+			<height>348</height>
 			<onleft>5</onleft>
 			<onright>60</onright>
 			<onup>3</onup>
@@ -46,35 +46,37 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
 			
-			<itemlayout height="35">
+			
+			<itemlayout height="50">
 
 				<control type="label">
 					<posx>10</posx>
-					<posy>0</posy>
-					<width>305</width>
+					<posy>7</posy>
+					<width>534</width>
 					<height>28</height>
-					<font>menu</font>
+					<font>menu34</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
 			
-			<focusedlayout height="35">
+			<focusedlayout height="50">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>325</width>
-					<height>33</height>
+					<width>558</width>
+					<height>48</height>
 					<texture>list-focus.png</texture>
+					
 				</control>
 
 				<control type="label">
 					<posx>10</posx>
-					<posy>0</posy>
-					<width>305</width>
+					<posy>7</posy>
+					<width>534</width>
 					<height>28</height>
-					<font>menu</font>
+					<font>menu34</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
@@ -84,25 +86,26 @@
 		
 		<control type="label" id="2">
 			<description>Objects Label</description>
-			<posx>325</posx>
-			<posy>305</posy>
-			<width>100</width>
+			<posx>545</posx>
+			<posy>440</posy>
+			<width>280</width>
 			<label>-</label>
 			<textcolor>sublabel-text</textcolor>
 			<align>right</align>
-			<font>h4D</font>
+			<font>cali38</font>
 		</control>
 		
 		<control type="button" id="5">
 			<description>manual button</description>
 			<posx>0</posx>
-			<posy>300</posy>
-			<width>100</width>
+			<posy>444</posy>
+			<width>200</width>
 			<label>368</label>
 			<onleft>3</onleft>
 			<onright>3</onright>
 			<onup>3</onup>
 			<ondown>3</ondown>
+			<font>cali38</font>
 			<include>dialogConfirmButton</include>
 		</control>
 

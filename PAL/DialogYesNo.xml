@@ -25,6 +25,7 @@
 				<label>-</label>
 				<align>center</align>
 				<font>h1Dlela</font>
+				<textcolor>rss-title</textcolor>
 			</control>
 		
 			<control type="label" id="2">
