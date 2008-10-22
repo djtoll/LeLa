@@ -81,6 +81,7 @@ Hit the OK button to start using Focus. This message will not reappear after tha
 <string id="31033">Appearance settings</string>
 <string id="31034">Use Default</string>
 
+
 <string id="31069">Video settings</string>
 <string id="31007">Programs settings</string>
 <string id="31900">Music settings</string>
@@ -162,5 +163,8 @@ Hit the OK button to start using Focus. This message will not reappear after tha
   <string id="31206">Show Music Plugins Button</string>
   <string id="31207">Music On Screen Display Options</string>
   <string id="31208">Show Lyrics Script Button in OSD</string>
+  
+  <!-- SKIN SETTINGS -->
+  <string id="33001">Show "Next Tracks" Labels in the Visualization</string>
 	
 </strings>

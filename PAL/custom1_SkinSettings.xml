@@ -261,6 +261,15 @@
 					<selected>!Skin.HasSetting(bigImage)</selected>
 				</control>
 				
+				<control type="radiobutton" id="110">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>33001</label>
+					<onclick>Skin.ToggleSetting(VisOffsetLabels)</onclick>
+					<selected>!Skin.HasSetting(VisOffsetLabels)</selected>
+				</control>
+				
 				
 			</control>
 			

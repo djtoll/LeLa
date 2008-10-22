@@ -36,7 +36,7 @@
 			<label>589</label>			
 			<align>center</align>
 			<font>page</font>
-			<textcolor>ffcd5c5c</textcolor>
+			<textcolor>rss-title</textcolor>
 			<visible>MusicPartyMode.Enabled</visible>
 			<include>home-menubar</include>			
 		</control>

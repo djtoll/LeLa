@@ -556,6 +556,17 @@
 				<animation effect="rotate" start="0" end="-270" time="20" condition="true">conditional</animation>
 				<overlaytexture>-</overlaytexture>
 			</control>
+			<control type="progress">
+				<description>progress control</description>
+				<posx>-330</posx>
+				<posy>413</posy>
+				<width>726</width>
+				<height>18</height>
+				<info>Player.Progress</info>							
+				<texturebg>progressbghome.png</texturebg>			
+				<midtexture>list-focus.png</midtexture>				
+				<overlaytexture>-</overlaytexture>
+			</control>
 			
 		<control type="image">
 			<description>Song Rating Value</description>
