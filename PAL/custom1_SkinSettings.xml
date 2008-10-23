@@ -447,18 +447,83 @@
 					<enable>Skin.HasSetting(backgroundDimEnable)</enable>
 				</control>
 
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<!-- aaaaaaaaaaaaaaaaaaddddddddddddddddddd -->
 				<control type="radiobutton" id="302">
+					<description>Use Custom Background</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>31928</label>
+					<onclick>Skin.ToggleSetting(backgroundFolderEnable)</onclick>
+				
+					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
+					<enable>Skin.HasSetting(defaultBackgroundEnable)</enable>
+					<selected>Skin.HasSetting(backgroundFolderEnable)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>-2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				
+				<control type="button" id="303">
+					<description>Use Custom Background</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>657</label>
+					<onclick>Skin.SetPath(backgroundFolderSet)</onclick>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>-2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<enable>Skin.HasSetting(backgroundFolder)</enable>
+				</control>
+				
+				
+					<!-- aaaaaaaaaaaaaaaaaaddddddddddddddddddd -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<control type="radiobutton" id="304">
 					<description>System Wide Background Toggle</description>
 					<width>520</width>
 					<height>38</height>
 					<font>cali34aspect</font>
 					<label>$LOCALIZE[31032]</label>
 					<onclick>Skin.ToggleSetting(genericBackgroundEnable)</onclick>
+					<onclick>Skin.Reset(backgroundFolderEnable)</onclick>
 					<onclick>Skin.Reset(defaultBackgroundEnable)</onclick>
 					<selected>!Skin.HasSetting(genericBackgroundEnable)</selected>
 				</control>
 				
-				<control type="button" id="303">
+				<control type="button" id="305">
 					<description>Background Select Dialog</description>
 					<width>520</width>
 					<height>38</height>
@@ -469,19 +534,21 @@
 					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
 				</control>
 				
-				<control type="radiobutton" id="304">
+				<control type="radiobutton" id="306">
 					<description>default Background</description>
 					<width>520</width>
 					<height>38</height>
 					<font>cali34aspect</font>
 					<label>$LOCALIZE[31034]</label>
 					<onclick>Skin.ToggleSetting(defaultBackgroundEnable)</onclick>
+					<onclick>Skin.Reset(backgroundFolderEnable)</onclick>
 					<onclick>Skin.Reset(genericBackgroundEnable)</onclick>
 					<selected>!Skin.HasSetting(defaultBackgroundEnable)</selected>
 					<enable>!Skin.HasSetting(genericBackgroundEnable)</enable>
+					<enable>!Skin.HasSetting(backgroundFolderEnable)</enable>
 				</control>
 				
-				<control type="button" id="305">
+				<control type="button" id="307">
 					<description>One Single Custom Background</description>
 					<width>520</width>
 					<height>38</height>
@@ -495,6 +562,7 @@
 					<textoffsety>2</textoffsety>
 					<textoffsetx>10</textoffsetx>
 					<enable>Skin.HasSetting(defaultBackgroundEnable)</enable>
+					
 				</control>
 
 			</control>			

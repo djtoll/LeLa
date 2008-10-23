@@ -645,11 +645,69 @@
        		</visible>
 	  	</control>
 		
+		
+		<!-- AAAAAAAAAAAAADDDDDDDDDDDDDDDDEEEEEEEEDDDDDDDDD -->
+		 <control type="image">
+			<description>background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<!-- <texture diffuse="background-diffuse2.png">background.bmp</texture> -->
+			<texture diffuse="background-diffuse2.png">Background5.png</texture>
+			<visible>!Skin.HasSetting(backgroundFolderEnable)</visible>
+			
+			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="0" condition="Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
+		</control>
+
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+			<visible>Skin.HasSetting(backgroundFolderEnable) + [![Container.Content(episodes) | Container.Content(seasons)] + Skin.HasSetting(FanartEnable)]</visible>
+			<info>Skin.String(backgroundFolderSet)</info>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="0" reversible="true" condition="Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
+			<colordiffuse>ffa3a3a3</colordiffuse>
+		</control>
+		
+		<!-- <control type="image">
+			<description>multiimage overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>multiimage-overlay.png</texture>
+			<colordiffuse>ffa3a3a3</colordiffuse>
+			<visible>Skin.HasSetting(backgroundFolder) + Skin.String(backgroundFolderSet)</visible>
+		</control> -->
+		
+		
+		<!-- AAAAAAAAAAAAAAAADDDDDDDDDDDDDDDDDDDEEEEEEEEEEEEEEDDDDDDDDDDD -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<control type="image">
 			<description>default background</description>
 			<include>screentype</include>
 			<texture diffuse="background-diffuse.png">Background5.png</texture>
 			<visible>
+				!Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundFolderEnable)
 				!Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(genericBackgroundEnable)
 				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundHomeEnable) + Window.IsActive(0)
 				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundVideoEnable) + Window.IsActive(25)
@@ -672,6 +730,7 @@
 			<texture diffuse="background-diffuse.png">$INFO[Skin.String(genericBackground)]</texture>
 			<visible>
 				Skin.HasSetting(defaultBackgroundEnable) + Skin.HasSetting(defaultBackgroundEnable)
+				!Skin.HasSetting(defaultBackgroundEnable) + Skin.HasSetting(backgroundFolderEnable)
 			</visible>
 			<include>screentype</include>
 			<animation effect="fade" start="100" end="65" time="150" condition="Skin.HasSetting(subMenuFade) + [ControlGroup(1100).HasFocus() | ControlGroup(1200).HasFocus() | ControlGroup(1800).HasFocus() | ControlGroup(1600).HasFocus() | ControlGroup(1400).HasFocus()]" >Conditional</animation>
