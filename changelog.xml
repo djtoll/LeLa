@@ -2,7 +2,20 @@ What's new? 	lela xbmc skin
 
 
 
-r65		...
+r78		added: SkinSettings Function to disable/enable "Next Tracks" in the Visualization. changed: orange Text color to the MusicPlaylist Heading Label when Party Modus is enabled. added: Big Music-Progressbar at the Bottom Home Window.	Today (4 minutes ago)	alwinker...@gmx.de
+r77		adjustment: DialogSelect Font Size and Window size. add: orange Text color to the Heading label -> Dialog Windows	Yesterday (25 hours ago)	alwinker...@gmx.de
+r76		adjustment: ThumbsViews (Big and small) Font size	Yesterday (35 hours ago)	alwinker...@gmx.de
+r75		fixed: Diffuse positions at the pictureSlide View. (focusedlayout and itemlayout)	Yesterday (35 hours ago)	alwinker...@gmx.de
+r74		adjustment: Font size at the pictureSlide View.	Yesterday (36 hours ago)	alwinker...@gmx.de
+r73		upgrade: Script lelaloader to v. 02	Oct 20 (46 hours ago)	alwinker...@gmx.de
+r72		adjustment: add-Content Window - scrapper Cover added - part_2	Oct 20 (47 hours ago)	alwinker...@gmx.de
+r71		adjustment: add-Content Window - bigger Fonts and Windows - part_1	Oct 20 (2 days ago)	alwinker...@gmx.de
+r70		adjustment: MediaSource Window - bigger Fonts and Windows - part_1 - for the moment (finished)	Oct 19 (2 days ago)	alwinker...@gmx.de
+r69		adjustment: FileBrowser Window - bigger Fonts and Windows - part_3 (finished)	Oct 19 (2 days ago)	alwinker...@gmx.de
+r68		adjustment: FileBrowser Window - bigger Fonts and Windows - part_2	Oct 19 (2 days ago)	alwinker...@gmx.de
+r67		adjustment: FileBrowser Window - bigger Fonts and Windows - part_1	Oct 19 (3 days ago)	alwinker...@gmx.de
+r66		add: 2 Buttons to the playerControls (forward and rewind). add: Seek .png to the seekBar.	Oct 18 (3 days ago)	alwinker...@gmx.de
+r65		adjustment: DialogOK more height. changed: Update Button in the Home Sub-Menu Accessories now other Link-Name.
 r64		changed: default background image, resize image size. adjustment: Fontsize at SystemInformation window. animating: default Lelaloader thumbnail, HomeAccessories SubMenu.	Yesterday (21 hours ago)	alwinker...@gmx.de
 r63		update: changelog	Oct 14 (2 days ago)	alwinker...@gmx.de
 r62		delete: .psd Files	Oct 14 (3 days ago)	alwinker...@gmx.de

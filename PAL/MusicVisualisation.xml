@@ -578,6 +578,7 @@
 			<animation effect="fade" time="100">VisibleChange</animation>
 		</control>
 		
+		
 		<control>
 			<description>Fan.CPU Frequenz</description>
 			<type>label</type>
@@ -626,14 +627,14 @@
 		<control type="progress" id="20">
 			<description>progress control track</description>
 			<posx>49</posx>
-			<posy>232</posy>
+			<posy>227</posy>
 			<width>584</width>
 			<height>8</height>
 			<info>Player.Progress</info>
-			<texturebg>progressbar-background.png</texturebg>
-			<lefttexture>progress-left.png</lefttexture>
-			<midtexture>progress-middle.png</midtexture>
-			<righttexture>progress-right.png</righttexture>
+			<texturebg>progressbghome.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>list-focus.png</midtexture>
+			<righttexture>-</righttexture>
 			<overlaytexture>-</overlaytexture>
 			<include>zoom</include>
 			<visible>Player.ShowInfo + Player.HasAudio</visible>
@@ -664,7 +665,22 @@
 			<righttexture>-</righttexture>
 			<overlaytexture>-</overlaytexture>
 			<visible>Player.ShowInfo + Player.HasAudio</visible>
+			
+			<animation effect="fade" time="800">VisibleChange</animation>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="0"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<description>speaker Image</description>
+			<height>32</height>
+			<width>32</width>
+			<posx>629</posx>
+			<posy>466</posy>
 			<include>zoom</include>
+			<visible>Player.ShowInfo</visible>
+			<texture>speaker.png</texture>		
+			<aspectratio align="left">keep</aspectratio>
 			<animation effect="fade" time="800">VisibleChange</animation>
 			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="0"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
 			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0"    condition="!Skin.HasSetting(animated)">WindowClose</animation>

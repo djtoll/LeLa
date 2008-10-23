@@ -359,11 +359,25 @@
 			</control>
 			
 		</control>
+		
+		<!-- PROGRESS BAR BIG BOTTOM -->
+		<control type="progress">
+				<description>progress control</description>
+				<posx>0</posx>
+				<posy>533</posy>
+				<width>725</width>
+				<height>18</height>
+				<info>Player.Progress</info>							
+				<texturebg>progressbghome.png</texturebg>			
+				<midtexture>list-focus.png</midtexture>				
+				<overlaytexture>-</overlaytexture>
+				<visible>Player.HasMedia + !Control.IsVisible(1422)</visible>
+			</control>
 
 										
-	<!--- MUSIC INFO --------------------------------->
+	<!--- MUSIC INFO 3x------------------------------->
 
-					<!--- MUSIC INFO SMAL --------------------------------->
+					<!--- MUSIC INFO SMALL --------------------------------->
 
 	<control type="group" id="1421">
 		<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
