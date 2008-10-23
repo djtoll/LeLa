@@ -471,6 +471,7 @@
 					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
 					<enable>Skin.HasSetting(defaultBackgroundEnable)</enable>
 					<selected>Skin.HasSetting(backgroundFolderEnable)</selected>
+					<selected>!Skin.SetPath(backgroundFolderSet)</selected>
 					<textcolor>button-text</textcolor>
 					<aligny>-</aligny>
 					<textoffsety>-2</textoffsety>
@@ -490,7 +491,7 @@
 					<aligny>-</aligny>
 					<textoffsety>-2</textoffsety>
 					<textoffsetx>10</textoffsetx>
-					<enable>Skin.HasSetting(backgroundFolder)</enable>
+					<enable>Skin.HasSetting(backgroundFolderEnable)</enable>
 				</control>
 				
 				

@@ -730,7 +730,7 @@
 			<texture diffuse="background-diffuse.png">$INFO[Skin.String(genericBackground)]</texture>
 			<visible>
 				Skin.HasSetting(defaultBackgroundEnable) + Skin.HasSetting(defaultBackgroundEnable)
-				!Skin.HasSetting(defaultBackgroundEnable) + Skin.HasSetting(backgroundFolderEnable)
+				<!-- Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundFolderEnable) -->
 			</visible>
 			<include>screentype</include>
 			<animation effect="fade" start="100" end="65" time="150" condition="Skin.HasSetting(subMenuFade) + [ControlGroup(1100).HasFocus() | ControlGroup(1200).HasFocus() | ControlGroup(1800).HasFocus() | ControlGroup(1600).HasFocus() | ControlGroup(1400).HasFocus()]" >Conditional</animation>
