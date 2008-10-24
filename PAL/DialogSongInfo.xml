@@ -7,10 +7,10 @@
 		
 		<control type="image">
 			<description>overlay background</description>
-			<posx>-10</posx>
-			<posy>-10</posy>
-			<width>740</width>
-			<height>592</height>
+			<posx>-15</posx>
+			<posy>-17</posy>
+			<width>750</width>
+			<height>620</height>
 			<texture>black.jpg</texture>
 		</control>
 
@@ -40,27 +40,30 @@
 			
 			<control type="image">
 				<description>Rating value</description>
-				<posx>50</posx>
+				<posx>34</posx>
 				<posy>300</posy>
 				<width>160</width>
-				<height>24</height>
+				<height>34</height>
 				<info>ListItem.Rating</info>
 				<aspectratio>keep</aspectratio>
 			</control>
-		
-		<control type="group">
-			<posx>260</posx>
-			<posy>27</posy>
+			
 			
 			<control type="label" id="20">
 				<description>Song Title Value</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>440</width>
-				<font>h1D</font>
+				<posx>20</posx>
+				<posy>430</posy>
+				<width>680</width>
+				<font>menu</font>
 				<info>ListItem.Title</info>
+				<textcolor>rss-title</textcolor>
+				<align>center</align>
 				<scroll>yes</scroll>
 			</control>
+		
+		<control type="group">
+			<posx>230</posx>
+			<posy>-10</posy>			
 			
 			<control type="label">
 				<description>Artist</description>	
@@ -68,7 +71,7 @@
 				<posy>38</posy>
 				<width>420</width>
 				<label>$LOCALIZE[557]:</label>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
 			
@@ -78,7 +81,7 @@
 				<posy>65</posy>
 				<width>200</width>
 				<label>$LOCALIZE[558]:</label>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
 			
@@ -88,7 +91,7 @@
 				<posy>92</posy>
 				<width>200</width>
 				<label>$LOCALIZE[345]:</label>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
 			
@@ -97,7 +100,7 @@
 				<posx>0</posx>
 				<posy>119</posy>
 				<label>$LOCALIZE[554]:</label>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
 			
@@ -106,7 +109,7 @@
 				<posx>0</posx>
 				<posy>146</posy>
 				<label>$LOCALIZE[515]:</label>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
 			
@@ -115,14 +118,14 @@
 				<posx>0</posx>
 				<posy>173</posy>
 				<label>$LOCALIZE[569]:</label>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
 		</control>
 
 		<control type="group">
-			<posx>370</posx>
-			<posy>27</posy>
+			<posx>382</posx>
+			<posy>-10</posy>
 			
 			<control type="fadelabel" id="21">
 				<description>Artist Value</description>
@@ -132,7 +135,7 @@
 				<scroll>true</scroll>
 				<align>right</align>
 				<info>ListItem.Artist</info>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>label-text</textcolor>
 			</control>
 
@@ -142,7 +145,7 @@
 				<posy>65</posy>
 				<width>320</width>
 				<info>ListItem.Album</info>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>label-text</textcolor>
 			</control>
 
@@ -152,7 +155,7 @@
 				<posy>92</posy>
 				<width>320</width>
 				<info>ListItem.Year</info>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>label-text</textcolor>
 			</control>
 
@@ -162,7 +165,7 @@
 				<posy>119</posy>
 				<width>320</width>
 				<info>ListItem.Tracknumber</info>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>label-text</textcolor>
 			</control>
 
@@ -172,7 +175,7 @@
 				<posy>146</posy>
 				<width>320</width>
 				<info>ListItem.Genre</info>
-				<font>description</font>
+				<font>cali38</font>
 				<textcolor>label-text</textcolor>
 			</control>
 
@@ -189,7 +192,7 @@
 				<ondown>999</ondown>
 				<spinposx>630</spinposx>
 				<spinposy>250</spinposy>
-				<font>description</font>
+				<font>cali38</font>
 				<align>left</align>	
 			</control>
 		</control>
@@ -199,73 +202,79 @@
 <!--- FUNCTIONS --------------------------------->
 	
 	<control type="group" id="999">	
-		<posx>103</posx>
+		<posx>0</posx>
 		<posy>520</posy>
 		
 		<control type="button" id="10">
 			<description>OK Button</description>
+			<width>80</width>			
 			<posx>0</posx>
 			<label>186</label>
 			<onleft>15</onleft>
 			<onright>13</onright>
 			<onup>4</onup>
 			<ondown>-</ondown>
-			<include>dialogInfoButton</include>
+			<include>dialogConfirmButton</include>
 		</control>
 		
 		<control type="button" id="13">
 			<description>Get Thumb</description>
-			<posx>100</posx>
+			<width>108</width>
+			<posx>96</posx>
 			<label>$LOCALIZE[31019]</label>
 			<onleft>10</onleft>
 			<onright>12</onright>
 			<onup>4</onup>
 			<ondown>-</ondown>
-			<include>dialogInfoButton</include>
+			<include>dialogConfirmButton</include>
 		</control>
 		
 		<control type="button" id="12">
 			<description>Album Info</description>
-			<posx>200</posx>
+			<width>260</width>
+			<posx>220</posx>
 			<width>110</width>
 			<label>10523</label>
 			<onleft>13</onleft>
 			<onright>14</onright>
 			<onup>4</onup>
 			<ondown>-</ondown>
-			<include>dialogInfoButton</include>
+			<include>dialogConfirmButton</include>
 		</control>
 		
 		<control type="button" id="14">
 			<description>Rating Increase</description>
-			<posx>315</posx>
-			<label>$LOCALIZE[31036] +</label>
+			
+			<posx>496</posx>
+			<label>Plus</label>			
 			<onleft>12</onleft>
 			<onright>15</onright>
 			<onup>4</onup>
 			<ondown>-</ondown>
 			<onclick>IncreaseRating</onclick>
-			<include>dialogInfoButton</include>
+			<include>dialogConfirmButton</include>
 		</control>
 		
 		<control type="button" id="15">
 			<description>Rating Decrease</description>
-			<posx>415</posx>
-			<label>$LOCALIZE[31036] -</label>
+			
+			<posx>616</posx>
+			<label>Minus</label>			
 			<onleft>14</onleft>
 			<onright>10</onright>
 			<onup>4</onup>
 			<ondown>-</ondown>
 			<onclick>DecreaseRating</onclick>
-			<include>dialogInfoButton</include>
+			<include>dialogConfirmButton</include>
 		</control>
 	</control>	
 		
 	<control type="image">
 		<description>Fake Rating Button</description>
+		
 		<posx>530</posx>
 		<posy>520</posy>
-		<width>120</width>
+		<width>100</width>
 		<height>37</height>
 		<texture>-</texture>
 		<visible>[Control.HasFocus(14) | Control.HasFocus(15)]</visible>
@@ -273,6 +282,7 @@
 	
 	<control type="label">
 		<description>Rating Button Label</description>
+	
 		<posx>537</posx>
 		<posy>520</posy>
 		<width>70</width>
