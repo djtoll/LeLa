@@ -654,12 +654,12 @@
 			<width>720</width>
 			<height>576</height>
 			<!-- <texture diffuse="background-diffuse2.png">background.bmp</texture> -->
-			<texture diffuse="background-diffuse2.png">Background5.png</texture>
+			<texture diffuse="background-diffuse2.png">Background5.png</texture>			
 			<visible>!Skin.HasSetting(backgroundFolderEnable)</visible>
 			
 			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
-			<animation effect="fade" start="100" end="70" time="0" condition="Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="300" condition="Player.HasVideo  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="300" condition="Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
 		</control>
 
 		<control type="multiimage">
@@ -685,9 +685,15 @@
 			<posy>0</posy>
 			<width>720</width>
 			<height>576</height>
-			<texture>multiimage-overlay.png</texture>
-			<colordiffuse>ffa3a3a3</colordiffuse>
-			<visible>Skin.HasSetting(backgroundFolderEnable) + Skin.String(backgroundFolderSet)</visible>
+			<!-- <texture>multiimage-overlay.png</texture> -->
+			<texture>MMbg.png</texture>
+			<colordiffuse>99000000</colordiffuse>
+			<!-- <visible>Skin.HasSetting(backgroundFolderEnable) + Skin.String(backgroundFolderSet)</visible> -->
+			<visible>Skin.HasSetting(backgroundFolderEnable)</visible>
+			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" reversible="true" condition="Player.HasVideo + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="0" reversible="true" condition="Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)">Conditional</animation>
+			
 		</control>
 		
 		

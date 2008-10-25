@@ -1,10 +1,7 @@
 <window id="135">
 	<defaultcontrol always="true">13</defaultcontrol>
-
 	<include>dialog-open-fs</include>
-
 	<controls>
-
 		<control type="image">
 			<description>overlay background</description>
 			<posx>-15</posx>
@@ -13,7 +10,6 @@
 			<height>620</height>
 			<texture>black.jpg</texture>
 		</control>
-
 		<control type="group">
 			<posx>-20</posx>
 			<posy>-10</posy>
@@ -38,7 +34,6 @@
 				<texture flipy="true" diffuse="fade2.png">-</texture>
 				<aspectratio align="left">keep</aspectratio>
 			</control>
-
 			<control type="image">
 				<description>Rating value</description>
 				<posx>34</posx>
@@ -49,7 +44,6 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 		</control>
-
 		<control type="label" id="20">
 			<description>Song Title Value</description>
 			<posx>20</posx>
@@ -61,13 +55,11 @@
 			<align>center</align>
 			<scroll>yes</scroll>
 		</control>
-
 		<control type="group">
 			<posx>220</posx>
-			<posy>-20</posy>			
-
+			<posy>-20</posy>
 			<control type="label">
-				<description>Artist</description>	
+				<description>Artist</description>
 				<posx>0</posx>
 				<posy>22</posy>
 				<width>420</width>
@@ -75,9 +67,8 @@
 				<font>cali38aspect</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
-
 			<control type="label">
-				<description>Album</description>	
+				<description>Album</description>
 				<posx>0</posx>
 				<posy>70</posy>
 				<width>200</width>
@@ -85,9 +76,8 @@
 				<font>cali38aspect</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
-
 			<control type="label">
-				<description>Year</description>	
+				<description>Year</description>
 				<posx>0</posx>
 				<posy>106</posy>
 				<width>200</width>
@@ -111,9 +101,6 @@
 				<font>cali38aspect</font>
 				<textcolor>sublabel-text</textcolor>
 			</control>
-
-
-
 			<!-- <control type="label">
 				<description>komentar</description>
 				<posx>0</posx>
@@ -123,11 +110,9 @@
 				<textcolor>sublabel-text</textcolor>
 			</control> -->
 		</control>
-
 		<control type="group">
 			<posx>325</posx>
 			<posy>-20</posy>
-
 			<control type="fadelabel" id="21">
 				<description>Artist Value</description>
 				<posx>0</posx>
@@ -139,9 +124,8 @@
 				<font>mach7</font>
 				<textcolor>label-text</textcolor>
 			</control>
-
 			<control type="label" id="24">
-				<description>Album value</description>	
+				<description>Album value</description>
 				<posx>0</posx>
 				<posy>70</posy>
 				<width>390</width>
@@ -150,14 +134,13 @@
 				<textcolor>ff888888</textcolor>
 				<scroll>true</scroll>
 			</control>
-
 			<control type="label" id="22">
 				<description>Year Value</description>
 				<posx>0</posx>
 				<posy>106</posy>
 				<width>390</width>
 				<info>ListItem.Year</info>
-				<font>cali38</font>
+				<font>menu34</font>
 				<textcolor>ff888888</textcolor>
 				<scroll>true</scroll>
 			</control>
@@ -172,7 +155,7 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
-				<description>Tracknumber value</description>				
+				<description>Tracknumber value</description>
 				<posx>0</posx>
 				<posy>179</posy>
 				<width>320</width>
@@ -180,48 +163,34 @@
 				<font>cali38</font>
 				<textcolor>ff888888</textcolor>
 			</control>
-
-
-
-
 			<control type="textbox" id="4">
 				<description>textarea</description>
 				<posx>-115</posx>
 				<posy>231</posy>
 				<width>490</width>
-				
-				
 				<height>208</height>
-				
-				
-				
-				
-				
 				<info>ListItem.Comment</info>
 				<textcolor>FF666666</textcolor>
 				<onleft>4</onleft>
 				<onright>4</onright>
 				<onup>999</onup>
 				<ondown>999</ondown>
-				<spinposx>450</spinposx>
-				<spinposy>-36</spinposy>
+				<!-- <spinposx>450</spinposx>
+				<spinposy>-36</spinposy> -->
+				<spinposx>5000</spinposx>
+				<spinposy>5140</spinposy>
 				<font>cali38aspect</font>
 				<autoscroll delay="3600" time="3000" repeat="10000"></autoscroll>
-				<align>left</align>	
+				<align>left</align>
 			</control>
 		</control>
-
-
-
 		<!-- FUNCTIONS -->
-
-		<control type="group" id="999">	
+		<control type="group" id="999">
 			<posx>0</posx>
 			<posy>520</posy>
-
 			<control type="button" id="10">
 				<description>OK Button</description>
-				<width>80</width>			
+				<width>80</width>
 				<posx>0</posx>
 				<label>186</label>
 				<onleft>15</onleft>
@@ -230,7 +199,6 @@
 				<ondown>-</ondown>
 				<include>dialogConfirmButton</include>
 			</control>
-
 			<control type="button" id="13">
 				<description>Get Thumb</description>
 				<width>108</width>
@@ -242,7 +210,6 @@
 				<ondown>-</ondown>
 				<include>dialogConfirmButton</include>
 			</control>
-
 			<control type="button" id="12">
 				<description>Album Info</description>
 				<width>260</width>
@@ -255,12 +222,10 @@
 				<ondown>-</ondown>
 				<include>dialogConfirmButton</include>
 			</control>
-
 			<control type="button" id="14">
 				<description>Rating Increase</description>
-
 				<posx>496</posx>
-				<label>Plus</label>			
+				<label>Plus</label>
 				<onleft>12</onleft>
 				<onright>15</onright>
 				<onup>4</onup>
@@ -268,12 +233,10 @@
 				<onclick>IncreaseRating</onclick>
 				<include>dialogConfirmButton</include>
 			</control>
-
 			<control type="button" id="15">
 				<description>Rating Decrease</description>
-
 				<posx>616</posx>
-				<label>Minus</label>			
+				<label>Minus</label>
 				<onleft>14</onleft>
 				<onright>10</onright>
 				<onup>4</onup>
@@ -281,11 +244,9 @@
 				<onclick>DecreaseRating</onclick>
 				<include>dialogConfirmButton</include>
 			</control>
-		</control>	
-
+		</control>
 		<control type="image">
 			<description>Fake Rating Button</description>
-
 			<posx>530</posx>
 			<posy>520</posy>
 			<width>100</width>
@@ -293,10 +254,8 @@
 			<texture>-</texture>
 			<visible>[Control.HasFocus(14) | Control.HasFocus(15)]</visible>
 		</control>
-
 		<control type="label">
 			<description>Rating Button Label</description>
-
 			<posx>537</posx>
 			<posy>520</posy>
 			<width>70</width>
@@ -304,6 +263,5 @@
 			<aligny>center</aligny>
 			<include>rating</include>
 		</control>
-
 	</controls>
 </window>
