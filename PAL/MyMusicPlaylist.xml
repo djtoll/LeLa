@@ -190,7 +190,7 @@
 				<include>pageslide</include>
 				<control type="image">
 					<description>list item icon background2</description>
-					<posx>-46</posx>
+					<posx>-76</posx>
 					<posy>-3</posy>
 					<height>318</height>
 					<width>340</width>

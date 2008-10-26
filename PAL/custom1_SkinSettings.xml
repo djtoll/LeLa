@@ -1,11 +1,11 @@
 <window id="59">
 	<defaultcontrol always="true">11</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	
+
 	<controls>
 		<include>background</include>
 		<include>allscreens</include>
-		
+
 		<control type="image">
 			<posx>12</posx>
 			<posy>460</posy>
@@ -34,7 +34,7 @@
 			<include>fadeinout</include>
 			<aspectratio align="left">keep</aspectratio>
 		</control>
-		
+
 		<control type="label">
 			<description>description label</description>
 			<include>home-menubar</include>
@@ -45,12 +45,12 @@
 			<label>20077</label>
 			<font>page</font>
 		</control>
-		
+
 		<control type="group" id="9001">
 			<posx>12</posx>
 			<posy>80</posy>
 			<include>pageslide</include>
-	
+
 			<control type="button" id="11">
 				<description>General Settings</description>
 				<posx>0</posx>
@@ -63,7 +63,7 @@
 				<ondown>12</ondown>
 				<include>categoryButton</include>
 			</control>
-			
+
 			<control type="button" id="12">
 				<description>Home Settings</description>
 				<posx>0</posx>
@@ -76,7 +76,7 @@
 				<ondown>13</ondown>
 				<include>categoryButton</include>
 			</control>
-			
+
 			<control type="button" id="13">
 				<description>Background Settings</description>
 				<posx>0</posx>
@@ -89,7 +89,7 @@
 				<ondown>16</ondown>
 				<include>categoryButton</include>
 			</control>
-			
+
 			<control type="button" id="16">
 				<description>Fanart Settings</description>
 				<posx>0</posx>
@@ -102,7 +102,7 @@
 				<ondown>18</ondown>
 				<include>categoryButton</include>
 			</control>
-			
+
 			<control type="button" id="18">
 				<description>Info Settings</description>
 				<posx>0</posx>
@@ -115,7 +115,7 @@
 				<ondown>17</ondown>
 				<include>categoryButton</include>
 			</control>
-			
+
 			<control type="button" id="17">
 				<description>Viewtype Settings</description>
 				<posx>0</posx>
@@ -125,6 +125,18 @@
 				<onleft>17</onleft>
 				<onright>9007</onright>
 				<onup>18</onup>
+				<ondown>19</ondown>
+				<include>categoryButton</include>
+			</control>
+			<control type="button" id="19">
+				<description>Home shortcuts</description>
+				<posx>0</posx>
+				<posy>216</posy>
+				<label>111</label>
+				<onfocus>Skin.SetString(SkinSettings,8)</onfocus>
+				<onleft>17</onleft>
+				<onright>9012</onright>
+				<onup>17</onup>
 				<ondown>15</ondown>
 				<include>categoryButton</include>
 			</control>
@@ -132,24 +144,24 @@
 			<control type="button" id="15">
 				<description>Skin credits</description>
 				<posx>0</posx>
-				<posy>216</posy>
+				<posy>252</posy>
 				<label>31909</label>
 				<onfocus>Skin.SetString(SkinSettings,6)</onfocus>
 				<onleft>-</onleft>
 				<onright>9005</onright>
-				<onup>17</onup>
+				<onup>19</onup>
 				<ondown>11</ondown>
 				<include>categoryButton</include>
 			</control>
 
 		</control>
 
-		
-<!--- GENERAL SETTINGS --------------------------------->
-			
+
+		<!-- GENERAL SETTINGS -->
+
 		<control type="group">
 			<include>pageslide</include>
-				
+
 			<control type="grouplist" id="9002">
 				<posx>182</posx>
 				<posy>80</posy>
@@ -161,7 +173,7 @@
 				<ondown>9002</ondown>				
 				<itemgap>4</itemgap>
 				<visible>Skin.String(SkinSettings,1)</visible>
-				
+
 				<!--<control type="radiobutton" id="100">
 					<description>scrollbars</description>
 					<width>520</width>
@@ -171,7 +183,7 @@
 					<onclick>Skin.ToggleSetting(notice)</onclick>
 					<selected>!Skin.HasSetting(notice)</selected>
 				</control>-->
-				
+
 				<control type="radiobutton" id="101">
 					<description>scrollbars</description>
 					<width>520</width>
@@ -182,7 +194,7 @@
 					<selected>Skin.HasSetting(scrollbar)</selected>
 					<textoffsety>-2</textoffsety>
 				</control>
-				
+
 				<control type="radiobutton" id="102">
 					<description>scrollbars</description>
 					<width>520</width>
@@ -192,7 +204,7 @@
 					<onclick>Skin.ToggleSetting(indicatorScrolling)</onclick>
 					<selected>Skin.HasSetting(indicatorScrolling)</selected>
 				</control>
-				
+
 				<control type="radiobutton" id="103">
 					<description>keyboard</description>
 					<width>520</width>
@@ -202,7 +214,7 @@
 					<onclick>Skin.ToggleSetting(keyboardButtons)</onclick>
 					<selected>!Skin.HasSetting(keyboardButtons)</selected>
 				</control>
-				
+
 				<control type="radiobutton" id="104">
 					<description>smooth scrolling</description>
 					<width>520</width>
@@ -212,7 +224,7 @@
 					<onclick>Skin.ToggleSetting(SmoothScroll)</onclick>
 					<selected>!Skin.HasSetting(SmoothScroll)</selected>
 				</control>
-					
+
 				<control type="radiobutton" id="105">
 					<description>media overlays</description>
 					<label>31025</label>
@@ -222,7 +234,7 @@
 					<onclick>Skin.ToggleSetting(overlay)</onclick>
 					<selected>!Skin.HasSetting(overlay)</selected>
 				</control>
-				
+
 				<control type="radiobutton" id="106">
 					<description>video behind background</description>
 					<width>520</width>
@@ -232,7 +244,7 @@
 					<onclick>Skin.ToggleSetting(backgroundVideo)</onclick>
 					<selected>!Skin.HasSetting(backgroundVideo)</selected>
 				</control>
-				
+
 				<control type="radiobutton" id="107">
 					<description>visualisation behind background</description>
 					<width>520</width>
@@ -242,7 +254,7 @@
 					<onclick>Skin.ToggleSetting(backgroundVisuals)</onclick>
 					<selected>Skin.HasSetting(backgroundVisuals)</selected>
 				</control>
-	
+
 				<control type="radiobutton" id="108">
 					<width>520</width>
 					<height>38</height>
@@ -251,7 +263,7 @@
 					<onclick>Skin.ToggleSetting(advancedShutdown)</onclick>
 					<selected>Skin.HasSetting(advancedShutdown)</selected>
 				</control>
-				
+
 				<control type="radiobutton" id="109">
 					<width>520</width>
 					<height>38</height>
@@ -260,7 +272,7 @@
 					<onclick>Skin.ToggleSetting(bigImage)</onclick>
 					<selected>!Skin.HasSetting(bigImage)</selected>
 				</control>
-				
+
 				<control type="radiobutton" id="110">
 					<width>520</width>
 					<height>38</height>
@@ -269,18 +281,18 @@
 					<onclick>Skin.ToggleSetting(VisOffsetLabels)</onclick>
 					<selected>!Skin.HasSetting(VisOffsetLabels)</selected>
 				</control>
-				
-				
+
+
 			</control>
-			
-			
-				
-				
-				
-			
-				
-<!--- HOME SCREEN SETTINGS --------------------------------->
-					
+
+
+
+
+
+
+
+			<!-- HOME SCREEN SETTINGS -->
+
 			<control type="grouplist" id="9003">
 				<posx>182</posx>
 				<posy>80</posy>
@@ -293,7 +305,7 @@
 				<include>pageslide</include>
 				<itemgap>4</itemgap>
 				<visible>Skin.String(SkinSettings,2)</visible>
-				
+
 				<control type="radiobutton" id="29">
 					<description>enable weather info</description>
 					<font>cali34aspect</font>		
@@ -303,7 +315,7 @@
 					<onclick>Skin.ToggleSetting(subMenuFade)</onclick>
 					<selected>Skin.HasSetting(subMenuFade)</selected>
 				</control>
-						
+
 				<control type="radiobutton" id="30">
 					<description>enable RSS</description>
 					<font>cali34aspect</font>
@@ -313,7 +325,7 @@
 					<onclick>Skin.ToggleSetting(enableRSSFeed)</onclick>
 					<selected>!Skin.HasSetting(enableRSSFeed)</selected>
 				</control>
-								
+
 				<control type="radiobutton" id="31">
 					<description>enable date/time</description>
 					<font>cali34aspect</font>
@@ -323,7 +335,7 @@
 					<onclick>Skin.ToggleSetting(homepageDateTime)</onclick>
 					<selected>!Skin.HasSetting(homepageDateTime)</selected>
 				</control>
-						
+
 				<control type="radiobutton" id="32">
 					<description>enable video info</description>
 					<font>cali34aspect</font>
@@ -333,7 +345,7 @@
 					<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
 					<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
 				</control>
-						
+
 				<control type="radiobutton" id="33">
 					<description>enable music info</description>
 					<font>cali34aspect</font>
@@ -343,7 +355,7 @@
 					<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
 					<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
 				</control>
-						
+
 				<control type="radiobutton" id="34">
 					<description>enable weather info</description>
 					<font>cali34aspect</font>		
@@ -353,7 +365,7 @@
 					<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
 					<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
 				</control>
-				
+
 				<control type="radiobutton" id="35">
 					<width>520</width>
 					<height>38</height>
@@ -362,7 +374,7 @@
 					<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 					<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 				</control>
-				
+
 				<control type="button" id="36">
 					<width>520</width>
 					<height>38</height>
@@ -374,7 +386,7 @@
 					<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>					
 					<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>					
 				</control>
-				
+
 				<control type="radiobutton" id="37">
 					<width>520</width>
 					<height>38</height>
@@ -383,7 +395,7 @@
 					<onclick>Skin.ToggleSetting(LyricScript_Enable)</onclick>
 					<selected>Skin.HasSetting(LyricScript_Enable)</selected>
 				</control>
-			
+
 				<control type="button" id="38">
 					<width>520</width>
 					<height>38</height>
@@ -394,12 +406,35 @@
 					<label2>[COLOR=sublabel-text]$INFO[Skin.String(LyricScript_Path)][/COLOR]</label2>				
 					<onclick>Skin.SetFile(LyricScript_Path,.py)</onclick>
 					<visible>Skin.HasSetting(LyricScript_Enable)</visible>
+				</control>
+
+
+				<!--  <control type="radiobutton" id="39">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>				
+					<label>Enable Kids Direkt Link @ Home Video Submenu</label>				
+					<onclick>Skin.ToggleSetting(KidsmenuEnable)</onclick>
+					<selected>Skin.HasSetting(KidsmenuEnable)</selected>
+				</control> -->
+
+
+				<!-- <control type="button" id="40">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<textcolor>sublabel-text</textcolor>
+					<textoffsety>-2</textoffsety>
+					<label>- $LOCALIZE[31204]</label>
+					<label2>[COLOR=sublabel-text]$INFO[Skin.String(Kidsmenu_Path)][/COLOR]</label2>				
+					<onclick>Skin.SetPath(Kidsmenu_Path,)</onclick>					
+					<visible>Skin.HasSetting(KidsmenuEnable)</visible>
+			</control>  -->
+
 			</control>
-			
-		</control>
-			
-<!--- BACKGROUND SETTINGS --------------------------------->
-					
+
+			<!-- BACKGROUND SETTINGS --> 
+
 			<control type="grouplist" id="9003">
 				<posx>182</posx>
 				<posy>80</posy>
@@ -413,7 +448,7 @@
 				<itemgap>4</itemgap>
 				<scrolltime>200</scrolltime>
 				<visible>Skin.String(SkinSettings,3)</visible>
-				
+
 				<control type="radiobutton" id="299">
 					<description>Dim Background Images</description>
 					<width>520</width>
@@ -434,7 +469,7 @@
 					<selected>Skin.HasSetting(backgroundDim)</selected>
 					<enable>Skin.HasSetting(backgroundDimEnable)</enable>
 				</control>
-				
+
 				<control type="radiobutton" id="301">
 					<description>Dim Background Images</description>
 					<width>520</width>
@@ -447,16 +482,16 @@
 					<enable>Skin.HasSetting(backgroundDimEnable)</enable>
 				</control>
 
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+
+
+
+
+
+
+
+
+
+
 				<!-- aaaaaaaaaaaaaaaaaaddddddddddddddddddd -->
 				<control type="radiobutton" id="302">
 					<description>Use Custom Background</description>
@@ -467,7 +502,7 @@
 					<texturenofocus>list-nofocus.png</texturenofocus>
 					<label>31928</label>
 					<onclick>Skin.ToggleSetting(backgroundFolderEnable)</onclick>
-				
+
 					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
 					<enable>Skin.HasSetting(defaultBackgroundEnable)</enable>
 					<selected>Skin.HasSetting(backgroundFolderEnable)</selected>
@@ -477,7 +512,7 @@
 					<textoffsety>-2</textoffsety>
 					<textoffsetx>10</textoffsetx>
 				</control>
-				
+
 				<control type="button" id="303">
 					<description>Use Custom Background</description>
 					<width>520</width>
@@ -493,25 +528,25 @@
 					<textoffsetx>10</textoffsetx>
 					<enable>Skin.HasSetting(backgroundFolderEnable)</enable>
 				</control>
-				
-				
-					<!-- aaaaaaaaaaaaaaaaaaddddddddddddddddddd -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+
+
+				<!-- aaaaaaaaaaaaaaaaaaddddddddddddddddddd -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				<control type="radiobutton" id="304">
 					<description>System Wide Background Toggle</description>
 					<width>520</width>
@@ -523,7 +558,7 @@
 					<onclick>Skin.Reset(defaultBackgroundEnable)</onclick>
 					<selected>!Skin.HasSetting(genericBackgroundEnable)</selected>
 				</control>
-				
+
 				<control type="button" id="305">
 					<description>Background Select Dialog</description>
 					<width>520</width>
@@ -534,7 +569,7 @@
 					<onclick>xbmc.activatewindow(51)</onclick>
 					<enable>Skin.HasSetting(genericBackgroundEnable)</enable>
 				</control>
-				
+
 				<control type="radiobutton" id="306">
 					<description>default Background</description>
 					<width>520</width>
@@ -548,7 +583,7 @@
 					<enable>!Skin.HasSetting(genericBackgroundEnable)</enable>
 					<enable>!Skin.HasSetting(backgroundFolderEnable)</enable>
 				</control>
-				
+
 				<control type="button" id="307">
 					<description>One Single Custom Background</description>
 					<width>520</width>
@@ -563,515 +598,554 @@
 					<textoffsety>2</textoffsety>
 					<textoffsetx>10</textoffsetx>
 					<enable>Skin.HasSetting(defaultBackgroundEnable)</enable>
-					
+
 				</control>
 
 			</control>			
-				
-
-<!--- FANART SETTINGS --------------------------------->
-
-	<control type="grouplist" id="9004">
-			<posx>182</posx>
-			<posy>80</posy>
-			<width>520</width>
-			<height>420</height>
-			<onleft>9001</onleft>
-			<onright>9001</onright>
-			<onup>9004</onup>
-			<ondown>9004</ondown>
-			<include>pageslide</include>
-			<itemgap>4</itemgap>
-			<visible>Skin.String(SkinSettings,4)</visible>
-			
-			
-			
-			
-			<!--- TV SHOWS -------------------->
-								
-			<control type="label" id="400">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<label>[B]$LOCALIZE[20343][/B]</label>
-				<textcolor>FFfda702</textcolor>
-				<aligny>-</aligny>
-				<textoffsety>3</textoffsety>
-				<textoffsetx>10</textoffsetx>
-			</control>
-			
-			<control type="radiobutton" id="401">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31933</label>
-				<onclick>Skin.ToggleSetting(FanartViewEnable)</onclick>
-				<selected>!Skin.HasSetting(FanartViewEnable)</selected>
-			</control>
-			
-			<control type="radiobutton" id="402">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31067</label>
-				<onclick>Skin.ToggleSetting(fanartcolorEnable)</onclick>
-				<selected>Skin.HasSetting(fanartcolorEnable)</selected>
-				<enable>!Skin.HasSetting(FanartViewEnable)</enable>
-			</control>
-			
-			<control type="radiobutton" id="403">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31940]</label>
-				<onclick>Skin.ToggleSetting(fanartcolorDarkBG)</onclick>
-				<selected>Skin.HasSetting(fanartcolorDarkBG)</selected>
-				<enable>!Skin.HasSetting(FanartViewEnable) + Skin.HasSetting(fanartcolorEnable)</enable>
-			</control>
-			
-			<control type="radiobutton" id="404">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31941]</label>
-				<onclick>Skin.ToggleSetting(fanartcolorDarkBG)</onclick>
-				<selected>!Skin.HasSetting(fanartcolorDarkBG)</selected>
-				<enable>!Skin.HasSetting(FanartViewEnable) + Skin.HasSetting(fanartcolorEnable)</enable>
-			</control>
-			
-			<control type="radiobutton" id="405">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31935]</label>
-				<onclick>Skin.ToggleSetting(FanartNoPlot)</onclick>
-				<selected>Skin.HasSetting(FanartNoPlot)</selected>
-				<enable>!Skin.HasSetting(FanartViewEnable)</enable>
-			</control>
-
-			<control type="radiobutton" id="406">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31929</label>
-				<onclick>Skin.ToggleSetting(FanartEnable)</onclick>
-				<selected>Skin.HasSetting(FanartEnable)</selected>
-			</control>
-
-			<control type="radiobutton" id="407">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31930</label>
-				<onclick>Skin.ToggleSetting(FanartDim)</onclick>
-				<selected>Skin.HasSetting(FanartDim)</selected>
-				<enable>Skin.HasSetting(FanartEnable)</enable>
-			</control>
-			<control type="radiobutton" id="408">
-				<description>Dim Fanart Images</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31925]</label>
-				<onclick>Skin.SetBool(FanartDimLight)</onclick>
-				<onclick>Skin.Reset(FanartDimStrong)</onclick>
-				<selected>Skin.HasSetting(FanartDimLight)</selected>
-				<enable>Skin.HasSetting(FanartEnable) + Skin.HasSetting(FanartDim)</enable>
-			</control>
-			<control type="radiobutton" id="409">
-				<description>Dim Fanart Images</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31926]</label>
-				<onclick>Skin.SetBool(FanartDimStrong)</onclick>
-				<onclick>Skin.Reset(FanartDimLight)</onclick>
-				<selected>Skin.HasSetting(FanartDimStrong)</selected>
-				<enable>Skin.HasSetting(FanartEnable) + Skin.HasSetting(FanartDim)</enable>
-			</control>
-
-			<!--- MOVIES -------------------->
-			
-			<control type="label" id="420">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<label>[B]$LOCALIZE[342][/B]</label>
-				<textcolor>FFfda702</textcolor>
-				<aligny>-</aligny>
-				<textoffsety>3</textoffsety>
-				<textoffsetx>10</textoffsetx>
-			</control>
-			
-			<control type="radiobutton" id="421">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31933</label>
-				<onclick>Skin.ToggleSetting(MovieFanartViewEnable)</onclick>
-				<selected>!Skin.HasSetting(MovieFanartViewEnable)</selected>
-			</control>
-			
-			<control type="radiobutton" id="422">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31935]</label>
-				<onclick>Skin.ToggleSetting(movieFanartNoPlot)</onclick>
-				<selected>Skin.HasSetting(movieFanartNoPlot)</selected>
-				<enable>!Skin.HasSetting(MovieFanartViewEnable)</enable>
-			</control>
-			
-			<control type="radiobutton" id="423">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31929</label>
-				<onclick>Skin.ToggleSetting(MovieFanartEnable)</onclick>
-				<selected>Skin.HasSetting(MovieFanartEnable)</selected>
-			</control>
-			
-			<control type="radiobutton" id="424">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31930</label>
-				<onclick>Skin.ToggleSetting(MovieFanartDim)</onclick>
-				<selected>Skin.HasSetting(MovieFanartDim)</selected>
-				<enable>Skin.HasSetting(MovieFanartEnable)</enable>
-			</control>
-			<control type="radiobutton" id="425">
-				<description>Dim Fanart Images</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31925]</label>
-				<onclick>Skin.SetBool(MovieFanartDimLight)</onclick>
-				<onclick>Skin.Reset(MovieFanartDimStrong)</onclick>
-				<selected>Skin.HasSetting(MovieFanartDimLight)</selected>
-				<enable>Skin.HasSetting(MovieFanartEnable) + Skin.HasSetting(MovieFanartDim)</enable>
-			</control>
-			<control type="radiobutton" id="426">
-				<description>Dim Fanart Images</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31926]</label>
-				<onclick>Skin.SetBool(MovieFanartDimStrong)</onclick>
-				<onclick>Skin.Reset(MovieFanartDimLight)</onclick>
-				<selected>Skin.HasSetting(MovieFanartDimStrong)</selected>
-				<enable>Skin.HasSetting(MovieFanartEnable) + Skin.HasSetting(MovieFanartDim)</enable>
-			</control>
-
-		</control>
-
-<!--- INFO SETTINGS --------------------------------->					
-
-		<control type="grouplist" id="9008">
-			<posx>182</posx>
-			<posy>80</posy>
-			<width>520</width>
-			<height>430</height>
-			<onleft>9001</onleft>
-			<onright>9001</onright>
-			<onup>9008</onup>
-			<ondown>9008</ondown>
-			<include>pageslide</include>
-			<itemgap>4</itemgap>
-			<visible>Skin.String(SkinSettings,7)</visible>
-			
-			<control type="radiobutton" id="700">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31003</label>
-				<onclick>Skin.ToggleSetting(ASStatusEnable)</onclick>
-				<selected>Skin.HasSetting(ASStatusEnable)</selected>
-			</control>
-			
-			<control type="radiobutton" id="701">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>20185</label>
-				<onclick>Skin.ToggleSetting(tvshowPosters)</onclick>
-				<selected>Skin.HasSetting(tvshowPosters)</selected>
-			</control>
-			
-			<control type="radiobutton" id="703">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31936]</label>
-				<onclick>Skin.ToggleSetting(listBigPosters)</onclick>
-				<selected>Skin.HasSetting(listBigPosters)</selected>
-			</control>
-
-			<control type="radiobutton" id="707">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31922</label>
-				<onclick>Skin.ToggleSetting(overlayMovies)</onclick>
-				<selected>!Skin.HasSetting(overlayMovies)</selected>
-			</control>
-			
-			<control type="radiobutton" id="708">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>31924</label>
-				<onclick>Skin.ToggleSetting(overlayEpisodes)</onclick>
-				<selected>!Skin.HasSetting(overlayEpisodes)</selected>
-			</control>
-		</control>
-
-<!--- VIEWTYPE SETTINGS --------------------------------->					
-
-		<control type="grouplist" id="9007">
-			<posx>182</posx>
-			<posy>80</posy>
-			<width>520</width>
-			<height>420</height>
-			<onleft>9001</onleft>
-			<onright>9001</onright>
-			<onup>9007</onup>
-			<ondown>9007</ondown>
-			<include>pageslide</include>
-			
-			<itemgap>4</itemgap>
-			
-			<visible>Skin.String(SkinSettings,5)</visible>
-
-			<control type="label" id="500">
-				<description>movies</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<label>[B]$LOCALIZE[342][/B]</label>
-				<textcolor>FFfda702</textcolor>
-				<aligny>-</aligny>
-				<textoffsety>2</textoffsety>
-				<textoffsetx>10</textoffsetx>
-			</control>
-
-			<control type="radiobutton" id="501">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>537</label>
-				<onclick>Skin.ToggleSetting(viewtypeBigList)</onclick>
-				<selected>!Skin.HasSetting(viewtypeBigList)</selected>
-			</control>
-			
-			<control type="radiobutton" id="502">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[21371]</label>
-				<onclick>Skin.ToggleSetting(viewtypeThumbs)</onclick>
-				<selected>!Skin.HasSetting(viewtypeThumbs)</selected>
-			</control>
-			
-			<control type="radiobutton" id="503">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>Slide</label>
-				<onclick>Skin.ToggleSetting(viewtypeCoverSlide)</onclick>
-				<selected>!Skin.HasSetting(viewtypeCoverSlide)</selected>
-			</control>
-			
-			<control type="radiobutton" id="504">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>CoverFlow</label>
-				<onclick>Skin.ToggleSetting(viewtypeCoverFlow)</onclick>
-				<selected>!Skin.HasSetting(viewtypeCoverFlow)</selected>
-			</control>
-
-			<control type="label" id="510">
-				<description>TV SHOWS</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<label>[B]$LOCALIZE[20343][/B]</label>
-				<textcolor>FFfda702</textcolor>
-				<aligny>-</aligny>
-				<textoffsety>2</textoffsety>
-				<textoffsetx>10</textoffsetx>
-			</control>
-			
-			<control type="radiobutton" id="511">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>537</label>
-				<onclick>Skin.ToggleSetting(viewtypeBigListTV)</onclick>
-				<selected>!Skin.HasSetting(viewtypeBigListTV)</selected>
-				<enable>Skin.HasSetting(tvshowPosters)</enable>
-			</control>
-			
-			<control type="radiobutton" id="512">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[21371]</label>
-				<onclick>Skin.ToggleSetting(viewtypeWideIcons)</onclick>
-				<selected>!Skin.HasSetting(viewtypeWideIcons)</selected>
-			</control>
-			
-			<control type="radiobutton" id="513">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>Slide</label>
-				<onclick>Skin.ToggleSetting(viewtypeSlideTV)</onclick>
-				<selected>!Skin.HasSetting(viewtypeSlideTV)</selected>
-			</control>
-			
-			<control type="radiobutton" id="514">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>Coverflow</label>
-				<onclick>Skin.ToggleSetting(viewtypeCoverFlowTV)</onclick>
-				<selected>!Skin.HasSetting(viewtypeCoverFlowTV)</selected>
-				<enable>Skin.HasSetting(tvshowPosters)</enable>
-			</control>
-
-			<control type="label" id="520">
-				<description>SEASONS</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<label>[B]$LOCALIZE[20373][/B]</label>
-				<textcolor>FFfda702</textcolor>
-				<aligny>-</aligny>
-				<textoffsety>2</textoffsety>
-				<textoffsetx>10</textoffsetx>
-			</control>
-			<control type="radiobutton" id="521">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>Coverflow</label>
-				<onclick>Skin.ToggleSetting(viewtypeCoverFlowS)</onclick>
-				<selected>Skin.HasSetting(viewtypeCoverFlowS)</selected>
-			</control>
-			
-			<control type="label" id="530">
-				<description>EPISODES</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<label>[B]$LOCALIZE[20360][/B]</label>
-				<textcolor>FFfda702</textcolor>
-				<aligny>-</aligny>
-				<textoffsety>2</textoffsety>
-				<textoffsetx>10</textoffsetx>
-			</control>
-			<control type="radiobutton" id="531">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>537</label>
-				<onclick>Skin.ToggleSetting(viewtypeBigListEP)</onclick>
-				<selected>!Skin.HasSetting(viewtypeBigListEP)</selected>
-			</control>
-			<control type="radiobutton" id="532">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[21371]</label>
-				<onclick>Skin.ToggleSetting(viewtypeThumbsEP)</onclick>
-				<selected>!Skin.HasSetting(viewtypeThumbsEP)</selected>
-			</control>
-			<control type="radiobutton" id="533">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>Slide</label>
-				<onclick>Skin.ToggleSetting(viewtypeSlideEP)</onclick>
-				<selected>!Skin.HasSetting(viewtypeSlideEP)</selected>
-			</control>
-			
-			<control type="label" id="540">
-				<description>MUSIC</description>
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<texturefocus>list-focus.png</texturefocus>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<label>[B]$LOCALIZE[2][/B]</label>
-				<textcolor>FFfda702</textcolor>
-				<aligny>-</aligny>
-				<textoffsety>2</textoffsety>
-				<textoffsetx>10</textoffsetx>
-			</control>
-			<control type="radiobutton" id="541">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>537</label>
-				<onclick>Skin.ToggleSetting(viewtypeBigListAU)</onclick>
-				<selected>!Skin.HasSetting(viewtypeBigListAU)</selected>
-			</control>
-			<control type="radiobutton" id="542">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[21371]</label>
-				<onclick>Skin.ToggleSetting(viewtypeThumbsAU)</onclick>
-				<selected>!Skin.HasSetting(viewtypeThumbsAU)</selected>
-			</control>
-			<control type="radiobutton" id="543">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>$LOCALIZE[31009]</label>
-				<onclick>Skin.ToggleSetting(viewtypeBigThumbsEP)</onclick>
-				<selected>!Skin.HasSetting(viewtypeBigThumbsEP)</selected>
-			</control>
-			<control type="radiobutton" id="544">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>Slide</label>
-				<onclick>Skin.ToggleSetting(viewtypeSlideAU)</onclick>
-				<selected>!Skin.HasSetting(viewtypeSlideAU)</selected>
-			</control>
-			<control type="radiobutton" id="545">
-				<width>520</width>
-				<height>38</height>
-				<font>cali34aspect</font>
-				<label>Coverflow</label>
-				<onclick>Skin.ToggleSetting(viewtypeCoverFlowAU)</onclick>
-				<selected>Skin.HasSetting(viewtypeCoverFlowAU)</selected>
-			</control>
-			
-		</control>
 
 
-<!--- SKIN CREDITS --------------------------------->					
+			<!-- FANART SETTINGS --> 
+
+			<control type="grouplist" id="9004">
+				<posx>182</posx>
+				<posy>80</posy>
+				<width>520</width>
+				<height>420</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9004</onup>
+				<ondown>9004</ondown>
+				<include>pageslide</include>
+				<itemgap>4</itemgap>
+				<visible>Skin.String(SkinSettings,4)</visible>
+
+
+
+
+				<!-- TV SHOWS -->
+
+				<control type="label" id="400">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>[B]$LOCALIZE[20343][/B]</label>
+					<textcolor>FFfda702</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>3</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+
+				<control type="radiobutton" id="401">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31933</label>
+					<onclick>Skin.ToggleSetting(FanartViewEnable)</onclick>
+					<selected>!Skin.HasSetting(FanartViewEnable)</selected>
+				</control>
+
+				<control type="radiobutton" id="402">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31067</label>
+					<onclick>Skin.ToggleSetting(fanartcolorEnable)</onclick>
+					<selected>Skin.HasSetting(fanartcolorEnable)</selected>
+					<enable>!Skin.HasSetting(FanartViewEnable)</enable>
+				</control>
+
+				<control type="radiobutton" id="403">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31940]</label>
+					<onclick>Skin.ToggleSetting(fanartcolorDarkBG)</onclick>
+					<selected>Skin.HasSetting(fanartcolorDarkBG)</selected>
+					<enable>!Skin.HasSetting(FanartViewEnable) + Skin.HasSetting(fanartcolorEnable)</enable>
+				</control>
+
+				<control type="radiobutton" id="404">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31941]</label>
+					<onclick>Skin.ToggleSetting(fanartcolorDarkBG)</onclick>
+					<selected>!Skin.HasSetting(fanartcolorDarkBG)</selected>
+					<enable>!Skin.HasSetting(FanartViewEnable) + Skin.HasSetting(fanartcolorEnable)</enable>
+				</control>
+
+				<control type="radiobutton" id="405">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31935]</label>
+					<onclick>Skin.ToggleSetting(FanartNoPlot)</onclick>
+					<selected>Skin.HasSetting(FanartNoPlot)</selected>
+					<enable>!Skin.HasSetting(FanartViewEnable)</enable>
+				</control>
+
+				<control type="radiobutton" id="406">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31929</label>
+					<onclick>Skin.ToggleSetting(FanartEnable)</onclick>
+					<selected>Skin.HasSetting(FanartEnable)</selected>
+				</control>
+
+				<control type="radiobutton" id="407">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31930</label>
+					<onclick>Skin.ToggleSetting(FanartDim)</onclick>
+					<selected>Skin.HasSetting(FanartDim)</selected>
+					<enable>Skin.HasSetting(FanartEnable)</enable>
+				</control>
+				<control type="radiobutton" id="408">
+					<description>Dim Fanart Images</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31925]</label>
+					<onclick>Skin.SetBool(FanartDimLight)</onclick>
+					<onclick>Skin.Reset(FanartDimStrong)</onclick>
+					<selected>Skin.HasSetting(FanartDimLight)</selected>
+					<enable>Skin.HasSetting(FanartEnable) + Skin.HasSetting(FanartDim)</enable>
+				</control>
+				<control type="radiobutton" id="409">
+					<description>Dim Fanart Images</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31926]</label>
+					<onclick>Skin.SetBool(FanartDimStrong)</onclick>
+					<onclick>Skin.Reset(FanartDimLight)</onclick>
+					<selected>Skin.HasSetting(FanartDimStrong)</selected>
+					<enable>Skin.HasSetting(FanartEnable) + Skin.HasSetting(FanartDim)</enable>
+				</control>
+
+				<!-- MOVIES -->
+
+				<control type="label" id="420">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>[B]$LOCALIZE[342][/B]</label>
+					<textcolor>FFfda702</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>3</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+
+				<control type="radiobutton" id="421">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31933</label>
+					<onclick>Skin.ToggleSetting(MovieFanartViewEnable)</onclick>
+					<selected>!Skin.HasSetting(MovieFanartViewEnable)</selected>
+				</control>
+
+				<control type="radiobutton" id="422">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31935]</label>
+					<onclick>Skin.ToggleSetting(movieFanartNoPlot)</onclick>
+					<selected>Skin.HasSetting(movieFanartNoPlot)</selected>
+					<enable>!Skin.HasSetting(MovieFanartViewEnable)</enable>
+				</control>
+
+				<control type="radiobutton" id="423">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31929</label>
+					<onclick>Skin.ToggleSetting(MovieFanartEnable)</onclick>
+					<selected>Skin.HasSetting(MovieFanartEnable)</selected>
+				</control>
+
+				<control type="radiobutton" id="424">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31930</label>
+					<onclick>Skin.ToggleSetting(MovieFanartDim)</onclick>
+					<selected>Skin.HasSetting(MovieFanartDim)</selected>
+					<enable>Skin.HasSetting(MovieFanartEnable)</enable>
+				</control>
+				<control type="radiobutton" id="425">
+					<description>Dim Fanart Images</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31925]</label>
+					<onclick>Skin.SetBool(MovieFanartDimLight)</onclick>
+					<onclick>Skin.Reset(MovieFanartDimStrong)</onclick>
+					<selected>Skin.HasSetting(MovieFanartDimLight)</selected>
+					<enable>Skin.HasSetting(MovieFanartEnable) + Skin.HasSetting(MovieFanartDim)</enable>
+				</control>
+				<control type="radiobutton" id="426">
+					<description>Dim Fanart Images</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31926]</label>
+					<onclick>Skin.SetBool(MovieFanartDimStrong)</onclick>
+					<onclick>Skin.Reset(MovieFanartDimLight)</onclick>
+					<selected>Skin.HasSetting(MovieFanartDimStrong)</selected>
+					<enable>Skin.HasSetting(MovieFanartEnable) + Skin.HasSetting(MovieFanartDim)</enable>
+				</control>
+
+			</control>
+
+			<!-- INFO SETTINGS -->				
+
+			<control type="grouplist" id="9008">
+				<posx>182</posx>
+				<posy>80</posy>
+				<width>520</width>
+				<height>430</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9008</onup>
+				<ondown>9008</ondown>
+				<include>pageslide</include>
+				<itemgap>4</itemgap>
+				<visible>Skin.String(SkinSettings,7)</visible>
+
+				<control type="radiobutton" id="700">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31003</label>
+					<onclick>Skin.ToggleSetting(ASStatusEnable)</onclick>
+					<selected>Skin.HasSetting(ASStatusEnable)</selected>
+				</control>
+
+				<control type="radiobutton" id="701">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>20185</label>
+					<onclick>Skin.ToggleSetting(tvshowPosters)</onclick>
+					<selected>Skin.HasSetting(tvshowPosters)</selected>
+				</control>
+
+				<control type="radiobutton" id="703">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31936]</label>
+					<onclick>Skin.ToggleSetting(listBigPosters)</onclick>
+					<selected>Skin.HasSetting(listBigPosters)</selected>
+				</control>
+
+				<control type="radiobutton" id="707">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31922</label>
+					<onclick>Skin.ToggleSetting(overlayMovies)</onclick>
+					<selected>!Skin.HasSetting(overlayMovies)</selected>
+				</control>
+
+				<control type="radiobutton" id="708">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>31924</label>
+					<onclick>Skin.ToggleSetting(overlayEpisodes)</onclick>
+					<selected>!Skin.HasSetting(overlayEpisodes)</selected>
+				</control>
+			</control>
+
+			<!-- VIEWTYPE SETTINGS --> 		
+
+			<control type="grouplist" id="9007">
+				<posx>182</posx>
+				<posy>80</posy>
+				<width>520</width>
+				<height>420</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9007</onup>
+				<ondown>9007</ondown>
+				<include>pageslide</include>
+
+				<itemgap>4</itemgap>
+
+				<visible>Skin.String(SkinSettings,5)</visible>
+
+				<control type="label" id="500">
+					<description>movies</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>[B]$LOCALIZE[342][/B]</label>
+					<textcolor>FFfda702</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+
+				<control type="radiobutton" id="501">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>537</label>
+					<onclick>Skin.ToggleSetting(viewtypeBigList)</onclick>
+					<selected>!Skin.HasSetting(viewtypeBigList)</selected>
+				</control>
+
+				<control type="radiobutton" id="502">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[21371]</label>
+					<onclick>Skin.ToggleSetting(viewtypeThumbs)</onclick>
+					<selected>!Skin.HasSetting(viewtypeThumbs)</selected>
+				</control>
+
+				<control type="radiobutton" id="503">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>Slide</label>
+					<onclick>Skin.ToggleSetting(viewtypeCoverSlide)</onclick>
+					<selected>!Skin.HasSetting(viewtypeCoverSlide)</selected>
+				</control>
+
+				<control type="radiobutton" id="504">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>CoverFlow</label>
+					<onclick>Skin.ToggleSetting(viewtypeCoverFlow)</onclick>
+					<selected>!Skin.HasSetting(viewtypeCoverFlow)</selected>
+				</control>
+
+				<control type="label" id="510">
+					<description>TV SHOWS</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>[B]$LOCALIZE[20343][/B]</label>
+					<textcolor>FFfda702</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+
+				<control type="radiobutton" id="511">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>537</label>
+					<onclick>Skin.ToggleSetting(viewtypeBigListTV)</onclick>
+					<selected>!Skin.HasSetting(viewtypeBigListTV)</selected>
+					<enable>Skin.HasSetting(tvshowPosters)</enable>
+				</control>
+
+				<control type="radiobutton" id="512">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[21371]</label>
+					<onclick>Skin.ToggleSetting(viewtypeWideIcons)</onclick>
+					<selected>!Skin.HasSetting(viewtypeWideIcons)</selected>
+				</control>
+
+				<control type="radiobutton" id="513">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>Slide</label>
+					<onclick>Skin.ToggleSetting(viewtypeSlideTV)</onclick>
+					<selected>!Skin.HasSetting(viewtypeSlideTV)</selected>
+				</control>
+
+				<control type="radiobutton" id="514">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>Coverflow</label>
+					<onclick>Skin.ToggleSetting(viewtypeCoverFlowTV)</onclick>
+					<selected>!Skin.HasSetting(viewtypeCoverFlowTV)</selected>
+					<enable>Skin.HasSetting(tvshowPosters)</enable>
+				</control>
+
+				<control type="label" id="520">
+					<description>SEASONS</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>[B]$LOCALIZE[20373][/B]</label>
+					<textcolor>FFfda702</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				<control type="radiobutton" id="521">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>Coverflow</label>
+					<onclick>Skin.ToggleSetting(viewtypeCoverFlowS)</onclick>
+					<selected>Skin.HasSetting(viewtypeCoverFlowS)</selected>
+				</control>
+
+				<control type="label" id="530">
+					<description>EPISODES</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>[B]$LOCALIZE[20360][/B]</label>
+					<textcolor>FFfda702</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				<control type="radiobutton" id="531">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>537</label>
+					<onclick>Skin.ToggleSetting(viewtypeBigListEP)</onclick>
+					<selected>!Skin.HasSetting(viewtypeBigListEP)</selected>
+				</control>
+				<control type="radiobutton" id="532">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[21371]</label>
+					<onclick>Skin.ToggleSetting(viewtypeThumbsEP)</onclick>
+					<selected>!Skin.HasSetting(viewtypeThumbsEP)</selected>
+				</control>
+				<control type="radiobutton" id="533">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>Slide</label>
+					<onclick>Skin.ToggleSetting(viewtypeSlideEP)</onclick>
+					<selected>!Skin.HasSetting(viewtypeSlideEP)</selected>
+				</control>
+
+				<control type="label" id="540">
+					<description>MUSIC</description>
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>[B]$LOCALIZE[2][/B]</label>
+					<textcolor>FFfda702</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				<control type="radiobutton" id="541">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>537</label>
+					<onclick>Skin.ToggleSetting(viewtypeBigListAU)</onclick>
+					<selected>!Skin.HasSetting(viewtypeBigListAU)</selected>
+				</control>
+				<control type="radiobutton" id="542">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[21371]</label>
+					<onclick>Skin.ToggleSetting(viewtypeThumbsAU)</onclick>
+					<selected>!Skin.HasSetting(viewtypeThumbsAU)</selected>
+				</control>
+				<control type="radiobutton" id="543">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>$LOCALIZE[31009]</label>
+					<onclick>Skin.ToggleSetting(viewtypeBigThumbsEP)</onclick>
+					<selected>!Skin.HasSetting(viewtypeBigThumbsEP)</selected>
+				</control>
+				<control type="radiobutton" id="544">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>Slide</label>
+					<onclick>Skin.ToggleSetting(viewtypeSlideAU)</onclick>
+					<selected>!Skin.HasSetting(viewtypeSlideAU)</selected>
+				</control>
+				<control type="radiobutton" id="545">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<label>Coverflow</label>
+					<onclick>Skin.ToggleSetting(viewtypeCoverFlowAU)</onclick>
+					<selected>Skin.HasSetting(viewtypeCoverFlowAU)</selected>
+				</control>
+
+			</control>
+			<!-- HOME SHORTCUTS -->
+			<control type="grouplist" id="9012">
+				<posx>182</posx>
+				<posy>80</posy>
+				<width>520</width>
+				<height>430</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9012</onup>
+				<ondown>9012</ondown>
+				<include>pageslide</include>
+				<itemgap>4</itemgap>
+				<visible>Skin.String(SkinSettings,8)</visible>
+
+				<control type="button" id="81">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<textcolor>label-text</textcolor>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<textoffsety>-2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<textcolor>label-text</textcolor>
+					<label>Kids Direkt Link-Path (Current: $INFO[Skin.String(Kidsmenupath)])</label>
+					<onclick>Skin.SetString(Kidsmenupath)</onclick>
+				</control>
+				<control type="button" id="82">
+					<width>520</width>
+					<height>38</height>
+					<font>cali34aspect</font>
+					<textcolor>label-text</textcolor>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<textoffsety>-2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<textcolor>label-text</textcolor>
+					<label>RECORDINGS Direkt Link-Path (Current: $INFO[Skin.String(Recordmenupath)])</label>
+					<onclick>Skin.SetString(Recordmenupath)</onclick>
+				</control>
+			</control>
+			<!-- SKIN CREDITS --> 				
 
 			<control type="group" id="9005">
 				<include>pageslide</include>
 				<visible>Skin.String(SkinSettings,6)</visible>
-		
+
 				<control type="label">
 					<font>h1</font>
 					<label>[B]FOCUS[/B]</label>
@@ -1092,7 +1166,7 @@
 					<align>left</align>
 					<textcolor>sublabel-text</textcolor>
 				</control>
-			
+
 				<control type="textbox" id="4">
 					<font>description</font>
 					<label>31000</label>
@@ -1109,26 +1183,26 @@
 				</control>
 			</control>
 		</control>
-				<control type="image">
-					<width>24</width>
-					<height>20</height>
-					<posx>676</posx>
-					<posy>57</posy>					
-					<texture>scroll-upp.png</texture>
-					<colordiffuse>98FFFFFF</colordiffuse>
-					<visible>Skin.String(SkinSettings,4) | Skin.String(SkinSettings,5)</visible>
-					<include>pageslide</include>
-				</control>
-				<control type="image">
-					<width>24</width>
-					<height>20</height>
-					<posx>676</posx>
-					<posy>510</posy>	
-					<colordiffuse>98FFFFFF</colordiffuse>
-					<texture>scroll-downn.png</texture>
-					<visible>Skin.String(SkinSettings,4) | Skin.String(SkinSettings,5)</visible>
-					<include>pageslide</include>					
-				</control>
-								
+		<control type="image">
+			<width>24</width>
+			<height>20</height>
+			<posx>676</posx>
+			<posy>57</posy>					
+			<texture>scroll-upp.png</texture>
+			<colordiffuse>98FFFFFF</colordiffuse>
+			<visible>Skin.String(SkinSettings,4) | Skin.String(SkinSettings,5)</visible>
+			<include>pageslide</include>
+		</control>
+		<control type="image">
+			<width>24</width>
+			<height>20</height>
+			<posx>676</posx>
+			<posy>510</posy>	
+			<colordiffuse>98FFFFFF</colordiffuse>
+			<texture>scroll-downn.png</texture>
+			<visible>Skin.String(SkinSettings,4) | Skin.String(SkinSettings,5)</visible>
+			<include>pageslide</include>					
+		</control>
+
 	</controls>
 </window>

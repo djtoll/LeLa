@@ -85,6 +85,15 @@
 						<label>31914</label>
 						<onclick>ActivateWindow(MyVideoLibrary,plugin://video)</onclick>
 					</button>
+					<button id="8">
+						<label>KIDS</label>
+						<!-- <onclick>ActivateWindow(MyVideoFiles,Kids)</onclick> -->
+						<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Kidsmenupath)])</onclick>						
+					</button>
+					<button id="8">
+						<label>RECORDINGS</label>					
+						<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(Recordmenupath)])</onclick>						
+					</button> 
 	
 				</buttons>
 			</control>
